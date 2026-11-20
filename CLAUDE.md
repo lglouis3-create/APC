@@ -1,0 +1,19 @@
+# APC III Outpatient Written Exam drill: state
+
+Course state for kit sessions (updated 2026-11-20). Source tree in `src/`, built page at the repository root (`index.html`).
+
+## What the drill covers
+- Exam: Mon 11/23/2026 1 PM, 50 minutes, 30 questions (15 Dr. Parsons, 15 Dr. Lahoud), non-sterile weeks. Source: Week 14 deck, slide "Outpatient Written Exam".
+- Ingested (170 questions): Week 2 Intro to Dispensing deck + 8/24 transcript + EOOR answer key + TOSCE guide (Dr. Lahoud); Week 3 OTC deck + APhA excerpt (no transcript); Week 5 POCT deck (no transcript exists); Week 6 immunization deck + AAFP 2026 schedule + 9/21 transcript; Week 14 DEENT deck + 11/16 transcript.
+- Not ingested: Week 4 recording (Day in the Life), 8/31 OTC transcript, 10/5 TOSCE and 10/26 OSCE Q&A transcripts, Dr. Patel's acne lecture, Dr. Lam's ophthalmic documents, the psoriasis lecture, the 13 Week 2 lab prescriptions (only the answer key), the BDK list.
+
+## Known conflicts (see `reviews/LOG.md`)
+- Passing grade: 8/24 transcript says 75%; slide 2 and syllabus say 70%. No question keys it.
+- CII expiration: key says ">1 month", slide 22 says 30 days; drill keys 30 days.
+- Slide 7 lists incorrect patient under dispensing; slide 38 and the EOOR key treat it as transcribing (note on d03).
+- Hydrocortisone frequency: slide 27 "1-4 times/day", APhA excerpt "3 or 4 times daily"; not keyed.
+- Mid-level practitioner 3-month expiration (slide 22 footnote) was not stressed in lecture.
+- TOSCE list names methylphenidate (Focalin XR); not used in any question.
+
+## Delivery status
+- Checks: see `reviews/LOG.md`. Not published to GitHub Pages; no pull request opened.
