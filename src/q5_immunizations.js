@@ -245,7 +245,7 @@ QUESTIONS.push(
  options:[
   {t:'Yes, as a 2-dose series', correct:true, why:'AAFP Notes: special situations, immunocompromising conditions, 2-dose RZV; (T) her lupus patient had shingles at 40 without the vaccine.'},
   {t:'No, RZV is not given until age 50 for anyone', correct:false, why:'AAFP Notes recommend RZV for immunocompromising conditions before age 50, so age 50 is not required.'},
-  {t:'No, a live zoster vaccine is given instead', correct:false, why:'RZV is the recombinant (not live) zoster vaccine.'},
+  {t:'No, a live zoster vaccine is given instead', correct:false, why:'AAFP Notes list RZV (Shingrix), the recombinant zoster vaccine, which is not a live vaccine.'},
   {t:'Yes, but a single dose is enough', correct:false, why:'AAFP Notes: RZV for immunocompromising conditions is a 2-dose series, not 1 dose.'}],
  teach:'(T) Immunosuppressed patients are often missing vaccines they should have had before the immunosuppressant was started.',
  cite:'AAFP-Adult-Schedule-2026.pdf Notes (zoster); 9/21 transcript (T)'},
@@ -323,7 +323,7 @@ QUESTIONS.push(
   {t:'HD-IIV3, RIV3 or aIIV3', correct:true, why:'AAFP Notes: at age 65 or older, any one of HD-IIV3, RIV3 or aIIV3 (high-dose, recombinant or adjuvanted) is preferred.'},
   {t:'Live attenuated (LAIV3)', correct:false, why:'FluMist is not the preferred product at 65 or older (AAFP Notes).'},
   {t:'Only egg-based IIV3', correct:false, why:'An egg allergy does not limit the choice, and the preferred vaccines are HD-IIV3, RIV3 or aIIV3 (AAFP Notes).'},
-  {t:'Any influenza vaccine with no preference', correct:false, why:'Preferred products are named for 65 or older (AAFP Notes).'}],
+  {t:'Any influenza vaccine with no preference', correct:false, why:'AAFP Notes name HD-IIV3, RIV3 and aIIV3 as the preferred products at 65 or older, so there is a preference.'}],
  teach:'Persons with an egg allergy can receive any influenza vaccine appropriate for age and health status.',
  cite:'AAFP-Adult-Schedule-2026.pdf Notes (influenza)'},
 
@@ -357,7 +357,7 @@ QUESTIONS.push(
  options:[
   {t:'2 doses at least 8 weeks apart', correct:true, why:'AAFP Notes: asplenia or HIV gets 2 doses of Menveo or MenQuadfi at least 8 weeks apart, revaccinated every 5 years if risk remains.'},
   {t:'1 dose of Menveo or MenQuadfi only', correct:false, why:'That is for first-year college students in residential housing or military recruits (AAFP Notes).'},
-  {t:'3 doses of Bexsero (MenB-4C)', correct:false, why:'Bexsero is MenB, not MenACWY (AAFP vaccine list).'},
+  {t:'3 doses of Bexsero (MenB-4C)', correct:false, why:'AAFP vaccine list: Bexsero is the MenB-4C vaccine, not a MenACWY product, so it does not fit asplenia or HIV here.'},
   {t:'1 dose of MenACWY every 10 years', correct:false, why:'AAFP Notes: revaccination is every 5 years if risk remains, not every 10 years.'}],
  teach:'MenACWY products are Menveo (MenACWY-CRM) and MenQuadfi (MenACWY-TT).',
  cite:'AAFP-Adult-Schedule-2026.pdf Notes (meningococcal)'},
@@ -380,7 +380,7 @@ QUESTIONS.push(
   {t:'2 doses, 28 days apart', correct:true, why:'AAFP Notes: a person at risk for mpox gets a 2-dose series of Jynneos, 28 days apart.'},
   {t:'1 dose', correct:false, why:'AAFP Notes: the Jynneos series is 2 doses, so 1 dose is incomplete.'},
   {t:'3 doses at 0, 1 and 6 months', correct:false, why:'AAFP Notes: 0, 1 and 6 months is the hepatitis B pattern, not the mpox series.'},
-  {t:'2 doses, 6 months apart', correct:false, why:'AAFP Notes: the mpox doses are 28 days apart, not 6 months.'}],
+  {t:'2 doses, 6 months apart', correct:false, why:'AAFP Notes: the 2 Jynneos doses are given 28 days apart, not 6 months apart.'}],
  teach:'Risk includes some persons who are gay, bisexual or other men who have sex with men, with certain recent exposures, and persons deemed at risk by public health authorities.',
  cite:'AAFP-Adult-Schedule-2026.pdf Notes (mpox)'},
 
@@ -460,7 +460,7 @@ QUESTIONS.push(
  options:[
   {t:'A household member may benefit', correct:true, why:'Slide 35: if they understand a household member may benefit, they are more likely to vaccinate.'},
   {t:'Refusal is the parent’s problem alone', correct:false, why:'(T) It is the whole community’s problem if people do not get vaccines.'},
-  {t:'The vaccine has no risks', correct:false, why:'Slide 33: share the risks as well as the benefits.'},
+  {t:'The vaccine has no risks', correct:false, why:'Slide 33 says to share the risks of the vaccine as well as its benefits, so claiming no risks is wrong.'},
   {t:'The patient must decide at once', correct:false, why:'Slide 36: help the patient come to their own decision with kindness, patience and active listening.'}],
  teach:'Provide scientific information from reliable sources: benefits shown in trials (for example, reduced hospitalization) and the risks of the vaccine.',
  cite:'Immunizations-Pre-Lab.pdf slides 33–36; 9/21 transcript (T)'},
@@ -470,9 +470,9 @@ QUESTIONS.push(
  stem:'A patient declines a vaccine for religious reasons. Which approach fits?',
  options:[
   {t:'Show sensitivity and hear the concerns', correct:true, why:'Slide 34; religious leaders and vaccine clinics at places of worship can help.'},
-  {t:'Dismiss the belief and repeat the benefits', correct:false, why:'Slide 34 asks for care and sensitivity to beliefs.'},
+  {t:'Dismiss the belief and repeat the benefits', correct:false, why:'Slide 34 asks the pharmacist to show care and sensitivity to patients’ beliefs, not to dismiss them.'},
   {t:'Stop all discussion with the patient', correct:false, why:'Slide 36 asks for kindness, patience and active listening; the patient may return if they want to learn more (slide 32).'},
-  {t:'Label the patient as anti-vaccine', correct:false, why:'(T) Do not use “anti-vaxxer”; it is rude and condescending.'}],
+  {t:'Label the patient as anti-vaccine', correct:false, why:'(T) Dr. Parsons said not to use “anti-vaxxer” because it is rude and condescending.'}],
  teach:'(T) A patient hesitant because of incorrect information is not a bad or unintelligent person; their information source has incorrect information.',
  cite:'Immunizations-Pre-Lab.pdf slides 32, 34, 36; 9/21 transcript (T)'},
 

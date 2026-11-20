@@ -55,7 +55,7 @@ const QUESTIONS = [
  tags:['medication use process'], source:'slide',
  stem:'In which order do the steps of the medication use process occur?',
  options:[
-  {t:'Prescribing, order processing, dispensing, administration, monitoring', correct:true, why:'The order on slide 6.'},
+  {t:'Prescribing, order processing, dispensing, administration, monitoring', correct:true, why:'Slide 6 shows the five steps in this order: prescribing, order processing, dispensing, administration, monitoring.'},
   {t:'Prescribing, dispensing, order processing, administration, and monitoring', correct:false, why:'Puts dispensing before order processing; the prescription is entered into the system before the product is filled (slide 6).'},
   {t:'Order processing, prescribing, dispensing, monitoring, and administration', correct:false, why:'Starts with order processing, but a prescriber must write the order first (slide 6).'},
   {t:'Prescribing, order processing, administration, dispensing, and monitoring', correct:false, why:'Puts administration before dispensing; the patient cannot take a medication before it is dispensed (slide 6).'}],
@@ -67,9 +67,9 @@ const QUESTIONS = [
  stem:'A technician enters a prescription’s directions into the pharmacy system incorrectly. At which step of the medication use process does this error occur?',
  options:[
   {t:'Order processing', correct:true, why:'A transcribing error is listed under order processing (slide 7).'},
-  {t:'Prescribing', correct:false, why:'Prescribing errors are inappropriate drug, dose, formulation, route or sig choices by the prescriber (slide 7); the prescriber wrote it correctly here.'},
-  {t:'Dispensing', correct:false, why:'Dispensing errors involve the product or bag, such as the wrong drug or a mislabeled item (slide 7), not data entry.'},
-  {t:'Monitoring', correct:false, why:'Monitoring covers interactions, allergies and adverse events after the patient has the drug (slide 7).'}],
+  {t:'Prescribing the drug', correct:false, why:'Prescribing errors are inappropriate drug, dose, formulation, route or sig choices by the prescriber (slide 7); the prescriber wrote it correctly here.'},
+  {t:'Dispensing the drug', correct:false, why:'Dispensing errors involve the product or bag, such as the wrong drug or a mislabeled item (slide 7), not data entry.'},
+  {t:'Monitoring the patient', correct:false, why:'Monitoring covers interactions, allergies and adverse events after the patient has the drug (slide 7).'}],
  teach:'Order processing is where the prescription is transcribed into the pharmacy system. A typing error in the drug, directions or refills is a transcribing error.',
  cite:'Intro-to-Dispensing.pdf slide 7'},
 
@@ -78,9 +78,9 @@ const QUESTIONS = [
  stem:'Which of the following is an error at the dispensing step of the medication use process?',
  options:[
   {t:'A mislabeled or mis-bagged product', correct:true, why:'Listed under dispensing on slide 7, with incorrect drug selection and expired medications.'},
-  {t:'An inappropriate dose chosen by the prescriber', correct:false, why:'This is a prescribing error (slide 7).'},
-  {t:'A transcribing error when the order is entered', correct:false, why:'This is an order-processing error (slide 7).'},
-  {t:'A missed drug-drug interaction after the patient starts the drug', correct:false, why:'This is a monitoring problem (slide 7).'}],
+  {t:'An inappropriate dose chosen by the prescriber', correct:false, why:'Slide 7 lists an inappropriate dose, formulation, route or sig under prescribing, not under dispensing.'},
+  {t:'A transcribing error when the order is entered', correct:false, why:'Slide 7 lists the transcribing error under order processing, the step before dispensing.'},
+  {t:'A missed drug-drug interaction after the patient starts the drug', correct:false, why:'Slide 7 lists drug-drug interactions, allergies and adverse events under monitoring, after the patient has the drug.'}],
  teach:'Dispensing errors involve the product handed over: wrong drug, expired product, or a mislabeled or mis-bagged item.',
  note:'Slide 7 also lists incorrect patient under dispensing, but slide 38 and the EOOR key treat incorrect patient selected or processed as a transcribing error fixed with the technician.',
  cite:'Intro-to-Dispensing.pdf slide 7'},
@@ -100,10 +100,10 @@ const QUESTIONS = [
  tags:['pharmacist role'], source:'slide',
  stem:'A pharmacist contributes to the medication use process mainly through which two activities?',
  options:[
-  {t:'Prescription review and medication counseling', correct:true, why:'Slides 10 and 41 mark these two under the pharmacist’s role.'},
-  {t:'Order entry and product delivery', correct:false, why:'Order entry is a technician step in the lecture’s example, not one of the two named roles (slide 10).'},
-  {t:'Compounding and insurance billing', correct:false, why:'Not named on slide 10.'},
-  {t:'Prescribing and monitoring labs', correct:false, why:'Prescribing is the prescriber’s step; the pharmacist’s two roles are prescription review and counseling (slide 10).'}],
+  {t:'Prescription review and counseling', correct:true, why:'Slides 10 and 41 mark these two under the pharmacist’s role.'},
+  {t:'Order entry and delivering the product', correct:false, why:'Order entry is a technician step in the lecture’s example, not one of the two named roles (slide 10).'},
+  {t:'Compounding and insurance claim billing', correct:false, why:'Slide 10 marks only prescription review and medication counseling as the pharmacist’s roles; compounding and billing are not named.'},
+  {t:'Prescribing and monitoring lab values', correct:false, why:'Prescribing is the prescriber’s step; the pharmacist’s two roles are prescription review and counseling (slide 10).'}],
  teach:'Prescription review catches errors before dispensing; medication counseling helps the patient use the drug correctly.',
  cite:'Intro-to-Dispensing.pdf slides 10, 41'},
 
@@ -112,10 +112,10 @@ const QUESTIONS = [
  tags:['definition'], source:'both',
  stem:'Which statement defines a prescription drug order?',
  options:[
-  {t:'A written order from a practitioner, or a verbal order from a practitioner or agent, to a pharmacist', correct:true, why:'The definition on slide 13; (T) it is written or verbal.'},
-  {t:'Only a written order signed by a physician', correct:false, why:'The definition includes verbal orders and is not limited to physicians (slide 13).'},
-  {t:'Only an electronic order sent to the pharmacy', correct:false, why:'Electronic is one route; the definition covers written and verbal orders (slide 13).'},
-  {t:'A request from the patient for a refill', correct:false, why:'The order comes from a practitioner, not the patient (slide 13).'}],
+  {t:'A written or verbal order from a practitioner to a pharmacist', correct:true, why:'Slide 13 defines it as a written order from a practitioner, or a verbal order from a practitioner or authorized agent, to a pharmacist; (T) it is written or verbal.'},
+  {t:'Only a written order signed by a physician and given to the pharmacist', correct:false, why:'The definition includes verbal orders and is not limited to physicians (slide 13).'},
+  {t:'Only an electronic order sent from the prescriber to the pharmacy', correct:false, why:'Electronic is one route; the definition covers written and verbal orders (slide 13).'},
+  {t:'A request from the patient to the pharmacist for a refill of a drug', correct:false, why:'The order comes from a practitioner, not the patient (slide 13).'}],
  teach:'A prescription drug order is a written order, or a verbal order from a practitioner or the practitioner’s authorized agent, to a pharmacist for a drug or device to be dispensed.',
  cite:'Intro-to-Dispensing.pdf slide 13; 8/24 transcript (T)'},
 
@@ -123,10 +123,10 @@ const QUESTIONS = [
  tags:['practitioner'], source:'both',
  stem:'Which of the following can be a practitioner legally authorized to prescribe in Texas? Select all that apply.',
  options:[
-  {t:'Podiatrist (DPM)', correct:true, why:'Listed with licensed Texas prescribers (slide 14).'},
+  {t:'Podiatrist (DPM)', correct:true, why:'Slide 14 lists podiatrists (DPM) among the licensed prescribers in Texas.'},
   {t:'Veterinarian (DVM)', correct:true, why:'Listed on slide 14; (T) a prescription for an animal needs the species and the owner’s name.'},
   {t:'Therapeutic optometrist (OD)', correct:true, why:'Therapeutic optometrists and optometric glaucoma specialists are listed (slide 14).'},
-  {t:'Pharmacy technician', correct:false, why:'Not on the practitioner list (slide 14).'},
+  {t:'Pharmacy technician', correct:false, why:'Slide 14 does not list pharmacy technicians; it lists physicians, dentists, podiatrists, veterinarians, optometrists and delegated APRNs and PAs.'},
   {t:'Physician assistant with no physician delegation', correct:false, why:'A PA may prescribe only if delegated by a physician under Chapter 157 (slide 14).'}],
  teach:'Practitioners include MD and DO physicians, dentists, podiatrists, veterinarians and optometrists. Advanced practice registered nurses and physician assistants prescribe when a physician delegates authority.',
  cite:'Intro-to-Dispensing.pdf slide 14; 8/24 transcript (T)'},
@@ -146,10 +146,10 @@ const QUESTIONS = [
  tags:['practitioner'], source:'slide',
  stem:'Under what condition can an advanced practice registered nurse (APRN) or physician assistant (PA) prescribe in Texas?',
  options:[
-  {t:'A physician delegates the authority under Chapter 157', correct:true, why:'Slide 14, delegated prescribers.'},
-  {t:'The drug is a dangerous drug only', correct:false, why:'Slide 14 sets no such limit; delegation is the condition.'},
-  {t:'The practice is a hospital pharmacy', correct:false, why:'Hospital settings appear on slide 14 for pharmacists signing prescriptions, not as the condition for APRNs and PAs.'},
-  {t:'The patient is under 18', correct:false, why:'Age is not a condition on slide 14.'}],
+  {t:'A physician delegates under Chapter 157', correct:true, why:'Slide 14 says APRNs and PAs may prescribe if delegated by a physician under Chapter 157.'},
+  {t:'The drug is a non-controlled dangerous drug', correct:false, why:'Slide 14 sets no drug-category limit for APRNs and PAs; delegation by a physician under Chapter 157 is the condition.'},
+  {t:'The practice setting is a hospital pharmacy', correct:false, why:'Hospital settings appear on slide 14 for pharmacists signing prescriptions, not as the condition for APRNs and PAs.'},
+  {t:'The patient is a minor under 18 years of age', correct:false, why:'Slide 14 sets no age condition for APRNs and PAs; delegation by a physician under Chapter 157 is the condition.'}],
  teach:'APRNs and PAs are delegated prescribers: they may prescribe if a physician delegates under Chapter 157.',
  cite:'Intro-to-Dispensing.pdf slide 14'},
 
@@ -160,8 +160,8 @@ const QUESTIONS = [
  options:[
   {t:'Yes, the date of birth only has to be in the PMR', correct:true, why:'Slide 16: date of birth is not required on a dangerous-drug prescription but must be in the PMR.'},
   {t:'No, the date of birth is always required on the prescription', correct:false, why:'That is true for CIII–V prescriptions in Texas (slide 18), not for dangerous drugs.'},
-  {t:'No, the pharmacist must call the prescriber for it', correct:false, why:'The PMR record satisfies the requirement (slide 16).'},
-  {t:'Yes, but only for the first fill', correct:false, why:'Slide 16 sets no first-fill limit.'}],
+  {t:'No, the pharmacist must call the prescriber for it', correct:false, why:'Slide 16: a date of birth held in the pharmacy’s PMR satisfies the requirement, so no call to the prescriber is needed.'},
+  {t:'Yes, but only for the first fill', correct:false, why:'Slide 16 does not require the date of birth on a dangerous-drug prescription at all, so no first-fill limit applies; a PMR record is enough.'}],
  teach:'(T) You can have more information than required, never less. For dangerous drugs, the address and date of birth may be taken from the PMR; for CIII–V both must be on the prescription.',
  cite:'Intro-to-Dispensing.pdf slides 16, 27; 8/24 transcript (T)'},
 
@@ -169,10 +169,10 @@ const QUESTIONS = [
  tags:['requirements','controlled'], source:'both',
  stem:'A written alprazolam (CIV) prescription lacks the patient’s date of birth, which is in the pharmacy’s PMR. Is the prescription valid?',
  options:[
-  {t:'No, a CIII–V prescription needs the date of birth on it', correct:true, why:'Slide 18 lists the date of birth for CIII–V; (T) Texas law requires it even though federal law does not.'},
-  {t:'Yes, the PMR is enough', correct:false, why:'That applies to dangerous drugs (slide 16), not controlled substances.'},
-  {t:'Yes, if the address is on it', correct:false, why:'The address and the date of birth are separate requirements on slide 18.'},
-  {t:'Yes, if a DEA number is on it', correct:false, why:'The DEA number is an added requirement, not a substitute for the date of birth (slide 18).'}],
+  {t:'No, CIII–V needs the date of birth on it', correct:true, why:'Slide 18 lists the date of birth for CIII–V; (T) Texas law requires it even though federal law does not.'},
+  {t:'Yes, the date of birth in the PMR is enough', correct:false, why:'That applies to dangerous drugs (slide 16), not controlled substances.'},
+  {t:'Yes, as long as the patient’s address is on it', correct:false, why:'The address and the date of birth are separate requirements on slide 18.'},
+  {t:'Yes, as long as the prescriber’s DEA number is on it', correct:false, why:'The DEA number is an added requirement, not a substitute for the date of birth (slide 18).'}],
  teach:'(T) The alprazolam example is a CIV. CIII–V prescriptions need the patient’s full name, address and date of birth on the prescription itself, plus the prescriber’s DEA number.',
  cite:'Intro-to-Dispensing.pdf slides 18–19; 8/24 transcript (T)'},
 
@@ -182,7 +182,7 @@ const QUESTIONS = [
  options:[
   {t:'Patient address', correct:true, why:'Required unless readily retrievable from the PMR (slide 16).'},
   {t:'Patient date of birth', correct:true, why:'Not required, but a record of it must be in the PMR (slide 16).'},
-  {t:'Directions for use', correct:false, why:'Directions are required on the prescription (slide 16).'},
+  {t:'Directions for use', correct:false, why:'Slide 16 requires directions for use on the prescription itself and gives no PMR exception for them.'},
   {t:'Prescriber’s telephone number', correct:false, why:'Practitioner name, address and telephone are required on the prescription (slide 16).'}],
  teach:'On a dangerous-drug prescription only the patient address and date of birth have a PMR exception.',
  cite:'Intro-to-Dispensing.pdf slide 16'},
@@ -193,7 +193,7 @@ const QUESTIONS = [
  options:[
   {t:'CIII–CV and CII', correct:true, why:'Slide 18 lists it for CIII–V; slide 20 adds everything required for CIII–V to CII.'},
   {t:'All three categories', correct:false, why:'Dangerous-drug prescriptions do not list a DEA number (slide 16).'},
-  {t:'CII only', correct:false, why:'CII includes everything required for CIII–V (slide 20).'},
+  {t:'CII only', correct:false, why:'Slide 20 says CII requires everything required for CIII–V, which includes the DEA number (slide 18), so CII is not the only category.'},
   {t:'Dangerous drugs only', correct:false, why:'The DEA number is required for controlled substances, not dangerous drugs (slides 16, 18).'}],
  teach:'(T) The DEA number shows the prescriber has federal permission to prescribe controlled substances and lets the pharmacist track prescribing.',
  cite:'Intro-to-Dispensing.pdf slides 16, 18, 20; 8/24 transcript (T)'},
@@ -202,10 +202,10 @@ const QUESTIONS = [
  tags:['requirements','controlled'], source:'both',
  stem:'How must the quantity appear on a written CIII–CV prescription?',
  options:[
-  {t:'As a number and as a word', correct:true, why:'Slide 18: numerically and written as a word, for example #20 (twenty).'},
-  {t:'As a number only', correct:false, why:'A number alone is not enough for a written controlled substance prescription (slide 18).'},
-  {t:'As a word only', correct:false, why:'Both forms are required (slide 18).'},
-  {t:'As the days’ supply', correct:false, why:'Slide 18 asks for the quantity in two forms, not a days’ supply.'}],
+  {t:'As a number and a word', correct:true, why:'Slide 18: numerically and written as a word, for example #20 (twenty).'},
+  {t:'As a number only, such as #20', correct:false, why:'A number alone is not enough for a written controlled substance prescription (slide 18).'},
+  {t:'As a word only, such as twenty', correct:false, why:'Slide 18 requires the quantity both numerically and written as a word, for example #20 (twenty), not a word alone.'},
+  {t:'As the days’ supply only', correct:false, why:'Slide 18 asks for the quantity in two forms, not a days’ supply.'}],
  teach:'(T) Showing the quantity two ways helps prevent diversion, because a written number is harder to alter without being noticed.',
  cite:'Intro-to-Dispensing.pdf slide 18; 8/24 transcript (T)'},
 
@@ -224,10 +224,10 @@ const QUESTIONS = [
  tags:['requirements'], source:'both',
  stem:'A prescription is written for a dog. Besides the usual drug information, what must it include?',
  options:[
-  {t:'The animal’s species and the owner’s name', correct:true, why:'Slides 16 and 18: required when the prescription is for an animal. (T) The lecturer’s example is a dog named Jimmy with her name as owner.'},
-  {t:'The animal’s weight and breed', correct:false, why:'Weight and breed are not listed on slides 16 or 18.'},
+  {t:'The species and owner’s name', correct:true, why:'Slides 16 and 18: required when the prescription is for an animal. (T) The lecturer’s example is a dog named Jimmy with her name as owner.'},
+  {t:'The animal’s weight and breed', correct:false, why:'Slides 16 and 18 ask for the animal’s species and the owner’s name; weight and breed are not listed.'},
   {t:'The owner’s date of birth only', correct:false, why:'The owner’s name is required, not the date of birth (slide 16).'},
-  {t:'A TSBP official form', correct:false, why:'That is a CII written-prescription requirement (slide 20).'}],
+  {t:'A TSBP official prescription form', correct:false, why:'Slide 20 requires the TSBP-issued official form for a written CII prescription, not for an animal prescription.'}],
  teach:'For an animal, the prescription needs the species and the name of the owner in every category.',
  cite:'Intro-to-Dispensing.pdf slides 16, 18; 8/24 transcript (T)'},
 
@@ -235,7 +235,7 @@ const QUESTIONS = [
  tags:['requirements'], source:'both',
  stem:'A dangerous-drug prescription has no indication written on it. What is the practical action?',
  options:[
-  {t:'Fill it; the indication can be left off at the prescriber’s judgment', correct:true, why:'Slide 16: required unless the practitioner determines it is not in the patient’s best interest. (T) Calling the prescriber for this is not expected.'},
+  {t:'Fill it; the prescriber may omit the indication', correct:true, why:'Slide 16: required unless the practitioner determines it is not in the patient’s best interest. (T) Calling the prescriber for this is not expected.'},
   {t:'Refuse it until the prescriber adds an indication', correct:false, why:'(T) The indication may be omitted when the prescriber judges that best, so refusal is not required.'},
   {t:'Call the prescriber about every missing indication', correct:false, why:'(T) Not expected; the lecturer said nobody has time for that.'},
   {t:'Add the likely indication from the drug', correct:false, why:'Slide 16 describes the prescriber’s intended use; it does not describe the pharmacist adding one.'}],
@@ -248,7 +248,7 @@ const QUESTIONS = [
  options:[
   {t:'A TSBP official form, manually signed', correct:true, why:'Slide 20. (T) A stamped or replica signature does not qualify.'},
   {t:'Any form, signed with a stamp', correct:false, why:'(T) The prescriber cannot stamp the signature on a written CII.'},
-  {t:'A TSBP official form, signed with a stamp', correct:false, why:'The signature must be manual (slide 20).'},
+  {t:'A TSBP official form, signed with a stamp', correct:false, why:'Slide 20 requires a written CII to be manually signed, and slide 27 says no stamp or replica signature for CII.'},
   {t:'Any form, signed electronically', correct:false, why:'An electronic signature belongs to an e-prescription (slide 27), not a written one.'}],
  teach:'If a CII prescription is written (not ideal), it must be on a TSBP-issued official form and manually signed. On the back, the pharmacist records the date filled and the Rx number.',
  cite:'Intro-to-Dispensing.pdf slides 20, 27; 8/24 transcript (T)'},
@@ -258,8 +258,8 @@ const QUESTIONS = [
  stem:'What must the pharmacist record on a filled CII prescription?',
  options:[
   {t:'The date filled and the Rx number', correct:true, why:'Slide 20. (T) The record lets auditors track the controlled medication.'},
-  {t:'The pharmacist’s initials only', correct:false, why:'Slide 20 names the date filled and the Rx number.'},
-  {t:'The patient’s insurance number', correct:false, why:'Not a CII requirement on slide 20.'},
+  {t:'The pharmacist’s initials only, on the back', correct:false, why:'Slide 20 names the date filled and the Rx number, not initials, as what the pharmacist records.'},
+  {t:'The patient’s insurance number and plan', correct:false, why:'Slide 20 lists no insurance information; the pharmacist records the date filled and the Rx number.'},
   {t:'The prescriber’s DEA number', correct:false, why:'The DEA number must already be on the prescription (slide 18); the pharmacist records the fill date and Rx number.'}],
  teach:'(T) The pharmacist writes the fill date and the Rx number so a later audit can track the CII.',
  cite:'Intro-to-Dispensing.pdf slide 20; 8/24 transcript (T)'},
@@ -270,9 +270,9 @@ const QUESTIONS = [
  note:'Slide 21 states this for controlled substances; (T) the lecturer said it about CII. Both key electronic delivery.',
  options:[
   {t:'Electronically', correct:true, why:'Slide 21; (T) the prescriber, not the pharmacist, is responsible for sending it electronically.'},
-  {t:'Handwritten on an official form', correct:false, why:'Allowed but not ideal (slide 20).'},
+  {t:'Handwritten on an official form', correct:false, why:'Slide 20 allows a written CII on a TSBP form but calls it not ideal; slide 21 says electronic issue is the standard.'},
   {t:'Verbally by phone', correct:false, why:'Verbal orders appear for substitution (slide 24), not as the standard route on slide 21.'},
-  {t:'By fax to the pharmacy', correct:false, why:'Slide 21 names electronic issue as the standard.'}],
+  {t:'By fax to the pharmacy', correct:false, why:'Slide 21 says controlled substance prescriptions should be issued electronically, not by fax, except in limited circumstances.'}],
  teach:'(T) The pharmacist does not have to double-check that a prescriber used electronic delivery, but should know the law prefers it.',
  cite:'Intro-to-Dispensing.pdf slides 20–21; 8/24 transcript (T)'},
 
@@ -280,12 +280,12 @@ const QUESTIONS = [
  tags:['requirements','controlled'], source:'slide',
  stem:'Pharmacists must check the patient’s prescription monitoring program (PMP) history before dispensing which of these? Select all that apply.',
  options:[
-  {t:'Opioids', correct:true, why:'Slide 21.'},
-  {t:'Benzodiazepines', correct:true, why:'Slide 21.'},
-  {t:'Barbiturates', correct:true, why:'Slide 21.'},
-  {t:'Carisoprodol', correct:true, why:'Slide 21.'},
-  {t:'Statins', correct:false, why:'Not on slide 21.'},
-  {t:'ACE inhibitors', correct:false, why:'Not on slide 21.'}],
+  {t:'Opioids', correct:true, why:'Slide 21 lists opioids among the drugs that require a PMP history check before dispensing.'},
+  {t:'Benzodiazepines', correct:true, why:'Slide 21 lists benzodiazepines among the drugs that require a PMP history check before dispensing.'},
+  {t:'Barbiturates', correct:true, why:'Slide 21 lists barbiturates among the drugs that require a PMP history check before dispensing.'},
+  {t:'Carisoprodol', correct:true, why:'Slide 21 lists carisoprodol among the drugs that require a PMP history check before dispensing.'},
+  {t:'Statins', correct:false, why:'Slide 21 names only opioids, benzodiazepines, barbiturates and carisoprodol for the PMP check; statins are not named.'},
+  {t:'ACE inhibitors', correct:false, why:'Slide 21 names only opioids, benzodiazepines, barbiturates and carisoprodol for the PMP check; ACE inhibitors are not named.'}],
  teach:'Pharmacists and prescribers (other than veterinarians) check the PMP before dispensing or prescribing opioids, benzodiazepines, barbiturates or carisoprodol.',
  cite:'Intro-to-Dispensing.pdf slide 21'},
 
@@ -293,11 +293,11 @@ const QUESTIONS = [
  tags:['requirements','controlled'], source:'slide',
  stem:'Which are required on a written CIII–CV prescription but not on a dangerous-drug prescription? Select all that apply.',
  options:[
-  {t:'Prescriber’s DEA number', correct:true, why:'Slide 18; slide 16 has none.'},
+  {t:'Prescriber’s DEA number', correct:true, why:'Slide 18 requires the prescriber’s DEA number on CIII–V, while slide 16 lists none for dangerous drugs.'},
   {t:'Patient date of birth on the prescription', correct:true, why:'Slide 18; on a dangerous-drug prescription it may be in the PMR instead (slide 16).'},
-  {t:'Quantity written as a word', correct:true, why:'Slide 18, if the order is written.'},
-  {t:'Directions for use', correct:false, why:'Required in every category (slides 16, 18).'},
-  {t:'Date of issuance', correct:false, why:'Required in every category (slides 16, 18).'}],
+  {t:'Quantity written as a word', correct:true, why:'Slide 18 requires the quantity as a word when the order is written; slide 16 has no such requirement.'},
+  {t:'Directions for use', correct:false, why:'Slides 16 and 18 both require directions for use, so it does not separate the two categories.'},
+  {t:'Date of issuance', correct:false, why:'Slides 16 and 18 both require the date of issuance, so it does not separate the two categories.'}],
  teach:'CIII–V adds the DEA number, the date of birth on the prescription, and the quantity as a word (when written) to the dangerous-drug list.',
  cite:'Intro-to-Dispensing.pdf slides 16, 18, 27'},
 
@@ -307,9 +307,9 @@ const QUESTIONS = [
  stem:'Match each prescription category to its refill limit and the time after issue when the script expires.',
  left:'Category', right:'Refills and expiration',
  pairs:[
-  {l:'Dangerous drug', r:'No limit; 1 year', why:'Slide 22.'},
-  {l:'Schedule III–V', r:'5 refills; 6 months', why:'Slide 22.'},
-  {l:'Schedule II', r:'0 refills; 30 days', why:'Slide 22.'}],
+  {l:'Dangerous drug', r:'No limit; 1 year', why:'Slide 22 gives dangerous drugs no refill limit and a script expiration of 1 year after issuance.'},
+  {l:'Schedule III–V', r:'5 refills; 6 months', why:'Slide 22 gives Schedule III–V a limit of 5 refills and a script expiration of 6 months after issuance.'},
+  {l:'Schedule II', r:'0 refills; 30 days', why:'Slide 22 gives Schedule II 0 refills and a script expiration of 30 days after issuance.'}],
  teach:'Refill limits and script expiration depend on the category: dangerous drugs no limit and 1 year; CIII–V 5 refills and 6 months; CII no refills and 30 days. Slide 22’s footnote adds 3 months for mid-level practitioners; the lecture did not stress it.',
  cite:'Intro-to-Dispensing.pdf slide 22'},
 
@@ -319,8 +319,8 @@ const QUESTIONS = [
  options:[
   {t:'Acceptable; it expires 8/18/2027', correct:true, why:'Dangerous drugs have no refill limit and expire 1 year after issue (slide 22); 8/18/2026 plus one year is 8/18/2027.'},
   {t:'Not acceptable; the maximum is 5 refills', correct:false, why:'5 refills is the CIII–V limit; dangerous drugs have no limit (slide 22).'},
-  {t:'Acceptable; it expires 2/18/2027', correct:false, why:'2/18/2027 is six months, the CIII–V period (slide 22).'},
-  {t:'Not acceptable; refills are not allowed', correct:false, why:'No refills is the CII rule (slide 22).'}],
+  {t:'Acceptable; it expires 2/18/2027', correct:false, why:'2/18/2027 is six months after 8/18/2026, the CIII–V expiration; slide 22 gives dangerous drugs 1 year.'},
+  {t:'Not acceptable; refills are not allowed', correct:false, why:'No refills is the CII rule; slide 22 gives dangerous drugs no refill limit, so 6 refills is acceptable.'}],
  teach:'(T) The Prozac example on slides 31–33 was judged legal and safe: dangerous drugs have no refill limit and are valid 1 year from the date of issuance.',
  cite:'Intro-to-Dispensing.pdf slides 22, 31; 8/24 transcript (T)'},
 
@@ -328,10 +328,10 @@ const QUESTIONS = [
  tags:['refills','expiration'], source:'slide',
  stem:'A physician issued a CIV prescription for alprazolam 6 months and 2 weeks ago. May it be filled?',
  options:[
-  {t:'No, it expired after 6 months', correct:true, why:'CIII–V scripts expire 6 months after issue (slide 22).'},
-  {t:'Yes, it is valid for 1 year', correct:false, why:'One year is the dangerous-drug period (slide 22).'},
-  {t:'Yes, it is valid for 30 days after the last fill', correct:false, why:'30 days is the CII period, counted from issue (slide 22).'},
-  {t:'Yes, if the prescriber approves by phone', correct:false, why:'An expired script needs a new prescription (slide 38).'}],
+  {t:'No, it expired after 6 months', correct:true, why:'Slide 22 gives CIII–V scripts 6 months after issue, and this one is 6 months and 2 weeks old.'},
+  {t:'Yes, it is valid for 1 year', correct:false, why:'One year is the dangerous-drug expiration on slide 22; alprazolam is a CIV, which expires at 6 months.'},
+  {t:'Yes, it is valid for 30 days after the last fill', correct:false, why:'Thirty days is the CII expiration on slide 22, counted from the date of issuance, not from the last fill.'},
+  {t:'Yes, if the prescriber approves by phone', correct:false, why:'Slide 38 lists an expired prescription as a prescribing error, and slide 39 says to obtain a new prescription from the prescriber.'}],
  teach:'A prescription that has passed its expiration is a prescribing error; contact the prescriber for a new prescription.',
  cite:'Intro-to-Dispensing.pdf slides 22, 38'},
 
@@ -339,11 +339,11 @@ const QUESTIONS = [
  tags:['refills','CII'], source:'slide',
  stem:'Which conditions must be met when a prescriber issues several CII prescriptions for up to a 90-day supply? Select all that apply.',
  options:[
-  {t:'The total is no more than a 90-day supply', correct:true, why:'Slide 22.'},
-  {t:'All prescriptions are issued the same day', correct:true, why:'Slide 22.'},
-  {t:'The prescriber notes an earliest fill date', correct:true, why:'Slide 22.'},
-  {t:'Each prescription carries 2 refills', correct:false, why:'CII allows 0 refills (slide 22).'},
-  {t:'Each prescription is issued on a different date', correct:false, why:'They must be issued the same day (slide 22).'}],
+  {t:'The total is no more than a 90-day supply', correct:true, why:'Slide 22 allows multiple CII prescriptions only if the total is no more than a 90-day supply.'},
+  {t:'All prescriptions are issued the same day', correct:true, why:'Slide 22 requires the multiple CII prescriptions to be issued on the same day.'},
+  {t:'The prescriber notes an earliest fill date', correct:true, why:'Slide 22 requires the prescriber to note an earliest fill date on the multiple CII prescriptions.'},
+  {t:'Each prescription carries 2 refills', correct:false, why:'Slide 22 gives CII 0 refills, so a CII prescription cannot carry refills.'},
+  {t:'Each prescription is issued on a different date', correct:false, why:'Slide 22 requires the prescriptions to be issued the same day, not on different dates.'}],
  teach:'(T) This is the legal way around the no-refill rule: separate prescriptions issued the same day, with earliest fill dates, totaling at most a 90-day supply.',
  cite:'Intro-to-Dispensing.pdf slide 22; 8/24 transcript (T)'},
 
@@ -363,8 +363,8 @@ const QUESTIONS = [
  tags:['substitution'], source:'both',
  stem:'On a written prescription, which method legally prevents generic substitution?',
  options:[
-  {t:'The prescriber handwrites “Brand Medically Necessary”', correct:true, why:'Slide 24: handwrite “Brand Necessary” or “Brand Medically Necessary.”'},
-  {t:'A pre-printed check box is marked', correct:false, why:'Check boxes do not legally prevent substitution (slide 24).'},
+  {t:'The prescriber handwrites “Brand Necessary”', correct:true, why:'Slide 24: for a written prescription, handwrite “Brand Necessary” or “Brand Medically Necessary.”'},
+  {t:'A pre-printed check box is marked', correct:false, why:'Slide 24 lists checkboxes among the methods that do not legally prevent generic substitution on a written prescription.'},
   {t:'A rubber stamp reads brand medically necessary', correct:false, why:'Rubber stamps do not legally prevent substitution (slide 24).'},
   {t:'A two-line prescription form is signed', correct:false, why:'Two-line forms do not legally prevent substitution (slide 24).'}],
  teach:'(T) On a written prescription the prescriber has to write it by hand. A pre-written box, a stamp or preprinted wording is not enough.',
@@ -374,10 +374,10 @@ const QUESTIONS = [
  tags:['substitution'], source:'slide',
  stem:'Which of these do NOT legally prevent generic substitution on a written prescription? Select all that apply.',
  options:[
-  {t:'Checkboxes', correct:true, why:'Slide 24.'},
-  {t:'Two-line prescription forms', correct:true, why:'Slide 24.'},
-  {t:'Preprinted wording', correct:true, why:'Slide 24.'},
-  {t:'Rubber stamps', correct:true, why:'Slide 24.'},
+  {t:'Checkboxes', correct:true, why:'Slide 24 lists checkboxes as a method that does not legally prevent generic substitution on a written prescription.'},
+  {t:'Two-line prescription forms', correct:true, why:'Slide 24 lists two-line prescription forms as a method that does not legally prevent generic substitution.'},
+  {t:'Preprinted wording', correct:true, why:'Slide 24 lists preprinted wording as a method that does not legally prevent generic substitution.'},
+  {t:'Rubber stamps', correct:true, why:'Slide 24 lists rubber stamps as a method that does not legally prevent generic substitution.'},
   {t:'Handwritten “Brand Necessary”', correct:false, why:'This is the method that does prevent substitution (slide 24).'}],
  teach:'Only handwriting “Brand Necessary” or “Brand Medically Necessary” prevents substitution on a written prescription.',
  cite:'Intro-to-Dispensing.pdf slide 24'},
@@ -386,10 +386,10 @@ const QUESTIONS = [
  tags:['substitution'], source:'both',
  stem:'A prescriber phones in a prescription and states that the brand is medically necessary. What makes that statement effective?',
  options:[
-  {t:'The pharmacist documents the verbal statement', correct:true, why:'Slide 24: oral, state it verbally and the pharmacist documents it.'},
-  {t:'The prescriber also faxes a signed form', correct:false, why:'Slide 24 requires no second document for an oral order.'},
+  {t:'The pharmacist documents the statement', correct:true, why:'Slide 24: for an oral order, the prescriber states it verbally and the pharmacist documents it.'},
+  {t:'The prescriber also faxes a signed form', correct:false, why:'Slide 24 says an oral request needs only the verbal statement and the pharmacist’s documentation, not a faxed form.'},
   {t:'The pharmacy records it on a stamp', correct:false, why:'Stamps are listed as not preventing substitution on written prescriptions (slide 24).'},
-  {t:'A verbal request cannot prevent substitution', correct:false, why:'Slide 24 lists the oral route as valid.'}],
+  {t:'A verbal request cannot prevent substitution', correct:false, why:'Slide 24 lists the oral route as valid: the prescriber states it verbally and the pharmacist documents it.'}],
  teach:'(T) Written: handwritten. Oral: stated verbally and documented by the pharmacist. Electronic: clearly indicated in the e-prescription (in lab, assume prescriptions arrive electronically).',
  cite:'Intro-to-Dispensing.pdf slide 24; 8/24 transcript (T)'},
 
@@ -401,7 +401,7 @@ const QUESTIONS = [
   {t:'Discard 10 days after mixing', correct:true, why:'Slide 25: check the product’s own directions; Augmentin suspension is discarded 10 days after mixing.'},
   {t:'One year after the fill date', correct:false, why:'That rule is for products taken from a stock bottle (slide 25).'},
   {t:'The stock bottle’s printed expiration', correct:false, why:'Once water is added it is no longer the powder that was on the shelf (T), so the product’s directions apply.'},
-  {t:'Thirty days after the fill date', correct:false, why:'Not stated on slide 25.'}],
+  {t:'Thirty days after the fill date', correct:false, why:'Slide 25 gives no thirty-day rule; a mixed product follows its own directions, such as 10 days for Augmentin suspension.'}],
  teach:'(T) Unconstituted powder has a stock expiration, but once water is added it has its own, found on the bottle’s label (for example, discard after 10 days from reconstitution).',
  cite:'Intro-to-Dispensing.pdf slide 25; 8/24 transcript (T)'},
 
@@ -444,9 +444,9 @@ const QUESTIONS = [
  stem:'In what order is the systematic approach to reviewing a prescription done?',
  options:[
   {t:'Legal and safe, transcribed correctly, product matches', correct:true, why:'Slide 30; (T) if it is not legal or safe, the prescriber is called before anything is processed.'},
-  {t:'Product matches, legal and safe, transcribed correctly', correct:false, why:'The legality and safety check comes first (slide 30).'},
+  {t:'Product matches, legal and safe, transcribed correctly', correct:false, why:'Slide 30 puts legal and safe first, so checking the product match first is out of order.'},
   {t:'Transcribed correctly, legal and safe, product matches', correct:false, why:'The prescription must be legal and safe before the transcription is checked (slide 30).'},
-  {t:'Transcribed correctly, product matches, legal and safe', correct:false, why:'Legal and safe is step one (slide 30).'}],
+  {t:'Transcribed correctly, product matches, legal and safe', correct:false, why:'Slide 30 puts legal and safe first, not last; the order is legal and safe, transcribed, then product match.'}],
  teach:'(1) Is the prescription legal and safe for the patient? (2) Was it transcribed appropriately? (3) Does the in-hand product match the transcribed product?',
  cite:'Intro-to-Dispensing.pdf slide 30; 8/24 transcript (T)'},
 
@@ -454,10 +454,10 @@ const QUESTIONS = [
  tags:['prescription review','transcription'], source:'both',
  stem:'A prescription was issued 8/18/2026 and filled 8/24/2026. The label shows a fill date of 8/24/2026. Is the label date an error?',
  options:[
-  {t:'No, the label shows the date of the fill', correct:true, why:'Slide 34: the date of fill will often auto-populate. (T) The label date is when it is filled.'},
+  {t:'No, the label shows the fill date', correct:true, why:'Slide 34: the date of fill will often auto-populate. (T) The label date is when it is filled.'},
   {t:'Yes, the label must show 8/18/2026', correct:false, why:'8/18/2026 is the date of issuance on the prescription (slide 32), not the fill date.'},
-  {t:'Yes, the prescription has expired', correct:false, why:'A dangerous drug is valid 1 year after issue (slide 22).'},
-  {t:'No, but the label needs both dates', correct:false, why:'Slide 34 checks one date, the date of fill.'}],
+  {t:'Yes, the prescription has expired', correct:false, why:'Slide 22 gives a dangerous drug 1 year after issue, so a prescription issued 8/18/2026 had not expired on 8/24/2026.'},
+  {t:'No, but the label needs both dates', correct:false, why:'Slide 34 checks only the date of fill on the label; the issue date belongs to the prescription (slide 32).'}],
  teach:'(T) The prescription date and the fill date are different. Filling a prescription written 8/18 on 8/24 is correct as long as it has not expired.',
  cite:'Intro-to-Dispensing.pdf slides 32, 34; 8/24 transcript (T)'},
 
@@ -466,7 +466,7 @@ const QUESTIONS = [
  stem:'Which resources are used to check that a prescribed dose is safe for a patient?',
  options:[
   {t:'Lexicomp/Lexidrug and Micromedex', correct:true, why:'Slide 45 allows Lexidrug and Micromedex in lab; (T) the lecturer wants them used to assess whether a prescription is safe, not only whether it is legal.'},
-  {t:'The patient’s memory of the last fill', correct:false, why:'Not a reference source for dose safety.'},
+  {t:'The patient’s memory of the last fill', correct:false, why:'A patient’s memory of a past fill is not a drug reference; slide 45 names Lexidrug and Micromedex as the resources to use.'},
   {t:'The pharmacy’s inventory list', correct:false, why:'Inventory shows what is stocked, not whether a dose is safe.'},
   {t:'The previous prescription label', correct:false, why:'A label is not a drug reference; (T) safety is checked in Lexicomp or Micromedex.'}],
  teach:'(T) Legality and safety are equally important. Use Lexicomp or Micromedex to check, for example, whether lisinopril 20 mg once a day is safe for the patient.',
@@ -477,9 +477,9 @@ const QUESTIONS = [
  stem:'In prescription verification, what does LASA stand for?',
  options:[
   {t:'Look-alike sound-alike', correct:true, why:'Slides 34 and 36 warn about brand-to-generic and LASA errors; (T) the example is fluoxetine and fluvoxamine.'},
-  {t:'Label, amount, strength, and administration', correct:false, why:'Not an abbreviation used on slides 34 or 36.'},
-  {t:'Legal and safe assessment', correct:false, why:'That is step 1 of the review (slide 30), not LASA.'},
-  {t:'Late arrival, stock available', correct:false, why:'Not an abbreviation used on slides 34 or 36.'}],
+  {t:'Label, amount, strength, and administration', correct:false, why:'Slides 34 and 36 use LASA for look-alike sound-alike drug names, not for label, amount, strength and administration.'},
+  {t:'Legal and safe assessment', correct:false, why:'Legal and safe is step 1 of the systematic review (slide 30), a different idea from LASA.'},
+  {t:'Late arrival, stock available', correct:false, why:'Slides 34 and 36 use LASA for look-alike sound-alike drug names; nothing there refers to late arrival or stock.'}],
  teach:'(T) Look-alike sound-alike drug names, such as fluoxetine and fluvoxamine, are easy to mix up when the pharmacy is busy.',
  cite:'Intro-to-Dispensing.pdf slides 34, 36, 37; 8/24 transcript (T)'},
 
@@ -487,10 +487,10 @@ const QUESTIONS = [
  tags:['prescription review','LASA','errors'], source:'both',
  stem:'Prozac (fluoxetine) is prescribed, but the stock bottle used holds fluvoxamine. Which error is this, and how is it corrected?',
  options:[
-  {t:'Dispensing error; replace the product and relabel', correct:true, why:'Slide 37 flags an incorrect stock bottle (LASA); slide 38 lists incorrect drug filled under dispensing; slide 39 gives the fix.'},
+  {t:'Dispensing error; replace the product', correct:true, why:'Slide 37 flags an incorrect stock bottle (LASA); slide 38 lists incorrect drug filled under dispensing; slide 39 gives the fix.'},
   {t:'Prescribing error; call the prescriber', correct:false, why:'(T) Nothing is wrong with the prescription; it was legal and safe.'},
   {t:'Transcribing error; regenerate the label', correct:false, why:'The label was transcribed correctly (T); the wrong bottle was pulled.'},
-  {t:'No error; the drugs are equivalent', correct:false, why:'Fluoxetine and fluvoxamine are different drugs (T).'}],
+  {t:'No error; the drugs are equivalent', correct:false, why:'(T) Fluoxetine and fluvoxamine are different drugs, so filling one for the other is an error (slide 37 flags the wrong stock bottle).'}],
  teach:'(T) The prescription was legal and safe, and the label was transcribed correctly. The error is the wrong bottle, a dispensing error to correct with the technician by replacing the product.',
  cite:'Intro-to-Dispensing.pdf slides 37–39; 8/24 transcript (T)'},
 
@@ -498,10 +498,10 @@ const QUESTIONS = [
  tags:['prescription review'], source:'slide',
  stem:'When verifying the product in hand, which practice does the review warn against?',
  options:[
-  {t:'Relying only on the bottle’s color or appearance', correct:true, why:'Slide 36: avoid relying solely on color or look of the bottle; always read the label.'},
-  {t:'Reading the label on the stock bottle', correct:false, why:'Slide 36 says always read the label.'},
-  {t:'Checking tablet versus capsule', correct:false, why:'Formulation is one of the four checks on slide 36.'},
-  {t:'Confirming the expiration date', correct:false, why:'Expiration date is one of the four checks on slide 36.'}],
+  {t:'Relying only on bottle color or look', correct:true, why:'Slide 36: avoid relying solely on color or look of the bottle; always read the label.'},
+  {t:'Reading the label on the stock bottle', correct:false, why:'Slide 36 says to always read the label, so this is the recommended practice, not the one warned against.'},
+  {t:'Checking tablet versus capsule', correct:false, why:'Slide 36 lists formulation (tablet vs capsule vs suspension vs injection) as a product check, so it is recommended.'},
+  {t:'Confirming the expiration date', correct:false, why:'Slide 36 lists expiration date as one of the four product checks, so it is recommended.'}],
  teach:'Product verification checks correct medication, strength, formulation (tablet vs capsule vs suspension vs injection; ER vs IR) and expiration date.',
  cite:'Intro-to-Dispensing.pdf slide 36'},
 
@@ -511,7 +511,7 @@ const QUESTIONS = [
  stem:'Bupropion is filled for a prescription written for buspirone. Which type of error is this?',
  options:[
   {t:'Dispensing error', correct:true, why:'Slide 38 lists incorrect drug filled, with this example, under dispensing.'},
-  {t:'Prescribing error', correct:false, why:'The prescriber wrote the intended drug (slide 38).'},
+  {t:'Prescribing error', correct:false, why:'Slide 38 lists incorrect drug filled under dispensing; the prescriber wrote buspirone as intended.'},
   {t:'Transcribing error', correct:false, why:'The order was entered correctly; the wrong product was filled (slide 38).'},
   {t:'Monitoring error', correct:false, why:'Monitoring happens after the patient has the drug (slide 7).'}],
  teach:'Incorrect drug filled, incorrect formulation or strength filled, insufficient quantity filled, a wrong use-before date and an expired product are dispensing errors.',
@@ -521,9 +521,9 @@ const QUESTIONS = [
  tags:['errors'], source:'slide',
  stem:'The label says twice daily but the prescription says once daily. Which type of error is this, and what is the correction?',
  options:[
-  {t:'Transcribing; correct the entry and regenerate the label', correct:true, why:'Slide 38 lists directions transcribed incorrectly onto the label as a transcribing error; slide 39 gives this correction.'},
+  {t:'Transcribing; correct the entry', correct:true, why:'Slide 38 lists directions transcribed incorrectly onto the label as a transcribing error; slide 39 gives this correction.'},
   {t:'Prescribing; contact the prescriber', correct:false, why:'The prescriber wrote once daily; the system entry is wrong (slide 38).'},
-  {t:'Dispensing; replace the product', correct:false, why:'The product is right; the label text is wrong (slide 38).'},
+  {t:'Dispensing; replace the product', correct:false, why:'The product is right and only the label text is wrong, which slide 38 lists as a transcribing error.'},
   {t:'Dispensing; relabel the product only', correct:false, why:'The entry in the system must be corrected so the label regenerates (slide 39).'}],
  teach:'Transcribing errors are fixed by correcting the prescription entered in the pharmacy system and regenerating labels and documentation.',
  cite:'Intro-to-Dispensing.pdf slides 38–39'},
@@ -532,10 +532,10 @@ const QUESTIONS = [
  tags:['errors'], source:'slide',
  stem:'A prescription is expired. Which type of error is this, and who resolves it?',
  options:[
-  {t:'Prescribing error; the prescriber gives a new prescription', correct:true, why:'Slide 38 lists prescription is expired under prescribing; slide 39: contact the prescriber to obtain a new prescription.'},
+  {t:'Prescribing error; the prescriber', correct:true, why:'Slide 38 lists prescription is expired under prescribing; slide 39: contact the prescriber to obtain a new prescription.'},
   {t:'Transcribing error; the technician', correct:false, why:'The date on the label is not the issue; the prescription itself has lapsed (slide 38).'},
   {t:'Dispensing error; the technician', correct:false, why:'Product expiration is a different item: product used for dispensing is expired (slide 38).'},
-  {t:'No error; refill it anyway', correct:false, why:'An expired script cannot be filled (slide 22).'}],
+  {t:'No error; refill it anyway', correct:false, why:'Slide 22 sets a script expiration, so an expired script cannot simply be refilled; slide 38 lists it as a prescribing error.'}],
  teach:'Prescribing errors (expired, dose too high or low, insufficient quantity prescribed, wrong number of refills, DEA number missing) often require a call to the prescriber.',
  cite:'Intro-to-Dispensing.pdf slides 38–39'},
 
@@ -544,8 +544,8 @@ const QUESTIONS = [
  stem:'An extended-release (ER) tablet was prescribed, but immediate-release (IR) tablets were filled. Which type of error is this?',
  options:[
   {t:'Dispensing error', correct:true, why:'Slide 38 lists incorrect formulation filled (for example IR vs ER) under dispensing.'},
-  {t:'Prescribing error', correct:false, why:'The prescriber chose ER (slide 38).'},
-  {t:'Transcribing error', correct:false, why:'The order was entered as ER; the wrong product was filled.'},
+  {t:'Prescribing error', correct:false, why:'Slide 38 lists incorrect formulation filled (IR vs ER) under dispensing; the prescriber chose ER correctly.'},
+  {t:'Transcribing error', correct:false, why:'The order was entered as ER, so the entry is correct; slide 38 lists filling IR vs ER as a dispensing error.'},
   {t:'Patient adherence problem', correct:false, why:'The error is made before the patient receives the drug (slide 7).'}],
  teach:'Formulation is one of the four product-verification checks: tablet, capsule, suspension or injection, and ER versus IR.',
  cite:'Intro-to-Dispensing.pdf slides 36, 38'},
@@ -554,10 +554,10 @@ const QUESTIONS = [
  tags:['errors'], source:'slide',
  stem:'An insufficient prescribed quantity is a common prescribing error with which kind of prescription?',
  options:[
-  {t:'Liquid', correct:true, why:'Slide 38.'},
-  {t:'Tablet', correct:false, why:'Not the form named on slide 38.'},
-  {t:'Topical cream', correct:false, why:'Not the form named on slide 38.'},
-  {t:'Controlled substance', correct:false, why:'Slide 38 names liquid prescriptions, not a category.'}],
+  {t:'Liquid', correct:true, why:'Slide 38 notes that an insufficient prescribed quantity is a common prescribing error with liquid prescriptions.'},
+  {t:'Tablet', correct:false, why:'Slide 38 ties the common insufficient-quantity error to liquid prescriptions, not to tablets.'},
+  {t:'Topical cream', correct:false, why:'Slide 38 ties the common insufficient-quantity error to liquid prescriptions, not to topical creams.'},
+  {t:'Controlled substance', correct:false, why:'Slide 38 ties the common insufficient-quantity error to liquid prescriptions, not to a drug category.'}],
  teach:'A liquid prescription needs enough volume for the full directed course; an insufficient quantity prescribed is a prescribing error, whereas insufficient quantity filled is a dispensing error.',
  cite:'Intro-to-Dispensing.pdf slide 38'},
 
@@ -565,11 +565,11 @@ const QUESTIONS = [
  tags:['errors'], source:'slide',
  stem:'Which errors usually require a call to the prescriber? Select all that apply.',
  options:[
-  {t:'The prescription is expired', correct:true, why:'Prescribing error (slide 38).'},
-  {t:'The prescribed dose is too high', correct:true, why:'Prescribing error (slide 38).'},
-  {t:'The DEA number is missing', correct:true, why:'Prescribing error (slide 38).'},
-  {t:'An inappropriate number of refills is prescribed', correct:true, why:'Prescribing error (slide 38).'},
-  {t:'The wrong strength was filled', correct:false, why:'Dispensing error; replace the product (slides 38–39).'},
+  {t:'The prescription is expired', correct:true, why:'Slide 38 lists an expired prescription as a prescribing error, which often requires a call to the prescriber.'},
+  {t:'The prescribed dose is too high', correct:true, why:'Slide 38 lists a dose or frequency that is too high or too low as a prescribing error, which often requires a call.'},
+  {t:'The DEA number is missing', correct:true, why:'Slide 38 lists a required but missing DEA number as a prescribing error, which often requires a call to the prescriber.'},
+  {t:'An inappropriate number of refills is prescribed', correct:true, why:'Slide 38 lists an inappropriate number of refills prescribed as a prescribing error, which often requires a call.'},
+  {t:'The wrong strength was filled', correct:false, why:'Slide 38 lists incorrect strength filled as a dispensing error; slide 39 says to replace the product and/or relabel.'},
   {t:'The label directions were typed incorrectly', correct:false, why:'Transcribing error; correct it in the system (slides 38–39).'}],
  teach:'Slide 38’s footnote: prescribing errors often require a call to the prescriber. (T) and the EOOR key: transcribing and dispensing errors are worked out with the technician.',
  cite:'Intro-to-Dispensing.pdf slides 38–39; EOOR-Answer-Key.pdf slides 1–2; 8/24 transcript (T)'},
@@ -580,9 +580,9 @@ const QUESTIONS = [
  stem:'Which set lists the 3 prime questions used for counseling?',
  options:[
   {t:'What is it for, how to take it, what to expect', correct:true, why:'Slide 43: what did the doctor tell you this was for, how to take it, what to expect.'},
-  {t:'What it costs, how to take it, where to store it', correct:false, why:'Cost and storage are not prime questions (slide 43).'},
+  {t:'What it costs, how to take it, where to store it', correct:false, why:'Slide 43 lists what it is for, how to take it and what to expect as the prime questions; cost and storage are not among them.'},
   {t:'What is it for, what allergies exist, what to avoid', correct:false, why:'Allergies are asked in the information-gathering part of the rubric (slide 44).'},
-  {t:'Who prescribed it, how long to take it, how to refill', correct:false, why:'Not the prime questions (slide 43).'}],
+  {t:'Who prescribed it, how long to take it, how to refill', correct:false, why:'Slide 43’s prime questions are what it is for, how to take it and what to expect; prescriber, duration and refills are not.'}],
  teach:'(T) The three prime questions: What did the doctor tell you this medication was for? How did the doctor tell you to take it? What did the doctor tell you to expect?',
  cite:'Intro-to-Dispensing.pdf slide 43; 8/24 transcript (T)'},
 
@@ -591,9 +591,9 @@ const QUESTIONS = [
  stem:'Which is NOT a stated reason that counseling is important?',
  options:[
   {t:'It replaces prescription review', correct:true, why:'Not on slide 42; counseling and prescription review are separate roles (slide 10).'},
-  {t:'It improves adherence', correct:false, why:'Listed on slide 42.'},
-  {t:'It prevents harm', correct:false, why:'Listed on slide 42.'},
-  {t:'It reduces healthcare costs', correct:false, why:'Listed on slide 42; (T) adherent patients return less often.'}],
+  {t:'It improves medication adherence', correct:false, why:'Slide 42 lists improved adherence as a reason counseling is important.'},
+  {t:'It prevents harm to patients', correct:false, why:'Slide 42 lists preventing harm as a reason counseling is important.'},
+  {t:'It reduces overall healthcare costs', correct:false, why:'Listed on slide 42; (T) adherent patients return less often.'}],
  teach:'(T) Counseling improves adherence, prevents harm, empowers patients and reduces healthcare costs.',
  cite:'Intro-to-Dispensing.pdf slides 10, 42; 8/24 transcript (T)'},
 
@@ -601,9 +601,9 @@ const QUESTIONS = [
  tags:['counseling'], source:'slide',
  stem:'The counseling rubric requires confirming the patient with how many identifiers?',
  options:[
-  {t:'At least two', correct:true, why:'Slide 44, item 2: at least two patient identifiers.'},
-  {t:'One', correct:false, why:'The rubric says at least two (slide 44).'},
-  {t:'Three', correct:false, why:'The rubric says at least two (slide 44).'},
+  {t:'At least two', correct:true, why:'Slide 44, item 2, says to confirm the patient with at least two patient identifiers.'},
+  {t:'One', correct:false, why:'Slide 44, item 2, requires at least two identifiers, so one is not enough.'},
+  {t:'Three', correct:false, why:'Slide 44, item 2, requires at least two identifiers; the number is not set at three.'},
   {t:'The name and insurance ID only', correct:false, why:'The rubric does not name the identifiers; it requires at least two (slide 44).'}],
  teach:'The rubric begins with introducing yourself as a pharmacist intern, confirming the patient with at least two identifiers and explaining the purpose of the session.',
  cite:'Intro-to-Dispensing.pdf slide 44'},
