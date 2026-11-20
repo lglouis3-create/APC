@@ -82,7 +82,7 @@ const QUESTIONS = [
   {t:'A transcribing error when the order is entered', correct:false, why:'Slide 7 lists the transcribing error under order processing, the step before dispensing.'},
   {t:'A missed drug-drug interaction after the patient starts the drug', correct:false, why:'Slide 7 lists drug-drug interactions, allergies and adverse events under monitoring, after the patient has the drug.'}],
  teach:'Dispensing errors involve the product handed over: wrong drug, expired product, or a mislabeled or mis-bagged item.',
- note:'Slide 7 also lists incorrect patient under dispensing, but slide 38 and the EOOR key treat incorrect patient selected or processed as a transcribing error fixed with the technician.',
+ note:'Slide 7 also lists incorrect patient under dispensing, but slide 38 lists incorrect patient selected or processed as a transcribing error, and the EOOR key (station 4) fixes it with the technician.',
  cite:'Intro-to-Dispensing.pdf slide 7'},
 
 {id:'d04', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'dispensing', sub:'mup', concept:'swiss-cheese',
@@ -101,7 +101,7 @@ const QUESTIONS = [
  stem:'A pharmacist contributes to the medication use process mainly through which two activities?',
  options:[
   {t:'Prescription review and counseling', correct:true, why:'Slides 10 and 41 mark these two under the pharmacist’s role.'},
-  {t:'Order entry and delivering the product', correct:false, why:'Order entry is a technician step in the lecture’s example, not one of the two named roles (slide 10).'},
+  {t:'Order entry and delivering the product', correct:false, why:'(T) In the lecture’s example a technician transcribes the order into the system (slide 7, order processing); it is not one of the two pharmacist roles named on slide 10.'},
   {t:'Compounding and insurance claim billing', correct:false, why:'Slide 10 marks only prescription review and medication counseling as the pharmacist’s roles; compounding and billing are not named.'},
   {t:'Prescribing and monitoring lab values', correct:false, why:'Prescribing is the prescriber’s step; the pharmacist’s two roles are prescription review and counseling (slide 10).'}],
  teach:'Prescription review catches errors before dispensing; medication counseling helps the patient use the drug correctly.',
@@ -258,7 +258,7 @@ const QUESTIONS = [
  stem:'What must the pharmacist record on a filled CII prescription?',
  options:[
   {t:'The date filled and the Rx number', correct:true, why:'Slide 20. (T) The record lets auditors track the controlled medication.'},
-  {t:'The pharmacist’s initials only, on the back', correct:false, why:'Slide 20 names the date filled and the Rx number, not initials, as what the pharmacist records.'},
+  {t:'The pharmacist’s initials only', correct:false, why:'Slide 20 names the date filled and the Rx number, not initials, as what the pharmacist records.'},
   {t:'The patient’s insurance number and plan', correct:false, why:'Slide 20 lists no insurance information; the pharmacist records the date filled and the Rx number.'},
   {t:'The prescriber’s DEA number', correct:false, why:'The DEA number must already be on the prescription (slide 18); the pharmacist records the fill date and Rx number.'}],
  teach:'(T) The pharmacist writes the fill date and the Rx number so a later audit can track the CII.',
@@ -331,7 +331,7 @@ const QUESTIONS = [
   {t:'No, it expired after 6 months', correct:true, why:'Slide 22 gives CIII–V scripts 6 months after issue, and this one is 6 months and 2 weeks old.'},
   {t:'Yes, it is valid for 1 year', correct:false, why:'One year is the dangerous-drug expiration on slide 22; alprazolam is a CIV, which expires at 6 months.'},
   {t:'Yes, it is valid for 30 days after the last fill', correct:false, why:'Thirty days is the CII expiration on slide 22, counted from the date of issuance, not from the last fill.'},
-  {t:'Yes, if the prescriber approves by phone', correct:false, why:'Slide 38 lists an expired prescription as a prescribing error, and slide 39 says to obtain a new prescription from the prescriber.'}],
+  {t:'Yes, if refills remain', correct:false, why:'Refills do not extend the 6-month expiration of a CIII–V script (slide 22); an expired prescription needs a new one (slides 38–39).'}],
  teach:'A prescription that has passed its expiration is a prescribing error; contact the prescriber for a new prescription.',
  cite:'Intro-to-Dispensing.pdf slides 22, 38'},
 
@@ -465,12 +465,12 @@ const QUESTIONS = [
  tags:['prescription review','safety'], source:'both',
  stem:'Which resources are used to check that a prescribed dose is safe for a patient?',
  options:[
-  {t:'Lexicomp/Lexidrug and Micromedex', correct:true, why:'Slide 45 allows Lexidrug and Micromedex in lab; (T) the lecturer wants them used to assess whether a prescription is safe, not only whether it is legal.'},
+  {t:'Lexicomp/Lexidrug and Micromedex', correct:true, why:'Slides 44–45 name Lexicomp or Micromedex and allow Lexidrug and Micromedex in lab; (T) the lecturer wants them used to assess whether a prescription is safe, not only whether it is legal.'},
   {t:'The patient’s memory of the last fill', correct:false, why:'A patient’s memory of a past fill is not a drug reference; slide 45 names Lexidrug and Micromedex as the resources to use.'},
   {t:'The pharmacy’s inventory list', correct:false, why:'Inventory shows what is stocked, not whether a dose is safe.'},
   {t:'The previous prescription label', correct:false, why:'A label is not a drug reference; (T) safety is checked in Lexicomp or Micromedex.'}],
  teach:'(T) Legality and safety are equally important. Use Lexicomp or Micromedex to check, for example, whether lisinopril 20 mg once a day is safe for the patient.',
- cite:'Intro-to-Dispensing.pdf slide 45; 8/24 transcript (T)'},
+ cite:'Intro-to-Dispensing.pdf slides 44–45; 8/24 transcript (T)'},
 
 {id:'d38', skill:'recall', prof:'Dr. Lahoud', tier:'new', topic:'dispensing', sub:'review', concept:'lasa',
  tags:['prescription review','LASA'], source:'both',
@@ -604,7 +604,7 @@ const QUESTIONS = [
   {t:'At least two', correct:true, why:'Slide 44, item 2, says to confirm the patient with at least two patient identifiers.'},
   {t:'One', correct:false, why:'Slide 44, item 2, requires at least two identifiers, so one is not enough.'},
   {t:'Three', correct:false, why:'Slide 44, item 2, requires at least two identifiers; the number is not set at three.'},
-  {t:'The name and insurance ID only', correct:false, why:'The rubric does not name the identifiers; it requires at least two (slide 44).'}],
+  {t:'None, if the patient is known to the pharmacy', correct:false, why:'Slide 44, item 2, requires at least two patient identifiers and states no exception.'}],
  teach:'The rubric begins with introducing yourself as a pharmacist intern, confirming the patient with at least two identifiers and explaining the purpose of the session.',
  cite:'Intro-to-Dispensing.pdf slide 44'},
 ];

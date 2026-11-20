@@ -12,7 +12,7 @@ QUESTIONS.push(
  tags:['QuEST'], source:'slide',
  stem:'What are the four steps of QuEST in order?',
  options:[
-  {t:'Quickly assess, establish self-care candidacy, suggest strategies, talk about products', correct:true, why:'Week 14 deck, QuEST/SCHOLAR-MAC slide: quickly assess, establish self-care candidacy, suggest strategies, talk about products.'},
+  {t:'Quickly assess, establish self-care candidacy, suggest strategies, and talk about products', correct:true, why:'Week 14 deck, QuEST/SCHOLAR-MAC slide: quickly assess, establish self-care candidacy, suggest strategies, talk about products.'},
   {t:'Quickly assess, suggest strategies, establish self-care candidacy, and talk about products', correct:false, why:'Self-care candidacy is established before strategies are suggested (Week 14 deck).'},
   {t:'Talk about products, quickly assess, establish candidacy, and suggest strategies', correct:false, why:'Talking about the selected products is the last step (Week 14 deck).'},
   {t:'Establish candidacy, quickly assess, talk about products, and suggest strategies', correct:false, why:'The quick assessment with SCHOLAR-MAC comes first (Week 14 deck).'}],

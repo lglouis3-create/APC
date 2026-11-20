@@ -39,7 +39,7 @@ QUESTIONS.push(
   {t:'The PDF schedule is provided; use the Notes', correct:true, why:'Slides 8 and 17; (T) a right answer cannot be reached without the Notes.'},
   {t:'Students must memorize every dose interval for the exam', correct:false, why:'The schedule is provided on exams (slide 17), so intervals are read from it rather than recalled.'},
   {t:'Any website may be used to answer the questions', correct:false, why:'Slide 17 says the PDF schedule is provided on exams, and (T) students use that schedule, not another website.'},
-  {t:'Only Table 1 is needed to answer any question', correct:false, why:'Slide 8 says the Notes and Table 2 are needed to catch risk factors, so Table 1 alone is not enough.'}],
+  {t:'Only Table 1 is needed to answer any question', correct:false, why:'Slide 8 says the Notes must be used on exams and medical conditions (Table 2) are often missed; (T) a right answer cannot be reached without the Notes.'}],
  teach:'(T) Skim the Notes regularly to get a global impression of the risk factors and special situations for each vaccine.',
  cite:'Immunizations-Pre-Lab.pdf slides 8, 17; 9/21 transcript (T)'},
 
@@ -143,8 +143,8 @@ QUESTIONS.push(
  tags:['pregnancy','contraindications'], source:'both',
  stem:'Which vaccines are contraindicated in pregnancy? Select all that apply.',
  options:[
-  {t:'Measles, mumps and rubella (MMR)', correct:true, why:'AAFP Appendix lists pregnancy as a contraindication to MMR, a live vaccine.'},
-  {t:'Varicella (VAR)', correct:true, why:'AAFP Appendix lists pregnancy as a contraindication to varicella vaccine, a live vaccine.'},
+  {t:'Measles, mumps and rubella (MMR)', correct:true, why:'AAFP Appendix lists pregnancy as a contraindication to MMR.'},
+  {t:'Varicella (VAR)', correct:true, why:'AAFP Appendix lists pregnancy as a contraindication to varicella vaccine.'},
   {t:'Live attenuated influenza (LAIV3)', correct:true, why:'AAFP Appendix lists pregnancy as a contraindication to LAIV3, the live attenuated influenza vaccine.'},
   {t:'Hepatitis A', correct:false, why:'Slide 14: hepatitis A vaccine is not live and is given in pregnancy to patients in a special situation.'},
   {t:'Tdap', correct:false, why:'One dose of Tdap is recommended in each pregnancy (AAFP Notes).'}],
@@ -186,10 +186,10 @@ QUESTIONS.push(
 
 {id:'i16', skill:'apply', prof:'Dr. Parsons', tier:'new', topic:'imm', sub:'vax', concept:'hepb-dialysis',
  tags:['hepatitis B','dialysis'], source:'slide',
- stem:'A patient starting dialysis needs hepatitis B vaccine. Which of the dialysis regimens in the Notes needs the fewest doses?',
+ stem:'A patient starting dialysis needs hepatitis B vaccine. Which regimen do the Notes give for the dialysis formulation (1 mL = 40 mcg)?',
  options:[
   {t:'Recombivax HB, 3 doses at 0, 1 and 6 months', correct:true, why:'AAFP Notes: patients on dialysis can get a 3-dose series of Recombivax HB (dialysis formulation) at 0, 1 and 6 months.'},
-  {t:'Engerix-B 4 doses at 0, 1, 2 and 6 months, with a 2 mL dose', correct:false, why:'AAFP Notes list a 4-dose Engerix-B series (2 mL doses) for dialysis, which is more doses than Recombivax HB.'},
+  {t:'Engerix-B 4 doses at 0, 1, 2 and 6 months, with a 2 mL dose', correct:false, why:'The Engerix-B dialysis series is 4 doses using a 2 mL dose, not the 40 mcg/1 mL dialysis formulation of Recombivax HB (AAFP Notes).'},
   {t:'Heplisav-B 2 doses 4 weeks apart', correct:false, why:'Heplisav-B is not named in the dialysis notes; the dialysis options are the 3- and 4-dose series (AAFP Notes).'},
   {t:'Twinrix 3 doses at 0, 1 and 6 months', correct:false, why:'Twinrix combines hepatitis A and B; the dialysis notes name Recombivax HB or Engerix-B.'}],
  teach:'Patients on dialysis complete a 3- or 4-dose series. Engerix-B uses a 2 mL dose instead of the normal adult 1 mL.',
@@ -244,8 +244,8 @@ QUESTIONS.push(
  stem:'A 40-year-old with lupus takes an immunosuppressant. Is Shingrix (RZV) recommended?',
  options:[
   {t:'Yes, as a 2-dose series', correct:true, why:'AAFP Notes: special situations, immunocompromising conditions, 2-dose RZV; (T) her lupus patient had shingles at 40 without the vaccine.'},
-  {t:'No, RZV is not given until age 50 for anyone', correct:false, why:'AAFP Notes recommend RZV for immunocompromising conditions before age 50, so age 50 is not required.'},
-  {t:'No, a live zoster vaccine is given instead', correct:false, why:'AAFP Notes list RZV (Shingrix), the recombinant zoster vaccine, which is not a live vaccine.'},
+  {t:'No, RZV is not given until age 50 for anyone', correct:false, why:'AAFP Table 1 and Notes recommend RZV for immunocompromising conditions before age 50, so age 50 is not required.'},
+  {t:'No, a live zoster vaccine is given instead', correct:false, why:'AAFP Notes recommend RZV (Shingrix), the recombinant zoster vaccine; the live zoster vaccine (ZVL, Zostavax) appears in the Notes only as prior history.'},
   {t:'Yes, but a single dose is enough', correct:false, why:'AAFP Notes: RZV for immunocompromising conditions is a 2-dose series, not 1 dose.'}],
  teach:'(T) Immunosuppressed patients are often missing vaccines they should have had before the immunosuppressant was started.',
  cite:'AAFP-Adult-Schedule-2026.pdf Notes (zoster); 9/21 transcript (T)'},
@@ -322,7 +322,7 @@ QUESTIONS.push(
  options:[
   {t:'HD-IIV3, RIV3 or aIIV3', correct:true, why:'AAFP Notes: at age 65 or older, any one of HD-IIV3, RIV3 or aIIV3 (high-dose, recombinant or adjuvanted) is preferred.'},
   {t:'Live attenuated (LAIV3)', correct:false, why:'FluMist is not the preferred product at 65 or older (AAFP Notes).'},
-  {t:'Only egg-based IIV3', correct:false, why:'An egg allergy does not limit the choice, and the preferred vaccines are HD-IIV3, RIV3 or aIIV3 (AAFP Notes).'},
+  {t:'Only egg-based IIV3', correct:false, why:'The Notes name HD-IIV3, RIV3 or aIIV3 as preferred at 65 or older, not standard IIV3 alone (AAFP Notes).'},
   {t:'Any influenza vaccine with no preference', correct:false, why:'AAFP Notes name HD-IIV3, RIV3 and aIIV3 as the preferred products at 65 or older, so there is a preference.'}],
  teach:'Persons with an egg allergy can receive any influenza vaccine appropriate for age and health status.',
  cite:'AAFP-Adult-Schedule-2026.pdf Notes (influenza)'},
@@ -357,7 +357,7 @@ QUESTIONS.push(
  options:[
   {t:'2 doses at least 8 weeks apart', correct:true, why:'AAFP Notes: asplenia or HIV gets 2 doses of Menveo or MenQuadfi at least 8 weeks apart, revaccinated every 5 years if risk remains.'},
   {t:'1 dose of Menveo or MenQuadfi only', correct:false, why:'That is for first-year college students in residential housing or military recruits (AAFP Notes).'},
-  {t:'3 doses of Bexsero (MenB-4C)', correct:false, why:'AAFP vaccine list: Bexsero is the MenB-4C vaccine, not a MenACWY product, so it does not fit asplenia or HIV here.'},
+  {t:'3 doses of Bexsero (MenB-4C)', correct:false, why:'AAFP vaccine list: Bexsero is a MenB vaccine, and the stem asks for the MenACWY regimen; asplenia has a separate MenB series in the Notes.'},
   {t:'1 dose of MenACWY every 10 years', correct:false, why:'AAFP Notes: revaccination is every 5 years if risk remains, not every 10 years.'}],
  teach:'MenACWY products are Menveo (MenACWY-CRM) and MenQuadfi (MenACWY-TT).',
  cite:'AAFP-Adult-Schedule-2026.pdf Notes (meningococcal)'},
@@ -368,7 +368,7 @@ QUESTIONS.push(
  options:[
   {t:'The dose is not valid and is repeated', correct:true, why:'AAFP Notes: doses given 5 or more days early are not counted and are repeated.'},
   {t:'The dose is valid', correct:false, why:'Only doses given 4 days or fewer before the minimum interval are valid (AAFP Notes).'},
-  {t:'The series restarts from dose 1', correct:false, why:'The Notes say not to restart series for extended intervals; the repeat is spaced after the invalid dose.'},
+  {t:'The series restarts from dose 1', correct:false, why:'The schedule’s vaccine-list footnote says not to restart series for extended intervals; an invalid early dose is repeated, spaced after the invalid dose (Notes).'},
   {t:'The dose is valid if the patient asks', correct:false, why:'Validity depends on the interval, not a request (AAFP Notes).'}],
  teach:'4 weeks equals 28 days. A dose given up to 4 days before the minimum age or interval is valid; 5 or more days early is repeated.',
  cite:'AAFP-Adult-Schedule-2026.pdf Notes (additional information)'},
@@ -405,7 +405,7 @@ QUESTIONS.push(
   {t:'The patient’s insurance plan', correct:false, why:'Slide 22’s example assessment cites AAFP and the vaccines indicated; it does not mention insurance.'},
   {t:'The pharmacy’s vaccine stock', correct:false, why:'Slide 22’s example assessment cites AAFP and the vaccines indicated; it does not mention pharmacy stock.'},
   {t:'Nothing; the recommendation is enough', correct:false, why:'(T) Dr. Parsons said to cite your source in the assessment, so the recommendation alone is not enough.'}],
- teach:'(T) A source matters most when guidance is new and other providers may not have caught up.',
+ teach:'(T) Cite your source, especially early in your career; in practice she adds the source when guidance is new and other providers may not have caught up.',
  cite:'Immunizations-Pre-Lab.pdf slide 22; 9/21 transcript (T)'},
 
 {id:'i36', skill:'apply', prof:'Dr. Parsons', tier:'new', topic:'imm', sub:'sbar', concept:'patient-language',

@@ -97,7 +97,7 @@ QUESTIONS.push(
 
 {id:'e09', skill:'error', prof:'Dr. Lahoud', tier:'new', topic:'eoor', sub:'spot', concept:'eoor-strength',
  tags:['EOOR'], source:'slide',
- stem:'The prescription is for 0.5 mg, but the vial holds 1 mg tablets. What is the error?',
+ stem:'The prescription is for 0.5 mg, but the vial holds 1 mg. What is the error?',
  options:[
   {t:'Incorrect strength filled', correct:true, why:'EOOR key, station 6: 0.5 mg on prescription, filled with 1 mg; obtain the correct stock bottle and reverify.'},
   {t:'Incorrect formulation filled', correct:false, why:'Formulation is tablet versus capsule or IR versus ER (slide 36).'},
@@ -129,7 +129,7 @@ QUESTIONS.push(
  cite:'EOOR-Answer-Key.pdf slide 1; Intro-to-Dispensing.pdf slide 22'},
 
 {id:'e12', skill:'error', prof:'Dr. Lahoud', tier:'new', topic:'eoor', sub:'spot', concept:'eoor-xarelto',
- tags:['EOOR','LASA'], source:'slide',
+ tags:['EOOR'], source:'slide',
  stem:'Xarelto is prescribed, but apixaban was filled. What is the correction?',
  options:[
   {t:'Get the correct bottle and reverify', correct:true, why:'EOOR key, station 8: filled with apixaban instead of Xarelto; work with the technician.'},
@@ -141,7 +141,7 @@ QUESTIONS.push(
 
 {id:'e13', skill:'error', prof:'Dr. Lahoud', tier:'new', topic:'eoor', sub:'spot', concept:'eoor-quantity-filled',
  tags:['EOOR'], source:'slide',
- stem:'A liquid prescription is written for 75 mL, but 60 mL was dispensed. What is the error?',
+ stem:'The prescription directions require 75 mL, but 60 mL was dispensed. What is the error?',
  options:[
   {t:'Insufficient quantity filled', correct:true, why:'EOOR key, station 9: 60 mL dispensed when 75 mL is needed; a dispensing error (slide 38).'},
   {t:'Insufficient quantity prescribed', correct:false, why:'That is a prescribing error (slide 38); the key lists insufficient quantity filled (EOOR key, station 9).'},
