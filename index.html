@@ -626,6 +626,7 @@ const COURSE = {
     {id:'L13D', deck:'Lam_OphthalmicDisorders.pdf',                         label:'DEENT lab source: Dr. Lam, ophthalmic disorders (11/20)',                prof:'Dr. Lahoud',  exam:1, module:'Dr. Lahoud: DEENT lab'},
     {id:'L12D', deck:'Lam_Glaucoma.pdf',                                    label:'DEENT lab source: Dr. Lam, glaucoma therapeutics (11/19)',               prof:'Dr. Lahoud',  exam:1, module:'Dr. Lahoud: DEENT lab'},
     {id:'L09D', deck:'Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf',          label:'DEENT lab source: Dr. Smith, eye lectures (11/13, 11/17)',               prof:'Dr. Lahoud',  exam:1, module:'Dr. Lahoud: DEENT lab'},
+    {id:'L14K', deck:'Ophthalmic-Review-Key.pdf',                          label:'Week 14 lab: Ophthalmic Review (Which is which) answer key',            prof:'Dr. Lahoud',  exam:1, module:'Dr. Lahoud: DEENT lab'},
     {id:'L14',  deck:'DEENT-Lab-Deck.pdf',                label:'Week 14: DEENT activities (11/16)',                  prof:'Dr. Lahoud',  exam:1, module:'Dr. Lahoud: DEENT lab'},
     {id:'L03',  deck:'OTC-Insect-Bites-Pediculosis.pdf',  label:'Week 3: OTC, insect bites and pediculosis (8/31)',   prof:'Dr. Parsons', exam:1, module:'Dr. Parsons: OTC'},
     {id:'L03A', deck:'APhA-Insect-Excerpt.pdf',           label:'Week 3: APhA OTC excerpt on insect bites',           prof:'Dr. Parsons', exam:1, module:'Dr. Parsons: OTC'},
@@ -658,9 +659,9 @@ const COURSE = {
 
   files: ['atlas.js', 'diagrams.js',
           'q1_topics.js', 'q2_eoor.js', 'q3_otc.js', 'q4_poct.js', 'q5_immunizations.js', 'q6_deent.js',
-          'q7_deent_acne.js', 'q8_deent_scaly.js', 'q9_deent_eye.js', 'q10_deent_glaucoma.js'],
+          'q7_deent_acne.js', 'q8_deent_scaly.js', 'q9_deent_eye.js', 'q10_deent_glaucoma.js', 'q11_deent_board.js'],
 
-  tools: {citeAliases:{'aafp-adult-schedule-2026.pdf': null, 'apha-insect-excerpt.pdf': null, 'deent-lab-deck.pdf': null,
+  tools: {citeAliases:{'aafp-adult-schedule-2026.pdf': null, 'apha-insect-excerpt.pdf': null, 'deent-lab-deck.pdf': null, 'ophthalmic-review-key.pdf': null,
                        'patel_acne-therapeutics-student.pdf': null, 'patel_scaly-dermatoses-therapeutics-student.pdf': null,
                        'lam_ophthalmicdisorders.pdf': null, 'lam_glaucoma.pdf': null, 'smith_eye_glaucoma_allergicconj_dryeye.pdf': null},
           citeLectures:{}, citeBareMap:{},
@@ -677,7 +678,7 @@ const COURSE = {
    the Topics page shows as "What's new" since this browser last marked an
    entry seen, and Settings shows whole. preview: true in a page built with
    `build.py --preview`, which is served at /preview/ beside the live drill. */
-const BUILD = {stamp:"2026-11-21 09:36 CT", built:"2026-11-21T15:36:04Z", questions:255, images:0, changelog:[{"date": "2026-11-21 (DEENT lab questions)", "items": ["85 new questions on acne, scaly dermatoses and psoriasis, dry eye and conjunctivitis, and glaucoma.", "Each is built from the DEENT course drill and marks which facts come from the recording."]}, {"date": "2026-11-20 (first release, before the 11/23 exam)", "items": ["170 questions across dispensing, errors and omissions, OTC, POCT, immunizations and the DEENT lab.", "The exam simulator draws 30 questions in 50 minutes: 15 from Dr. Parsons and 15 from Dr. Lahoud.", "Every explanation names the slide, the transcript (T) or the answer key it comes from."]}], preview:false};
+const BUILD = {stamp:"2026-11-21 09:51 CT", built:"2026-11-21T15:51:30Z", questions:274, images:0, changelog:[{"date": "2026-11-21 (DEENT lab questions)", "items": ["85 new questions on acne, scaly dermatoses and psoriasis, dry eye and conjunctivitis, and glaucoma.", "Each is built from the DEENT course drill and marks which facts come from the recording."]}, {"date": "2026-11-20 (first release, before the 11/23 exam)", "items": ["170 questions across dispensing, errors and omissions, OTC, POCT, immunizations and the DEENT lab.", "The exam simulator draws 30 questions in 50 minutes: 15 from Dr. Parsons and 15 from Dr. Lahoud.", "Every explanation names the slide, the transcript (T) or the answer key it comes from."]}], preview:false};
 const IMAGES = {};
 /* Atlas of drawn structures. This course has none: the stub keeps the engine
    happy and COURSE.atlas:false hides the tab. See the PHAR 4342 repo's atlas.js
@@ -784,16 +785,12 @@ const SAMPLE_STEPS = (() => {
 
 /* Inline SVG a question can show in its concept block via `svg: DIA.key`, a
    reading tab via <!--DIA:key-->, and the Diagrams tab via DIAGRAMS. */
-const DIA = {
-  'sample-steps': SAMPLE_STEPS,
-};
+const DIA = {};
 
 /* The Diagrams tab: [group name, [figure keys]]. Course-specific — group the
    figures the way the course groups the processes they show. A key that is not
    in DIA is skipped, and the tab hides itself when nothing is listed. */
-const DIAGRAMS = [
-  ['Sample figures', ['sample-steps']],
-];
+const DIAGRAMS = [];
 
 /* A figure's own title, used by the Diagrams tab's contents chips when a key
    needs a name different from the title drawn inside it. */
@@ -3593,7 +3590,7 @@ QUESTIONS.push(
  stem:'A man with hypertension has used tetrahydrozoline eye drops every day for 6 days for red eyes, and his eyes are redder when he skips a dose. What is the best advice?',
  options:[
   {t:'Stop it; past 72 hours it causes rebound redness and raises blood pressure', correct:true, why:'Slide 39 lists rebound conjunctival hyperemia beyond 72 hours and increased blood pressure as a side effect of decongestants.'},
-  {t:'Keep using it, since redness on skipping a dose means the drops are working well', correct:false, why:'Slide 39 gives rebound conjunctival hyperemia beyond 72 hours, so redness on skipping a dose is rebound.'},
+  {t:'Keep using it, since redness when a dose is missed means the drops are working well', correct:false, why:'Slide 39 gives rebound conjunctival hyperemia beyond 72 hours, so redness on skipping a dose is rebound.'},
   {t:'Use it hourly instead, because the dose was too low to control his redness', correct:false, why:'Slide 39 lists rebound conjunctival hyperemia beyond 72 hours, so using it more often makes it worse (inference).'},
   {t:'Switch to a preservative-free brand of tetrahydrozoline and continue it', correct:false, why:'Slide 39 lists rebound hyperemia as a decongestant effect beyond 72 hours; a preservative-free product does not remove it.'}],
  teach:'Ophthalmic decongestants (naphazoline, tetrahydrozoline, brimonidine 0.025%) shrink vessels and reduce redness only (T). Slide 39 lists rebound conjunctival hyperemia and epithelial xerosis beyond 72 hours, and increased blood pressure as a side effect. They do not treat the allergic response (T).',
@@ -3869,33 +3866,239 @@ QUESTIONS.push(
 );
 
 /* ==========================================================================
-   TERM GLOSSES
-   ==========================================================================
-   Terms that carry conceptual weight in this course get a short definition the
-   first time they appear in a question's explanation, so a reader who has
-   forgotten one is not sent away to look it up.
-
-     k     a short key, unique in this file
-     p     the pattern to match, as a string (a regex source, case-insensitive)
-     d     the definition, in the course's own wording where a deck gives one
-     skip  recognises an explanation that already defines the term in its own
-           prose, so a hand-written definition is never doubled by a gloss
-
-   A term appearing in one explanation is glossed once, in the first place it
-   appears, whether that is an option's `why` or the concept block.
-   `explain_check.js` reports weighty terms used in the bank that have no entry
-   here, which is how this file grows.
-
-   The two below are SAMPLES: replace them with the course's own terms.
+   Week 14 lab, Part 2: the "Ophthalmic Review: Which is which?" grid (Mix and
+   Match warm-up). Source: the lab's verified answer key (Louis, 2026-11-21,
+   photo of the completed grid): rows Clinical presentation, Treatment
+   approach, Compress, Non-pharm recommendation, First line, Example
+   medication with instructions; columns dry eye disease, allergic
+   conjunctivitis, bacterial/viral conjunctivitis, primary open-angle
+   glaucoma (POAG). Cited as Ophthalmic-Review-Key.pdf (a photo, not a PDF).
+   Where it differs from Dr. Lam's slides: the key lists an ocular
+   antimicrobial as first line for bacterial/viral conjunctivitis; Dr. Lam's
+   slide 34 gives cold compresses and referral. The questions key the lab's
+   answer key.
    ========================================================================== */
-const GLOSS = [
- {k:'sample1', p:'sample term',
-  d:'the one-line definition, as the deck words it',
-  skip:/already defined in the explanation/i},
- {k:'sample2', p:'another sample term|another sampled term',
-  d:'a second definition, to show that `p` may list alternative spellings',
-  skip:/spelled either way/i},
-];
+TOPICS.push({id:'dboard', name:'DEENT lab: Which is which (ophthalmic review)', prof:'Dr. Lahoud',
+  cite:'Ophthalmic-Review-Key.pdf',
+  subs:[
+   {id:'present', name:'Presentation and treatment approach', cite:'Ophthalmic-Review-Key.pdf rows 1-2'},
+   {id:'nondrug',  name:'Compresses and non-drug measures',     cite:'Ophthalmic-Review-Key.pdf rows 3-4'},
+   {id:'drugs',    name:'First line and example medications',   cite:'Ophthalmic-Review-Key.pdf rows 5-6'}]});
+
+QUESTIONS.push(
+{id:'xb01', skill:'tell', prof:'Dr. Lahoud', tier:'new', topic:'dboard', sub:'present', concept:'board-dry-eye-presentation',
+ tags:['dry eye','Which is which'], source:'slide',
+ stem:'A patient has a mildly red eye and a sandy, gritty feeling, as if something is in the eye. Which condition fits best?',
+ options:[
+  {t:'Dry eye disease', correct:true, why:'The answer key gives a mildly red eye with a sandy, gritty or foreign-body sensation as the dry eye presentation.'},
+  {t:'Allergic conjunctivitis', correct:false, why:'The answer key gives itching, tearing and red eyes for allergic conjunctivitis; itching is the leading complaint, not grittiness.'},
+  {t:'Bacterial or viral conjunctivitis', correct:false, why:'The answer key gives tearing and lid crusting for bacterial or viral conjunctivitis, not a sandy, gritty feeling.'},
+  {t:'Primary open-angle glaucoma', correct:false, why:'The answer key says POAG is asymptomatic until substantial visual field loss occurs, so it does not cause a gritty feeling.'}],
+ teach:'Presentations in the lab key: dry eye, mildly red with a sandy, gritty or foreign-body feeling; allergic conjunctivitis, itching, tearing and red eyes; bacterial or viral conjunctivitis, tearing and lid crusting; POAG, no symptoms until substantial visual field loss.',
+ cite:'Ophthalmic-Review-Key.pdf (Clinical presentation row)'},
+
+{id:'xb02', skill:'tell', type:'match', prof:'Dr. Lahoud', tier:'new', topic:'dboard', sub:'present', concept:'board-presentation-match',
+ tags:['Which is which'], source:'slide',
+ stem:'Match each presentation to the condition.',
+ left:'Presentation', right:'Condition',
+ pairs:[
+  {l:'Itching, tearing and red eyes', r:'Allergic conjunctivitis', why:'The Clinical presentation row of the lab answer key lists this presentation under that condition.'},
+  {l:'Tearing and lid crusting', r:'Bacterial or viral conjunctivitis', why:'The Clinical presentation row of the lab answer key lists this presentation under that condition.'},
+  {l:'No symptoms until substantial visual field loss', r:'Primary open-angle glaucoma', why:'The Clinical presentation row of the lab answer key lists this presentation under that condition.'},
+  {l:'Mildly red eye with a sandy, gritty feeling', r:'Dry eye disease', why:'The Clinical presentation row of the lab answer key lists this presentation under that condition.'}],
+ teach:'Itch separates allergic conjunctivitis from the bacterial or viral types, which show tearing with lid crusting; grittiness marks dry eye; POAG gives no early symptoms.',
+ cite:'Ophthalmic-Review-Key.pdf (Clinical presentation row)'},
+
+{id:'xb03', skill:'tell', prof:'Dr. Lahoud', tier:'new', topic:'dboard', sub:'present', concept:'board-bv-presentation',
+ tags:['conjunctivitis','Which is which'], source:'slide',
+ stem:'A patient has tearing and crusting along the eyelid margins. Which condition fits best?',
+ options:[
+  {t:'Bacterial or viral conjunctivitis', correct:true, why:'The answer key lists tearing and lid crusting as the clinical presentation of bacterial or viral conjunctivitis.'},
+  {t:'Allergic conjunctivitis with itching', correct:false, why:'The key gives itching, tearing and red eyes for allergic conjunctivitis; lid crusting is not listed for it.'},
+  {t:'Dry eye disease with a gritty feeling', correct:false, why:'The key gives a mildly red eye with a gritty sensation for dry eye disease, not tearing with lid crusting.'},
+  {t:'Primary open-angle glaucoma', correct:false, why:'The key says POAG is asymptomatic until substantial visual field loss, so it does not cause lid crusting.'}],
+ teach:'Lid crusting with tearing points to an infectious cause, while itch points to allergy.',
+ cite:'Ophthalmic-Review-Key.pdf (Clinical presentation row)'},
+
+{id:'xb04', skill:'tell', prof:'Dr. Lahoud', tier:'new', topic:'dboard', sub:'present', concept:'board-poag-presentation',
+ tags:['glaucoma','Which is which'], source:'slide',
+ stem:'Which condition is asymptomatic until substantial visual field loss occurs?',
+ options:[
+  {t:'Primary open-angle glaucoma', correct:true, why:'The answer key gives asymptomatic until substantial visual field loss occurs as the POAG presentation.'},
+  {t:'Dry eye disease', correct:false, why:'The key gives a mildly red eye with a sandy, gritty feeling for dry eye disease, which causes symptoms early.'},
+  {t:'Allergic conjunctivitis', correct:false, why:'The key gives itching, tearing and red eyes for allergic conjunctivitis, which causes symptoms early.'},
+  {t:'Bacterial or viral conjunctivitis', correct:false, why:'The key gives tearing and lid crusting for bacterial or viral conjunctivitis, which causes symptoms early.'}],
+ teach:'POAG is silent early, which is why treatment aims to lower intraocular pressure before vision is lost.',
+ cite:'Ophthalmic-Review-Key.pdf (Clinical presentation row)'},
+
+{id:'xb05', skill:'tell', prof:'Dr. Lahoud', tier:'new', topic:'dboard', sub:'nondrug', concept:'board-warm-compress',
+ tags:['compress','Which is which'], source:'slide',
+ stem:'Which condition is helped by a warm compress?',
+ options:[
+  {t:'Dry eye disease', correct:true, why:'The Compress row of the lab key lists a warm compress for dry eye disease.'},
+  {t:'Allergic conjunctivitis', correct:false, why:'The Compress row lists a cold compress, not a warm one, for allergic conjunctivitis.'},
+  {t:'Bacterial or viral conjunctivitis', correct:false, why:'The Compress row lists a cold compress, not a warm one, for bacterial or viral conjunctivitis.'},
+  {t:'Primary open-angle glaucoma', correct:false, why:'The Compress row of the lab key says a compress is not helpful in POAG, so no temperature applies.'}],
+ teach:'Compress row: dry eye warm; allergic conjunctivitis cold; bacterial or viral conjunctivitis cold; POAG not helpful.',
+ cite:'Ophthalmic-Review-Key.pdf (Compress row)'},
+
+{id:'xb06', skill:'tell', prof:'Dr. Lahoud', multi:true, tier:'new', topic:'dboard', sub:'nondrug', concept:'board-cold-compress',
+ tags:['compress','Which is which'], source:'slide',
+ stem:'Which conditions use a cold compress? Select all that apply.',
+ options:[
+  {t:'Allergic conjunctivitis', correct:true, why:'The Compress row of the lab key lists a cold compress for allergic conjunctivitis.'},
+  {t:'Bacterial or viral conjunctivitis', correct:true, why:'The Compress row lists a cold compress for bacterial or viral conjunctivitis as well.'},
+  {t:'Dry eye disease', correct:false, why:'The Compress row lists a warm compress, not a cold one, for dry eye disease.'},
+  {t:'Primary open-angle glaucoma', correct:false, why:'The Compress row says a compress is not helpful for POAG, so no temperature applies.'}],
+ teach:'Cold compresses are for the two conjunctivitis types; dry eye uses a warm compress; a compress does nothing for POAG.',
+ cite:'Ophthalmic-Review-Key.pdf (Compress row)'},
+
+{id:'xb07', skill:'recall', prof:'Dr. Lahoud', tier:'new', topic:'dboard', sub:'nondrug', concept:'board-poag-compress',
+ tags:['compress','glaucoma'], source:'slide',
+ stem:'What does a compress do for a patient with primary open-angle glaucoma?',
+ options:[
+  {t:'Nothing; it is not helpful', correct:true, why:'The Compress row of the lab key lists a compress as not helpful for POAG.'},
+  {t:'A warm compress lowers pressure', correct:false, why:'The key lists a warm compress for dry eye disease only; for POAG the compress is not helpful.'},
+  {t:'A cold compress lowers pressure', correct:false, why:'The key lists a cold compress for the two conjunctivitis types; for POAG the compress is not helpful.'},
+  {t:'It replaces drug therapy early on', correct:false, why:'The key lists prostaglandin analogs as first line for POAG; a compress is not helpful and replaces nothing.'}],
+ teach:'POAG treatment targets intraocular pressure, which a compress does not change.',
+ cite:'Ophthalmic-Review-Key.pdf (Compress row)'},
+
+{id:'xb08', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'dboard', sub:'present', concept:'board-treatment-approach',
+ tags:['treatment approach','Which is which'], source:'slide',
+ stem:'The treatment approach is to reduce intraocular pressure. Which condition is being treated?',
+ options:[
+  {t:'Primary open-angle glaucoma', correct:true, why:'The Treatment Approach row of the lab key gives reducing intraocular pressure for POAG.'},
+  {t:'Dry eye disease', correct:false, why:'The Treatment Approach row gives symptomatic relief, with referral vital for diagnosis and treatment, for dry eye disease.'},
+  {t:'Allergic conjunctivitis', correct:false, why:'The Treatment Approach row gives symptomatic relief for allergic conjunctivitis, not pressure lowering.'},
+  {t:'Bacterial or viral conjunctivitis', correct:false, why:'The Treatment Approach row gives symptomatic treatment and referral for an antibiotic if applicable, not pressure lowering.'}],
+ teach:'Only POAG is treated by lowering intraocular pressure; the other three are managed for symptoms, with referral where the key says so.',
+ cite:'Ophthalmic-Review-Key.pdf (Treatment approach row)'},
+
+{id:'xb09', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'dboard', sub:'drugs', concept:'board-poag-first-line',
+ tags:['glaucoma','first line'], source:'slide',
+ stem:'Which drug class is first line for primary open-angle glaucoma?',
+ options:[
+  {t:'Prostaglandin analogs', correct:true, why:'The First line row of the lab key gives prostaglandin analogs for POAG.'},
+  {t:'Ocular lubricants', correct:false, why:'The First line row gives ocular lubricants (artificial tears or bland ointments) for dry eye disease.'},
+  {t:'Ophthalmic antihistamines', correct:false, why:'The First line row gives artificial tears, then ophthalmic antihistamines if symptoms persist, for allergic conjunctivitis.'},
+  {t:'Ocular antimicrobials', correct:false, why:'The First line row gives an ocular antimicrobial, with or without tears or antihistamines, for bacterial or viral conjunctivitis.'}],
+ teach:'First line by condition: dry eye, lubricants; allergic conjunctivitis, tears then antihistamines; bacterial or viral conjunctivitis, ocular antimicrobial; POAG, prostaglandin analogs.',
+ cite:'Ophthalmic-Review-Key.pdf (First line row)'},
+
+{id:'xb10', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'dboard', sub:'drugs', concept:'board-allergic-first-line',
+ tags:['allergic conjunctivitis','first line'], source:'slide',
+ stem:'What is first line for allergic conjunctivitis?',
+ options:[
+  {t:'Tears, then antihistamines if symptoms persist', correct:true, why:'The First line row of the lab key gives artificial tears followed by ophthalmic antihistamines if symptoms persist.'},
+  {t:'Ocular antimicrobial drops, with or without tears', correct:false, why:'The First line row gives an ocular antimicrobial for bacterial or viral conjunctivitis, not allergic conjunctivitis.'},
+  {t:'Prostaglandin analog drops, dosed once daily', correct:false, why:'The First line row gives prostaglandin analogs for POAG, not allergic conjunctivitis.'},
+  {t:'Bland ophthalmic ointment as the first choice', correct:false, why:'The First line row gives lubricants, including bland ointments, for dry eye disease, not allergic conjunctivitis.'}],
+ teach:'Allergic conjunctivitis: remove or avoid the allergen, a cold compress, and tears first with an antihistamine added if symptoms persist.',
+ cite:'Ophthalmic-Review-Key.pdf (First line row)'},
+
+{id:'xb11', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'dboard', sub:'drugs', concept:'board-dry-eye-first-line',
+ tags:['dry eye','first line'], source:'slide',
+ stem:'What is first line for dry eye disease?',
+ options:[
+  {t:'Ocular lubricants: tears or bland ointments', correct:true, why:'The First line row of the lab key gives ocular lubricants, meaning artificial tears or bland ophthalmic ointments.'},
+  {t:'Ophthalmic antihistamine drops, if tears fail', correct:false, why:'The First line row gives antihistamines only after tears fail in allergic conjunctivitis, not for dry eye disease.'},
+  {t:'Prostaglandin analog drops, dosed once daily', correct:false, why:'The First line row gives prostaglandin analogs for POAG, not for dry eye disease.'},
+  {t:'An ocular antimicrobial, with or without tears', correct:false, why:'The First line row gives an ocular antimicrobial for bacterial or viral conjunctivitis, not dry eye disease.'}],
+ teach:'The key adds that dry eye treatment is symptomatic relief, but referral is vital for diagnosis and treatment.',
+ cite:'Ophthalmic-Review-Key.pdf (First line and Treatment approach rows)'},
+
+{id:'xb12', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'dboard', sub:'present', concept:'board-bv-approach',
+ tags:['conjunctivitis','treatment approach'], source:'slide',
+ stem:'Which approach fits bacterial or viral conjunctivitis?',
+ options:[
+  {t:'Symptomatic care; antibiotic referral if applicable', correct:true, why:'The Treatment Approach row gives symptomatic treatment, with referral to a provider for an antibiotic if applicable.'},
+  {t:'Pressure-lowering drops started at once, then tears', correct:false, why:'The Treatment Approach row gives pressure lowering only for POAG, not bacterial or viral conjunctivitis.'},
+  {t:'Symptomatic relief alone with no referral', correct:false, why:'The row for allergic conjunctivitis is symptomatic relief; bacterial or viral conjunctivitis adds referral for an antibiotic.'},
+  {t:'A warm compress and no other treatment', correct:false, why:'The Compress row lists a cold compress for bacterial or viral conjunctivitis; a warm compress is for dry eye disease.'}],
+ teach:'The key also lists an ocular antimicrobial, with or without tears or antihistamines for symptoms, as first line.',
+ cite:'Ophthalmic-Review-Key.pdf (Treatment approach and First line rows)'},
+
+{id:'xb13', skill:'tell', prof:'Dr. Lahoud', tier:'new', topic:'dboard', sub:'nondrug', concept:'board-nonpharm-poag',
+ tags:['glaucoma','non-drug'], source:'slide',
+ stem:'Which non-drug recommendation belongs to primary open-angle glaucoma?',
+ options:[
+  {t:'Limit drugs that raise intraocular pressure', correct:true, why:'The Non-pharm row of the lab key gives limiting or eliminating drugs that increase intraocular pressure for POAG.'},
+  {t:'Avoid dusty places that dry out the tear film', correct:false, why:'The Non-pharm row gives avoiding environments that increase tear film evaporation for dry eye disease.'},
+  {t:'Remove the allergen or avoid exposure to it', correct:false, why:'The Non-pharm row gives removing or avoiding the offending allergen for allergic conjunctivitis.'},
+  {t:'Apply a compress to the closed eye', correct:false, why:'The Non-pharm row gives a compress for bacterial or viral conjunctivitis; the Compress row says it is not helpful in POAG.'}],
+ teach:'Non-drug measures: dry eye, avoid environments that increase evaporation; allergic conjunctivitis, avoid the allergen; bacterial or viral conjunctivitis, a compress; POAG, limit drugs that raise pressure.',
+ cite:'Ophthalmic-Review-Key.pdf (Non-pharm recommendation row)'},
+
+{id:'xb14', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'dboard', sub:'nondrug', concept:'board-nonpharm-dry',
+ tags:['dry eye','non-drug'], source:'slide',
+ stem:'Which advice fits a patient with dry eye disease?',
+ options:[
+  {t:'Avoid dusty places that increase tear evaporation', correct:true, why:'The Non-pharm row gives avoiding environments that increase evaporation of the tear film, for example dusty places.'},
+  {t:'Use a cold compress and avoid exposure to the allergen', correct:false, why:'The key pairs the allergen and a cold compress with allergic conjunctivitis; dry eye uses a warm compress.'},
+  {t:'Limit drugs that increase intraocular pressure', correct:false, why:'The Non-pharm row gives this advice for POAG, not dry eye disease.'},
+  {t:'Use a cold compress and tears every hour', correct:false, why:'The Compress row lists a warm compress for dry eye, and the tear frequency in the key is once or twice a day.'}],
+ teach:'Dry eye: warm compress, avoid dry or dusty environments, ocular lubricants, and referral for diagnosis and treatment.',
+ cite:'Ophthalmic-Review-Key.pdf (Non-pharm recommendation row)'},
+
+{id:'xb15', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'dboard', sub:'drugs', concept:'board-ketotifen',
+ tags:['allergic conjunctivitis','ketotifen'], source:'slide',
+ stem:'Ketotifen dosed twice per day for patients 3 years and older is the example medication for which condition?',
+ options:[
+  {t:'Allergic conjunctivitis', correct:true, why:'The Example medication row of the lab key gives ketotifen, dosed twice per day for patients 3 years and older, for allergic conjunctivitis.'},
+  {t:'Dry eye disease', correct:false, why:'The Example medication row gives artificial tears once or twice a day for dry eye disease.'},
+  {t:'Bacterial or viral conjunctivitis', correct:false, why:'The Example medication row gives ciprofloxacin ophthalmic solution for bacterial or viral conjunctivitis.'},
+  {t:'Primary open-angle glaucoma', correct:false, why:'The Example medication row gives latanoprost, dosed once daily, for POAG.'}],
+ teach:'Example medications in the key: artificial tears (dry eye), ketotifen (allergic conjunctivitis), ciprofloxacin ophthalmic solution (bacterial or viral conjunctivitis), latanoprost (POAG).',
+ cite:'Ophthalmic-Review-Key.pdf (Example medication row)'},
+
+{id:'xb16', skill:'recall', prof:'Dr. Lahoud', tier:'new', topic:'dboard', sub:'drugs', concept:'board-ciprofloxacin',
+ tags:['conjunctivitis','ciprofloxacin'], source:'slide',
+ stem:'How is ciprofloxacin ophthalmic solution dosed for bacterial conjunctivitis?',
+ options:[
+  {t:'1–2 drops every 2 hours for 2 days, then every 4 hours for 5 days', correct:true, why:'The Example medication row of the lab key gives 1–2 drops q2h for 2 days and then 1–2 drops q4h for 5 days.'},
+  {t:'1–2 drops every 4 hours for 2 days, then every 2 hours for 5 days', correct:false, why:'This reverses the schedule; the key starts with the more frequent every-2-hour dosing for 2 days.'},
+  {t:'1–2 drops once daily for 7 days, with no step-down in frequency', correct:false, why:'The key gives a step-down schedule of every 2 hours then every 4 hours, not a once-daily dose.'},
+  {t:'1–2 drops every 2 hours for 7 days, with no step-down in frequency', correct:false, why:'The key steps down to every 4 hours after 2 days rather than staying at every 2 hours.'}],
+ teach:'The key gives the schedule as q2h × 2 days, then q4h × 5 days, for a 7-day course.',
+ cite:'Ophthalmic-Review-Key.pdf (Example medication row)'},
+
+{id:'xb17', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'dboard', sub:'drugs', concept:'board-latanoprost',
+ tags:['glaucoma','latanoprost','counseling'], source:'slide',
+ stem:'What dosing and storage instructions apply to latanoprost for glaucoma?',
+ options:[
+  {t:'Once daily; refrigerate until opened, then room temperature', correct:true, why:'The Example medication row gives once daily dosing, refrigeration before opening and room temperature storage once opened.'},
+  {t:'Twice daily; keep it refrigerated even after it has been opened', correct:false, why:'The key gives once daily dosing and room temperature storage once opened, not twice daily or refrigeration after opening.'},
+  {t:'Once daily; store at room temperature before opening', correct:false, why:'The key says to refrigerate latanoprost before opening and store it at room temperature only once opened.'},
+  {t:'Four times daily; discard 30 days after opening', correct:false, why:'The key gives once daily dosing for latanoprost, a prostaglandin analog, not four times daily.'}],
+ teach:'Latanoprost is a prostaglandin analog, the first-line class for POAG in the key.',
+ cite:'Ophthalmic-Review-Key.pdf (Example medication row)'},
+
+{id:'xb18', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'dboard', sub:'drugs', concept:'board-artificial-tears',
+ tags:['dry eye','artificial tears','counseling'], source:'slide',
+ stem:'What instructions does the key give for artificial tears in dry eye disease?',
+ options:[
+  {t:'Once or twice a day, on arising and before retiring', correct:true, why:'The Example medication row gives once or twice a day, typically on arising in the morning and before retiring at night.'},
+  {t:'Every 2 hours for 2 days, then every 4 hours for 5 days', correct:false, why:'That schedule is the ciprofloxacin ophthalmic solution dosing for bacterial conjunctivitis in the same key.'},
+  {t:'Twice per day, for patients 3 years and older', correct:false, why:'That is the ketotifen instruction for allergic conjunctivitis in the same key.'},
+  {t:'Once daily; refrigerate before opening', correct:false, why:'That is the latanoprost instruction for POAG in the same key.'}],
+ teach:'The key gives one example instruction for each condition; matching the instruction to the drug is how the row is tested.',
+ cite:'Ophthalmic-Review-Key.pdf (Example medication row)'},
+
+{id:'xb19', skill:'tell', prof:'Dr. Lahoud', multi:true, tier:'new', topic:'dboard', sub:'drugs', concept:'board-poag-sort',
+ tags:['glaucoma','Which is which'], source:'slide',
+ stem:'Which statements describe primary open-angle glaucoma? Select all that apply.',
+ options:[
+  {t:'It is asymptomatic until substantial visual field loss', correct:true, why:'The Clinical presentation row of the lab key gives this for POAG.'},
+  {t:'The treatment approach is to reduce intraocular pressure', correct:true, why:'The Treatment approach row gives reducing intraocular pressure for POAG.'},
+  {t:'Prostaglandin analogs are first line', correct:true, why:'The First line row of the lab key gives prostaglandin analogs as the first-line drug class for POAG.'},
+  {t:'A warm compress is recommended', correct:false, why:'The Compress row lists a warm compress for dry eye disease; for POAG it says not helpful.'},
+  {t:'Artificial tears are first line', correct:false, why:'The First line row gives artificial tears for dry eye disease and as the first step for allergic conjunctivitis, not POAG.'}],
+ teach:'POAG row of the key: asymptomatic early; reduce intraocular pressure; no compress; limit drugs that raise pressure; prostaglandin analogs; latanoprost once daily.',
+ cite:'Ophthalmic-Review-Key.pdf (POAG column)'}
+);
+
+const GLOSS = [];
 
 /* ==========================================================================
    READ LINKS — which section of the reading tabs explains a question
@@ -3922,11 +4125,7 @@ const GLOSS = [
    ========================================================================== */
 const READ_LINKS = {
   // [[/regex/, [[view, anchor, label], …]], …] — most specific first
-  byKey: [
-    // SAMPLE: delete these two and write the course's own
-    [/sample-calculation|sample-matching/, [['ref', 'ref-sample', 'Reference: how to use this tab']]],
-    [/sample/, [['guide', 'gobj-1', 'Guide: objective 1']]],
-  ],
+  byKey: [],
 
   bySub: {
     // 'a': ['guide', 'gobj-1', 'Guide: objective 1'],
@@ -3939,67 +4138,116 @@ const READ_LINKS = {
 
 const REFERENCE_HTML = `
 <h2>Reference</h2>
-<p class="sub">The tables the questions keep coming back to. Nothing here is scored.</p>
+<p class="sub">Tables the questions keep returning to. Each cites its source. Nothing here is scored.</p>
 
-<h3 id="ref-sample">How to use this tab</h3>
-<p class="prose">Put here the tables a student consults while answering: enzyme lists, drug classes, formulas in the professor's form, unit conversions. Each table cites the slide it was copied from. A figure token on its own line, {{fig:key|caption}}, embeds a slide crop stored in images.json under that key, and &lt;!--DIA:key--&gt; embeds a figure drawn in diagrams.js, step-through controls and all.</p>
-
-<!--DIA:sample-steps-->
-
-<h3 id="ref-explain-one">SAMPLE: a table with an explanation per row</h3>
-<p class="prose">A row cannot carry a paragraph of reasoning without the table becoming unreadable, so the reasoning lives in a card under it: each row has a Why? button, and the card for one row at a time appears below. Replace this sample table, its select and its templates with the course's own. The ids in the select and in each template have to match the <span class="kbd">group:key</span> pairs on the buttons.</p>
-
-<table class="reftab"><thead><tr><th style="width:26%">Item</th><th>What it is</th><th style="width:16%">Slide</th></tr></thead><tbody>
-<tr><td><button class="whybtn" data-xpick="sample:one">Why?</button> <b>Sample item one</b></td><td>One line, as the slide states it.</td><td>N</td></tr>
-<tr><td><button class="whybtn" data-xpick="sample:two">Why?</button> <b>Sample item two</b></td><td>One line, as the slide states it.</td><td>N</td></tr>
+<h3 id="ref-vitals">Vital signs and ranges (POCT-Physical-Assessment.pdf slides 30, 32, 38&ndash;40)</h3>
+<table class="reftab"><thead><tr><th style="width:24%">Measure</th><th>Values on the slides</th><th style="width:12%">Slide</th></tr></thead><tbody>
+<tr><td><b>Pulse</b></td><td>Normal 60&ndash;100 beats/min; tachycardia above 100; bradycardia below 60. Count 15 seconds &times; 4, or 30 seconds &times; 2</td><td>30, 31</td></tr>
+<tr><td><b>Respirations</b></td><td>Normal 12&ndash;20 breaths/min; tachypnea above 20; bradypnea below 12; do not tell the patient; at least 30 seconds</td><td>32</td></tr>
+<tr><td><b>Blood pressure (ACC/AHA 2017)</b></td><td>Normal below 120/80; hypertension 130/80 or greater; hypertensive urgency 180/110 or greater; hypotension systolic below 90&ndash;100 or diastolic below 50&ndash;60</td><td>38</td></tr>
+<tr><td><b>Temperature</b></td><td>Normal 98.0&ndash;98.6 &deg;F (36.7&ndash;37 &deg;C); fever 99.5 &deg;F (37.5 &deg;C) or higher; dangerous above 105.0 &deg;F</td><td>39</td></tr>
+<tr><td><b>Pulse oximetry</b></td><td>Normal 95&ndash;99%; below 90% needs medical attention; can read falsely high in Black patients</td><td>40, 41</td></tr>
 </tbody></table>
 
-<div class="xpick">
-  <label class="meta">Explain one:
-    <select data-xsel="sample">
-      <option value="">pick a row…</option>
-      <option value="one">Sample item one</option>
-      <option value="two">Sample item two</option>
-    </select>
-  </label>
-  <div class="xout" data-xout="sample"></div>
-</div>
+<h3 id="ref-assess">SCHOLAR-MAC and QuEST</h3>
+<table class="reftab"><thead><tr><th style="width:24%">Letter or step</th><th>Meaning</th><th style="width:22%">Source</th></tr></thead><tbody>
+<tr><td><b>SCHOLAR-MAC</b></td><td>Symptoms, Characteristics, History, Onset, Location, Aggravating factors, Remitting factors, Medications, Allergies, Conditions</td><td>OTC slide 6</td></tr>
+<tr><td><b>QuEST</b></td><td>Quickly assess (SCHOLAR-MAC); Establish self-care candidacy; Suggest self-care strategies; Talk about the product (administration, efficacy, safety)</td><td>Week 14 lab deck</td></tr>
+<tr><td><b>PPCP</b></td><td>Collect, assess, plan, implement, follow-up</td><td>OTC slide 4</td></tr>
+</tbody></table>
 
-<template data-x="sample:one">
-  <div class="panel"><b>Sample item one</b>
-    <p class="prose" style="margin:6px 0 0">Why this row reads the way it does, in two or three sentences from the slide it cites. A card may send the reader to the figure that shows it:
-      <button type="button" class="btn ghost" data-xgo="ref-sample">See the figure</button></p></div>
-</template>
-<template data-x="sample:two">
-  <div class="panel"><b>Sample item two</b>
-    <p class="prose" style="margin:6px 0 0">The same, for the second row. Nothing here is scored, so a card can be as long as the explanation needs.</p></div>
-</template>
+<h3 id="ref-expiry">Label expiration dates (Intro-to-Dispensing.pdf slides 25&ndash;26)</h3>
+<table class="reftab"><thead><tr><th style="width:30%">Product</th><th>Rule</th></tr></thead><tbody>
+<tr><td><b>Constituted product</b></td><td>Check the product's own directions (Augmentin suspension: discard 10 days after mixing)</td></tr>
+<tr><td><b>From a stock bottle</b></td><td>One year after the fill date, or the stock bottle's expiration if that is earlier; a month-and-year stock date runs to the last day of that month (EOOR key, station 10)</td></tr>
+</tbody></table>
+
+<h3 id="ref-aafp">Using the AAFP adult schedule (Immunizations-Pre-Lab.pdf slide 8)</h3>
+<table class="reftab"><thead><tr><th style="width:12%">Step</th><th>Part of the schedule</th></tr></thead><tbody>
+<tr><td>1</td><td>Vaccines by age (Table 1)</td></tr>
+<tr><td>2</td><td>Medical conditions (Table 2), often missed by providers</td></tr>
+<tr><td>3</td><td>Notes, which must be used on exams</td></tr>
+<tr><td>4</td><td>Appendix: contraindications and precautions</td></tr>
+<tr><td>5</td><td>Addendum: new or updated guidance</td></tr>
+</tbody></table>
 `;
 
 const TELL_HTML = `
 <h2>Tell apart</h2>
-<p class="sub">Pairs that share wording. Each row gives the one feature that separates them, the answer a question is fishing for, and the slide it comes from. Nothing here is scored.</p>
+<p class="sub">Pairs and groups that share wording. Each table gives what separates them and where it comes from. Nothing here is scored.</p>
 
-<h3>Lecture 1 (deck file name)</h3>
-<table class="reftab"><thead><tr><th style="width:22%">Looks alike</th><th>What separates them</th><th style="width:26%">The trap</th><th style="width:9%">Slide</th></tr></thead><tbody>
-<tr><td><b>Term A</b> vs <b>Term B</b></td><td>The one feature that separates them, in the slide's words.</td><td>The wrong answer a question is written to catch.</td><td>N</td></tr>
+<h3 id="tell-ophtho">Ophthalmic review: which is which (Week 14 lab answer key)</h3>
+<table class="reftab"><thead><tr><th style="width:15%"></th><th>Dry eye disease</th><th>Allergic conjunctivitis</th><th>Bacterial/viral conjunctivitis</th><th>Primary open-angle glaucoma</th></tr></thead><tbody>
+<tr><td><b>Clinical presentation</b></td><td>Mildly red eye; sandy, gritty feeling or sensation that something is in the eye</td><td>Itching, tearing, red eyes</td><td>Tearing, lid crusting</td><td>Asymptomatic until substantial visual field loss occurs</td></tr>
+<tr><td><b>Treatment approach</b></td><td>Symptomatic relief, but referral is vital for diagnosis and treatment</td><td>Symptomatic relief</td><td>Symptomatic treatment; refer to provider for antibiotic if applicable</td><td>Reduce intraocular pressure</td></tr>
+<tr><td><b>Compress</b></td><td>Warm</td><td>Cold</td><td>Cold</td><td>Not helpful</td></tr>
+<tr><td><b>Non-pharm recommendation</b></td><td>Avoid environments that increase evaporation of the tear film (for example dusty places)</td><td>Remove or avoid exposure to the offending allergen</td><td>Compress</td><td>Limit or eliminate drugs that increase intraocular pressure</td></tr>
+<tr><td><b>First line</b></td><td>Ocular lubricants (artificial tears or bland ophthalmic ointments)</td><td>Artificial tears, followed by ophthalmic antihistamines if symptoms persist</td><td>Ocular antimicrobial, with or without artificial tears or ophthalmic antihistamines for symptomatic relief</td><td>Prostaglandin analogs</td></tr>
+<tr><td><b>Example medication with instructions</b></td><td>Artificial tears: instill drops once or twice a day, typically on arising and before retiring</td><td>Ketotifen: twice per day, for patients 3 years and older</td><td>Ciprofloxacin ophthalmic solution: 1&ndash;2 drops every 2 hours for 2 days, then 1&ndash;2 drops every 4 hours for 5 days</td><td>Latanoprost: once daily; refrigerate before opening, room temperature once opened</td></tr>
+</tbody></table>
+<p class="prose">Source: the lab's verified answer key (Ophthalmic-Review-Key.pdf). Dr. Lam's slide 34 gives cold compresses and referral for bacterial or viral conjunctivitis; the key's row is what the lab keyed.</p>
+
+<h3 id="tell-rx-categories">Prescription requirements by category (Intro-to-Dispensing.pdf slides 16, 18, 20, 22)</h3>
+<table class="reftab"><thead><tr><th style="width:18%"></th><th>Dangerous drug (non-controlled)</th><th>Schedule III&ndash;V</th><th>Schedule II</th></tr></thead><tbody>
+<tr><td><b>Patient address</b></td><td>Required unless readily retrievable from the pharmacy patient medication record</td><td colspan="2">On the prescription</td></tr>
+<tr><td><b>Patient date of birth</b></td><td>Not required, but must be in the record</td><td colspan="2">On the prescription (Texas)</td></tr>
+<tr><td><b>Prescriber DEA number</b></td><td>Not listed</td><td colspan="2">Required</td></tr>
+<tr><td><b>Quantity</b></td><td>Name, strength, dosage form and quantity</td><td colspan="2">Also written as a word if the order is written</td></tr>
+<tr><td><b>If written</b></td><td>&mdash;</td><td>&mdash;</td><td>TSBP official form, manually signed; pharmacist records date filled and Rx number</td></tr>
+<tr><td><b>Refills</b></td><td>No limit</td><td>5 refills</td><td>0 refills</td></tr>
+<tr><td><b>Script expires</b></td><td>1 year after issue</td><td>6 months after issue</td><td>30 days after issue</td></tr>
+</tbody></table>
+
+<h3 id="tell-errors">Prescribing, transcribing and dispensing errors (Intro-to-Dispensing.pdf slides 38&ndash;39)</h3>
+<table class="reftab"><thead><tr><th style="width:18%">Type</th><th>Examples</th><th style="width:30%">Correction</th></tr></thead><tbody>
+<tr><td><b>Prescribing</b></td><td>Prescription expired; dose or frequency too high or too low; insufficient prescribed quantity (common with liquids); inappropriate number of refills; DEA number missing</td><td>Contact the prescriber to clarify, correct or obtain a new prescription</td></tr>
+<tr><td><b>Transcribing</b></td><td>Incorrect patient selected or processed; incorrect drug entered; directions or refills transcribed incorrectly onto the label</td><td>Correct the prescription entered in the system and regenerate labels</td></tr>
+<tr><td><b>Dispensing</b></td><td>Incorrect drug, formulation or strength filled; insufficient quantity filled; wrong use-before date; expired product used</td><td>Replace the incorrect product and/or relabel before dispensing</td></tr>
+</tbody></table>
+
+<h3 id="tell-lice">Pyrethrins and permethrin for head lice (OTC-Insect-Bites-Pediculosis.pdf slides 31&ndash;33)</h3>
+<table class="reftab"><thead><tr><th style="width:18%"></th><th>Synergized pyrethrins</th><th>Permethrin (Nix)</th></tr></thead><tbody>
+<tr><td><b>What is special</b></td><td>Piperonyl butoxide inhibits pyrethrin breakdown</td><td>Cream rinse applied to the scalp for 10 minutes</td></tr>
+<tr><td><b>Retreatment</b></td><td>Must retreat in 7&ndash;10 days</td><td>May retreat in 7&ndash;10 days if lice or nits are seen</td></tr>
+<tr><td><b>Age exclusion</b></td><td>Under 2 years</td><td>Under 2 months</td></tr>
+<tr><td><b>Both</b></td><td colspan="2">Block nerve impulse transmission (paralysis and death of the lice); a lice comb must be used</td></tr>
+</tbody></table>
+
+<h3 id="tell-contra">Contraindication or precaution (AAFP-Adult-Schedule-2026.pdf Appendix)</h3>
+<table class="reftab"><thead><tr><th style="width:18%"></th><th>Meaning</th><th style="width:34%">Example</th></tr></thead><tbody>
+<tr><td><b>Contraindication</b></td><td>The vaccine should NOT be administered</td><td>Severe allergic reaction (for example anaphylaxis) after a previous dose or to a component</td></tr>
+<tr><td><b>Precaution</b></td><td>Vaccination should generally be deferred, but might be indicated if the benefit of protection outweighs the risk of an adverse reaction</td><td>Moderate or severe acute illness, with or without fever</td></tr>
 </tbody></table>
 `;
 
 const GUIDE_HTML = `
 <h2>Objective guides</h2>
-<p class="sub">One section per objective on the professor's own objectives slides: the words on the slides, the points in slide order with what he or she said in lecture marked (T), the pairs that get swapped and what separates them, the poll or practice item on that objective, and how it is asked. Nothing here is scored.</p>
+<p class="sub">The objectives each professor printed for the week, in the professor&rsquo;s words, with the topic in Topics that drills them. Nothing here is scored.</p>
 
 <section class="gobj" id="gobj-1">
-<h3>Lecture 1 (deck file name) &mdash; Objective 1 of N: title in the professor's words</h3>
-<div class="gbar"><span>OBJECTIVE (slide 2)</span><b>The objective as the slide prints it</b><i>slides 3&ndash;20</i></div>
-<h4>Read this first &mdash; the words on these slides</h4>
-<dl class="gwords"><dt>Term</dt><dd>Plain definition, with the slide it appears on.</dd></dl>
-<h4>The points, in slide order</h4>
-<div class="gpt"><h5>1. First point (slide 3)</h5><ul><li>One thought per bullet, each with its slide.</li><li>(T) &ldquo;A verbatim lecture quote in its own bullet.&rdquo;</li></ul></div>
-<div class="gtell"><b>Tell apart</b><ul><li>Pair of swappable items: the one feature that separates them.</li></ul></div>
-<div class="gpoll"><b>Poll or practice item on this objective</b><ul><li>The professor's own item, each option judged TRUE or FALSE, and the answer.</li></ul></div>
-<div class="gask"><b>How it is asked, and how to answer</b><ul><li>Format the professor uses, with an example stem.</li></ul><ul><li>Step 1 &mdash; what to check first in the stem.</li></ul></div>
+<h3>Week 2 (Dr. Lahoud): Intro to Dispensing</h3>
+<div class="gbar"><span>OBJECTIVES</span><b>At the end of this week&rsquo;s lab, a P2 student will be able to:</b><i>Intro-to-Dispensing.pdf slide 4</i></div>
+<div class="gpt"><ul><li>Identify errors and omissions and assess if prescription is valid and safe to dispense</li><li>Provide a method of corrective action if errors and omissions are identified</li><li>Conduct a counseling session using the 3 prime questions</li><li>Drill: topics &ldquo;Intro to Dispensing&rdquo; and &ldquo;Errors and omissions lab&rdquo;</li></ul></div>
+</section>
+<section class="gobj" id="gobj-2">
+<h3>Week 3 (Dr. Parsons): OTC insect stings and head lice</h3>
+<div class="gbar"><span>OBJECTIVES</span><b>Lecture objectives</b><i>OTC-Insect-Bites-Pediculosis.pdf slide 2</i></div>
+<div class="gpt"><ul><li>Identify the components of the PPCP, QuEST, and SCHOLAR-MAC acronyms</li><li>Define each section of a SOAP Note (Subjective, Objective, Assessment, Plan)</li><li>Describe the purpose of each section of the SOAP Note</li><li>Identify Black Widow and Brown Recluse spider bites</li><li>Identify signs and symptoms of insect stings and pediculosis infestation</li><li>Identify exclusion criteria for self-treatment of insect stings and pediculosis</li><li>Recognize OTC medications used for the treatment of insect stings and pediculosis</li><li>Drill: topic &ldquo;OTC self-care&rdquo;</li></ul></div>
+</section>
+<section class="gobj" id="gobj-3">
+<h3>Week 5 (Dr. Parsons): physical assessment and point-of-care testing</h3>
+<div class="gbar"><span>OBJECTIVES</span><b>Learning objectives</b><i>POCT-Physical-Assessment.pdf slide 6</i></div>
+<div class="gpt"><ul><li>Identify opportunities for expanding patient-centered services in pharmacy settings, using point-of-care testing and treatment</li><li>Discuss the value and limitations of patient reported symptoms, medical history, and drug allergies</li><li>Describe and perform the following physical assessments, when appropriate to patient care: blood pressure, pulse, respiratory rate, oxygenation, and cervical lymph node inspection</li><li>Describe and perform the following specimen collections used in point of care testing: throat swab and nasal swab</li><li>Drill: topic &ldquo;Physical assessment and point-of-care testing&rdquo;</li></ul></div>
+</section>
+<section class="gobj" id="gobj-4">
+<h3>Week 6 (Dr. Parsons): Immunizations</h3>
+<div class="gbar"><span>OBJECTIVES</span><b>Objectives for the pre-lab lecture</b><i>Immunizations-Pre-Lab.pdf slide 2</i></div>
+<div class="gpt"><ul><li>List steps for proper use of the AAFP Immunization Schedules</li><li>Identify a resource for CDC recommended Travel Vaccines</li><li>Define Vaccine Hesitancy</li><li>Consider your feelings and attitudes about Vaccine Hesitant patients</li><li>Describe the ASK-TELL-ASK Method</li><li>Drill: topic &ldquo;Immunizations&rdquo;</li></ul></div>
+</section>
+<section class="gobj" id="gobj-5">
+<h3>Week 14 (Dr. Lahoud): DEENT activities</h3>
+<div class="gbar"><span>OBJECTIVES</span><b>Objectives for lab this week</b><i>DEENT-Lab-Deck.pdf</i></div>
+<div class="gpt"><ul><li>Review and apply key concepts from DEENT topics, including acne, psoriasis and scaly dermatoses, and ophthalmic conditions</li><li>Integrate assessment and counseling skills into OTC Acne patient scenario the QuEST/SCHOLAR-MAC framework</li><li>Relate prescription verification principles to corresponding DEENT therapeutic concepts</li><li>Drill: topics &ldquo;DEENT lab&rdquo; (QuEST, acne, scaly dermatoses, dry eye and conjunctivitis, glaucoma, Which is which)</li></ul></div>
 </section>
 `;
 

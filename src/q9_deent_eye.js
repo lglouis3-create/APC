@@ -260,7 +260,7 @@ QUESTIONS.push(
  stem:'A man with hypertension has used tetrahydrozoline eye drops every day for 6 days for red eyes, and his eyes are redder when he skips a dose. What is the best advice?',
  options:[
   {t:'Stop it; past 72 hours it causes rebound redness and raises blood pressure', correct:true, why:'Slide 39 lists rebound conjunctival hyperemia beyond 72 hours and increased blood pressure as a side effect of decongestants.'},
-  {t:'Keep using it, since redness on skipping a dose means the drops are working well', correct:false, why:'Slide 39 gives rebound conjunctival hyperemia beyond 72 hours, so redness on skipping a dose is rebound.'},
+  {t:'Keep using it, since redness when a dose is missed means the drops are working well', correct:false, why:'Slide 39 gives rebound conjunctival hyperemia beyond 72 hours, so redness on skipping a dose is rebound.'},
   {t:'Use it hourly instead, because the dose was too low to control his redness', correct:false, why:'Slide 39 lists rebound conjunctival hyperemia beyond 72 hours, so using it more often makes it worse (inference).'},
   {t:'Switch to a preservative-free brand of tetrahydrozoline and continue it', correct:false, why:'Slide 39 lists rebound hyperemia as a decongestant effect beyond 72 hours; a preservative-free product does not remove it.'}],
  teach:'Ophthalmic decongestants (naphazoline, tetrahydrozoline, brimonidine 0.025%) shrink vessels and reduce redness only (T). Slide 39 lists rebound conjunctival hyperemia and epithelial xerosis beyond 72 hours, and increased blood pressure as a side effect. They do not treat the allergic response (T).',

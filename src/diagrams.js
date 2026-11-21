@@ -98,16 +98,12 @@ const SAMPLE_STEPS = (() => {
 
 /* Inline SVG a question can show in its concept block via `svg: DIA.key`, a
    reading tab via <!--DIA:key-->, and the Diagrams tab via DIAGRAMS. */
-const DIA = {
-  'sample-steps': SAMPLE_STEPS,
-};
+const DIA = {};
 
 /* The Diagrams tab: [group name, [figure keys]]. Course-specific — group the
    figures the way the course groups the processes they show. A key that is not
    in DIA is skipped, and the tab hides itself when nothing is listed. */
-const DIAGRAMS = [
-  ['Sample figures', ['sample-steps']],
-];
+const DIAGRAMS = [];
 
 /* A figure's own title, used by the Diagrams tab's contents chips when a key
    needs a name different from the title drawn inside it. */

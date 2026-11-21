@@ -26,6 +26,7 @@ const COURSE = {
     {id:'L13D', deck:'Lam_OphthalmicDisorders.pdf',                         label:'DEENT lab source: Dr. Lam, ophthalmic disorders (11/20)',                prof:'Dr. Lahoud',  exam:1, module:'Dr. Lahoud: DEENT lab'},
     {id:'L12D', deck:'Lam_Glaucoma.pdf',                                    label:'DEENT lab source: Dr. Lam, glaucoma therapeutics (11/19)',               prof:'Dr. Lahoud',  exam:1, module:'Dr. Lahoud: DEENT lab'},
     {id:'L09D', deck:'Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf',          label:'DEENT lab source: Dr. Smith, eye lectures (11/13, 11/17)',               prof:'Dr. Lahoud',  exam:1, module:'Dr. Lahoud: DEENT lab'},
+    {id:'L14K', deck:'Ophthalmic-Review-Key.pdf',                          label:'Week 14 lab: Ophthalmic Review (Which is which) answer key',            prof:'Dr. Lahoud',  exam:1, module:'Dr. Lahoud: DEENT lab'},
     {id:'L14',  deck:'DEENT-Lab-Deck.pdf',                label:'Week 14: DEENT activities (11/16)',                  prof:'Dr. Lahoud',  exam:1, module:'Dr. Lahoud: DEENT lab'},
     {id:'L03',  deck:'OTC-Insect-Bites-Pediculosis.pdf',  label:'Week 3: OTC, insect bites and pediculosis (8/31)',   prof:'Dr. Parsons', exam:1, module:'Dr. Parsons: OTC'},
     {id:'L03A', deck:'APhA-Insect-Excerpt.pdf',           label:'Week 3: APhA OTC excerpt on insect bites',           prof:'Dr. Parsons', exam:1, module:'Dr. Parsons: OTC'},
@@ -58,9 +59,9 @@ const COURSE = {
 
   files: ['atlas.js', 'diagrams.js',
           'q1_topics.js', 'q2_eoor.js', 'q3_otc.js', 'q4_poct.js', 'q5_immunizations.js', 'q6_deent.js',
-          'q7_deent_acne.js', 'q8_deent_scaly.js', 'q9_deent_eye.js', 'q10_deent_glaucoma.js'],
+          'q7_deent_acne.js', 'q8_deent_scaly.js', 'q9_deent_eye.js', 'q10_deent_glaucoma.js', 'q11_deent_board.js'],
 
-  tools: {citeAliases:{'aafp-adult-schedule-2026.pdf': null, 'apha-insect-excerpt.pdf': null, 'deent-lab-deck.pdf': null,
+  tools: {citeAliases:{'aafp-adult-schedule-2026.pdf': null, 'apha-insect-excerpt.pdf': null, 'deent-lab-deck.pdf': null, 'ophthalmic-review-key.pdf': null,
                        'patel_acne-therapeutics-student.pdf': null, 'patel_scaly-dermatoses-therapeutics-student.pdf': null,
                        'lam_ophthalmicdisorders.pdf': null, 'lam_glaucoma.pdf': null, 'smith_eye_glaucoma_allergicconj_dryeye.pdf': null},
           citeLectures:{}, citeBareMap:{},

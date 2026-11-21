@@ -4,7 +4,7 @@ Course state for kit sessions (updated 2026-11-21). Source tree in `src/`, built
 
 ## What the drill covers
 - Exam: Mon 11/23/2026 1 PM, 50 minutes, 30 questions (15 Dr. Parsons, 15 Dr. Lahoud), non-sterile weeks. Source: Week 14 deck, slide "Outpatient Written Exam".
-- Ingested (255 questions; 2026-11-21 added 85 DEENT lab questions in q7-q10 from the lglouis3-create/DEENT bank: Patel acne and scaly dermatoses, Lam ophthalmic disorders and glaucoma): Week 2 Intro to Dispensing deck + 8/24 transcript + EOOR answer key + TOSCE guide (Dr. Lahoud); Week 3 OTC deck + APhA excerpt (no transcript); Week 5 POCT deck (no transcript exists); Week 6 immunization deck + AAFP 2026 schedule + 9/21 transcript; Week 14 DEENT deck + 11/16 transcript.
+- Ingested (274 questions; 2026-11-21 also added 19 questions from the verified Week 14 Ophthalmic Review (Which is which) lab answer key, q11_deent_board.js, cited as Ophthalmic-Review-Key.pdf, a photo; Tell apart, Reference and Objective guide tabs now hold real tables and objectives instead of template samples; 2026-11-21 added 85 DEENT lab questions in q7-q10 from the lglouis3-create/DEENT bank: Patel acne and scaly dermatoses, Lam ophthalmic disorders and glaucoma): Week 2 Intro to Dispensing deck + 8/24 transcript + EOOR answer key + TOSCE guide (Dr. Lahoud); Week 3 OTC deck + APhA excerpt (no transcript); Week 5 POCT deck (no transcript exists); Week 6 immunization deck + AAFP 2026 schedule + 9/21 transcript; Week 14 DEENT deck + 11/16 transcript.
 - Not ingested: Week 4 recording (Day in the Life), 8/31 OTC transcript, 10/5 TOSCE and 10/26 OSCE Q&A transcripts, the 13 Week 2 lab prescriptions (only the answer key), the BDK list.
 
 ## Known conflicts (see `reviews/LOG.md`)

@@ -23,11 +23,7 @@
    ========================================================================== */
 const READ_LINKS = {
   // [[/regex/, [[view, anchor, label], …]], …] — most specific first
-  byKey: [
-    // SAMPLE: delete these two and write the course's own
-    [/sample-calculation|sample-matching/, [['ref', 'ref-sample', 'Reference: how to use this tab']]],
-    [/sample/, [['guide', 'gobj-1', 'Guide: objective 1']]],
-  ],
+  byKey: [],
 
   bySub: {
     // 'a': ['guide', 'gobj-1', 'Guide: objective 1'],

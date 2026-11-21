@@ -1,16 +1,30 @@
 const GUIDE_HTML = `
 <h2>Objective guides</h2>
-<p class="sub">One section per objective on the professor's own objectives slides: the words on the slides, the points in slide order with what he or she said in lecture marked (T), the pairs that get swapped and what separates them, the poll or practice item on that objective, and how it is asked. Nothing here is scored.</p>
+<p class="sub">The objectives each professor printed for the week, in the professor&rsquo;s words, with the topic in Topics that drills them. Nothing here is scored.</p>
 
 <section class="gobj" id="gobj-1">
-<h3>Lecture 1 (deck file name) &mdash; Objective 1 of N: title in the professor's words</h3>
-<div class="gbar"><span>OBJECTIVE (slide 2)</span><b>The objective as the slide prints it</b><i>slides 3&ndash;20</i></div>
-<h4>Read this first &mdash; the words on these slides</h4>
-<dl class="gwords"><dt>Term</dt><dd>Plain definition, with the slide it appears on.</dd></dl>
-<h4>The points, in slide order</h4>
-<div class="gpt"><h5>1. First point (slide 3)</h5><ul><li>One thought per bullet, each with its slide.</li><li>(T) &ldquo;A verbatim lecture quote in its own bullet.&rdquo;</li></ul></div>
-<div class="gtell"><b>Tell apart</b><ul><li>Pair of swappable items: the one feature that separates them.</li></ul></div>
-<div class="gpoll"><b>Poll or practice item on this objective</b><ul><li>The professor's own item, each option judged TRUE or FALSE, and the answer.</li></ul></div>
-<div class="gask"><b>How it is asked, and how to answer</b><ul><li>Format the professor uses, with an example stem.</li></ul><ul><li>Step 1 &mdash; what to check first in the stem.</li></ul></div>
+<h3>Week 2 (Dr. Lahoud): Intro to Dispensing</h3>
+<div class="gbar"><span>OBJECTIVES</span><b>At the end of this week&rsquo;s lab, a P2 student will be able to:</b><i>Intro-to-Dispensing.pdf slide 4</i></div>
+<div class="gpt"><ul><li>Identify errors and omissions and assess if prescription is valid and safe to dispense</li><li>Provide a method of corrective action if errors and omissions are identified</li><li>Conduct a counseling session using the 3 prime questions</li><li>Drill: topics &ldquo;Intro to Dispensing&rdquo; and &ldquo;Errors and omissions lab&rdquo;</li></ul></div>
+</section>
+<section class="gobj" id="gobj-2">
+<h3>Week 3 (Dr. Parsons): OTC insect stings and head lice</h3>
+<div class="gbar"><span>OBJECTIVES</span><b>Lecture objectives</b><i>OTC-Insect-Bites-Pediculosis.pdf slide 2</i></div>
+<div class="gpt"><ul><li>Identify the components of the PPCP, QuEST, and SCHOLAR-MAC acronyms</li><li>Define each section of a SOAP Note (Subjective, Objective, Assessment, Plan)</li><li>Describe the purpose of each section of the SOAP Note</li><li>Identify Black Widow and Brown Recluse spider bites</li><li>Identify signs and symptoms of insect stings and pediculosis infestation</li><li>Identify exclusion criteria for self-treatment of insect stings and pediculosis</li><li>Recognize OTC medications used for the treatment of insect stings and pediculosis</li><li>Drill: topic &ldquo;OTC self-care&rdquo;</li></ul></div>
+</section>
+<section class="gobj" id="gobj-3">
+<h3>Week 5 (Dr. Parsons): physical assessment and point-of-care testing</h3>
+<div class="gbar"><span>OBJECTIVES</span><b>Learning objectives</b><i>POCT-Physical-Assessment.pdf slide 6</i></div>
+<div class="gpt"><ul><li>Identify opportunities for expanding patient-centered services in pharmacy settings, using point-of-care testing and treatment</li><li>Discuss the value and limitations of patient reported symptoms, medical history, and drug allergies</li><li>Describe and perform the following physical assessments, when appropriate to patient care: blood pressure, pulse, respiratory rate, oxygenation, and cervical lymph node inspection</li><li>Describe and perform the following specimen collections used in point of care testing: throat swab and nasal swab</li><li>Drill: topic &ldquo;Physical assessment and point-of-care testing&rdquo;</li></ul></div>
+</section>
+<section class="gobj" id="gobj-4">
+<h3>Week 6 (Dr. Parsons): Immunizations</h3>
+<div class="gbar"><span>OBJECTIVES</span><b>Objectives for the pre-lab lecture</b><i>Immunizations-Pre-Lab.pdf slide 2</i></div>
+<div class="gpt"><ul><li>List steps for proper use of the AAFP Immunization Schedules</li><li>Identify a resource for CDC recommended Travel Vaccines</li><li>Define Vaccine Hesitancy</li><li>Consider your feelings and attitudes about Vaccine Hesitant patients</li><li>Describe the ASK-TELL-ASK Method</li><li>Drill: topic &ldquo;Immunizations&rdquo;</li></ul></div>
+</section>
+<section class="gobj" id="gobj-5">
+<h3>Week 14 (Dr. Lahoud): DEENT activities</h3>
+<div class="gbar"><span>OBJECTIVES</span><b>Objectives for lab this week</b><i>DEENT-Lab-Deck.pdf</i></div>
+<div class="gpt"><ul><li>Review and apply key concepts from DEENT topics, including acne, psoriasis and scaly dermatoses, and ophthalmic conditions</li><li>Integrate assessment and counseling skills into OTC Acne patient scenario the QuEST/SCHOLAR-MAC framework</li><li>Relate prescription verification principles to corresponding DEENT therapeutic concepts</li><li>Drill: topics &ldquo;DEENT lab&rdquo; (QuEST, acne, scaly dermatoses, dry eye and conjunctivitis, glaucoma, Which is which)</li></ul></div>
 </section>
 `;
