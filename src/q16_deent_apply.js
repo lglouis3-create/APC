@@ -1,0 +1,265 @@
+/* ==========================================================================
+   DEENT lab: apply it (Dr. Lahoud's Week 14 lab). Twenty application-level items on
+   acne (QuEST/SCHOLAR-MAC, OTC products), psoriasis and the scaly dermatoses, the
+   ophthalmic review (self-care exclusions, conjunctivitis rows) and glaucoma drug
+   selection and prescription review. Each item asks the learner to read a slide
+   image or a clinical fact and reason: grade a patient and say which change moves
+   the grade, find the product that has two properties, find the error in an order
+   and state the fix, explain why a counseling step matters, or change one fact and
+   see how the plan changes. Every fact was read from a slide image viewed in the
+   session that wrote this file (Patel acne slides 7, 8, 17, 18, 23, 24, 25, 26, 27,
+   31, 33, 41; Patel scaly dermatoses slides 6, 7, 12, 16, 17, 26, 31, 32, 35, 36, 37;
+   Lam ophthalmic slides 7, 10, 11, 28, 29, 30, 34, 35, 39, 41, 45; Lam glaucoma slides
+   19, 21, 32, 34, 43, 44, 54, 69, 72, 73, 75, 90). No fact here rests on a recording, so every item is
+   source 'slide'. Images are keyed in images.json as deent_* and are the same slides.
+   Where the sources differ: the lab answer key lists an ocular antimicrobial first
+   line for bacterial or viral conjunctivitis, while Lam slide 34 gives cold
+   compresses and slide 28 gives symptomatic treatment and referral; no item keys the
+   antimicrobial. Lam slide 35 is titled preferred treatment for allergic, viral and
+   bacterial conjunctivitis but lists only artificial tears plus a dual-acting agent;
+   no item uses it for bacterial or viral disease. Lam slide 28 is cut off at the
+   bottom, so the herpetic row is read only as acute with tearing.
+   ========================================================================== */
+TOPICS.push({id:'deentapply', name:'DEENT lab: apply it', prof:'Dr. Lahoud', open:true, cite:'Patel acne and scaly dermatoses decks; Lam ophthalmic disorders and glaucoma decks', subs:[
+  {id:'acne', name:'Acne: grade, product, prescription review', cite:'Patel_Acne-Therapeutics-Student.pdf slides 8, 23, 24, 25, 27, 31'},
+  {id:'scaly', name:'Psoriasis and scaly dermatoses', cite:'Patel_Scaly-Dermatoses-Therapeutics-Student.pdf slides 6, 7, 12, 16, 26, 31, 32, 35, 36'},
+  {id:'eye', name:'Ophthalmic: self-care and conjunctivitis', cite:'Lam_OphthalmicDisorders.pdf slides 11, 28, 29'},
+  {id:'glau', name:'Glaucoma: drug choice and review', cite:'Lam_Glaucoma.pdf slides 32, 34, 44, 69, 72, 73, 90'}]});
+
+QUESTIONS.push(
+/* ---- Acne ------------------------------------------------------------- */
+{id:'da01', skill:'apply', prof:'Dr. Lahoud', multi:true, tier:'new', topic:'deentapply', sub:'acne', concept:'da-acne-moderate-to-severe-change', img:'deent_acne_sev',
+ tags:['acne','severity','classification'], source:'slide',
+ stem:'A 16-year-old has moderate acne: many noninflammatory lesions, some inflammatory lesions, one nodule and mild scarring. Use the image above. Which single new finding would move him into the severe category? Select all that apply.',
+ options:[
+  {t:'A few nodular lesions instead of one nodule', correct:true, why:'The moderate row allows no more than one nodule, while the severe row allows no more than a few nodular lesions. A second or third nodule therefore crosses the line, so the nodule count is one of the findings that separates the two rows.'},
+  {t:'Moderate to extensive scarring instead of mild scarring', correct:true, why:'The moderate row says mild scarring is possible, and the severe row says moderate to extensive scarring. Scarring that has progressed beyond mild is a severe-row finding, which is why scars matter when grading even if the patient has few active lesions.'},
+  {t:'Many inflammatory lesions instead of some', correct:true, why:'The moderate row has many noninflammatory lesions but only some inflammatory ones, while the severe row has many of both. A shift from some to many inflammatory lesions is a severe-row finding, so it also changes the category.'},
+  {t:'The same lesions now appear on his upper back as well as his face', correct:false, why:'Neither row names a body site. Spread to the back changes where the product is applied, but the classification on the image depends only on lesion types, nodules and scarring, so location alone does not move him to severe.'},
+  {t:'One more small inflammatory papule appears this week', correct:false, why:'He already has some inflammatory lesions, and one more papule leaves him within some, not many. Without more nodules or more scarring he stays in the moderate row, so a single extra papule does not change his category.'},
+  {t:'He has had the lesions for a long time', correct:false, why:'Duration does not appear in either row. A long history may show that earlier treatment failed, but the classification comes from lesion types, nodules and scarring, so time alone does not move a patient from moderate to severe.'}],
+ teach:'Grade acne by counting lesion types, nodules and scarring, then match the patient to the row. In the image, moderate acne has many noninflammatory lesions, some inflammatory lesions, no more than one nodule and mild scarring, while severe acne has many of both lesion types, a few nodular lesions and moderate to extensive scarring. Asking which single finding changes the row shows which features carry the grade. Location and duration are not criteria, so a patient who crosses into severe on nodules or scarring is no longer a self-care candidate.',
+ cite:'Patel_Acne-Therapeutics-Student.pdf slide 8; slide 18 (severe acne is an exclusion for self-treatment)'},
+
+{id:'da02', skill:'tell', prof:'Dr. Lahoud', tier:'new', topic:'deentapply', sub:'acne', concept:'da-acne-otc-two-properties', img:'deent_acne_otc',
+ tags:['acne','OTC','benzoyl peroxide','comparison'], source:'slide',
+ stem:'A 19-year-old has red papules and pustules and also blackheads. He wants one OTC ingredient that kills acne bacteria and also clears clogged pores. Use the image above. Which ingredient fits both needs?',
+ options:[
+  {t:'Benzoyl peroxide', correct:true, why:'In the table, benzoyl peroxide is the only column marked yes for both bactericidal and comedolytic. It therefore addresses the bacteria behind his papules and pustules and the clogged pores behind his blackheads with one product.'},
+  {t:'Resorcinol, usually combined with sulfur', correct:false, why:'Resorcinol is marked bactericidal, and also antifungal, but it is marked no for comedolytic. It would help the bacteria but would not open the clogged pores, so it covers only one of the two needs he named.'},
+  {t:'A salicylic acid (beta-hydroxy acid) product', correct:false, why:'Hydroxy acids are comedolytic in the beta form but are marked no for bactericidal. Salicylic acid would help with blackheads but not with the bacterial part of his papules and pustules, so it also covers only one need.'},
+  {t:'Sulfur at 3 to 10%', correct:false, why:'Sulfur is marked keratolytic and comedolytic but no for bactericidal, so it would address pores but not bacteria. The slide on topical treatments also notes limited evidence for sulfur in acne treatment, which makes it a weaker choice.'}],
+ teach:'Match the property to the column: bactericidal and comedolytic are different checks, and only benzoyl peroxide passes both. Resorcinol kills bacteria but does not unclog pores, while hydroxy acids and sulfur unclog pores but do not kill bacteria. Benzoyl peroxide is also the preferred initial OTC topical agent for acne, with the table giving 2.5 to 10% once or twice daily. When a patient states two goals, check each goal against the table rather than choosing the first ingredient that fits one of them.',
+ cite:'Patel_Acne-Therapeutics-Student.pdf slide 23; slide 25 (benzoyl peroxide preferred; limited evidence for sulfur and resorcinol)'},
+
+{id:'da03', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'deentapply', sub:'acne', concept:'da-acne-vehicle-dry-skin',
+ tags:['acne','formulation','skin type','counseling'], source:'slide',
+ stem:'A 24-year-old man has mild acne and dry, “sensitive” skin that stings with most products. He chooses a benzoyl peroxide product, which is made as a wash, foam, lotion, cream and gel. Which formulation best fits his skin type?',
+ options:[
+  {t:'A lotion or a cream', correct:true, why:'Normal to dry or sensitive skin tolerates lotions and creams, and benzoyl peroxide is made in both forms. A lotion or cream matches his skin type and still delivers the same ingredient, so it is the better vehicle for him.'},
+  {t:'A gel, because gels dry quickly and spread easily on the face', correct:false, why:'Gels are tolerated by oily to normal skin, not by dry or sensitive skin, so a gel suits the wrong skin type. On skin that already stings, the drying vehicle makes irritation more likely rather than less.'},
+  {t:'A solution, because solutions penetrate better than creams', correct:false, why:'Solutions are tolerated by oily to normal skin, along with gels and lotions, but not by dry or sensitive skin. Benzoyl peroxide is also not made as a solution on the product table, so this vehicle fails on both points.'},
+  {t:'An ointment, because it adds the most moisture to dry skin', correct:false, why:'Ointments and bars are not usually recommended for any skin type, so dry skin is not an exception. Choosing an ointment for moisture confuses a dry-skin need with a vehicle that the table does not support for acne products.'}],
+ teach:'Pick the vehicle from the skin type, then check that the ingredient comes in that vehicle. Oily to normal skin tolerates gels, solutions and lotions, normal skin adds creams, normal to dry or sensitive skin tolerates lotions and creams, and ointments and bars are not usually recommended for any skin type. Benzoyl peroxide is made as a wash, foam, lotion, cream and gel, so a lotion or cream is available for this patient. Changing one fact, for example oily skin, makes a gel or solution acceptable again.',
+ cite:'Patel_Acne-Therapeutics-Student.pdf slide 24; slide 23 (benzoyl peroxide formulations)'},
+
+{id:'da04', skill:'error', prof:'Dr. Lahoud', tier:'new', topic:'deentapply', sub:'acne', concept:'da-acne-antibiotic-monotherapy-error',
+ tags:['acne','prescription review','resistance','clindamycin'], source:'slide',
+ stem:'A prescriber orders clindamycin 1% topical, apply to the face twice daily, as the only acne treatment for a 20-year-old with inflammatory acne. The label and bottle match the order. What is the problem, and what is the fix?',
+ options:[
+  {t:'Topical antibiotics are not used alone; ask the prescriber to add benzoyl peroxide to limit resistance.', correct:true, why:'Topical antibiotics are not recommended as monotherapy, and the comment on the prescription table says to add benzoyl peroxide to reduce resistance. The order is complete otherwise, so the fix is a call to the prescriber to add a second agent.'},
+  {t:'Twice daily exceeds the limit for a topical antibiotic, so ask the prescriber to reduce the frequency to once weekly.', correct:false, why:'The oral and topical use notes allow a thin layer 1 to 2 times daily, so twice daily is within range. Cutting to once weekly would lower exposure but would not fix the real problem, which is the antibiotic being used with no partner.'},
+  {t:'Clindamycin works well alone on the face, so dispense as written and counsel on cosmetics.', correct:false, why:'This keeps the order as written, but topical antibiotics are never recommended as monotherapy, and the comment on the table says to add benzoyl peroxide. Counseling on cosmetics (wait 30 minutes) is useful but does not repair the order.'},
+  {t:'Ask for erythromycin 2% instead, because it is the one topical antibiotic that can be used alone.', correct:false, why:'Erythromycin 2% is on the same row as clindamycin and carries the same instruction not to use it as monotherapy. Switching products would leave the resistance problem in place, so the correct fix is adding benzoyl peroxide, not swapping antibiotics.'}],
+ teach:'Reviewing this order means checking more than the label and the bottle. The prescription is complete and matches the product, yet the regimen is flawed: topical antibiotics reduce inflammation and bacterial growth, but used alone they invite resistance, so benzoyl peroxide is added. The correct response is to call the prescriber with a specific recommendation rather than to change the frequency or swap one antibiotic for another. A counseling point also follows from the table: wait 30 minutes before shaving or applying cosmetics.',
+ cite:'Patel_Acne-Therapeutics-Student.pdf slide 31; slides 25, 33'},
+
+{id:'da18', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'deentapply', sub:'acne', concept:'da-acne-pair-pathogenic-factors',
+ tags:['acne','combination therapy','retinoid','benzoyl peroxide'], source:'slide',
+ stem:'A 17-year-old with mild acne wants a two-product OTC plan that addresses as many causes as possible: acne bacteria, abnormal keratinization and inflammation. Which pair does this best?',
+ options:[
+  {t:'Benzoyl peroxide in the morning and adapalene at night', correct:true, why:'Benzoyl peroxide is bactericidal and comedolytic, and the retinoid normalizes keratinocyte differentiation and reduces inflammation. The two work on different parts of acne development, and splitting them morning and night follows the retinoid counseling.'},
+  {t:'Adapalene and a salicylic acid product used together at night', correct:false, why:'Both are comedolytic, so the pair overlaps and adds no bacterial action. The retinoid counseling also says not to use adapalene with salicylic acid, sulfur, resorcinol or vitamin C products, so this pair breaks a stated rule.'},
+  {t:'Benzoyl peroxide and resorcinol, both used each morning', correct:false, why:'Both are bactericidal, so the pair covers bacteria twice and leaves keratinization and inflammation unaddressed. Resorcinol is also not comedolytic, and the evidence for resorcinol in acne treatment is limited, so the pair adds little.'},
+  {t:'Salicylic acid and sulfur, one in the morning and one at night', correct:false, why:'Both are keratolytic and comedolytic but neither is bactericidal, so the bacterial cause is not treated at all. Evidence for sulfur is limited as well, so this pair covers only one of the three causes the patient named.'}],
+ teach:'The treatment approach is to address as many pathogenic factors as possible: reduce sebum, suppress P. acnes, reduce inflammation to prevent scarring and decrease hyperkeratinization. Combination therapy that affects different aspects of acne development should be used in most patients, and a topical retinoid with benzoyl peroxide is safe and efficacious. Choose agents that cover different causes instead of two with the same action, and use the retinoid at night apart from benzoyl peroxide, with a moisturizer and sunscreen.',
+ cite:'Patel_Acne-Therapeutics-Student.pdf slides 17, 25, 27'},
+
+/* ---- Scaly dermatoses and psoriasis ------------------------------------ */
+{id:'da05', skill:'tell', prof:'Dr. Lahoud', multi:true, tier:'new', topic:'deentapply', sub:'scaly', concept:'da-scaly-shared-features', img:'deent_scaly_compare',
+ tags:['scaly dermatoses','comparison','dandruff','seborrheic dermatitis','psoriasis'], source:'slide',
+ stem:'Use the image above. Which features does seborrheic dermatitis share with psoriasis but not with dandruff? Select all that apply.',
+ options:[
+  {t:'Inflammation is present', correct:true, why:'The inflammation row reads absent for dandruff and present for both seborrheic dermatitis and psoriasis. It is a feature the two share that dandruff lacks, which is why inflammation helps separate dandruff from the other two.'},
+  {t:'Epidermal hyperplasia is present', correct:true, why:'The epidermal hyperplasia row also reads absent for dandruff and present for seborrheic dermatitis and psoriasis. Together with inflammation it marks the two conditions that involve the epidermis as more than a scalp flaking problem.'},
+  {t:'The scalp is involved', correct:false, why:'Scalp involvement appears in all three columns: dandruff on the scalp, seborrheic dermatitis on the scalp, face and trunk, and psoriasis on the scalp and other sites. A feature present in all three cannot separate dandruff from the other two.'},
+  {t:'Scales are yellow and oily', correct:false, why:'Yellow, oily scales on red skin describe seborrheic dermatitis only. Psoriasis has silvery white scales on sharp-bordered plaques and dandruff has thin white or grey flakes, so this feature is not shared by psoriasis.'},
+  {t:'Epidermal turnover is 2 times faster than normal', correct:false, why:'A 2-fold increase belongs to dandruff. Seborrheic dermatitis is 3 times faster and psoriasis is 8 times faster, so this statement describes the condition the question asks to exclude, not a feature shared by the other two.'}],
+ teach:'When a question asks what two conditions share and a third lacks, run down each row of the table and keep only the rows where the two match and the third differs. Here inflammation and epidermal hyperplasia are absent in dandruff and present in seborrheic dermatitis and psoriasis. Scalp involvement is in all three, yellow oily scales belong to seborrheic dermatitis, and the 2-fold turnover belongs to dandruff, with 3-fold and 8-fold for the others. The same rows give a quick way to sort a patient description.',
+ cite:'Patel_Scaly-Dermatoses-Therapeutics-Student.pdf slide 6'},
+
+{id:'da06', skill:'apply', prof:'Dr. Lahoud', multi:true, tier:'new', topic:'deentapply', sub:'scaly', concept:'da-scaly-otc-ingredient-match', img:'deent_scaly_otc',
+ tags:['scaly dermatoses','OTC ingredients','hydrocortisone','sulfur'], source:'slide',
+ stem:'Use the image above. Which condition and OTC ingredient pairings does the table support? Select all that apply.',
+ options:[
+  {t:'Seborrheic dermatitis of the face: hydrocortisone 1%', correct:true, why:'Hydrocortisone 1% reads 0.5 to 1 for seborrheic dermatitis, so a 1% product is within the range. Hydrocortisone is therefore an OTC option for this condition, and the patient can choose it for the inflamed skin of the face.'},
+  {t:'Dandruff: selenium sulfide 1%', correct:true, why:'Selenium sulfide reads 1 for dandruff, as it does for seborrheic dermatitis and psoriasis. The pairing matches the table, so selenium sulfide is a supported OTC choice for dandruff in addition to ketoconazole and coal tar shampoos.'},
+  {t:'Psoriasis: coal tar 2%', correct:true, why:'Coal tar reads 0.5 to 5 in all three condition columns, so 2% is inside the range for psoriasis. It is one of the OTC ingredients that applies to every condition in the table, which makes it a safe pairing to recognize.'},
+  {t:'Psoriasis: sulfur 3%', correct:false, why:'Sulfur reads 2 to 5 for dandruff and seborrheic dermatitis but reads no for psoriasis. A 3% strength is a valid number for the other two conditions, which makes this a near-miss, but the psoriasis cell excludes it.'},
+  {t:'Dandruff: hydrocortisone 0.5%', correct:false, why:'Hydrocortisone reads no in the dandruff column and 0.5 to 1 for seborrheic dermatitis and psoriasis. The 0.5% strength is valid for those two, but not for dandruff, so the ingredient fails on the condition, not the strength.'},
+  {t:'Psoriasis: residual pyrithione zinc 0.1%', correct:false, why:'Residual pyrithione zinc reads 0.1 to 0.25 for dandruff and seborrheic dermatitis but 0.25 only for psoriasis. A 0.1% strength fits the other two columns, but the psoriasis column allows only the single value 0.25.'}],
+ teach:'Read the table by condition column, not by ingredient row alone: an ingredient can be allowed for one condition and marked no or given a different range for another. Hydrocortisone is no for dandruff, sulfur is no for psoriasis, and coal tar, ketoconazole shampoo, salicylic acid and selenium sulfide cover all three. Pyrithione zinc is the near-miss case, because its range differs by condition and by rinse-off or residual form. When a patient names a product and a condition, check both together.',
+ cite:'Patel_Scaly-Dermatoses-Therapeutics-Student.pdf slide 7'},
+
+{id:'da07', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'deentapply', sub:'scaly', concept:'da-psoriasis-bsa-age', img:'deent_psor_bsa',
+ tags:['psoriasis','BSA','severity','child'], source:'slide',
+ stem:'A 7-year-old child and a 40-year-old adult each have psoriasis plaques covering the entire head, front and back, and nowhere else. Mild psoriasis is a BSA of 5% or less, moderate is 8% or more and severe is 10% or more. Use the image above. How is each classified?',
+ options:[
+  {t:'Child: 18%, severe. Adult: 9%, moderate.', correct:true, why:'The image gives the head as 18% in a child and 9% in an adult. The child exceeds the 10% cut-off for severe, and the adult at 9% meets the 8% cut-off for moderate but not the 10% cut-off for severe.'},
+  {t:'Child: 9%, moderate. Adult: 18%, severe.', correct:false, why:'This reverses the two figures. The head is 18% of the body surface in the child figure and 9% in the adult figure, because a child’s head is larger in proportion to the body, so the larger value belongs to the child.'},
+  {t:'Both: 9%, so both are moderate.', correct:false, why:'This uses the adult head value for both patients. The child figure shows the head as 18% of the body surface, so applying the adult value understates the child’s BSA and places the child in the wrong category.'},
+  {t:'Child: 18%, severe. Adult: 9%, mild, because it is under 10%.', correct:false, why:'The adult at 9% is not under the mild limit of 5% or less. A BSA of 9% meets the 8% cut-off for moderate, and being below 10% only means it does not reach severe, so calling it mild misreads the cut-offs.'}],
+ teach:'Two steps decide the class: find the BSA that the lesion site represents for that patient’s age, then compare it with the cut-offs. The image shows the head as 9% in an adult and 18% in a child, while each arm is 9%, the chest and back are each 18%, and each leg is 18% in an adult and 13.5% in a child. The same anatomical site can therefore carry a different weight, and the classification and the choice of therapy can differ even though the body part is the same.',
+ cite:'Patel_Scaly-Dermatoses-Therapeutics-Student.pdf slide 32; slides 26, 31 (BSA cut-offs)'},
+
+{id:'da08', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'deentapply', sub:'scaly', concept:'da-psoriasis-algorithm-next-step', img:'deent_psor_algo',
+ tags:['psoriasis','algorithm','phototherapy','topical'], source:'slide',
+ stem:'A 45-year-old has plaques on the elbows and knees covering about 4% of the body surface. After 4 weeks of a topical corticosteroid there is little improvement, and he asks about a pill. Use the image above, the algorithm for mild-to-moderate psoriasis. What is the next step?',
+ options:[
+  {t:'Topical agents plus phototherapy', correct:true, why:'In the algorithm the second step after inadequate or ineffective topical agents is topical agents plus phototherapy. A systemic agent is the third step, so he moves one step, not two, and moisturizers continue at every step.'},
+  {t:'Topical agents plus a systemic agent, which is the pill he asked about', correct:false, why:'This is the third box of the algorithm, reached only if topical agents plus phototherapy are inadequate or ineffective. Skipping the middle step goes beyond what the algorithm allows for mild disease, even though the patient asked for a pill.'},
+  {t:'A biologic agent used alone, with the topical agents stopped', correct:false, why:'The mild-to-moderate algorithm contains no biologic box. Biologic agents appear in the moderate-to-severe algorithm, which starts with a systemic agent, so applying that algorithm to a mild patient chooses the wrong pathway.'},
+  {t:'Continue the same corticosteroid for another 8 weeks', correct:false, why:'The algorithm moves to the next step when topical agents are inadequate, and the topical therapy table limits corticosteroid duration to 4 weeks or less. Continuing it for 8 more weeks ignores both the step and the duration limit.'}],
+ teach:'Start by placing the patient in the right algorithm: with a BSA of 4% he is in the mild range, so the mild-to-moderate pathway applies. That pathway moves from topical agents to topical agents plus phototherapy to topical agents plus a systemic agent, each time only if the step before is inadequate or ineffective, with moisturizers as needed and step-down once disease is controlled. The moderate-to-severe algorithm begins with a systemic agent, which is why changing his BSA would change the answer. A patient’s request for a pill does not skip a step.',
+ cite:'Patel_Scaly-Dermatoses-Therapeutics-Student.pdf slide 35; slides 36, 37, 26'},
+
+{id:'da09', skill:'apply', prof:'Dr. Lahoud', multi:true, tier:'new', topic:'deentapply', sub:'scaly', concept:'da-psoriasis-topical-application',
+ tags:['psoriasis','topical','anthralin','coal tar','counseling'], source:'slide',
+ stem:'A 52-year-old has thick plaques on both elbows and a patch of psoriasis in the armpit fold. Which statements about applying topical products to these areas are correct? Select all that apply.',
+ options:[
+  {t:'Coal tar is applied in the evening and washed off in the morning', correct:true, why:'The topical therapy table gives coal tar as applied in the evening and washed off in the morning. This is the timing to teach when a patient chooses coal tar for the elbow plaques.'},
+  {t:'Anthralin goes only on the thick elbow plaques and is wiped off after 2 hours or less', correct:true, why:'The table says anthralin is applied only to thick plaque lesions for 2 hours or less and then wiped off. Limiting it to the plaques and the time window keeps the irritant away from normal skin and limits contact.'},
+  {t:'Zinc oxide around the edges of an anthralin plaque protects the normal skin', correct:true, why:'The anthralin entry says to use zinc oxide around the edges to protect normal skin. The reasoning is that the product acts on the plaque, so the surrounding healthy skin needs a barrier against it.'},
+  {t:'Pimecrolimus suits the armpit patch because it is applied to intertriginous areas', correct:true, why:'The calcineurin inhibitor entry, pimecrolimus, says to apply it to intertriginous areas, which are skin folds such as the armpit. The elbow plaques are thick and exposed, so the fold is the location that this entry fits.'},
+  {t:'Anthralin is left on overnight so that it reaches the thick plaques', correct:false, why:'Anthralin is applied for 2 hours or less and wiped off, not left on overnight. Longer contact would expose normal skin to an irritant, which is the reason for the time limit and for protecting the edges with zinc oxide.'},
+  {t:'A high-potency corticosteroid is the best choice for the armpit fold', correct:false, why:'The corticosteroid entry calls for low potency on the face and skin folds, with duration limited to 4 weeks or less. The armpit is a skin fold, so a high-potency product there contradicts the potency rule.'}],
+ teach:'Each topical psoriasis product has a site, a timing and a limit, and the reasons explain the rules. Anthralin is an irritant, so it is confined to thick plaques, wiped off after 2 hours or less and kept off normal skin with zinc oxide. Coal tar is applied in the evening and washed off in the morning. Skin folds call for pimecrolimus or a low-potency corticosteroid, and corticosteroids are limited in duration and surface area, with cream or lotion by day and ointment at night. Matching the product to the body site is the pharmacist’s task.',
+ cite:'Patel_Scaly-Dermatoses-Therapeutics-Student.pdf slide 36'},
+
+{id:'da10', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'deentapply', sub:'scaly', concept:'da-sd-shampoo-next-step',
+ tags:['seborrheic dermatitis','ketoconazole','shampoo schedule','referral'], source:'slide',
+ stem:'A 35-year-old man with seborrheic dermatitis of the scalp has used ketoconazole shampoo every day for 2 weeks, leaving it on for 3 to 5 minutes each time. He is clearly better and asks what to do now. What is the best advice?',
+ options:[
+  {t:'Use it 2 to 3 times a week for 4 weeks.', correct:true, why:'The schedule is daily for 1 to 2 weeks, then 2 to 3 times a week for 4 weeks, and only after 4 weeks of improvement may the frequency fall to once weekly. He is at the end of the daily phase, so the next phase is 2 to 3 times weekly.'},
+  {t:'Drop to once weekly now, since he is already much better.', correct:false, why:'Once weekly is allowed only after 4 weeks of improvement on the 2 to 3 times weekly phase. Dropping to it after the daily phase skips the middle phase, which carries the response forward and lowers the chance of the flakes returning.'},
+  {t:'Keep using it daily until the scalp clears.', correct:false, why:'The schedule moves from daily use to 2 to 3 times a week after 1 to 2 weeks. Staying on daily use extends the intense phase beyond the schedule, even though the patient is improving, so it does not follow the stated regimen.'},
+  {t:'Stop and see a provider, because 2 weeks is longer than 7 days.', correct:false, why:'The 7-day rule says to consult a provider if the disorder worsens or symptoms persist beyond 7 days. He is improving on schedule, so the rule does not apply, and sending him to a provider would be unnecessary.'}],
+ teach:'Treat the shampoo directions as a schedule with phases: leave it on 3 to 5 minutes, use it daily for 1 to 2 weeks, then 2 to 3 times a week for 4 weeks, and consider once weekly if there is improvement after 4 weeks. Ketoconazole is first line, with selenium sulfide, pyrithione zinc, ciclopirox and coal tar as second line. The referral rule is separate: a disorder that worsens or persists beyond 7 days needs a health care provider. Change the facts, for example no improvement after 7 days of correct use, and the advice becomes referral.',
+ cite:'Patel_Scaly-Dermatoses-Therapeutics-Student.pdf slide 16'},
+
+{id:'da19', skill:'tell', prof:'Dr. Lahoud', tier:'new', topic:'deentapply', sub:'scaly', concept:'da-sd-darker-skin-presentation',
+ tags:['seborrheic dermatitis','presentation','pigmentation','tell apart'], source:'slide',
+ stem:'A 29-year-old man with darker skin has pale, hypopigmented patches covered with greasy yellow scales on the face and around the ears, with itching and stinging. He has no plaques on the elbows or knees. Which statement is correct?',
+ options:[
+  {t:'This fits seborrheic dermatitis, because darker skin may show hypopigmentation.', correct:true, why:'Seborrheic dermatitis presents on the head, ears and face with yellow, greasy scales and itching and stinging. People with darker pigmentation may present with hypopigmentation, so the pale color does not argue against the diagnosis.'},
+  {t:'Hypopigmentation rules out seborrheic dermatitis, so this is psoriasis.', correct:false, why:'Hypopigmentation can occur with seborrheic dermatitis in darker skin, so it does not rule it out. Psoriasis has silvery white scales on sharp red plaques, usually at the elbows and knees, which does not fit greasy yellow scales on the face.'},
+  {t:'Greasy yellow scales mean dandruff, which also affects the face and ears.', correct:false, why:'Dandruff is limited to the scalp and shows thin white or grey flakes without inflammation. Greasy yellow scales on the face and ears with itching and stinging point to seborrheic dermatitis, which has inflammation.'},
+  {t:'The itching and stinging show the patient needs a different diagnosis from the scales.', correct:false, why:'Itching and stinging are part of the usual presentation of seborrheic dermatitis on the head, ears and face. They do not require a second diagnosis, so treating the symptoms as unrelated misreads a typical feature.'}],
+ teach:'Build the diagnosis from the pattern of site and scale rather than from color alone. Seborrheic dermatitis shows yellow, greasy scales in patches or plaques on red inflamed skin of the head, ears and face, often with itching and stinging, and it can also occur on the chest and in skin folds. In people with darker pigmentation the skin may be hypopigmented, not red. Psoriasis would show sharp-bordered plaques with silvery white scales, and dandruff stays on the scalp as thin flakes without inflammation.',
+ cite:'Patel_Scaly-Dermatoses-Therapeutics-Student.pdf slide 12; slide 6'},
+
+/* ---- Ophthalmic -------------------------------------------------------- */
+{id:'da11', skill:'apply', prof:'Dr. Lahoud', multi:true, tier:'new', topic:'deentapply', sub:'eye', concept:'da-eye-exclusion-exceptions', img:'deent_oph_excl',
+ tags:['ophthalmic','exclusions','self-care','referral'], source:'slide',
+ stem:'Several patients with red, irritated eyes ask for an OTC eye product. Use the image above. Which findings exclude self-treatment? Select all that apply.',
+ options:[
+  {t:'Red, thickened eyelids with scaling', correct:true, why:'Signs and symptoms of eyelid infection, such as red, thickened eyelids and scaling, exclude self-treatment. The exception is a stye, so this picture of a scaling infection goes to a provider rather than to an OTC eye product.'},
+  {t:'Sensitivity to bright light', correct:true, why:'Light sensitivity is its own item among the exclusions. It points to a problem that a pharmacist cannot judge from the counter, so a patient who reports it is referred even if the eyes look only mildly red.'},
+  {t:'A splash of hot cooking oil into the eye', correct:true, why:'Eye exposure to heat is an exclusion, as are ocular trauma and chemical exposure. A hot oil splash is a heat exposure to the eye, so this patient is excluded from self-treatment and needs prompt evaluation.'},
+  {t:'A stye on the eyelid', correct:false, why:'The eyelid infection exclusion carries an explicit exception for a stye. A stye does not by itself exclude self-treatment, so this finding is the near-miss that shares a body site with the true exclusion but is not an exclusion.'},
+  {t:'Blurry vision that began right after applying a bland eye ointment', correct:false, why:'The exclusion covers blurred vision not due to the use of eye ointments. Blur caused by an ointment is expected from the product, so it does not exclude self-treatment, unlike blur with no such cause.'},
+  {t:'Red, irritated eyes after a day in strong sunlight', correct:false, why:'The heat exclusion is worded as eye exposure to heat, not sun exposure. Sun exposure is stated as the exception, so redness after a day in the sun does not exclude self-treatment on that basis.'}],
+ teach:'The exclusion list has three built-in exceptions that are easy to overlook, and each one is the reason a stem can look like an exclusion without being one: a stye is not an eyelid infection for this purpose, blurred vision from an eye ointment does not count, and sun exposure is not heat exposure. The true exclusions are eye pain, ocular trauma, chemical exposure, heat exposure, blurred vision without an ointment cause, light sensitivity and eyelid infection. Check the exact wording before referring.',
+ cite:'Lam_OphthalmicDisorders.pdf slide 11 (repeated on slide 30)'},
+
+{id:'da12', skill:'tell', prof:'Dr. Lahoud', tier:'new', topic:'deentapply', sub:'eye', concept:'da-conj-chronic-bacterial-row', img:'deent_conj_bv',
+ tags:['ophthalmic','conjunctivitis','bacterial','tell apart'], source:'slide',
+ stem:'A 30-year-old has had crusting along the eyelid margins for several weeks, with no tearing. Use the image above. Which row does he match, and what does the table list for treatment?',
+ options:[
+  {t:'Chronic bacterial; symptomatic treatment and refer to a provider.', correct:true, why:'The chronic bacterial row lists a chronic onset and lid crusting as the symptom, without tearing. The treatment column for the bacterial rows is symptomatic treatment and referral to a provider, so both parts of the answer match.'},
+  {t:'Acute bacterial; symptomatic treatment and refer to a provider.', correct:false, why:'The acute bacterial row lists tearing as well as lid crusting and an acute onset. His crusting has lasted for weeks and he has no tearing, so he fits the chronic row, even though the treatment entry is the same.'},
+  {t:'Adenoviral; symptomatic treatment and refer to a provider.', correct:false, why:'The adenoviral row has an acute onset with tearing and lid crusting upon awakening. A weeks-long course without tearing does not match that row, even though crusting is a shared symptom, so this is a near-miss.'},
+  {t:'Herpetic; symptomatic treatment and refer to a provider, as for the other viral row.', correct:false, why:'The herpetic row lists an acute onset with tearing as the symptom. He has no tearing and a long course, so the herpetic row does not describe him, even though the treatment entry for viral rows is also referral.'}],
+ teach:'Sort by onset and symptom pattern before looking at treatment, because the treatment entry is the same across the rows in the image. The bacterial rows are acute with tearing and lid crusting or chronic with lid crusting alone, the adenoviral row is acute with tearing and crusting on waking, and the herpetic row is acute with tearing. The condition column is marked FYI, so the decision that matters is the one in the treatment column: symptomatic treatment and referral to a provider. Note that the bottom of this slide is cut off.',
+ cite:'Lam_OphthalmicDisorders.pdf slide 28'},
+
+/* ---- Glaucoma ---------------------------------------------------------- */
+{id:'da13', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'deentapply', sub:'glau', concept:'da-glau-combination-substitution', img:'deent_glc_combo',
+ tags:['glaucoma','combination','timolol','dorzolamide'], source:'slide',
+ stem:'A 68-year-old with primary open-angle glaucoma uses timolol drops and dorzolamide drops (a carbonic anhydrase inhibitor) from two bottles and has trouble managing both. He asks whether one bottle could replace the two. Use the image above. Which product and schedule do that?',
+ options:[
+  {t:'Dorzolamide/timolol (Cosopt), 1 drop in the affected eye(s) twice daily', correct:true, why:'Cosopt is a carbonic anhydrase inhibitor plus beta blocker, so it contains both of his drugs, and the table gives its regimen as 1 drop twice daily. One bottle then replaces the two on a single schedule.'},
+  {t:'Brimonidine/timolol (Combigan), 1 drop in the affected eye(s) twice daily', correct:false, why:'Combigan shares timolol with his current regimen, which makes it a near-miss, but it pairs timolol with the alpha-2 agonist brimonidine, not a carbonic anhydrase inhibitor. It would swap his dorzolamide for a different class.'},
+  {t:'Brinzolamide/brimonidine (Simbrinza), 1 drop in the affected eye(s) three times daily', correct:false, why:'Simbrinza contains a carbonic anhydrase inhibitor, brinzolamide, but no timolol, so it replaces dorzolamide while leaving the beta blocker out. Its three-times-daily regimen also differs from the twice-daily one of the combinations that contain timolol.'},
+  {t:'Dorzolamide/timolol (Cosopt), 1 drop in the affected eye(s) three times daily to match dorzolamide alone', correct:false, why:'The product is right, but the dose is not. The table gives the combination as 1 drop twice daily, so a three-times-daily sig copied from the single-agent schedule would overdose both drugs in the bottle and conflict with the table.'}],
+ teach:'A combination substitution has two checks: both classes must be present, and the schedule must be the combination’s own, not that of one component. Reading the table, Combigan is alpha-2 agonist plus beta blocker twice daily, Cosopt and Cosopt PF are carbonic anhydrase inhibitor plus beta blocker twice daily, and Simbrinza is carbonic anhydrase inhibitor plus alpha-2 agonist three times daily. Each near-miss shares one class or one frequency with the correct product, which is why both checks are needed.',
+ cite:'Lam_Glaucoma.pdf slide 69; slide 32 (timolol)'},
+
+{id:'da14', skill:'error', prof:'Dr. Lahoud', multi:true, tier:'new', topic:'deentapply', sub:'glau', concept:'da-glau-copd-combination-products', img:'deent_glc_combo',
+ tags:['glaucoma','beta blocker','COPD','precautions'], source:'slide',
+ stem:'A 62-year-old with glaucoma also has COPD. Her prescriber is considering a combination bottle. Use the image above and the precautions for ophthalmic beta blockers. Which products should the pharmacist question because of her COPD? Select all that apply.',
+ options:[
+  {t:'Brimonidine/timolol (Combigan)', correct:true, why:'Combigan contains timolol, a beta blocker, and the precautions for ophthalmic beta blockers include asthma and COPD. The alpha-2 agonist half does not matter for this concern, but the timolol half does, so she needs the prescriber’s review.'},
+  {t:'Dorzolamide/timolol (Cosopt)', correct:true, why:'Cosopt contains timolol, so the beta blocker precaution for asthma and COPD applies to the whole bottle. The carbonic anhydrase inhibitor half is not the problem, but a combination carries every precaution of its parts.'},
+  {t:'Dorzolamide/timolol, preservative-free (Cosopt PF)', correct:true, why:'The preservative-free version has the same two drugs as Cosopt, so it also contains timolol. A change to a preservative-free product helps preservative irritation but does not remove the beta blocker precaution for COPD.'},
+  {t:'Brinzolamide/brimonidine (Simbrinza)', correct:false, why:'Simbrinza combines a carbonic anhydrase inhibitor with an alpha-2 agonist and contains no beta blocker, so the COPD precaution does not apply. It has its own precautions, for example for a history of stroke, but not this one.'},
+  {t:'Latanoprost/netarsudil (Rocklatan)', correct:false, why:'Rocklatan pairs the prostaglandin analogue latanoprost with netarsudil and has no beta blocker. The COPD precaution belongs to the beta blocker class, so this product does not need to be questioned for her lung disease.'}],
+ teach:'A combination product carries the precautions of each of its components, so check which classes are in the bottle before checking the patient’s conditions. The ophthalmic beta blocker precautions are asthma or COPD, bradycardia or second or third degree heart block, uncompensated cardiac failure and oral beta-blocker therapy. Any bottle containing timolol, including Combigan and both versions of Cosopt, triggers them. Products without timolol, such as Simbrinza and the latanoprost combination, need a different precaution check.',
+ cite:'Lam_Glaucoma.pdf slide 69; slide 34 (beta blocker precautions); slide 19 (latanoprost with netarsudil)'},
+
+{id:'da15', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'deentapply', sub:'glau', concept:'da-glau-eyelid-closure-reason', img:'deent_glc_elc',
+ tags:['glaucoma','administration','eyelid closure','counseling'], source:'slide',
+ stem:'A 70-year-old with glaucoma uses timolol drops and has a slow heart rate. The pharmacist teaches him to keep his eyelids gently closed after each drop. Use the image above. Why does this step matter most for him?',
+ options:[
+  {t:'It slows drainage down the nasolacrimal duct, so less drug reaches the blood and effects are milder.', correct:true, why:'Closing the eyelids reduces nasolacrimal drainage, which reduces systemic absorption and the severity of systemic side effects. For a patient with a slow heart rate on a beta blocker, less systemic drug is the reason the step matters.'},
+  {t:'It speeds drainage through the tear duct, which clears the preservative before it irritates the eye surface.', correct:false, why:'Eyelid closure decreases drainage rather than increasing it, as the diagram’s drainage path shows. Moving the drop faster through the duct would raise systemic absorption, the opposite of what a patient with a slow heart rate needs.'},
+  {t:'It keeps the drop from touching the cornea, which lowers stinging at the eye surface.', correct:false, why:'The purpose is not to keep the drop off the cornea. The drop is placed on the eye so that it can work there, and the closure step then limits what drains away, so this reason misstates what the technique does.'},
+  {t:'It makes the drop work faster, so the drops can be used less often than prescribed.', correct:false, why:'The slide gives no effect on onset of action or on the dosing schedule. Eyelid closure is about reducing drainage and systemic exposure, and a patient who used drops less often than prescribed would risk poor pressure control.'}],
+ teach:'The reason for each technique step explains who needs it most. Eyelid closure reduces nasolacrimal drainage, systemic absorption and the severity of systemic side effects. The instructions are to wash hands and remove contacts, tilt the head back and pull the lower outer lid to make a pouch, look at the dropper, release the lid slowly as the drop falls, close the eyes and lightly press the inner corners, and blot excess solution. A beta blocker with a slow heart rate makes systemic exposure the main concern.',
+ cite:'Lam_Glaucoma.pdf slide 72; slide 73 (instructions for eyelid closure)'},
+
+{id:'da16', skill:'apply', prof:'Dr. Lahoud', multi:true, tier:'new', topic:'deentapply', sub:'glau', concept:'da-glau-pacg-drug-flags', img:'deent_glc_pacg',
+ tags:['glaucoma','angle-closure','drug-induced','medication review'], source:'slide',
+ stem:'A 66-year-old has been told he has primary angle-closure glaucoma (PACG). Use the image above. Which of his medicines should the pharmacist flag for review? Select all that apply.',
+ options:[
+  {t:'Oxybutynin tablets, a systemic anticholinergic', correct:true, why:'Topical and systemic anticholinergics worsen or exacerbate PACG. Oxybutynin is a systemic anticholinergic, so a patient with angle-closure glaucoma who takes it needs a review with the prescriber and eye care provider.'},
+  {t:'Amitriptyline, an antidepressant', correct:true, why:'Antidepressants are on the list of drugs that worsen or exacerbate PACG. Amitriptyline is an antidepressant, so it belongs in the flagged group even though it was not prescribed for the eye condition.'},
+  {t:'Phenylephrine nasal spray, an alpha-1 agonist', correct:true, why:'Alpha-1 adrenergic agonists can worsen PACG, and phenylephrine is an alpha-1 agonist. A nasal decongestant that the patient buys without a prescription is easy to miss, which is why the medication review asks about it.'},
+  {t:'Albuterol inhaler, a beta-2 agonist', correct:true, why:'Beta-2 adrenergic agonists are the fourth class that can worsen PACG. Albuterol is a beta-2 agonist, so an inhaler used for breathing is still a medicine to flag in a patient with angle-closure glaucoma.'},
+  {t:'Timolol eye drops, a beta blocker', correct:false, why:'Beta blockers are not on the list of drugs that worsen PACG. Timolol lowers intraocular pressure, so it would not be flagged for this reason, though it has its own precautions, for example asthma, COPD and heart block.'},
+  {t:'Lisinopril, an ACE inhibitor', correct:false, why:'ACE inhibitors are not among the classes that worsen or exacerbate PACG. The list covers anticholinergics, antidepressants, alpha-1 agonists and beta-2 agonists, so lisinopril does not need flagging for the eye condition.'}],
+ teach:'In a medication review for angle-closure glaucoma, scan the profile for four classes: topical and systemic anticholinergics, antidepressants, alpha-1 adrenergic agonists and beta-2 adrenergic agonists. The trap is that the same drug classes appear in everyday products, such as a bladder anticholinergic, an antidepressant, a nasal decongestant and a rescue inhaler. A drug that lowers pressure in open-angle glaucoma, such as timolol, is not on the list. This slide concerns PACG, not primary open-angle glaucoma.',
+ cite:'Lam_Glaucoma.pdf slide 90'},
+
+{id:'da17', skill:'error', prof:'Dr. Lahoud', tier:'new', topic:'deentapply', sub:'glau', concept:'da-glau-timoptic-xe-frequency', img:'deent_glc_names',
+ tags:['glaucoma','prescription review','timolol','prescribing error'], source:'slide',
+ stem:'A prescription reads Timoptic XE (timolol gel-forming solution), 1 drop in both eyes (OU) twice daily, for primary open-angle glaucoma. The label and the stock bottle both match the order. Use the image above. What is the error, and what is the fix?',
+ options:[
+  {t:'Prescribing error: this gel is dosed once daily; call the prescriber.', correct:true, why:'The drug names slide gives Timoptic XE gel as 1 drop daily, while timolol solution is twice daily. The order, label and bottle agree with each other, so the mistake is in the original frequency, and only the prescriber can change it.'},
+  {t:'Transcribing error: re-enter the sig and print a new label, because the label is wrong.', correct:false, why:'The label matches the prescription, so nothing was mistyped between the order and the label. Re-entering the sig would copy the same twice-daily frequency, because the error is in the prescriber’s order, not in transcription.'},
+  {t:'No error: the gel and the solution are dosed the same way, so dispense as written.', correct:false, why:'Timolol solution is 1 drop twice daily, but Timoptic XE gel is 1 drop daily, so the two forms differ. Treating them as equivalent would double the daily dose of the gel and carries the beta blocker precautions into a larger dose.'},
+  {t:'Dispensing error: replace it with Betoptic-S, which is the correct product for this order.', correct:false, why:'The stock bottle matches the product ordered, so the product is not the problem. Betoptic-S is a different beta blocker, bextaxolol, so a swap changes the drug without addressing the frequency that the prescriber wrote.'}],
+ teach:'Classify an error by where it enters the process. When the prescription, label and bottle agree, any mistake is in the order itself, which makes it a prescribing error that is fixed by a call to the prescriber, here with a specific recommendation to change to once daily. The slide gives timolol solution and the other beta blockers shown as 1 drop twice daily, and Timoptic XE gel as 1 drop daily. Different dosage forms of the same drug can carry different frequencies, so check the form as well as the drug.',
+ cite:'Lam_Glaucoma.pdf slide 32'},
+
+{id:'da20', skill:'error', prof:'Dr. Lahoud', tier:'new', topic:'deentapply', sub:'glau', concept:'da-glau-stroke-alpha2-combination',
+ tags:['glaucoma','alpha-2 agonist','stroke','precautions'], source:'slide',
+ stem:'A 71-year-old with glaucoma had a stroke last year. The prescriber wants to add a second drug and offers a combination bottle. Based on the precautions for the alpha-2 agonist class, which product should the pharmacist question?',
+ options:[
+  {t:'Brimonidine/timolol (Combigan)', correct:true, why:'Brimonidine is an alpha-2 agonist, and the precautions for the class include cardiovascular and kidney disease and a history of stroke. Combigan contains brimonidine, so his stroke history calls for a question to the prescriber.'},
+  {t:'Dorzolamide/timolol (Cosopt)', correct:false, why:'Cosopt contains a carbonic anhydrase inhibitor and timolol, and neither is an alpha-2 agonist. It carries other precautions, such as asthma, COPD and heart block, but a history of stroke is not one of its listed precautions.'},
+  {t:'Latanoprost/netarsudil (Rocklatan)', correct:false, why:'Rocklatan is a prostaglandin analogue plus netarsudil, with no alpha-2 agonist. Its cautions on the prostaglandin slide are macular edema and a history of herpetic keratitis, so his stroke does not point to this product.'},
+  {t:'Timolol gel-forming solution (Timoptic XE) as a single agent', correct:false, why:'Timolol is a beta blocker, not an alpha-2 agonist, so the stroke precaution does not apply to it. It is also a single drug, not a combination, so it does not match the combination bottle that the prescriber offered.'}],
+ teach:'Link the patient’s history to the class precaution, then find the class in the product. The alpha-2 agonist precautions are cardiovascular and kidney disease, a history of stroke and certain drugs, and brimonidine is the alpha-2 agonist in the combination table, in Combigan and in Simbrinza. A patient with a prior stroke therefore needs those products questioned, while products that lack brimonidine have different precautions. Change the history to asthma and the product to question becomes the one with timolol.',
+ cite:'Lam_Glaucoma.pdf slide 44; slide 69 (combination products); slides 21, 19 (prostaglandin cautions)'}
+);
