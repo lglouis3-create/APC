@@ -1125,10 +1125,10 @@ const GUIDE_HTML = `
 <li>Tables 1 and 2 have different legends [Imm sl 11].</li>
 <li>&ldquo;See Notes&rdquo; appears on many rows; even without it, rows such as Hib (1 or 3 doses depending on indication) need the Notes (T).</li>
 </ul></div>
-<table class="reftab"><thead><tr><th>Table 1 category (AAFP legend)</th><th>Color (T)</th><th>Meaning</th></tr></thead><tbody>
+<table class="reftab"><thead><tr><th>Table 1 category (AAFP legend)</th><th>Color (Table 1)</th><th>Meaning</th></tr></thead><tbody>
 <tr><td>Recommended for adults who meet the age requirement, lack documentation of vaccination or lack evidence of past infection</td><td>Yellow</td><td>Give the vaccine</td></tr>
-<tr><td>Recommended for adults with an additional risk factor or another indication</td><td>Blue</td><td>Read the Notes to see whether the patient has the risk factor</td></tr>
-<tr><td>Recommended based on shared clinical decision-making</td><td>Not stated</td><td>Evidence is mixed, or vaccinate if the patient now has risk factors (example: HPV at 27&ndash;45 years)</td></tr>
+<tr><td>Recommended for adults with an additional risk factor or another indication</td><td>Light blue</td><td>Read the Notes to see whether the patient has the risk factor</td></tr>
+<tr><td>Recommended based on shared clinical decision-making</td><td>Green</td><td>Evidence is mixed, or vaccinate if the patient now has risk factors (example: HPV at 27&ndash;45 years)</td></tr>
 <tr><td>No recommendation / not applicable</td><td>Gray</td><td>Do not give; no body of evidence</td></tr>
 </tbody></table>
 <div class="gpt"><h5>Reading Table 2</h5><ul>
@@ -1177,7 +1177,7 @@ const GUIDE_HTML = `
 <div class="gtell"><b>Tell apart</b><ul>
 <li>Contraindication (do not give) vs precaution (generally defer; may be given if benefit outweighs risk) [AAFP Appendix].</li>
 <li>Table 1 (age) vs Table 2 (condition); each has its own legend [Imm sl 11].</li>
-<li>Recommended (yellow, give) vs recommended with another indication (blue, read the Notes) vs shared decision-making (mixed evidence) vs no recommendation (gray) (T).</li>
+<li>Recommended (yellow, give) vs recommended with another indication (light blue, read the Notes) vs shared decision-making (green; mixed evidence) vs no recommendation (gray). Table 2 uses a different legend: its green means &ldquo;not recommended for all adults but recommended for some&rdquo; and its teal means shared decision-making.</li>
 <li>ACIP (CDC subcommittee) vs AAFP (physician society; the schedule used here) [Imm sl 4&ndash;5].</li>
 <li>Immunize.org (screening checklists and VIS) vs CDC Yellow Book (travel) [Imm sl 6].</li>
 <li>Dose 4 days early (valid) vs 5 days early (repeat) [AAFP Notes].</li>
