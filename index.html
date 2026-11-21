@@ -621,6 +621,11 @@ const COURSE = {
     {id:'L02',  deck:'Intro-to-Dispensing.pdf',           label:'Week 2: Intro to Dispensing (8/24)',                 prof:'Dr. Lahoud',  exam:1, module:'Dr. Lahoud: dispensing and errors'},
     {id:'L02K', deck:'EOOR-Answer-Key.pdf',               label:'Week 2 lab: errors and omissions answer key',        prof:'Dr. Lahoud',  exam:1, module:'Dr. Lahoud: dispensing and errors'},
     {id:'L08T', deck:'TOSCE-Study-Guide.pdf',             label:'Week 8: TOSCE study guide',                          prof:'Dr. Lahoud',  exam:1, module:'Dr. Lahoud: dispensing and errors'},
+    {id:'L06D', deck:'Patel_Acne-Therapeutics-Student.pdf',                 label:'DEENT lab source: Dr. Patel, acne therapeutics (11/10)',                 prof:'Dr. Lahoud',  exam:1, module:'Dr. Lahoud: DEENT lab'},
+    {id:'L07D', deck:'Patel_Scaly-Dermatoses-Therapeutics-Student.pdf',     label:'DEENT lab source: Dr. Patel, scaly dermatoses (11/10-11/11)',            prof:'Dr. Lahoud',  exam:1, module:'Dr. Lahoud: DEENT lab'},
+    {id:'L13D', deck:'Lam_OphthalmicDisorders.pdf',                         label:'DEENT lab source: Dr. Lam, ophthalmic disorders (11/20)',                prof:'Dr. Lahoud',  exam:1, module:'Dr. Lahoud: DEENT lab'},
+    {id:'L12D', deck:'Lam_Glaucoma.pdf',                                    label:'DEENT lab source: Dr. Lam, glaucoma therapeutics (11/19)',               prof:'Dr. Lahoud',  exam:1, module:'Dr. Lahoud: DEENT lab'},
+    {id:'L09D', deck:'Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf',          label:'DEENT lab source: Dr. Smith, eye lectures (11/13, 11/17)',               prof:'Dr. Lahoud',  exam:1, module:'Dr. Lahoud: DEENT lab'},
     {id:'L14',  deck:'DEENT-Lab-Deck.pdf',                label:'Week 14: DEENT activities (11/16)',                  prof:'Dr. Lahoud',  exam:1, module:'Dr. Lahoud: DEENT lab'},
     {id:'L03',  deck:'OTC-Insect-Bites-Pediculosis.pdf',  label:'Week 3: OTC, insect bites and pediculosis (8/31)',   prof:'Dr. Parsons', exam:1, module:'Dr. Parsons: OTC'},
     {id:'L03A', deck:'APhA-Insect-Excerpt.pdf',           label:'Week 3: APhA OTC excerpt on insect bites',           prof:'Dr. Parsons', exam:1, module:'Dr. Parsons: OTC'},
@@ -652,9 +657,12 @@ const COURSE = {
   scheduler: {model:'concept'},
 
   files: ['atlas.js', 'diagrams.js',
-          'q1_topics.js', 'q2_eoor.js', 'q3_otc.js', 'q4_poct.js', 'q5_immunizations.js', 'q6_deent.js'],
+          'q1_topics.js', 'q2_eoor.js', 'q3_otc.js', 'q4_poct.js', 'q5_immunizations.js', 'q6_deent.js',
+          'q7_deent_acne.js', 'q8_deent_scaly.js', 'q9_deent_eye.js', 'q10_deent_glaucoma.js'],
 
-  tools: {citeAliases:{'aafp-adult-schedule-2026.pdf': null, 'apha-insect-excerpt.pdf': null, 'deent-lab-deck.pdf': null},
+  tools: {citeAliases:{'aafp-adult-schedule-2026.pdf': null, 'apha-insect-excerpt.pdf': null, 'deent-lab-deck.pdf': null,
+                       'patel_acne-therapeutics-student.pdf': null, 'patel_scaly-dermatoses-therapeutics-student.pdf': null,
+                       'lam_ophthalmicdisorders.pdf': null, 'lam_glaucoma.pdf': null, 'smith_eye_glaucoma_allergicconj_dryeye.pdf': null},
           citeLectures:{}, citeBareMap:{},
           explainTerms:[], harvestMasks:[]},
 
@@ -669,7 +677,7 @@ const COURSE = {
    the Topics page shows as "What's new" since this browser last marked an
    entry seen, and Settings shows whole. preview: true in a page built with
    `build.py --preview`, which is served at /preview/ beside the live drill. */
-const BUILD = {stamp:"2026-11-20 17:33 CT", built:"2026-11-20T23:33:38Z", questions:170, images:0, changelog:[{"date": "2026-11-20 (first release, before the 11/23 exam)", "items": ["170 questions across dispensing, errors and omissions, OTC, POCT, immunizations and the DEENT lab.", "The exam simulator draws 30 questions in 50 minutes: 15 from Dr. Parsons and 15 from Dr. Lahoud.", "Every explanation names the slide, the transcript (T) or the answer key it comes from."]}], preview:false};
+const BUILD = {stamp:"2026-11-21 09:09 CT", built:"2026-11-21T15:09:51Z", questions:255, images:0, changelog:[{"date": "2026-11-20 (first release, before the 11/23 exam)", "items": ["170 questions across dispensing, errors and omissions, OTC, POCT, immunizations and the DEENT lab.", "The exam simulator draws 30 questions in 50 minutes: 15 from Dr. Parsons and 15 from Dr. Lahoud.", "Every explanation names the slide, the transcript (T) or the answer key it comes from."]}], preview:false};
 const IMAGES = {};
 /* Atlas of drawn structures. This course has none: the stub keeps the engine
    happy and COURSE.atlas:false hides the tab. See the PHAR 4342 repo's atlas.js
@@ -2824,6 +2832,1038 @@ QUESTIONS.push(
   {t:'Ask-Tell-Ask', correct:false, why:'Ask-Tell-Ask is for vaccine hesitancy (Immunizations slide 32).'}],
  teach:'(T) The lab relates prescription verification principles to DEENT therapeutic concepts.',
  cite:'DEENT-Lab-Deck.pdf, Part 2 slide; 11/16 transcript (T)'}
+);
+
+/* ==========================================================================
+   Week 14: Dr. Lahoud, DEENT lab (11/16), acne part. Dr. Lahoud said the
+   lab's acne part uses Dr. Patel's acne lecture and her mild / moderate /
+   severe algorithm, practiced with QuEST/SCHOLAR-MAC. Facts are taken only
+   from the student's verified DEENT course items for Dr. Patel's lecture
+   (Patel_Acne-Therapeutics-Student.pdf, slide numbers as that course cites
+   them; "(T)" marks a point the DEENT bank takes from the 11/10 lecture
+   transcript). The Patel deck itself is not in this drill.
+   Not keyed because the DEENT bank records that slide and speech disagree or
+   the point is not traceable: retinoids in pregnancy, the OTC retinoid age
+   boundary at exactly 12 years, isotretinoin as a severe first-line choice,
+   acne prevalence figures.
+   ========================================================================== */
+TOPICS.push({id:'dacne', name:'DEENT lab: acne', prof:'Dr. Lahoud', cite:'Patel_Acne-Therapeutics-Student.pdf', subs:[
+  {id:'assess', name:'Assessing severity and self-care candidacy', cite:'slides 7–8, 10, 17–18'},
+  {id:'path', name:'Mild, moderate and severe pathway', cite:'slides 20, 40–41'},
+  {id:'otc', name:'OTC products and counseling', cite:'slides 19, 23–29, 42'},
+  {id:'safety', name:'Pregnancy and safety cautions', cite:'slides 33, 38'}]});
+
+QUESTIONS.push(
+{id:'xa01', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'dacne', sub:'assess', concept:'acne-grade-moderate',
+ tags:['acne','severity'], source:'both',
+ stem:'A 17-year-old boy has many open and closed comedones, some papules and pustules on his cheeks, and one nodule on his jaw. Scarring is mild. How should his acne be classified?',
+ options:[
+  {t:'Moderate acne', correct:true, why:'Moderate acne has many non-inflammatory and some inflammatory lesions, no more than one nodule and mild scarring (slide 8).'},
+  {t:'Mild acne', correct:false, why:'Mild acne has only some non-inflammatory lesions and no nodules (slide 7), so a patient with many comedones and a nodule is beyond it.'},
+  {t:'Mildly clear acne', correct:false, why:'Mildly clear acne is rare non-inflammatory lesions with no more than one small lesion (slide 7), far less than this patient has.'},
+  {t:'Severe acne', correct:false, why:'Severe acne has a few nodular lesions with moderate to extensive scarring (slide 8); he has one nodule and mild scarring.'}],
+ teach:'Count the lesion types and nodules: one, some, many. Rare lesions is mildly clear, some is mild, many with some inflammatory lesions and no more than one nodule is moderate, and more than one nodule with scarring is severe. (T) Dr. Patel said she uses the words one, some and many on exam cases.',
+ cite:'Patel_Acne-Therapeutics-Student.pdf slides 7–8; 11/10 transcript (T)'},
+
+{id:'xa02', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'dacne', sub:'assess', concept:'acne-severe-refer',
+ tags:['acne','severity','referral'], source:'slide',
+ stem:'A man asks for an OTC acne product. He has many inflammatory and non-inflammatory lesions, several nodules on his cheeks and back, and moderate scarring. What should the pharmacist do?',
+ options:[
+  {t:'Refer him; severe acne is not a self-care candidate', correct:true, why:'Slide 18 excludes severe acne from self-care, and several nodules with moderate scarring is severe acne (slide 8).'},
+  {t:'Recommend a benzoyl peroxide wash and reassess in a few weeks', correct:false, why:'A single topical agent is the first step for mild acne (slide 40), and severe acne is excluded from self-care (slide 18).'},
+  {t:'Recommend OTC adapalene gel at night and a glycolic acid peel', correct:false, why:'Topical OTC agents suit mild acne (slide 40); severe acne needs an oral antibiotic with a topical combination (slide 40).'},
+  {t:'Recommend a salicylic acid cleanser and tea tree oil in a lotion', correct:false, why:'Salicylic acid has limited efficacy data (slide 29) and cannot treat several nodules with scarring.'}],
+ teach:'Self-care exclusions for acne are severe acne, possible rosacea, exacerbating factors and comedogenic drugs (slide 18). Severe first-line therapy is an oral antibiotic plus a topical combination, which needs a prescriber.',
+ cite:'Patel_Acne-Therapeutics-Student.pdf slides 8, 18, 29, 40'},
+
+{id:'xa03', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'dacne', sub:'path', concept:'acne-mild-first-step',
+ tags:['acne','algorithm'], source:'both',
+ stem:'A 15-year-old boy has some open and closed comedones on his forehead and two small papules on his chin. There are no nodules and scarring is minimal. He has used no acne product. What is the first step?',
+ options:[
+  {t:'One topical agent: benzoyl peroxide or a topical retinoid', correct:true, why:'Slide 40 lists topical single therapy, benzoyl peroxide or a topical retinoid, as first line for mild acne; slide 25 calls benzoyl peroxide the preferred initial OTC agent.'},
+  {t:'Benzoyl peroxide, a topical retinoid and a topical antibiotic together', correct:false, why:'Slide 40 reaches topical combinations only after single therapy fails; (T) Dr. Patel called the plan a step by step process.'},
+  {t:'An oral antibiotic added to a topical combination', correct:false, why:'Slide 40 adds an oral antibiotic at moderate acne, not at mild acne.'},
+  {t:'A combined oral contraceptive with spironolactone', correct:false, why:'Slide 40 lists contraceptives and spironolactone as a severe second-line option for females, and he is a boy with mild acne.'}],
+ teach:'Mild acne means some non-inflammatory lesions, no more than a few papules and pustules, no nodules and minimal scarring (slide 7). Start with one topical agent and step up only if it fails.',
+ cite:'Patel_Acne-Therapeutics-Student.pdf slides 7, 25, 40; 11/10 transcript (T)'},
+
+{id:'xa04', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'dacne', sub:'path', concept:'acne-moderate-first-step',
+ tags:['acne','algorithm'], source:'both',
+ stem:'A 17-year-old boy has many open and closed comedones and some papules and pustules, with no nodules. He has never used an acne product. Which first-line therapy fits his severity?',
+ options:[
+  {t:'Benzoyl peroxide plus a topical retinoid', correct:true, why:'Slide 40 gives topical combination therapy, such as benzoyl peroxide with a topical retinoid, as first line for moderate acne.'},
+  {t:'A topical antibiotic such as clindamycin gel used alone', correct:false, why:'Topical antibiotics are not recommended as monotherapy; benzoyl peroxide is added to reduce resistance (slides 25, 31).'},
+  {t:'Oral doxycycline with benzoyl peroxide and a topical retinoid', correct:false, why:'(T) Dr. Patel added the oral antibiotic only after the topical combinations were tried (slide 40).'},
+  {t:'Oral isotretinoin as the first agent for his comedones', correct:false, why:'(T) Dr. Patel called isotretinoin the absolute last line for moderate acne, after topical and oral antibiotic combinations (slide 40).'}],
+ teach:'Many non-inflammatory lesions with some inflammatory lesions is moderate acne (slide 8). First line is a topical combination; an oral antibiotic is added when the topical combinations have been tried (slide 40).',
+ cite:'Patel_Acne-Therapeutics-Student.pdf slides 8, 25, 31, 40; 11/10 transcript (T)'},
+
+{id:'xa05', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'dacne', sub:'assess', concept:'acne-mildly-clear',
+ tags:['acne','severity'], source:'both',
+ stem:'A 19-year-old man has no inflammation and one small closed comedone on his forehead. Which approach fits his acne?',
+ options:[
+  {t:'Benzoyl peroxide alone or essential oils, or no product at all', correct:true, why:'Slide 40 lists benzoyl peroxide alone or essential oils, with or without, as first line for mildly clear acne.'},
+  {t:'Topical retinoid plus topical antibiotic, both applied at night', correct:false, why:'Combinations are later steps in the mild column (slide 40), and antibiotics are paired with benzoyl peroxide, not with a retinoid alone.'},
+  {t:'Oral antibiotic for 3–4 months plus benzoyl peroxide gel', correct:false, why:'Oral antibiotics are moderate and severe options (slide 40), and slide 33 asks for the shortest possible duration.'},
+  {t:'Referral to a prescriber for isotretinoin and its monthly tests', correct:false, why:'Isotretinoin is for severe refractory nodular acne (slide 37); one small comedone is mildly clear acne (slide 7).'}],
+ teach:'Mildly clear acne is rare non-inflammatory lesions with no more than one small lesion (slide 7). It is the lowest rung of the algorithm and needs little or no treatment.',
+ cite:'Patel_Acne-Therapeutics-Student.pdf slides 7, 33, 37, 40; 11/10 transcript (T)'},
+
+{id:'xa06', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'dacne', sub:'assess', concept:'acne-self-care-exclusion-drug',
+ tags:['acne','referral','self-care candidacy'], source:'both',
+ stem:'Which patient with acne should the pharmacist refer instead of recommending self-care?',
+ options:[
+  {t:'A 17-year-old boy whose acne flared after he started lithium', correct:true, why:'Slide 18 excludes acne with exacerbating factors or comedogenic drugs, and lithium is on the list of drugs that worsen acne (slide 10).'},
+  {t:'A 16-year-old girl with some comedones and no inflamed lesions', correct:false, why:'Some non-inflammatory lesions with no inflammation is mild acne (slide 7), which is within self-care.'},
+  {t:'A 15-year-old boy with some comedones and a few papules', correct:false, why:'A few papules and pustules with no nodules still fit mild acne (slide 7), so he is a self-care candidate.'},
+  {t:'A 20-year-old woman with one small closed comedone', correct:false, why:'One small lesion is mildly clear acne (slide 7); none of the exclusions on slide 18 applies to her.'}],
+ teach:'Exclusions from self-care (slide 18): severe acne, possible rosacea, exacerbating factors, comedogenic drugs. Slide 10 also lists corticosteroids, androgens, progesterone contraceptives, antiepileptics and SSRIs. (T) Dr. Patel called this a straight referral to dermatology.',
+ cite:'Patel_Acne-Therapeutics-Student.pdf slides 7, 10, 18; 11/10 transcript (T)'},
+
+{id:'xa07', skill:'tell', prof:'Dr. Lahoud', tier:'new', topic:'dacne', sub:'assess', concept:'acne-quest-candidacy',
+ tags:['QuEST','acne','self-care candidacy'], source:'both',
+ stem:'In QuEST (Quickly assess, Establish self-care candidacy, Suggest self-care strategies, Talk about the product), at which step does the pharmacist decide that a patient with severe acne needs a referral?',
+ options:[
+  {t:'Establish self-care candidacy', correct:true, why:'Severe acne is an exclusion from self-care (slide 18), and the Establish step is where that exclusion is checked.'},
+  {t:'Quickly assess with SCHOLAR-MAC', correct:false, why:'The quick assessment gathers the history; the decision that the acne is severe enough to exclude self-care is made in the next step (slide 18).'},
+  {t:'Suggest self-care strategies', correct:false, why:'Strategies such as cleansing advice (slide 19) are suggested only after the patient is judged a self-care candidate.'},
+  {t:'Talk about the product', correct:false, why:'Talking about administration, efficacy and safety of the product comes last and assumes the patient is a candidate.'}],
+ teach:'QuEST order: quickly assess with SCHOLAR-MAC, establish self-care candidacy, suggest self-care strategies, talk about the product. For acne, the Establish step uses the exclusions on slide 18: severe acne, possible rosacea, exacerbating factors, comedogenic drugs.',
+ cite:'Patel_Acne-Therapeutics-Student.pdf slide 18; 11/16 transcript (T)'},
+
+{id:'xa08', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'dacne', sub:'assess', concept:'acne-scholar-mac-medications',
+ tags:['SCHOLAR-MAC','acne'], source:'slide',
+ stem:'A mother says her 16-year-old daughter’s acne got worse over the past month. Which SCHOLAR-MAC element should the pharmacist ask about to find a possible drug cause?',
+ options:[
+  {t:'Medications', correct:true, why:'Slide 10 lists drugs that cause or worsen acne, including corticosteroids, lithium and androgens, so current medicines must be asked about.'},
+  {t:'Location', correct:false, why:'Location tells where the acne is, such as the face only, but it does not reveal a drug that worsens acne (slide 10).'},
+  {t:'Allergies', correct:false, why:'Allergies identify products to avoid; they do not reveal which drug is worsening acne (slide 10).'},
+  {t:'Remitting factors', correct:false, why:'Remitting factors ask what makes the problem better; the drug causes on slide 10 are found by asking about medications.'}],
+ teach:'SCHOLAR-MAC: Symptoms, Characteristics, History, Onset, Location, Aggravating factors, Remitting factors, Medications, Allergies, Conditions. The medication history can uncover acne-causing drugs such as those on slide 10, which are an exclusion from self-care (slide 18).',
+ cite:'Patel_Acne-Therapeutics-Student.pdf slides 10, 18'},
+
+{id:'xa09', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'dacne', sub:'safety', concept:'acne-tetracycline-cautions', multi:true,
+ tags:['acne','pregnancy','safety'], source:'both',
+ stem:'A prescriber adds oral doxycycline to a patient’s topical acne regimen. Which statements about this tetracycline-class antibiotic are correct? Select all that apply.',
+ options:[
+  {t:'It is for patients older than 12 years, because of tooth discoloration', correct:true, why:'Slide 33 limits minocycline and doxycycline to patients over 12 years old; use under 12 may discolor teeth permanently.'},
+  {t:'It should be avoided during pregnancy because of fetal harm', correct:true, why:'Slide 33 lists fetal harm and advises avoiding the tetracyclines during pregnancy.'},
+  {t:'Photosensitivity is common, so sunscreen is advised', correct:true, why:'Slide 33 lists photosensitivity as common with the tetracyclines, and slide 42 includes sunscreen in oral counseling.'},
+  {t:'It can be taken together with oral isotretinoin', correct:false, why:'Slide 38 says not to use isotretinoin with vitamin A supplements, tetracyclines or steroids.'},
+  {t:'It is used alone, without any topical agent', correct:false, why:'Slide 40 gives an oral antibiotic in combination with topical agents, not as a single agent.'}],
+ teach:'Tetracyclines for acne: over 12 years, not in pregnancy, not with isotretinoin, photosensitivity, shortest possible duration with re-evaluation at 3–4 months (slide 33). (T) Dr. Patel stressed that the oral antibiotic is given with the topicals.',
+ cite:'Patel_Acne-Therapeutics-Student.pdf slides 33, 38, 40, 42; 11/10 transcript (T)'},
+
+{id:'xa10', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'dacne', sub:'safety', concept:'acne-isotretinoin-contraception',
+ tags:['acne','pregnancy','isotretinoin','safety'], source:'slide',
+ stem:'A 19-year-old woman of reproductive potential has a prescription for oral isotretinoin. Which birth control plan fits the iPledge program?',
+ options:[
+  {t:'Two forms from 1 month before treatment to 1 month after', correct:true, why:'Slide 38 requires two forms of birth control from 1 month before, during, and for 1 month after treatment for females of reproductive potential.'},
+  {t:'One reliable form during the 15–20 weeks of treatment only', correct:false, why:'Slide 38 requires two forms, started 1 month before and continued for 1 month after treatment, not one form during treatment only.'},
+  {t:'A progestin-only pill alone, once both pregnancy tests are negative', correct:false, why:'Slide 38 says not to use progestin-only products with isotretinoin, and negative tests do not replace two forms of birth control.'},
+  {t:'No added method, because the monthly pregnancy test is enough', correct:false, why:'Slide 38 requires two pregnancy tests before starting and a monthly test, in addition to two forms of birth control.'}],
+ teach:'Isotretinoin carries a boxed warning for birth defects (slide 37). A female of reproductive potential needs two negative pregnancy tests before starting, a monthly test, two forms of birth control, and fills within a 7-day window; males and females who cannot get pregnant have a 30-day window (slide 38).',
+ cite:'Patel_Acne-Therapeutics-Student.pdf slides 37–38'},
+
+{id:'xa11', skill:'tell', prof:'Dr. Lahoud', tier:'new', topic:'dacne', sub:'otc', concept:'acne-bp-adverse-effects',
+ tags:['acne','benzoyl peroxide','counseling'], source:'both',
+ stem:'A 15-year-old will start an OTC benzoyl peroxide wash. Which counseling point applies to this ingredient?',
+ options:[
+  {t:'It can bleach hair and clothing and cause dryness', correct:true, why:'Slide 23 lists bleaching of hair and clothing, drying, photosensitivity and contact allergy as adverse effects of benzoyl peroxide.'},
+  {t:'It is malodorous and may change the color of the skin', correct:false, why:'Those are the drawbacks of sulfur on slide 23, not of benzoyl peroxide.'},
+  {t:'It lowers sensitivity of the skin to sunlight', correct:false, why:'Benzoyl peroxide causes photosensitivity (slide 23), so sun protection is advised rather than relaxed.'},
+  {t:'It is applied three to four times daily to affected areas', correct:false, why:'Slide 23 gives benzoyl peroxide as 1–2 times daily, with OTC strengths of 2.5–10%.'}],
+ teach:'Benzoyl peroxide: OTC 2.5–10%, 1–2 times daily; drying, photosensitivity, contact allergy, bleaching. Irritation is the most common effect and is more likely with higher strengths; side effects stabilize within 1–2 weeks (slide 26). (T) Dr. Patel linked this to its first-line status.',
+ cite:'Patel_Acne-Therapeutics-Student.pdf slides 23, 26; 11/10 transcript (T)'},
+
+{id:'xa12', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'dacne', sub:'otc', concept:'acne-adapalene-timing',
+ tags:['acne','adapalene','counseling'], source:'both',
+ stem:'A 15-year-old starts OTC adapalene (Differin) gel and already uses a benzoyl peroxide wash. Which plan is correct?',
+ options:[
+  {t:'Adapalene at night, benzoyl peroxide in the morning, with sunscreen', correct:true, why:'Slide 27 says to apply the retinoid at night and separate it from benzoyl peroxide (am versus pm); sunscreen and a moisturizer are advised.'},
+  {t:'Adapalene and benzoyl peroxide together each morning, then sunscreen', correct:false, why:'Slide 27 says to separate use from benzoyl peroxide products (am versus pm), so they are not applied together.'},
+  {t:'Adapalene in the morning under sunscreen, benzoyl peroxide at night', correct:false, why:'The times are reversed: slide 27 says to apply the retinoid at night, not in the morning.'},
+  {t:'Adapalene at night, followed right away by a salicylic acid product', correct:false, why:'Slide 27 says not to use the retinoid with sulfur, resorcinol, salicylic acid or vitamin C products.'}],
+ teach:'OTC adapalene: apply at night, separate from benzoyl peroxide (am versus pm), moisturizer and sunscreen, and not with sulfur, resorcinol, salicylic acid or vitamin C products (slide 27). (T) Dr. Patel said vitamin C may be used if kept separate.',
+ cite:'Patel_Acne-Therapeutics-Student.pdf slide 27; 11/10 transcript (T)'},
+
+{id:'xa13', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'dacne', sub:'otc', concept:'acne-adapalene-age',
+ tags:['acne','adapalene','referral'], source:'both',
+ stem:'A mother asks to buy Differin gel for her 10-year-old son’s comedones. What should the pharmacist advise?',
+ options:[
+  {t:'Do not recommend it; the FDA limits OTC retinoids to age over 12', correct:true, why:'Slide 27 says the FDA limits the OTC topical retinoid to persons over 12 years of age.'},
+  {t:'Recommend it, applied each morning after he washes his face', correct:false, why:'He is under the FDA age limit, and slide 27 says the retinoid is applied at night, not in the morning.'},
+  {t:'Recommend it with a topical antibiotic to lower resistance', correct:false, why:'Combining products does not lift the age limit of slide 27; benzoyl peroxide, not the retinoid, reduces resistance (slide 26).'},
+  {t:'Do not recommend it; OTC retinoids are limited to adults over 18', correct:false, why:'Slide 27 gives the limit as over 12 years of age, not over 18.'}],
+ teach:'OTC adapalene 0.1% is limited to persons over 12 years of age (slide 27). (T) Dr. Patel said younger children are not recommended a retinoid. A child under the limit with acne is referred or given another suitable step.',
+ cite:'Patel_Acne-Therapeutics-Student.pdf slides 26–27; 11/10 transcript (T)'},
+
+{id:'xa14', skill:'tell', prof:'Dr. Lahoud', tier:'new', topic:'dacne', sub:'otc', concept:'acne-bp-properties',
+ tags:['acne','benzoyl peroxide','class'], source:'both',
+ stem:'Which OTC acne ingredient is bactericidal, keratolytic and comedolytic?',
+ options:[
+  {t:'Benzoyl peroxide', correct:true, why:'Slide 23 marks benzoyl peroxide yes for all three properties, which is why it is the first-line OTC agent.'},
+  {t:'Topical retinoid such as adapalene', correct:false, why:'Slide 23 marks the topical retinoid as not bactericidal, though it is comedolytic.'},
+  {t:'Alpha and beta hydroxy acids', correct:false, why:'Slide 23 marks the hydroxy acids as not bactericidal; salicylic acid is comedolytic but has limited efficacy data (slide 29).'},
+  {t:'Resorcinol', correct:false, why:'Slide 23 marks resorcinol as bactericidal and keratolytic but not comedolytic, so it does not target comedones.'}],
+ teach:'Benzoyl peroxide covers bacteria, keratin plugging and comedones, so it is the preferred initial OTC agent (slides 23, 25). (T) Dr. Patel made this point when explaining why it is first line.',
+ cite:'Patel_Acne-Therapeutics-Student.pdf slides 23, 25, 29; 11/10 transcript (T)'},
+
+{id:'xa15', skill:'tell', prof:'Dr. Lahoud', tier:'new', topic:'dacne', sub:'otc', concept:'acne-salicylic-vs-bp',
+ tags:['acne','salicylic acid','counseling'], source:'both',
+ stem:'A parent asks whether a salicylic acid cleanser is the best OTC choice for her teenager’s mild acne. What should the pharmacist say?',
+ options:[
+  {t:'Its efficacy data are limited; benzoyl peroxide is preferred', correct:true, why:'Slide 29 notes limited efficacy data for salicylic acid, and slide 25 calls benzoyl peroxide the preferred initial OTC agent.'},
+  {t:'It is bactericidal, so it replaces benzoyl peroxide', correct:false, why:'Slide 23 marks the hydroxy acids as not bactericidal, while benzoyl peroxide is bactericidal.'},
+  {t:'It does not cause photosensitivity, so sunscreen is not needed', correct:false, why:'Slide 29 lists photosensitivity among the adverse effects of salicylic acid, so sun protection still applies.'},
+  {t:'It works best as a peel, repeated each week until clear', correct:false, why:'Salicylic acid is used once or twice daily as a cleanser or gel for 4–6 weeks (slide 29); peels every 2–4 weeks are the alpha hydroxy acids (slide 28).'}],
+ teach:'Salicylic acid: once or twice daily as a cleanser or gel on the affected area, with maximum effect over 4–6 weeks and limited efficacy data (slide 29). (T) Dr. Patel said it was once first line, until benzoyl peroxide proved more effective.',
+ cite:'Patel_Acne-Therapeutics-Student.pdf slides 23, 25, 28–29; 11/10 transcript (T)'},
+
+{id:'xa16', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'dacne', sub:'otc', concept:'acne-non-drug-cleansing',
+ tags:['acne','non-drug','counseling'], source:'both',
+ stem:'A 16-year-old with oily skin and mild acne wears heavy covering makeup. Which non-drug advice is appropriate?',
+ options:[
+  {t:'Cleanse twice daily without abrasives; pick a gel, solution or lotion', correct:true, why:'Slide 19 advises cleansing twice a day with a mild cleanser and no abrasives, and slide 24 gives gels, solutions and lotions for oily skin.'},
+  {t:'Scrub with an abrasive cleanser several times a day to clear out the pores', correct:false, why:'Slide 19 says to avoid abrasive products, devices and excessive cleansing, which can irritate acne-prone skin.'},
+  {t:'Wash with a bar soap and use an ointment on the lesions', correct:false, why:'Slide 24 says bars and ointments are not usually recommended; creams and lotions are for normal to dry skin.'},
+  {t:'Remove makeup with a water-based cleanser, then an oil-based one', correct:false, why:'The order is reversed: slide 19 removes dirt and makeup with an oil-based cleanser before using a water-based cleanser.'}],
+ teach:'Non-drug measures: cleanse twice a day with a mild soap or non-soap cleanser, avoid abrasives and excessive cleansing, remove makeup with an oil-based cleanser before a water-based one (slide 19), and match the vehicle to skin type (slide 24).',
+ cite:'Patel_Acne-Therapeutics-Student.pdf slides 19, 24; 11/10 transcript (T)'},
+
+{id:'xa17', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'dacne', sub:'path', concept:'acne-time-to-benefit',
+ tags:['acne','counseling','follow-up'], source:'both',
+ stem:'A 16-year-old started benzoyl peroxide in the morning and a topical retinoid at night 3 weeks ago for mild acne. Her lesions look unchanged, and she wants to stop both. What is the best advice?',
+ options:[
+  {t:'Continue both; visible benefit takes 8 weeks or more', correct:true, why:'Slide 41 says patience is key, with 8 weeks or more needed to see visible benefits, so 3 weeks is too early to judge.'},
+  {t:'Stop both today, since no change by 3 weeks means failure', correct:false, why:'Slide 41 gives 8 weeks or more before visible benefit; (T) Dr. Patel said a medication is never stopped abruptly.'},
+  {t:'Add an oral antibiotic now, because topical therapy has failed', correct:false, why:'Oral antibiotics are not in the mild column of slide 40, and 3 weeks is too short to call topical therapy a failure.'},
+  {t:'Stop the retinoid and keep only the benzoyl peroxide wash', correct:false, why:'It is too early to judge either agent (slide 41); a 10–25% lesion decrease is expected within 4–8 weeks (slide 44).'}],
+ teach:'Set expectations at the start: 8 weeks or more for visible benefit (slide 41), a 10–25% drop in lesion count within 4–8 weeks, and a pharmacist check every 4–8 weeks (slide 44).',
+ cite:'Patel_Acne-Therapeutics-Student.pdf slides 40–41, 44; 11/10 transcript (T)'},
+
+{id:'xa18', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'dacne', sub:'path', concept:'acne-mild-after-bp',
+ tags:['acne','algorithm'], source:'both',
+ stem:'A 14-year-old with mild acne used benzoyl peroxide twice daily for 2 months with no benefit. What is the next step?',
+ options:[
+  {t:'Switch to a topical retinoid as the single topical agent', correct:true, why:'Slide 40 lists benzoyl peroxide or a topical retinoid as mild first line; (T) a retinoid is used when benzoyl peroxide gave no benefit.'},
+  {t:'Add oral doxycycline to the benzoyl peroxide wash', correct:false, why:'Oral antibiotics enter at moderate acne (slide 40), not at mild acne, and the single topical agents have not all been tried.'},
+  {t:'Switch to topical clindamycin as a single agent', correct:false, why:'Topical antibiotics are not used as monotherapy; benzoyl peroxide is added to reduce resistance (slides 25, 31).'},
+  {t:'Refer for oral isotretinoin and its pregnancy-test program', correct:false, why:'Isotretinoin is for severe refractory nodular acne and is the last line (slide 37), not for mild acne after one agent.'}],
+ teach:'Mild acne follows steps: one topical agent, then the other single agent, then a topical combination, before anything oral (slide 40). (T) Dr. Patel described it as a step by step process.',
+ cite:'Patel_Acne-Therapeutics-Student.pdf slides 25, 31, 37, 40; 11/10 transcript (T)'},
+
+{id:'xa19', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'dacne', sub:'otc', concept:'acne-topical-application',
+ tags:['acne','counseling','administration'], source:'both',
+ stem:'Under “Talk about the product,” how should the pharmacist tell a patient to apply a topical acne medicine?',
+ options:[
+  {t:'Wash gently, pat dry, wait 20–30 minutes; thin layer in the evening', correct:true, why:'Slide 42 says to wash with a mild soap, pat dry and wait 20–30 minutes, then apply a thin layer in the evening or before bedtime.'},
+  {t:'Wash and apply at once while the skin is damp, each morning', correct:false, why:'Slide 42 has the patient pat dry and wait 20–30 minutes, and apply in the evening or before bedtime.'},
+  {t:'Wait 5 minutes after washing, then apply a thick layer to the whole face', correct:false, why:'Slide 42 calls for a thin layer on the affected area after waiting 20–30 minutes, not a thick layer.'},
+  {t:'Apply a thin layer twice daily, including the eyes and lips', correct:false, why:'Slide 42 says to avoid the eyes, ears, nostrils and mouth when applying the medicine.'}],
+ teach:'Administration counseling (slide 42): gentle wash with a mild soap, pat dry, wait 20–30 minutes, thin layer to the affected area in the evening or before bedtime, avoiding the eyes, ears, nostrils and mouth. If stinging or irritation develops, temporarily stop or use it less often.',
+ cite:'Patel_Acne-Therapeutics-Student.pdf slide 42; 11/10 transcript (T)'}
+);
+
+/* ==========================================================================
+   Week 14, Part 3 of Dr. Lahoud's DEENT lab (psoriasis and scaly dermatoses
+   sorting challenge): dandruff, seborrheic dermatitis and psoriasis.
+   Source: Patel_Scaly-Dermatoses-Therapeutics-Student.pdf (Dr. Patel's Lecture 7,
+   slide N = PDF page; printed slide text only) and the 11/10 and 11/11
+   transcripts of that lecture, marked (T). Facts were taken from the student's
+   verified DEENT course drill (q13_L07.js) and the slide text was re-read in
+   the DEENT slide folder.
+   Where the sources differ: slide 26 writes psoriasis severity as <= 5%, >= 8%
+   and >= 10% BSA; slide 31 prints < 5%, > 8% and > 10%. The items key the
+   slide 26 form with the 10% cut-off that Dr. Patel confirmed on 11/11 (T);
+   no item uses a BSA of exactly 5%, 8% or 10%. She first said ">= 20%" for
+   severe and then told students to follow the slide (10%).
+   Not keyed: doses of biologics and cyclosporine, PASI/DLQI scoring, epidermal
+   turnover multiples.
+   ========================================================================== */
+TOPICS.push({id:'dscaly', name:'DEENT lab: scaly dermatoses and psoriasis', prof:'Dr. Lahoud', cite:'Patel_Scaly-Dermatoses-Therapeutics-Student.pdf', subs:[
+ {id:'sort', name:'Dandruff, seborrheic dermatitis or psoriasis', cite:'slides 6–8, 11–13'},
+ {id:'otc', name:'OTC products, counseling and referral', cite:'slides 7, 9, 16, 18'},
+ {id:'sev', name:'Psoriasis severity and non-drug measures', cite:'slides 24, 26, 31, 33–34'},
+ {id:'alg', name:'Psoriasis treatment placement and agents', cite:'slides 35–45'}]});
+
+QUESTIONS.push(
+{id:'xs01', skill:'tell', prof:'Dr. Lahoud', tier:'new', topic:'dscaly', sub:'sort', concept:'dscaly-sort-dandruff',
+ tags:['dandruff','sorting'], source:'slide',
+ stem:'A patient has thin white or grey flakes on the scalp with no inflammation of the skin. Which scaly dermatosis is this?',
+ options:[
+  {t:'Dandruff', correct:true, why:'Slide 6 gives dandruff thin white or grey flakes on the scalp, with inflammation absent.'},
+  {t:'Seborrheic dermatitis', correct:false, why:'Slide 6 gives seborrheic dermatitis yellow oily scales on red skin, with inflammation present.'},
+  {t:'Plaque psoriasis', correct:false, why:'Slide 6 gives psoriasis red plaques with sharp borders and silvery white scales, with inflammation present.'},
+  {t:'Rosacea', correct:false, why:'Rosacea is not one of the three scaly dermatoses compared on slide 6, so it does not fit this sorting.'}],
+ teach:'Dandruff is the non-inflammatory scalp condition. Seborrheic dermatitis and psoriasis both have inflammation and epidermal hyperplasia.',
+ cite:'Patel_Scaly-Dermatoses-Therapeutics-Student.pdf slide 6'},
+
+{id:'xs02', skill:'tell', prof:'Dr. Lahoud', tier:'new', topic:'dscaly', sub:'sort', concept:'dscaly-sort-sd',
+ tags:['seborrheic dermatitis','sorting'], source:'both',
+ stem:'A man has yellow, greasy scales on red skin of the scalp, ears, eyebrows and nasolabial creases. Which scaly dermatosis is this?',
+ options:[
+  {t:'Seborrheic dermatitis', correct:true, why:'Slides 6 and 12 describe yellow, greasy scales on red skin of the head, ears and face as seborrheic dermatitis.'},
+  {t:'Dandruff', correct:false, why:'Dandruff is limited to the scalp as thin white or grey flakes without inflammation (slide 6).'},
+  {t:'Plaque psoriasis', correct:false, why:'Psoriasis has sharp-bordered red plaques with silvery white scales on the elbows and knees (slide 6).'},
+  {t:'Infant cradle cap (scalp scaling only)', correct:false, why:'Cradle cap is the infant form, with scalp scaling only (slide 12); this is an adult with facial and ear involvement.'}],
+ teach:'Key words for seborrheic dermatitis: greasy, yellowish scales, and a location beyond the scalp such as the ears and face (T: 11/10 transcript).',
+ cite:'Patel_Scaly-Dermatoses-Therapeutics-Student.pdf slides 6, 12; 11/10 transcript (T)'},
+
+{id:'xs03', skill:'tell', prof:'Dr. Lahoud', tier:'new', topic:'dscaly', sub:'sort', concept:'dscaly-sort-psoriasis',
+ tags:['psoriasis','sorting'], source:'slide',
+ stem:'A patient has discrete, symmetrical red plaques with sharp borders and silvery white scales on the elbows and knees. Which scaly dermatosis is this?',
+ options:[
+  {t:'Psoriasis', correct:true, why:'Slide 6 gives psoriasis discrete symmetrical red plaques with sharp borders, silvery white scales and bleeding points.'},
+  {t:'Dandruff', correct:false, why:'Dandruff produces thin white or grey scalp flakes, not red plaques on the elbows and knees (slide 6).'},
+  {t:'Seborrheic dermatitis', correct:false, why:'Seborrheic dermatitis favors the scalp, face and trunk with yellow oily scales (slide 6).'},
+  {t:'Cradle cap', correct:false, why:'Cradle cap is infant scalp scaling from seborrheic dermatitis (slide 12), not plaques on the elbows and knees.'}],
+ teach:'Psoriasis involves the scalp, elbows, knees, trunk and lower extremities, with sharp-bordered red plaques and silvery white scales.',
+ cite:'Patel_Scaly-Dermatoses-Therapeutics-Student.pdf slide 6'},
+
+{id:'xs04', skill:'tell', prof:'Dr. Lahoud', multi:true, tier:'new', topic:'dscaly', sub:'sort', concept:'dscaly-features-absent-dandruff',
+ tags:['dandruff','seborrheic dermatitis','psoriasis','sorting'], source:'both',
+ stem:'Which features are absent in dandruff but present in both seborrheic dermatitis and psoriasis? Select all that apply.',
+ options:[
+  {t:'Inflammation', correct:true, why:'Slide 6 lists inflammation as absent in dandruff and present in seborrheic dermatitis and psoriasis.'},
+  {t:'Epidermal hyperplasia', correct:true, why:'Slide 6 lists epidermal hyperplasia as absent in dandruff and present in the other two conditions.'},
+  {t:'Malassezia involvement', correct:false, why:'Slide 8 lists Malassezia fungi in dandruff, so it is not absent there.'},
+  {t:'Flaking of scalp skin', correct:false, why:'Slide 8 says dandruff causes mild inflammation, flaking and pruritus, so flaking is present in dandruff.'}],
+ teach:'Inflammation from the start, not from scratching, and epidermal hyperplasia separate seborrheic dermatitis and psoriasis from dandruff (T: 11/10 transcript).',
+ cite:'Patel_Scaly-Dermatoses-Therapeutics-Student.pdf slides 6, 8; 11/10 transcript (T)'},
+
+{id:'xs05', skill:'tell', prof:'Dr. Lahoud', tier:'new', topic:'dscaly', sub:'sort', concept:'dscaly-malassezia',
+ tags:['Malassezia','sorting'], source:'slide',
+ stem:'Which condition is NOT associated with Malassezia fungi?',
+ options:[
+  {t:'Psoriasis', correct:true, why:'Slide 21 describes psoriasis as a T-lymphocyte mediated inflammatory disease, and no Malassezia link is given.'},
+  {t:'Dandruff', correct:false, why:'Slide 8 lists the presence of Malassezia fungi as part of dandruff.'},
+  {t:'Seborrheic dermatitis', correct:false, why:'Slide 11 says seborrheic dermatitis, like dandruff, involves Malassezia species.'},
+  {t:'Cradle cap', correct:false, why:'Cradle cap is infant seborrheic dermatitis (slide 12), which involves Malassezia species (slide 11).'}],
+ teach:'Dandruff and seborrheic dermatitis involve Malassezia. Psoriasis is an immune-mediated disease involving adaptive and innate immunity.',
+ cite:'Patel_Scaly-Dermatoses-Therapeutics-Student.pdf slides 8, 11, 12, 21'},
+
+{id:'xs06', skill:'tell', prof:'Dr. Lahoud', tier:'new', topic:'dscaly', sub:'otc', concept:'dscaly-hydrocortisone-dandruff',
+ tags:['OTC ingredients','sorting'], source:'both',
+ stem:'Which over-the-counter (OTC) ingredient is not effective for dandruff but is used for seborrheic dermatitis and psoriasis?',
+ options:[
+  {t:'Hydrocortisone 1%', correct:true, why:'Slide 7 marks hydrocortisone “no” for dandruff and gives 0.5–1% for seborrheic dermatitis and psoriasis.'},
+  {t:'Pyrithione zinc (rinse-off)', correct:false, why:'Slide 7 lists rinse-off pyrithione zinc for dandruff, so it is effective there.'},
+  {t:'Selenium sulfide', correct:false, why:'Slide 7 lists selenium sulfide 1% for dandruff, so it is effective there.'},
+  {t:'Coal tar', correct:false, why:'Slide 7 lists coal tar 0.5–5% for dandruff, seborrheic dermatitis and psoriasis.'}],
+ teach:'Slide 7 has two “no” cells: hydrocortisone for dandruff and sulfur for psoriasis (T: 11/10 transcript).',
+ cite:'Patel_Scaly-Dermatoses-Therapeutics-Student.pdf slide 7; 11/10 transcript (T)'},
+
+{id:'xs07', skill:'tell', prof:'Dr. Lahoud', tier:'new', topic:'dscaly', sub:'otc', concept:'dscaly-sulfur-psoriasis',
+ tags:['OTC ingredients','sorting'], source:'both',
+ stem:'Which OTC ingredient is used for dandruff and seborrheic dermatitis but is not effective for psoriasis?',
+ options:[
+  {t:'Sulfur', correct:true, why:'Slide 7 gives sulfur 2–5% for dandruff and seborrheic dermatitis and “no” for psoriasis.'},
+  {t:'Coal tar', correct:false, why:'Slide 7 gives coal tar 0.5–5% for all three conditions, including psoriasis.'},
+  {t:'Salicylic acid', correct:false, why:'Slide 7 gives salicylic acid 1.8–3% for all three conditions, including psoriasis.'},
+  {t:'Ketoconazole shampoo', correct:false, why:'Slide 7 gives ketoconazole shampoo 1% for all three conditions, including psoriasis.'}],
+ teach:'Sulfur is the ingredient with “no” under psoriasis; hydrocortisone is the one with “no” under dandruff (T: 11/10 transcript).',
+ cite:'Patel_Scaly-Dermatoses-Therapeutics-Student.pdf slide 7; 11/10 transcript (T)'},
+
+{id:'xs08', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'dscaly', sub:'otc', concept:'dscaly-mild-dandruff',
+ tags:['dandruff','counseling'], source:'both',
+ stem:'A young man has intermittent white flakes on dark clothing, with an itch-free scalp that is not inflamed. Which product is appropriate?',
+ options:[
+  {t:'Non-medicated shampoo, daily or every other day', correct:true, why:'Slide 9 treats mild dandruff (intermittent, mild inflammation) with a non-medicated shampoo daily or every other day.'},
+  {t:'Coal tar shampoo left on for 3–5 minutes', correct:false, why:'Slide 9 reserves OTC medicated shampoos such as coal tar for moderate to severe dandruff.'},
+  {t:'Hydrocortisone 1% lotion to the scalp', correct:false, why:'Slide 7 marks hydrocortisone “no” for dandruff, so it is not effective here.'},
+  {t:'Ketoconazole shampoo daily for 1–2 weeks, then 2–3 times weekly', correct:false, why:'Slide 16 gives that schedule for seborrheic dermatitis, and this patient has mild dandruff.'}],
+ teach:'Mild dandruff: non-medicated shampoo. Moderate to severe (daily dandruff, moderate–severe inflammation): medicated shampoo (pyrithione zinc, selenium sulfide, coal tar).',
+ cite:'Patel_Scaly-Dermatoses-Therapeutics-Student.pdf slides 7, 9; 11/10 transcript (T)'},
+
+{id:'xs09', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'dscaly', sub:'otc', concept:'dscaly-moderate-dandruff-regimen',
+ tags:['dandruff','counseling'], source:'both',
+ stem:'A man has daily dandruff and a moderately inflamed scalp and starts a medicated shampoo. Which instructions are appropriate?',
+ options:[
+  {t:'3–5 minutes; daily 1 week, then 2–3 times weekly for 2–3 weeks, then weekly', correct:true, why:'Slide 9 gives this exact schedule for moderate to severe dandruff, ending with once weekly for control.'},
+  {t:'Rinse off at once; use once weekly from the start for 4 weeks', correct:false, why:'Slide 9 says to leave the shampoo on the scalp for 3 to 5 minutes and begin daily for 1 week.'},
+  {t:'Leave on 3–5 minutes; daily for 1–2 weeks, then 2–3 times weekly for 4 weeks', correct:false, why:'Slide 16 gives that longer taper for seborrheic dermatitis; dandruff uses 1 week daily then 2–3 weeks (slide 9).'},
+  {t:'Leave on 3–5 minutes; use daily without a taper', correct:false, why:'Slide 9 tapers to 2–3 times weekly and then once weekly for control rather than staying daily.'}],
+ teach:'Dandruff taper: 1 week daily, then 2–3 weeks at 2–3 times weekly, then weekly. Seborrheic dermatitis taper is longer: 1–2 weeks daily, then 4 weeks (T: 11/10 transcript).',
+ cite:'Patel_Scaly-Dermatoses-Therapeutics-Student.pdf slides 9, 16; 11/10 transcript (T)'},
+
+{id:'xs10', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'dscaly', sub:'otc', concept:'dscaly-sd-first-line',
+ tags:['seborrheic dermatitis','OTC products'], source:'both',
+ stem:'An adult has seborrheic dermatitis of the scalp. Which shampoo is first line?',
+ options:[
+  {t:'Ketoconazole shampoo', correct:true, why:'Slide 16 lists ketoconazole shampoo as first line for decreasing fungal growth in seborrheic dermatitis.'},
+  {t:'Selenium sulfide shampoo', correct:false, why:'Slide 16 lists selenium sulfide as second line, after ketoconazole.'},
+  {t:'Pyrithione zinc shampoo', correct:false, why:'Slide 16 lists pyrithione zinc as second line, after ketoconazole.'},
+  {t:'Coal tar shampoo', correct:false, why:'Slide 16 lists coal tar shampoo as second line, after ketoconazole.'}],
+ teach:'First line is the key word: ketoconazole shampoo (T: 11/10 transcript). Second line: selenium sulfide, pyrithione zinc, ciclopirox, coal tar.',
+ cite:'Patel_Scaly-Dermatoses-Therapeutics-Student.pdf slide 16; 11/10 transcript (T)'},
+
+{id:'xs11', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'dscaly', sub:'otc', concept:'dscaly-sd-refer',
+ tags:['seborrheic dermatitis','referral'], source:'slide',
+ stem:'An adult is using an antifungal shampoo for seborrheic dermatitis. When should the patient consult a health care provider?',
+ options:[
+  {t:'If it worsens or persists longer than 7 days', correct:true, why:'Slide 16 says a health care provider should be consulted if the disorder worsens or symptoms persist longer than 7 days.'},
+  {t:'Only after the full 4-week schedule is completed', correct:false, why:'Slide 16 sets the referral point at 7 days, not at the end of the 4-week schedule.'},
+  {t:'Only after 1–2 weeks of daily shampooing', correct:false, why:'Slide 16 uses 1–2 weeks daily as the first phase of treatment, not the point for referral.'},
+  {t:'Never, because it is harmless', correct:false, why:'Slide 11 calls it neither harmful nor contagious, but slide 16 still sends worsening or persistent cases to a provider.'}],
+ teach:'Seborrheic dermatitis is chronic with no specific cure, but a worsening or persistent course beyond 7 days goes to a provider.',
+ cite:'Patel_Scaly-Dermatoses-Therapeutics-Student.pdf slides 11, 16'},
+
+{id:'xs12', skill:'error', prof:'Dr. Lahoud', tier:'new', topic:'dscaly', sub:'otc', concept:'dscaly-infant-steroid',
+ tags:['cradle cap','counseling'], source:'both',
+ stem:'A pharmacist suggests hydrocortisone cream for scaling on the cheeks of a 3-week-old infant with cradle cap. What is the error?',
+ options:[
+  {t:'No corticosteroid should go on an infant’s face', correct:true, why:'Slide 18 says to wash the face with mild soap or cleanser, apply a facial emollient and not suggest corticosteroids.'},
+  {t:'The cream must be a lotion for the scalp', correct:false, why:'Slide 17 gives corticosteroid lotion for adult scalp care; slide 18 advises against corticosteroids in infants.'},
+  {t:'A ketoconazole cream is required for infant faces', correct:false, why:'Slide 18 gives infants baby oil, a non-medicated shampoo and a soft brush, with no antifungal cream.'},
+  {t:'Coal tar must be applied to the face first', correct:false, why:'Slide 18 does not use coal tar for infant seborrheic dermatitis; severe scalp cases use salicylic acid 3–5%.'}],
+ teach:'Infant care: baby oil or vegetable oil massage, non-medicated shampoo, soft bristle brush; for the face, mild cleanser and emollient (T: 11/10 transcript).',
+ cite:'Patel_Scaly-Dermatoses-Therapeutics-Student.pdf slides 17, 18; 11/10 transcript (T)'},
+
+{id:'xs13', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'dscaly', sub:'sev', concept:'dscaly-bsa-mild-moderate',
+ tags:['psoriasis','severity','BSA'], source:'both',
+ stem:'A woman has two plaques on her elbows with a body surface area (BSA) involvement of 7%. Between which classes does her psoriasis fall?',
+ options:[
+  {t:'Mild to moderate', correct:true, why:'Slide 31 puts mild at 5% or less and moderate at 8% or more, and Dr. Patel called 7% in between (T).'},
+  {t:'Mild', correct:false, why:'Slide 31 limits mild psoriasis to a BSA of 5% or less, and 7% is above that.'},
+  {t:'Moderate to severe', correct:false, why:'Slide 31 puts severe at 10% or more, so 7% is too low to sit between moderate and severe.'},
+  {t:'Severe', correct:false, why:'Slide 31 puts severe at a BSA of 10% or more, and 7% is below it.'}],
+ teach:'Cut-offs: mild BSA 5% or less, moderate 8% or more, severe 10% or more. A value between two cut-offs takes both names, such as 7% mild to moderate and 9% moderate to severe (T: 11/11 transcript).',
+ cite:'Patel_Scaly-Dermatoses-Therapeutics-Student.pdf slides 26, 31, 50; 11/11 transcript (T)'},
+
+{id:'xs14', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'dscaly', sub:'sev', concept:'dscaly-bsa-severe',
+ tags:['psoriasis','severity','BSA'], source:'both',
+ stem:'A man has plaques over his back, chest and both legs, with a BSA of 12%. How is his psoriasis classified?',
+ options:[
+  {t:'Severe', correct:true, why:'Slide 31 classes psoriasis with a BSA of 10% or more as severe, and 12% meets that.'},
+  {t:'Moderate', correct:false, why:'Slide 31 puts moderate at 8% or more, and a BSA of 12% passes the severe cut-off of 10%.'},
+  {t:'Mild', correct:false, why:'Slide 31 limits mild psoriasis to a BSA of 5% or less, which 12% far exceeds.'},
+  {t:'Mild to moderate', correct:false, why:'Slide 31 uses this range only between 5% and 8%, and 12% lies above both cut-offs.'}],
+ teach:'Dr. Patel first said severe was 20% or more, then told students to follow the slide: 10% (T: 11/11 transcript). She asked students to know the BSA.',
+ cite:'Patel_Scaly-Dermatoses-Therapeutics-Student.pdf slides 26, 31; 11/11 transcript (T)'},
+
+{id:'xs15', skill:'tell', prof:'Dr. Lahoud', multi:true, tier:'new', topic:'dscaly', sub:'sev', concept:'dscaly-nonpharm-sort',
+ tags:['psoriasis','non-drug'], source:'both',
+ stem:'Which are non-drug measures recommended for psoriasis? Select all that apply.',
+ options:[
+  {t:'Smoking cessation', correct:true, why:'Slide 33 lists cessation of smoking among the healthy lifestyle recommendations for all psoriasis patients.'},
+  {t:'Weight management (BMI 18.5–24.9)', correct:true, why:'Slide 33 lists weight management, aiming for a body mass index of 18.5–24.9.'},
+  {t:'Oatmeal baths and emollients', correct:true, why:'Slide 34 lists moisturizers or emollients and oatmeal baths as non-pharmacologic treatments.'},
+  {t:'Daily ibuprofen for aches', correct:false, why:'Slide 24 lists NSAIDs among the medications that may worsen psoriasis, so ibuprofen is not a recommended measure.'}],
+ teach:'Non-drug care for every patient: reduce stress, exercise, weight management, moderate alcohol, stop smoking, moisturizers, oatmeal baths and sunscreen SPF 30+ with UVA protection (T: 11/11 transcript).',
+ cite:'Patel_Scaly-Dermatoses-Therapeutics-Student.pdf slides 24, 33, 34; 11/11 transcript (T)'},
+
+{id:'xs16', skill:'tell', prof:'Dr. Lahoud', tier:'new', topic:'dscaly', sub:'sev', concept:'dscaly-drug-trigger',
+ tags:['psoriasis','triggers'], source:'slide',
+ stem:'Which medication can precipitate or worsen psoriasis?',
+ options:[
+  {t:'Lithium', correct:true, why:'Slide 24 lists lithium among the medications that may precipitate or worsen psoriasis.'},
+  {t:'Metformin', correct:false, why:'Slide 24 lists lithium, NSAIDs, antimalarials, β-blockers, fluoxetine and steroid withdrawal; metformin is not among them.'},
+  {t:'Omeprazole', correct:false, why:'Slide 24 does not list omeprazole; the listed medications include lithium, NSAIDs and β-adrenergic blockers.'},
+  {t:'Levothyroxine', correct:false, why:'Slide 24 does not list levothyroxine; the listed medications include lithium, NSAIDs and fluoxetine.'}],
+ teach:'Medications on slide 24: lithium, NSAIDs, antimalarials such as chloroquine, β-adrenergic blockers, fluoxetine and withdrawal of corticosteroids.',
+ cite:'Patel_Scaly-Dermatoses-Therapeutics-Student.pdf slide 24'},
+
+{id:'xs17', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'dscaly', sub:'alg', concept:'dscaly-first-drug-mild-moderate',
+ tags:['psoriasis','algorithm'], source:'both',
+ stem:'A man has mild plaque psoriasis (BSA 4%) on the elbows and knees and has not been treated before. Which drug therapy comes first?',
+ options:[
+  {t:'Topical corticosteroid', correct:true, why:'Slides 35–36 place topical agents first in mild-to-moderate psoriasis, and corticosteroids are the most effective topical (T).'},
+  {t:'Methotrexate with folic acid', correct:false, why:'Slide 37 places systemic agents such as methotrexate in the moderate-to-severe algorithm, not first for mild disease.'},
+  {t:'Adalimumab (Humira)', correct:false, why:'Slides 35–37 place biologics after topical and oral systemic options, so they do not come first here.'},
+  {t:'Oral psoralen plus UVA', correct:false, why:'Slides 44–45 reserve psoralen plus UVA light for severe, refractory psoriasis.'}],
+ teach:'Mild to moderate: topical agents first, with non-drug measures. Systemic therapy is last line there. Corticosteroids are applied 2 to 4 times daily, limited to 4 weeks or less (slide 36).',
+ cite:'Patel_Scaly-Dermatoses-Therapeutics-Student.pdf slides 35, 36, 37, 44, 45; 11/11 transcript (T)'},
+
+{id:'xs18', skill:'tell', prof:'Dr. Lahoud', tier:'new', topic:'dscaly', sub:'alg', concept:'dscaly-puva-placement',
+ tags:['psoriasis','phototherapy'], source:'slide',
+ stem:'Which therapy is reserved for patients with severe, refractory psoriasis?',
+ options:[
+  {t:'Psoralen plus UVA (PUVA)', correct:true, why:'Slide 45 says PUVA photochemotherapy is reserved for patients with severe, refractory psoriasis.'},
+  {t:'Calcipotriene (vitamin D3 analogue)', correct:false, why:'Slide 36 lists calcipotriene as a topical option for plaques, not a last-line therapy.'},
+  {t:'Coal tar applied in the evening', correct:false, why:'Slide 36 lists coal tar as a topical applied in the evening and washed off in the morning.'},
+  {t:'Apremilast (Otezla), a PDE-4 blocker', correct:false, why:'Slide 38 lists apremilast as an oral systemic agent with a response expected by week 4, not a last-line therapy.'}],
+ teach:'PUVA works by psoralen cross-linking with DNA in the presence of UVA light; Dr. Patel called it the absolute last line, with about 90% responding (T: 11/11 transcript).',
+ cite:'Patel_Scaly-Dermatoses-Therapeutics-Student.pdf slides 36, 38, 44, 45; 11/11 transcript (T)'},
+
+{id:'xs19', skill:'tell', prof:'Dr. Lahoud', tier:'new', topic:'dscaly', sub:'alg', concept:'dscaly-key-adr-sort',
+ tags:['psoriasis','adverse effects','sorting'], source:'slide',
+ stem:'Which adverse effect is a serious concern with PUVA photochemotherapy?',
+ options:[
+  {t:'Serious burns', correct:true, why:'Slide 44 lists serious burns, blistering and peeling among the side effects of PUVA.'},
+  {t:'Nephrotoxicity', correct:false, why:'Slide 39 lists nephrotoxicity for cyclosporine, not for PUVA.'},
+  {t:'Depression', correct:false, why:'Slide 38 lists depression among the adverse effects of apremilast, not PUVA.'},
+  {t:'Hepatotoxicity', correct:false, why:'Slide 39 lists hepatotoxicity risk for methotrexate, not for PUVA.'}],
+ teach:'PUVA side effects: serious burns, blistering, peeling, itching, nausea, a possible increase in basal cell and melanoma cancers, and photoaging.',
+ cite:'Patel_Scaly-Dermatoses-Therapeutics-Student.pdf slides 38, 39, 44'},
+
+{id:'xs20', skill:'tell', prof:'Dr. Lahoud', tier:'new', topic:'dscaly', sub:'alg', concept:'dscaly-cyclosporine',
+ tags:['psoriasis','systemic','adverse effects'], source:'both',
+ stem:'Which systemic psoriasis agent is nephrotoxic and not recommended for use beyond 4 months?',
+ options:[
+  {t:'Cyclosporine', correct:true, why:'Slide 39 says cyclosporine is not recommended for prolonged use (under 4 months) and is nephrotoxic.'},
+  {t:'Methotrexate', correct:false, why:'Slide 39 ties methotrexate to hepatotoxicity risk, with folic acid given and CBC and LFTs screened.'},
+  {t:'Apremilast', correct:false, why:'Slide 38 lists nausea, vomiting, diarrhea, depression and weight loss for apremilast, not nephrotoxicity.'},
+  {t:'Acitretin', correct:false, why:'Slide 38 lists acitretin as an oral retinoid with a maximum response at 3 to 6 months and a pregnancy caution.'}],
+ teach:'Cyclosporine: nephrotoxic, under 4 months of use, many interactions (CYP 3A4 and 2C9 inhibitor), contraindicated with untreated hypertension (T: 11/11 transcript).',
+ cite:'Patel_Scaly-Dermatoses-Therapeutics-Student.pdf slides 38, 39; 11/11 transcript (T)'},
+
+{id:'xs21', skill:'tell', prof:'Dr. Lahoud', tier:'new', topic:'dscaly', sub:'alg', concept:'dscaly-methotrexate',
+ tags:['psoriasis','systemic','counseling'], source:'both',
+ stem:'Which systemic psoriasis agent is given with folic acid 1–5 mg daily and screened with a complete blood count (CBC) and liver function tests (LFTs)?',
+ options:[
+  {t:'Methotrexate', correct:true, why:'Slide 39 gives methotrexate with folic acid 1-5 mg daily, with CBC and LFTs as the screening.'},
+  {t:'Cyclosporine', correct:false, why:'Slide 39 lists nephrotoxicity and many interactions for cyclosporine, not folic acid co-administration.'},
+  {t:'Apremilast', correct:false, why:'Slide 38 lists dose titration to 30 mg twice daily for apremilast, with no folic acid.'},
+  {t:'Tofacitinib', correct:false, why:'Slide 38 lists tofacitinib monitoring of lymphocytes, neutrophils, hemoglobin, liver enzymes and lipids, with no folic acid.'}],
+ teach:'Methotrexate: psoriasis and psoriatic arthritis, onset 3–6 weeks, folic acid lowers nausea, bone marrow suppression and hepatotoxicity; avoid in pregnancy and cirrhosis (T: 11/11 transcript).',
+ cite:'Patel_Scaly-Dermatoses-Therapeutics-Student.pdf slides 38, 39; 11/11 transcript (T)'},
+
+{id:'xs22', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'dscaly', sub:'alg', concept:'dscaly-tnf-chf',
+ tags:['psoriasis','biologics'], source:'both',
+ stem:'A man with severe psoriasis and congestive heart failure is to start a biologic. Which agent should be avoided?',
+ options:[
+  {t:'Infliximab (Remicade)', correct:true, why:'Slide 41 says not to use tumor necrosis factor (TNF)-α inhibitors such as infliximab in congestive heart failure.'},
+  {t:'Guselkumab (Tremfya)', correct:false, why:'Slide 42 lists guselkumab as an interleukin-23 inhibitor with active TB and live vaccines as the cautions.'},
+  {t:'Ustekinumab (Stelara)', correct:false, why:'Slide 42 lists ustekinumab as an IL-12 and IL-23 inhibitor with active TB and live vaccines as the cautions.'},
+  {t:'Risankizumab (Skyriza)', correct:false, why:'Slide 42 lists risankizumab as an interleukin-23 inhibitor; heart failure worsening is the anti-TNF caution (slide 43).'}],
+ teach:'TNF-α inhibitors (adalimumab, etanercept, infliximab, golimumab, certolizumab): avoid in heart failure and demyelinating disease. Every biologic: no live vaccines, TB screening, stop during active infection (T: 11/11 transcript).',
+ cite:'Patel_Scaly-Dermatoses-Therapeutics-Student.pdf slides 40–43; 11/11 transcript (T)'}
+);
+
+/* ==========================================================================
+   DEENT lab, Part 2 (Ophthalmic Review, Mix & Match warm-up): Dr. Lahoud's
+   lab sorts items into a table for dry eye disease, allergic conjunctivitis,
+   bacterial/viral conjunctivitis and primary open-angle glaucoma. This file
+   covers the first three (symptoms, therapies and other identifying
+   features); glaucoma is in another file.
+   Sources: Lam_OphthalmicDisorders.pdf (Dr. Lam, 11/20 lecture, 58 slides; slide N =
+   PDF page) and, for cyclosporine side effects, Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf
+   (Dr. Smith). Facts follow the student's verified DEENT drill. Facts that come
+   only from the 11/20 recording or the handout, not the printed slide, are
+   marked (T).
+   Source notes: slide 35 of the deck headlines first-line tears plus a
+   dual-acting agent for "allergic/viral/bacterial conjunctivitis"; the DEENT
+   drill and the recording key it to allergic conjunctivitis, and bacterial or
+   viral conjunctivitis to symptomatic care and referral (slides 28, 34). The
+   items here follow the drill.
+   ========================================================================== */
+TOPICS.push({id:'deye', name:'DEENT lab: dry eye and conjunctivitis', prof:'Dr. Lahoud', cite:'Lam_OphthalmicDisorders.pdf', subs:[
+  {id:'dedx', name:'Dry eye: causes, presentation and referral', cite:'slides 6–11'},
+  {id:'dert', name:'Dry eye: goals, non-drug measures and products', cite:'slides 9–21'},
+  {id:'cjdx', name:'Conjunctivitis: telling the types apart', cite:'slides 28–31'},
+  {id:'cjrx', name:'Conjunctivitis: treatment and counseling', cite:'slides 33–46'}]});
+
+QUESTIONS.push(
+{id:'xe01', skill:'tell', prof:'Dr. Lahoud', tier:'new', topic:'deye', sub:'dedx', concept:'dry-eye-presentation',
+ tags:['dry eye','sorting'], source:'slide',
+ stem:'A patient describes a sandy, gritty feeling and a foreign body sensation in an eye that looks normal or mildly red, with excessive tearing. Which condition fits?',
+ options:[
+  {t:'Dry eye disease', correct:true, why:'Slide 7 gives a normal or mildly red eye, foreign body sensation, a sandy gritty feeling and excessive tearing as dry eye.'},
+  {t:'Seasonal allergic conjunctivitis', correct:false, why:'Slide 29 gives itching, tearing and red eyes for seasonal allergy; grittiness without itch does not fit.'},
+  {t:'Bacterial conjunctivitis with lid crusting', correct:false, why:'Slide 28 gives tearing and lid crusting for bacterial disease; no crusting is described here.'},
+  {t:'Giant papillary conjunctivitis from contact lenses', correct:false, why:'Slide 29 ties giant papillary disease to itching, mucous discharge and contact lens intolerance, none of which is described.'}],
+ teach:'Dry eye looks like a normal or mildly red eye with a sandy, gritty or foreign body feeling and tearing. Itch points to allergy and lid crusting to bacterial or viral infection.',
+ cite:'Lam_OphthalmicDisorders.pdf slide 7'},
+
+{id:'xe02', skill:'recall', prof:'Dr. Lahoud', multi:true, tier:'new', topic:'deye', sub:'dedx', concept:'dry-eye-offending-drugs',
+ tags:['dry eye','drugs','sorting'], source:'slide',
+ stem:'Which products can contribute to dry eye disease? Select all that apply.',
+ options:[
+  {t:'A diuretic', correct:true, why:'Slide 6 includes diuretics among the drugs that are risk factors for dry eye.'},
+  {t:'A decongestant', correct:true, why:'Slide 6 includes decongestants among the drugs that are risk factors for dry eye.'},
+  {t:'An oral contraceptive', correct:true, why:'Slide 6 includes oral contraceptives and hormone-replacement agents as risk factors for dry eye.'},
+  {t:'Preservative-free artificial tears used several times a day', correct:false, why:'Slide 14 makes preservative-free artificial tears the first-line treatment, not a cause of dry eye.'},
+  {t:'An omega fatty acid supplement taken by mouth every day', correct:false, why:'Slide 16 lists omega fatty acids as a supplement used for dry eye, not a cause.'}],
+ teach:'Risk factors for dry eye include older age, female sex, environment, comorbidities, surgery, preservatives such as benzalkonium chloride, and drugs: anticholinergic agents, diuretics, decongestants, oral contraceptives or hormone replacement, and corticosteroids. Artificial tears and supplements are treatments.',
+ cite:'Lam_OphthalmicDisorders.pdf slides 6, 14, 16'},
+
+{id:'xe03', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'deye', sub:'dedx', concept:'dry-eye-preservative',
+ tags:['dry eye','preservatives'], source:'both',
+ stem:'A patient uses a multi-dose artificial tear bottle six times a day and says his eyes burn after each drop. The bottle contains the preservative benzalkonium chloride (BAK). What is the best change?',
+ options:[
+  {t:'Switch to preservative-free single-use vials', correct:true, why:'Slide 43 gives preservative-free unit-dose dispensers as the fix when a preservative irritates the eye.'},
+  {t:'Switch to a topical corticosteroid drop four times daily', correct:false, why:'Slide 20 places topical corticosteroids as prescription drugs for brief use, not as the fix for preservative irritation.'},
+  {t:'Add a decongestant drop for the burning and redness', correct:false, why:'Slide 39 shows decongestants carry rebound hyperemia and epithelial dryness risks, so they do not fix preservative irritation.'},
+  {t:'Use the same bottle but double the number of drops', correct:false, why:'Slides 6 and 43 identify the preservative (BAK) as the problem, so more drops from the same bottle add more preservative.'}],
+ teach:'Preservatives such as benzalkonium chloride are a risk factor for dry eye. When a preservative causes irritation, move to a preservative-free formulation in unit-dose dispensers; these cost more and are easier to contaminate (T).',
+ cite:'Lam_OphthalmicDisorders.pdf slides 6, 43 (T)'},
+
+{id:'xe04', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'deye', sub:'dedx', concept:'dry-eye-first-episode-referral',
+ tags:['dry eye','referral'], source:'both',
+ stem:'A man has had gritty, mildly irritated eyes in both eyes for three days. This is his first episode, and he has no eye pain, trauma or eyelid swelling. What is the best response?',
+ options:[
+  {t:'Refer him to an eye doctor and suggest artificial tears meanwhile', correct:true, why:'Slide 10 says referral for everyone while OTC products can still be recommended; slide 14 makes artificial tears first.'},
+  {t:'Suggest artificial tears alone and make no referral at all', correct:false, why:'Slide 10 says every dry eye patient is referred, so treating without referral skips half of the plan.'},
+  {t:'Refer him to an eye doctor and recommend no product until the visit', correct:false, why:'Slide 10 says OTC products can still be recommended, so withholding artificial tears leaves him untreated.'},
+  {t:'Start a topical corticosteroid while he waits for an appointment', correct:false, why:'Slides 17 and 20 show corticosteroids are prescription drugs for very short use, not a first step for the pharmacist.'}],
+ teach:'In dry eye every patient is referred, and the pharmacist can still recommend OTC artificial tears in the meantime. Referral without a product or a product without referral each misses half of the plan (T).',
+ cite:'Lam_OphthalmicDisorders.pdf slides 10, 14 (T)'},
+
+{id:'xe05', skill:'recall', prof:'Dr. Lahoud', multi:true, tier:'new', topic:'deye', sub:'dedx', concept:'eye-exclusions-self-care',
+ tags:['dry eye','conjunctivitis','referral','sorting'], source:'slide',
+ stem:'Which findings mean a patient with red, irritated eyes is excluded from self-treatment and should be referred? Select all that apply.',
+ options:[
+  {t:'Light sensitivity', correct:true, why:'Slides 11 and 30 name light sensitivity as an exclusion for self-treatment.'},
+  {t:'Eye pain', correct:true, why:'Slides 11 and 30 name eye pain as an exclusion for self-treatment.'},
+  {t:'A chemical splash to the eye', correct:true, why:'Slides 11 and 30 name chemical exposure as an exclusion for self-treatment.'},
+  {t:'Blurred vision only after applying an eye ointment', correct:false, why:'Slides 11 and 30 exclude blurred vision not due to eye ointments, so ointment blur is the stated exception.'},
+  {t:'A stye with a red, tender bump on the eyelid edge', correct:false, why:'Slides 11 and 30 exclude eyelid infection except a stye, so a stye alone is the stated exception.'}],
+ teach:'The same exclusion list applies to dry eye and conjunctivitis: eye pain, ocular trauma, chemical exposure, eye exposure to heat (not sun exposure), blurred vision not due to eye ointments, light sensitivity, and signs of eyelid infection other than a stye.',
+ cite:'Lam_OphthalmicDisorders.pdf slides 11, 30'},
+
+{id:'xe06', skill:'tell', prof:'Dr. Lahoud', multi:true, tier:'new', topic:'deye', sub:'dert', concept:'goals-allergic-vs-dry',
+ tags:['dry eye','allergic conjunctivitis','goals','sorting'], source:'slide',
+ stem:'Which treatment goals belong to allergic conjunctivitis rather than dry eye disease? Select all that apply.',
+ options:[
+  {t:'Remove or avoid the allergen', correct:true, why:'Slide 31 gives removing or avoiding the allergen as the first goal of conjunctivitis therapy; dry eye goals on slide 9 do not mention it.'},
+  {t:'Limit the severity of the allergic reaction', correct:true, why:'Slide 31 gives limiting or reducing the severity of the allergic reaction as a conjunctivitis goal; slide 9 has no such goal.'},
+  {t:'Alleviate dryness of the surface of the eye', correct:false, why:'Slide 9 gives alleviating dryness as the first goal of dry eye treatment, not of allergic conjunctivitis.'},
+  {t:'Prevent damage to the cornea from dryness', correct:false, why:'Slide 9 gives preventing damage as the third goal of dry eye treatment, not a goal tied to an allergen.'}],
+ teach:'Dry eye goals: alleviate dryness, relieve irritation, prevent damage. Conjunctivitis goals: remove or avoid the allergen, limit the severity of the allergic reaction, provide symptomatic relief, and protect the ocular surface.',
+ cite:'Lam_OphthalmicDisorders.pdf slides 9, 31'},
+
+{id:'xe07', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'deye', sub:'dert', concept:'dry-eye-nondrug',
+ tags:['dry eye','non-drug'], source:'slide',
+ stem:'A woman has dry, gritty eyes. She works eight hours a day at a computer directly beneath an air-conditioning vent. Which non-drug advice best matches the cause?',
+ options:[
+  {t:'Move her workstation and limit screen time', correct:true, why:'Slide 13 lists repositioning the workstation, avoiding prolonged screens and avoiding environments that raise evaporation.'},
+  {t:'Keep the doors and windows closed and track the pollen count', correct:false, why:'Slide 33 gives closed windows and the pollen count as allergen avoidance for allergic conjunctivitis, not dry eye.'},
+  {t:'Use hypoallergenic bedding and wash her clothes frequently', correct:false, why:'Slide 33 gives hypoallergenic bedding and frequent clothes washing for allergic conjunctivitis, not dry eye.'},
+  {t:'Wear sunglasses and apply cold compresses to the eyes', correct:false, why:'Slide 33 gives cold compresses and sunglasses for allergic conjunctivitis; slide 13 gives warm compresses for dry eye.'}],
+ teach:'For dry eye, improve evaporation of the tear film (avoid drying environments, use humidifiers, reposition the workstation, limit screens, use eye protection) and improve eyelid function (warm compresses, stop offending agents, eyelid hygiene).',
+ cite:'Lam_OphthalmicDisorders.pdf slides 13, 33'},
+
+{id:'xe08', skill:'recall', prof:'Dr. Lahoud', tier:'new', topic:'deye', sub:'dert', concept:'artificial-tears-dosing',
+ tags:['dry eye','artificial tears'], source:'slide',
+ stem:'A patient with chronic dry eye starts artificial tears. How often can they be used, and for how long?',
+ options:[
+  {t:'Up to hourly if needed, for as long as the response requires', correct:true, why:'Slide 14 allows 1–2 drops 1–2 times daily, up to 3–4 times daily or hourly, for a duration set by response.'},
+  {t:'Four times daily for no more than 72 hours before referral', correct:false, why:'The 72-hour limit on slides 39 and 41 applies to decongestants and referral in conjunctivitis, not to artificial tears.'},
+  {t:'Once daily for a maximum of 30 days, then discard the product', correct:false, why:'The 30 days on slide 50 is how long opened drops may be kept, not a limit on artificial tear therapy.'},
+  {t:'Twice daily for 4 weeks, then stop until symptoms return', correct:false, why:'Slide 14 sets no fixed stop; a 4-week course belongs to a different dry eye drug, not to artificial tears.'}],
+ teach:'Artificial tears start at 1–2 drops once or twice daily and can go up to 3–4 times daily or hourly. Preservative-free products are preferred, and use continues as long as the patient responds, which is why dry eye is chronic.',
+ cite:'Lam_OphthalmicDisorders.pdf slide 14'},
+
+{id:'xe09', skill:'recall', prof:'Dr. Lahoud', tier:'new', topic:'deye', sub:'dert', concept:'bland-ointment-tradeoff',
+ tags:['dry eye','ointment'], source:'slide',
+ stem:'What is the advantage of a bland ophthalmic ointment over artificial tear drops, and what is its main drawback?',
+ options:[
+  {t:'Longer retention time; blurry vision', correct:true, why:'Slide 15 gives longer retention time as the advantage and blurry vision and hypersensitivity as the side effects.'},
+  {t:'Faster onset of relief; a limit of 72 hours of use', correct:false, why:'Slide 15 gives longer retention, not faster onset; the 72-hour limit on slide 39 applies to decongestants.'},
+  {t:'No preservative at all; a need to refrigerate after opening', correct:false, why:'Slide 15 gives longer retention as the advantage, and refrigeration is a storage point on slide 50, not an ointment drawback.'},
+  {t:'Blocks the release of histamine; drying of the cornea itself', correct:false, why:'Slide 15 describes a lubricant, not an antihistamine; histamine blockade belongs to dual-acting agents on slide 37.'}],
+ teach:'Bland ointments stay longer on the eye but blur vision and can cause hypersensitivity, so they go on mainly at bedtime. A bland gel is better tolerated. Neither makes the eye produce more tears.',
+ cite:'Lam_OphthalmicDisorders.pdf slide 15'},
+
+{id:'xe10', skill:'tell', prof:'Dr. Lahoud', tier:'new', topic:'deye', sub:'dert', concept:'rx-dry-eye-route',
+ tags:['dry eye','prescription','sorting'], source:'slide',
+ stem:'Which prescription medicine for dry eye is a nasal spray rather than an eye drop?',
+ options:[
+  {t:'Varenicline (Tyrvaya)', correct:true, why:'Slides 17 and 21 give varenicline as the nasal spray; slide 22 teaches priming and resisting inhaling.'},
+  {t:'Cyclosporine (Restasis, Cequa)', correct:false, why:'Slides 17 and 18 give topical cyclosporine as an eye drop, an immunomodulator.'},
+  {t:'Lifitegrast (Xiidra)', correct:false, why:'Slides 17 and 19 give lifitegrast as a topical eye drop, an LFA-1 antagonist.'},
+  {t:'A topical corticosteroid for dry eye', correct:false, why:'Slides 17 and 20 give topical corticosteroids as eye drops used for a short duration.'}],
+ teach:'Prescription dry eye options: topical cyclosporine (immunomodulator), lifitegrast (LFA-1 antagonist), topical corticosteroids, and varenicline nasal spray (secretagogue). Varenicline is the only one given in the nose; it is applied by tilting, elevating the tongue, administering and resisting inhaling.',
+ cite:'Lam_OphthalmicDisorders.pdf slides 17, 21, 22'},
+
+{id:'xe11', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'deye', sub:'dert', concept:'cyclosporine-side-effects',
+ tags:['dry eye','prescription','counseling'], source:'both',
+ stem:'A woman started cyclosporine eye drops for dry eye one week ago and calls because her eyes burn, sting and feel gritty. What is the best response?',
+ options:[
+  {t:'These are common effects and can resemble dry eye itself', correct:true, why:'Slide 18 lists common side effects, and Smith slide 67 gives burning, pain, foreign body sensation and itchiness as its ocular effects.'},
+  {t:'Stop the drops for good, because burning means an allergy to cyclosporine', correct:false, why:'Slide 18 lists burning and stinging as common side effects, so they alone do not mean allergy or call for stopping.'},
+  {t:'Switch to a topical decongestant, since redness is the real problem', correct:false, why:'Slide 39 limits decongestants to 72 hours, and they do not treat the inflammation that cyclosporine targets.'},
+  {t:'Take both daily doses at once to finish the course sooner', correct:false, why:'Slide 18 gives twice-daily dosing; doses are spaced about 8 to 12 hours apart (T), not combined.'}],
+ teach:'Topical cyclosporine (Restasis, Cequa) is taken twice daily for about 6 months or longer; common effects are burning, stinging and foreign body sensation, which resemble dry eye symptoms (T). Counsel on what to expect and keep the schedule.',
+ cite:'Lam_OphthalmicDisorders.pdf slide 18 (T); Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf slide 67'},
+
+{id:'xe12', skill:'error', prof:'Dr. Lahoud', tier:'new', topic:'deye', sub:'dert', concept:'topical-steroid-duration',
+ tags:['dry eye','prescription','corticosteroid'], source:'both',
+ stem:'A prescriber plans a topical corticosteroid as the maintenance drug for chronic dry eye. What concern should the pharmacist raise?',
+ options:[
+  {t:'Use should be very short because chronic use can cause glaucoma', correct:true, why:'Slide 20 lists duration of therapy and contraindications; the recording adds that long use raises glaucoma risk (T).'},
+  {t:'It must be used for at least 6 months before any benefit appears', correct:false, why:'A 6-month course belongs to cyclosporine on slide 18; corticosteroids on slide 20 are for short duration.'},
+  {t:'It should be given as a nasal spray into each nostril twice daily', correct:false, why:'Slide 21 gives the nasal spray route for varenicline; topical corticosteroids on slide 20 are eye drops.'},
+  {t:'It is first-line therapy and should be dosed as often as hourly', correct:false, why:'Slide 14 makes artificial tears the first-line product that can go up to hourly; corticosteroids are not first line.'}],
+ teach:'Topical corticosteroids give short-term symptom relief and are not maintenance drugs for dry eye, because chronic use risks glaucoma and other problems (T). Cyclosporine runs about 6 months or longer, lifitegrast about 12 weeks (T).',
+ cite:'Lam_OphthalmicDisorders.pdf slides 18, 20 (T)'},
+
+{id:'xe13', skill:'tell', prof:'Dr. Lahoud', tier:'new', topic:'deye', sub:'cjdx', concept:'allergic-itch-rule',
+ tags:['allergic conjunctivitis','bacterial/viral conjunctivitis','sorting'], source:'slide',
+ stem:'Which finding is present in allergic conjunctivitis but not in bacterial or viral conjunctivitis?',
+ options:[
+  {t:'Itching', correct:true, why:'Slide 29 lists itching for allergic conjunctivitis; slide 28 lists only tearing and lid crusting for bacterial and viral types.'},
+  {t:'Tearing', correct:false, why:'Slides 28 and 29 both list tearing, so it appears in allergic, bacterial and viral conjunctivitis.'},
+  {t:'Lid crusting on waking', correct:false, why:'Slide 28 lists lid crusting for bacterial and viral conjunctivitis, not for the allergic types on slide 29.'},
+  {t:'Foreign body sensation with a sandy feeling', correct:false, why:'Slide 7 lists foreign body sensation and a sandy, gritty feeling as dry eye findings, not conjunctivitis.'}],
+ teach:'Itching points to allergic conjunctivitis. Tearing is common to every type and cannot separate them. Lid crusting points to bacterial or viral conjunctivitis, and a sandy, gritty feeling points to dry eye.',
+ cite:'Lam_OphthalmicDisorders.pdf slides 28, 29, 7'},
+
+{id:'xe14', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'deye', sub:'cjdx', concept:'bacterial-viral-case',
+ tags:['bacterial/viral conjunctivitis','case'], source:'slide',
+ stem:'A man has watery eyes and crusted eyelids when he wakes up. He denies itching. Which condition is most likely?',
+ options:[
+  {t:'Bacterial or viral conjunctivitis', correct:true, why:'Slide 28 gives tearing and lid crusting, including crusting upon awakening for adenoviral disease, with no itch.'},
+  {t:'Seasonal allergic conjunctivitis', correct:false, why:'Slide 29 gives itching, tearing and red eyes for seasonal allergy; he denies itching.'},
+  {t:'Dry eye disease with mild redness', correct:false, why:'Slide 7 gives a sandy, gritty feeling and foreign body sensation for dry eye, not crusted eyelids on waking.'},
+  {t:'Giant papillary conjunctivitis from lens wear', correct:false, why:'Slide 29 gives itching and contact lens intolerance for giant papillary disease; he has neither.'}],
+ teach:'Tearing plus lid crusting without itch is the bacterial or viral picture. Treatment is symptomatic care (cold compresses) with referral to a provider as needed.',
+ cite:'Lam_OphthalmicDisorders.pdf slides 28, 29, 34'},
+
+{id:'xe15', skill:'recall', prof:'Dr. Lahoud', tier:'new', topic:'deye', sub:'cjdx', concept:'why-allergic-itch',
+ tags:['allergic conjunctivitis','mechanism'], source:'both',
+ stem:'Why does allergic conjunctivitis itch while bacterial and viral conjunctivitis do not usually?',
+ options:[
+  {t:'The allergen triggers mast cells to release histamine', correct:true, why:'Slide 29 lists itching for allergic types, and slide 37 treats it with antihistamine and mast cell stabilizer agents.'},
+  {t:'Bacteria and viruses release histamine from the eyelid glands', correct:false, why:'Slide 28 gives tearing and lid crusting for infection, with no itching and no histamine release described.'},
+  {t:'Tearing washes the allergen out so the eye cannot itch', correct:false, why:'Slides 28 and 29 show tearing in every type, and slide 36 gives allergen washout as a role of artificial tears, not an itch cause.'},
+  {t:'Dryness of the cornea stimulates the nerves that cause itching', correct:false, why:'Slide 7 ties dryness to grittiness and a foreign body sensation, not to the itch of allergy.'}],
+ teach:'In allergy the allergen sets off mast cell degranulation and histamine produces the itch (T). In bacterial and viral disease the byproducts cause lid crusting and the eye tears to clear them, so the same red, tearing eye is sorted by itch.',
+ cite:'Lam_OphthalmicDisorders.pdf slides 28, 29, 37 (T)'},
+
+{id:'xe16', skill:'tell', prof:'Dr. Lahoud', tier:'new', topic:'deye', sub:'cjdx', concept:'giant-papillary',
+ tags:['allergic conjunctivitis','contact lenses'], source:'slide',
+ stem:'A woman who wears contact lenses has had itchy, red eyes with mucous discharge for two weeks and can no longer tolerate her lenses. Which condition fits?',
+ options:[
+  {t:'Giant papillary conjunctivitis', correct:true, why:'Slide 29 gives itching, contact lens intolerance, mucous discharge and red eyes for giant papillary conjunctivitis.'},
+  {t:'Seasonal allergic conjunctivitis with spring pollen', correct:false, why:'Slide 29 gives only itching, tearing and red eyes for the seasonal type, with no lens intolerance or mucous discharge.'},
+  {t:'Bacterial conjunctivitis with acute lid crusting', correct:false, why:'Slide 28 gives tearing and lid crusting for bacterial disease, and no itching or lens intolerance.'},
+  {t:'Dry eye disease from older age and female sex', correct:false, why:'Slide 7 gives a sandy, gritty feeling and foreign body sensation for dry eye, not itching with mucous discharge.'}],
+ teach:'Within allergic conjunctivitis, seasonal disease gives itching, tearing and red eyes; vernal and giant papillary types add mucous discharge, and giant papillary adds contact lens intolerance. Lens intolerance is the clue.',
+ cite:'Lam_OphthalmicDisorders.pdf slide 29'},
+
+{id:'xe17', skill:'tell', prof:'Dr. Lahoud', tier:'new', topic:'deye', sub:'cjrx', concept:'cold-compress-only',
+ tags:['bacterial/viral conjunctivitis','non-drug','sorting'], source:'slide',
+ stem:'Cold compresses are the only non-drug measure for which condition?',
+ options:[
+  {t:'Bacterial or viral conjunctivitis', correct:true, why:'Slide 34 gives applying cold compresses as the single non-drug measure for viral and bacterial conjunctivitis.'},
+  {t:'Allergic conjunctivitis with a known allergen', correct:false, why:'Slide 33 gives a long list for allergic conjunctivitis, including avoiding allergens, air filters and sunglasses.'},
+  {t:'Dry eye disease with eyelid dysfunction', correct:false, why:'Slide 13 gives humidifiers, workstation changes, warm compresses and eyelid hygiene for dry eye, not cold compresses.'},
+  {t:'Giant papillary conjunctivitis with lens wear', correct:false, why:'Giant papillary disease is allergic, so slide 33 gives its long list of avoidance measures, not one measure.'}],
+ teach:'Dry eye uses warm compresses and environmental measures. Allergic conjunctivitis uses allergen avoidance and cold compresses. Bacterial or viral conjunctivitis has one non-drug measure, cold compresses, which give comfort while the patient arranges to see a provider (T).',
+ cite:'Lam_OphthalmicDisorders.pdf slides 13, 33, 34 (T)'},
+
+{id:'xe18', skill:'tell', prof:'Dr. Lahoud', tier:'new', topic:'deye', sub:'cjrx', concept:'allergen-avoidance-measure',
+ tags:['allergic conjunctivitis','non-drug','sorting'], source:'slide',
+ stem:'Which non-drug measure belongs to allergic conjunctivitis rather than to dry eye?',
+ options:[
+  {t:'Keeping doors and windows closed when pollen is high', correct:true, why:'Slide 33 gives checking the pollen count and keeping doors and windows closed as allergen avoidance.'},
+  {t:'Applying warm compresses to improve eyelid function', correct:false, why:'Slide 13 gives warm compresses for improving eyelid function in dry eye, not for allergic conjunctivitis.'},
+  {t:'Repositioning the workstation away from drying air flow', correct:false, why:'Slide 13 gives repositioning the workstation to reduce evaporation, which is a dry eye measure.'},
+  {t:'Using humidifiers to reduce evaporation of the tear film', correct:false, why:'Slide 13 gives humidifiers to reduce tear film evaporation, which is a dry eye measure.'}],
+ teach:'Allergic conjunctivitis: avoid the allergen (pollen count, closed doors and windows, hypoallergenic bedding, washing clothes, showering, air conditioning, air filters, sunglasses) and use cold compresses. Dry eye: reduce evaporation and improve eyelid function.',
+ cite:'Lam_OphthalmicDisorders.pdf slides 13, 33'},
+
+{id:'xe19', skill:'recall', prof:'Dr. Lahoud', tier:'new', topic:'deye', sub:'cjrx', concept:'allergic-first-line',
+ tags:['allergic conjunctivitis','OTC'], source:'both',
+ stem:'What is the first-line OTC regimen for allergic conjunctivitis?',
+ options:[
+  {t:'Artificial tears plus a dual-acting agent', correct:true, why:'Slide 35 gives artificial tears plus an ophthalmic dual-acting antihistamine and mast cell stabilizer as first line.'},
+  {t:'An ophthalmic decongestant used for up to 72 hours', correct:false, why:'Slide 39 limits decongestants to 72 hours, and they relieve redness only; they are not the first-line regimen.'},
+  {t:'A second-generation oral antihistamine taken by itself', correct:false, why:'Slide 40 reserves oral antihistamines for systemic symptoms or persistent ocular symptoms, not first line.'},
+  {t:'Cetirizine eye drops given as the only product', correct:false, why:'Slide 38 gives ophthalmic cetirizine a limited role, not first line, since it blocks histamine alone.'}],
+ teach:'First line for allergic conjunctivitis is two products: artificial tears to wash out the allergen and protect the ocular surface, plus a dual-acting agent for the itch. Bacterial or viral conjunctivitis is not treated with this pair; it gets cold compresses and provider referral (T).',
+ cite:'Lam_OphthalmicDisorders.pdf slides 35, 36, 38, 39, 40 (T)'},
+
+{id:'xe20', skill:'tell', prof:'Dr. Lahoud', tier:'new', topic:'deye', sub:'cjrx', concept:'otc-dual-acting-sort',
+ tags:['allergic conjunctivitis','OTC','sorting'], source:'slide',
+ stem:'Which OTC eye drop is a dual-acting antihistamine and mast cell stabilizer?',
+ options:[
+  {t:'Ketotifen', correct:true, why:'Slide 37 gives ketotifen fumarate as an OTC antihistamine, mast cell stabilizer and H1 receptor antagonist.'},
+  {t:'Naphazoline by itself', correct:false, why:'Slide 39 gives naphazoline as an OTC ophthalmic decongestant, which reduces redness only.'},
+  {t:'Tetrahydrozoline used for redness', correct:false, why:'Slide 39 gives tetrahydrozoline as an OTC ophthalmic decongestant, not a dual-acting agent.'},
+  {t:'Brimonidine 0.025% used for redness', correct:false, why:'Slide 39 gives brimonidine 0.025% as an OTC ophthalmic decongestant, not a dual-acting agent.'}],
+ teach:'OTC dual-acting agents: olopatadine (Pataday), alcaftadine and ketotifen fumarate. OTC decongestants: naphazoline, tetrahydrozoline and brimonidine 0.025%. Pheniramine appears only in combination with naphazoline.',
+ cite:'Lam_OphthalmicDisorders.pdf slides 37, 39'},
+
+{id:'xe21', skill:'tell', prof:'Dr. Lahoud', tier:'new', topic:'deye', sub:'cjrx', concept:'rx-dual-acting-sort',
+ tags:['allergic conjunctivitis','prescription','sorting'], source:'slide',
+ stem:'Which dual-acting eye drop for allergic conjunctivitis requires a prescription?',
+ options:[
+  {t:'Bepotastine', correct:true, why:'Slide 37 gives azelastine, bepotastine and epinastine as the prescription dual-acting agents.'},
+  {t:'Olopatadine (Pataday)', correct:false, why:'Slide 37 gives olopatadine (Pataday) as an OTC dual-acting agent, so it needs no prescription.'},
+  {t:'Alcaftadine, available OTC', correct:false, why:'Slide 37 gives alcaftadine as an OTC dual-acting agent, so it needs no prescription.'},
+  {t:'Ketotifen fumarate, available OTC', correct:false, why:'Slide 37 gives ketotifen fumarate as an OTC dual-acting agent.'}],
+ teach:'Prescription dual-acting agents: azelastine, bepotastine and epinastine. OTC dual-acting agents: olopatadine, alcaftadine and ketotifen.',
+ cite:'Lam_OphthalmicDisorders.pdf slide 37'},
+
+{id:'xe22', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'deye', sub:'cjrx', concept:'decongestant-rebound',
+ tags:['allergic conjunctivitis','decongestant','counseling'], source:'both',
+ stem:'A man with hypertension has used tetrahydrozoline eye drops four times daily for 6 days for red eyes, and his eyes are redder when he skips a dose. What is the best advice?',
+ options:[
+  {t:'Stop it; past 72 hours it causes rebound redness and raises blood pressure', correct:true, why:'Slide 39 gives rebound conjunctival hyperemia beyond 72 hours and increased blood pressure as a side effect.'},
+  {t:'Keep using it, since redness on skipping a dose means the drops are working well', correct:false, why:'Slide 39 gives rebound conjunctival hyperemia beyond 72 hours, so redness on skipping a dose is rebound.'},
+  {t:'Use it hourly instead, because the dose was too low to control his redness', correct:false, why:'Slide 39 limits decongestant dosing and warns of rebound beyond 72 hours, so more frequent use makes the problem worse.'},
+  {t:'Switch to a preservative-free brand of tetrahydrozoline and continue it', correct:false, why:'Slide 39 lists rebound hyperemia as a decongestant effect beyond 72 hours; a preservative-free product does not remove it.'}],
+ teach:'Ophthalmic decongestants (naphazoline, tetrahydrozoline, brimonidine 0.025%) shrink vessels and reduce redness only. Beyond 72 hours they risk rebound conjunctival hyperemia and epithelial dryness, and absorbed drug can raise blood pressure. They do not treat the allergic response (T).',
+ cite:'Lam_OphthalmicDisorders.pdf slide 39 (T)'},
+
+{id:'xe23', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'deye', sub:'cjrx', concept:'referral-72-hours',
+ tags:['allergic conjunctivitis','referral'], source:'slide',
+ stem:'A man with itchy, red eyes has used artificial tears plus ketotifen drops correctly for three days with no improvement. What should the pharmacist do?',
+ options:[
+  {t:'Refer him to a provider', correct:true, why:'Slide 41 says to refer if symptoms do not resolve after 72 hours of appropriate treatment.'},
+  {t:'Add an ophthalmic decongestant for another week', correct:false, why:'Slide 39 limits decongestants to 72 hours and shows rebound hyperemia beyond it, so extending is not advised.'},
+  {t:'Continue the same products for several more weeks', correct:false, why:'Slide 41 sets 72 hours of appropriate treatment as the point for medical referral, not a longer trial.'},
+  {t:'Switch to a topical corticosteroid eye drop sold OTC', correct:false, why:'Slide 17 lists topical corticosteroids as prescription medications, so they are not an OTC step.'}],
+ teach:'If an OTC regimen is used correctly and symptoms have not resolved after 72 hours, the patient needs a provider and possibly a prescription or another diagnosis.',
+ cite:'Lam_OphthalmicDisorders.pdf slides 17, 39, 41'},
+
+{id:'xe24', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'deye', sub:'cjrx', concept:'contact-lens-counseling',
+ tags:['contact lenses','counseling'], source:'slide',
+ stem:'A woman who wears soft contact lenses will use eye drops that contain BAK. What counseling is correct?',
+ options:[
+  {t:'Remove lenses; wait 15 minutes after the drops', correct:true, why:'Slide 46 says to remove lenses and wait 15 minutes, especially for products with the BAK preservative.'},
+  {t:'Leave the lenses in and apply the drops over them', correct:false, why:'Slides 46 and 48 say to remove contacts before instilling drops, because lenses trap drug and preservative.'},
+  {t:'Remove the lenses and reinsert them as soon as the drop is in', correct:false, why:'Slide 46 says to wait 15 minutes before reinserting the lenses, not to reinsert at once.'},
+  {t:'Reinsert the lenses after 5 minutes, the wait between two solutions', correct:false, why:'Slide 44 gives 5 minutes between two solutions; slide 46 gives 15 minutes before lens reinsertion.'}],
+ teach:'Contact lenses can trap drug and preservative against the eye and can be discolored by some products. Remove them before instilling eye drops and wait 15 minutes before reinserting, especially with benzalkonium chloride.',
+ cite:'Lam_OphthalmicDisorders.pdf slides 44, 46, 48'}
+);
+
+/* ==========================================================================
+   Week 14, Dr. Lahoud's DEENT lab, Part 2 (ophthalmic review): primary open-angle
+   glaucoma and the "EOOR Eye Drop" glaucoma prescription verification. Facts come
+   from Dr. Lam's 11/19 glaucoma deck, Lam_Glaucoma.pdf (slide N = PDF page; slides
+   1-80 were re-read in Google Drive for this file), as carried in the student's
+   own verified DEENT drill. Pathophysiology and mechanism wording is limited to
+   what the DEENT items cite from Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf.
+   Review items use the Week 2 error types (Intro-to-Dispensing.pdf slides 38-39):
+   a prescribing error is fixed by calling the prescriber; a transcribing or a
+   dispensing error is corrected with the technician.
+   Facts that only the DEENT bank states (not seen on slides 1-80 here): slides 83,
+   91 and 92 (contact lenses; angle-closure presentation), and the Latisse versus
+   Lumigan indications (slide 19 only names the brands). Marked (bank) in the notes.
+   Not used: Latisse strength (slide 19 prints 0.3%, the handout 0.03%).
+   ========================================================================== */
+TOPICS.push({id:'dglau', name:'DEENT lab: glaucoma', prof:'Dr. Lahoud', cite:'Lam_Glaucoma.pdf', subs:[
+  {id:'pres', name:'Open-angle glaucoma: presentation and goal', cite:'slides 12–14, 91–92'},
+  {id:'drugs', name:'Drug classes, dosing and cautions', cite:'slides 18–21, 31–34, 41–44, 51–53, 57, 62–63, 69'},
+  {id:'tech', name:'Eye drop technique, spacing and order', cite:'slides 22, 35, 71–75, 83'},
+  {id:'rev', name:'Eye drop prescription review (EOOR)', cite:'slides 19, 24–25, 32, 51, 62, 69'}]});
+
+QUESTIONS.push(
+{id:'xg01', skill:'tell', prof:'Dr. Lahoud', tier:'new', topic:'dglau', sub:'pres', concept:'poag-silent',
+ tags:['glaucoma','POAG'], source:'slide',
+ stem:'A man with newly diagnosed primary open-angle glaucoma (POAG) says his vision is fine and asks why he must use eye drops every day. What is the best explanation?',
+ options:[
+  {t:'It is silent until substantial field loss', correct:true, why:'Slide 12 gives the clinical presentation as asymptomatic until substantial visual field loss occurs, so feeling well says nothing about pressure.'},
+  {t:'POAG causes sandy, gritty eyes that the drops relieve', correct:false, why:'Slide 12 describes POAG as asymptomatic; the drops lower intraocular pressure and are not for surface irritation.'},
+  {t:'POAG causes pain that the drops prevent', correct:false, why:'Slide 12 lists no pain for POAG; it is asymptomatic until substantial visual field loss occurs.'},
+  {t:'POAG resolves once the pressure is measured once', correct:false, why:'Slides 13–14 set a goal of reducing pressure with ongoing therapy; measuring it once does not end the disease.'}],
+ teach:'Primary open-angle glaucoma is asymptomatic until substantial visual field loss occurs. A patient cannot judge control by how the eyes feel, so the drops are used daily and an eye care professional follows the pressure.',
+ cite:'Lam_Glaucoma.pdf slide 12'},
+
+{id:'xg02', skill:'tell', prof:'Dr. Lahoud', tier:'new', topic:'dglau', sub:'pres', concept:'poag-vs-acg',
+ tags:['glaucoma','POAG'], source:'both',
+ stem:'A woman has severe pain in one eye with headache, nausea, vomiting, blurred vision, colored halos around lights and sudden vision loss. Which statement fits?',
+ options:[
+  {t:'Not POAG; send her for emergency eye evaluation', correct:true, why:'Slide 12 shows open-angle glaucoma is asymptomatic, while slides 91–92 give pain, halos and sudden loss as acute angle closure (bank).'},
+  {t:'This is typical POAG and she should start a once-daily drop', correct:false, why:'Slide 12 says POAG is asymptomatic until substantial field loss; this pain and sudden loss is a different, urgent picture.'},
+  {t:'This is adverse effect of her prostaglandin analog and should be waited out', correct:false, why:'Slide 21 lists blurred vision, stinging, pigmentation and lash growth for prostaglandin analogs, not severe pain with vomiting.'},
+  {t:'This is dry eye and artificial tears are enough', correct:false, why:'Severe pain with vomiting and sudden vision loss is not a surface irritation problem and cannot be handled with a lubricant.'}],
+ teach:'Open-angle glaucoma is symptomless until late. Severe eye pain with headache, nausea, vomiting, halos and sudden vision loss points to acute angle closure, which is an emergency referral to an eye care professional.',
+ cite:'Lam_Glaucoma.pdf slides 12, 91–92 (bank)'},
+
+{id:'xg03', skill:'recall', prof:'Dr. Lahoud', tier:'new', topic:'dglau', sub:'pres', concept:'iop-goal',
+ tags:['glaucoma','goal'], source:'slide',
+ stem:'Which statement about the goal of therapy in primary open-angle glaucoma is correct?',
+ options:[
+  {t:'Lower pressure; target set by an eye care professional', correct:true, why:'Slide 14 gives the goal as reducing intraocular pressure (IOP), with the target determined by an eye care professional.'},
+  {t:'Relieve symptoms, with the target set by the pharmacist', correct:false, why:'Slide 12 shows POAG has no symptoms to relieve, and slide 14 says an eye care professional determines the IOP target.'},
+  {t:'Reduce IOP by 25–30% in every patient, set by the pharmacist', correct:false, why:'Slide 14 shows the 25–30% reduction but states the IOP target is determined by an eye care professional, not the pharmacist.'},
+  {t:'Raise ocular perfusion pressure, with no pressure target', correct:false, why:'Slide 7 names lower perfusion pressure as a risk factor, but slide 14 gives the goal as lowering IOP.'}],
+ teach:'The goal of POAG therapy is a lower IOP. An eye care professional determines the target; the initial reduction shown on the slide is 25–30%.',
+ cite:'Lam_Glaucoma.pdf slides 12, 14'},
+
+{id:'xg04', skill:'recall', prof:'Dr. Lahoud', tier:'new', topic:'dglau', sub:'drugs', concept:'first-line-pga',
+ tags:['glaucoma','prostaglandin'], source:'slide',
+ stem:'Which drug class is first-line therapy for primary open-angle glaucoma?',
+ options:[
+  {t:'Prostaglandin analogs', correct:true, why:'Slide 19 is titled First-Line Therapy: Prostaglandin Analogues, and slide 63 lists them first in the sequence.'},
+  {t:'Ophthalmic beta blockers', correct:false, why:'Slide 31 titles beta blockers adjunctive or alternative, and slide 63 puts them second after prostaglandin analogs.'},
+  {t:'Alpha-2 adrenergic agonists', correct:false, why:'Slide 41 titles alpha-2 agonists adjunctive therapy or alternative; slide 63 puts them third in the sequence.'},
+  {t:'Cholinergic agonists', correct:false, why:'Slide 63 puts cholinergic agents fifth, and slide 57 dosing is four times daily, so they are not first line.'}],
+ teach:'The six classes in the usual order are prostaglandin analog, beta blocker, alpha-2 agonist, topical carbonic anhydrase inhibitor, cholinergic and Rho kinase inhibitor. The prostaglandin analog starts therapy.',
+ cite:'Lam_Glaucoma.pdf slides 19, 63'},
+
+{id:'xg05', skill:'recall', prof:'Dr. Lahoud', multi:true, tier:'new', topic:'dglau', sub:'drugs', concept:'pga-reasons',
+ tags:['glaucoma','prostaglandin'], source:'slide',
+ stem:'Which are reasons prostaglandin analogs are first-line therapy for primary open-angle glaucoma? Select all that apply.',
+ options:[
+  {t:'Once-daily dosing', correct:true, why:'Slide 20 gives once-daily dosing as the first reason prostaglandin analogs are first line.'},
+  {t:'IOP reduction of up to 33%', correct:true, why:'Slide 20 states they reduce intraocular pressure by up to 33%, more than the later classes on slides 31, 41 and 51.'},
+  {t:'Lower-cost generics', correct:true, why:'Slide 20 lists lower-cost generics among the reasons for first-line use.'},
+  {t:'Good tolerance', correct:true, why:'Slide 20 lists good tolerance as one of the reasons for first-line use.'},
+  {t:'Dosing four times daily', correct:false, why:'Slide 20 stresses once-daily dosing; four times daily is the pilocarpine frequency on slide 57.'}],
+ teach:'Prostaglandin analogs combine a large pressure reduction (up to 33%) with one dose a day, generic availability and good tolerance.',
+ cite:'Lam_Glaucoma.pdf slide 20'},
+
+{id:'xg06', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'dglau', sub:'drugs', concept:'pga-night',
+ tags:['glaucoma','prostaglandin'], source:'slide',
+ stem:'A patient starting latanoprost asks why the drop is used at night. Which side effect is the reason for nightly dosing?',
+ options:[
+  {t:'Blurred vision', correct:true, why:'Slide 21 states blurred vision is the reason for nightly dosing of prostaglandin analogs.'},
+  {t:'Eyelash growth', correct:false, why:'Slide 21 lists eyelash growth and thickening as a side effect, but it is not the stated reason for nightly dosing.'},
+  {t:'Increased iris pigmentation', correct:false, why:'Slide 21 lists increased pigmentation as a side effect, but blurred vision is the stated reason for nightly dosing.'},
+  {t:'Stinging', correct:false, why:'Slide 21 lists stinging as a side effect, but only blurred vision carries the note about nightly dosing.'}],
+ teach:'Prostaglandin analog side effects are blurred vision, stinging, increased iris or eyelash pigmentation, eyelash growth and a foreign body sensation. Blurred vision is why the drop is used at night.',
+ cite:'Lam_Glaucoma.pdf slide 21'},
+
+{id:'xg07', skill:'recall', prof:'Dr. Lahoud', multi:true, tier:'new', topic:'dglau', sub:'drugs', concept:'pga-contra',
+ tags:['glaucoma','prostaglandin'], source:'slide',
+ stem:'Which histories are contraindications to prostaglandin analogs? Select all that apply.',
+ options:[
+  {t:'Macular edema', correct:true, why:'Slide 21 lists macular edema under contraindications for prostaglandin analogs.'},
+  {t:'History of herpetic keratitis', correct:true, why:'Slide 21 lists a history of herpetic keratitis under contraindications for prostaglandin analogs.'},
+  {t:'Asthma', correct:false, why:'Slides 34 and 59 list asthma as a precaution for beta blockers and cholinergic agents, not for prostaglandin analogs.'},
+  {t:'Sickle cell disease', correct:false, why:'Slide 54 lists sickle cell disease as a carbonic anhydrase inhibitor precaution, not a prostaglandin analog contraindication.'}],
+ teach:'Match each caution to its class: macular edema and herpetic keratitis for prostaglandin analogs; asthma for beta blockers and cholinergics; sickle cell disease for carbonic anhydrase inhibitors.',
+ cite:'Lam_Glaucoma.pdf slides 21, 34, 54, 59'},
+
+{id:'xg08', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'dglau', sub:'drugs', concept:'timolol-asthma',
+ tags:['glaucoma','beta blocker'], source:'slide',
+ stem:'A patient with uncontrolled asthma is prescribed timolol eye drops. Which response is best?',
+ options:[
+  {t:'Call the prescriber about asthma and beta blockers', correct:true, why:'Slide 34 lists asthma/COPD as a precaution for ophthalmic beta blockers, and slide 33 lists bronchospasm as a systemic effect.'},
+  {t:'Dispense it; beta blocker eye drops do not reach the lungs', correct:false, why:'Slide 33 lists bronchospasm as a systemic effect of ophthalmic beta blockers, so absorbed drug can reach the lungs.'},
+  {t:'Change the drop to pilocarpine, which also treats glaucoma', correct:false, why:'Slide 59 lists asthma as a precaution for cholinergic agents too, so pilocarpine does not solve the problem.'},
+  {t:'Double the frequency to speed up the effect', correct:false, why:'Slide 32 gives timolol as BID or once daily as a gel; a higher frequency adds exposure and does not remove the precaution.'}],
+ teach:'Ophthalmic beta blockers can cause bradycardia, hypotension and bronchospasm. Asthma/COPD, heart block, uncompensated cardiac failure and oral beta blocker therapy are precautions, so the pharmacist raises them with the prescriber.',
+ cite:'Lam_Glaucoma.pdf slides 33, 34, 59'},
+
+{id:'xg09', skill:'recall', prof:'Dr. Lahoud', tier:'new', topic:'dglau', sub:'drugs', concept:'timolol-gel',
+ tags:['glaucoma','beta blocker'], source:'slide',
+ stem:'A patient forgets the evening dose of timolol solution taken twice daily (BID). Which change allows once-daily dosing of the same drug?',
+ options:[
+  {t:'Timoptic XE gel', correct:true, why:'Slide 32 gives Timoptic XE gel as 1 drop into the affected eye(s) daily, while timolol solution is BID.'},
+  {t:'Combigan combination drop', correct:false, why:'Slide 69 gives Combigan as 1 drop BID, so it cannot meet a once-daily need.'},
+  {t:'Cosopt combination drop', correct:false, why:'Slide 69 gives Cosopt as 1 drop BID, so it does not reduce the evening dose problem.'},
+  {t:'Simbrinza combination drop', correct:false, why:'Slide 69 gives Simbrinza as 1 drop TID, a higher frequency than timolol solution, and it contains no timolol.'}],
+ teach:'Timolol solution (Timoptic, Istalol) is BID, and Timoptic XE gel is once daily. The combination products on slide 69 are BID or TID, never once daily.',
+ cite:'Lam_Glaucoma.pdf slides 32, 69'},
+
+{id:'xg10', skill:'recall', prof:'Dr. Lahoud', tier:'new', topic:'dglau', sub:'drugs', concept:'cai-why-last',
+ tags:['glaucoma','CAI'], source:'slide',
+ stem:'Oral carbonic anhydrase inhibitors lower IOP by 25–40%. Why are they still a last-line choice?',
+ options:[
+  {t:'Systemic acidosis', correct:true, why:'Slide 53 gives systemic acidosis (malaise, fatigue, anorexia, nausea, weight loss, altered taste) as the reason they are last.'},
+  {t:'Bronchospasm and heart block', correct:false, why:'Slide 58 lists bronchospasm and heart block as cholinergic agent systemic effects, not the oral carbonic anhydrase inhibitor problem.'},
+  {t:'Eyelash growth and iris darkening', correct:false, why:'Slide 21 lists these as prostaglandin analog effects, and slide 53 gives acidosis as the oral carbonic anhydrase inhibitor problem.'},
+  {t:'Too small a pressure reduction', correct:false, why:'Slide 53 states the oral reduction is 25–40%, larger than the topical 15–26%; the limit is tolerability.'}],
+ teach:'Oral acetazolamide and methazolamide lower pressure well but cause systemic acidosis, so they sit at the end of the sequence. The topical agents reduce IOP 15–26% with minimal systemic effects.',
+ cite:'Lam_Glaucoma.pdf slides 51–53'},
+
+{id:'xg11', skill:'recall', prof:'Dr. Lahoud', tier:'new', topic:'dglau', sub:'drugs', concept:'class-order',
+ tags:['glaucoma','sequence'], source:'slide',
+ stem:'A patient is adherent on a prostaglandin analog, a beta blocker and an alpha-2 agonist, and the intraocular pressure (IOP) is still above goal. Which class comes next in the usual order?',
+ options:[
+  {t:'Topical carbonic anhydrase inhibitor', correct:true, why:'Slide 63 lists the topical carbonic anhydrase inhibitor fourth, after the prostaglandin analog, beta blocker and alpha-2 agonist.'},
+  {t:'Rho kinase inhibitor (netarsudil)', correct:false, why:'Slide 63 lists the Rho kinase inhibitor sixth and last, after the cholinergic.'},
+  {t:'Another prostaglandin analog in a second bottle', correct:false, why:'Slide 15 lists duplicate therapy as an indication problem, and a second prostaglandin analog is not a new class.'},
+  {t:'Cholinergic agonist', correct:false, why:'Slide 63 lists the cholinergic fifth, so it follows the topical carbonic anhydrase inhibitor.'}],
+ teach:'Add classes in order: prostaglandin analog, beta blocker, alpha-2 agonist, topical carbonic anhydrase inhibitor, cholinergic, Rho kinase inhibitor.',
+ cite:'Lam_Glaucoma.pdf slides 15, 63'},
+
+{id:'xg12', skill:'recall', prof:'Dr. Lahoud', tier:'new', topic:'dglau', sub:'tech', concept:'eyelid-closure',
+ tags:['eye drops','technique'], source:'slide',
+ stem:'A patient with heart disease uses timolol drops. What does closing the eyelids after each drop do?',
+ options:[
+  {t:'Lowers drainage and systemic absorption', correct:true, why:'Slide 72 states eyelid closure decreases nasolacrimal drainage, systemic absorption and the severity of systemic side effects.'},
+  {t:'Raises the concentration of the drop in the bottle', correct:false, why:'Slide 72 lists effects on drainage and absorption; nothing changes the strength of the product in the bottle.'},
+  {t:'Replaces the wait between two different drops', correct:false, why:'Slide 74 gives a separate 5 minute wait between two solutions; eyelid closure does not replace it.'},
+  {t:'Prevents contamination of the bottle tip', correct:false, why:'Slide 71 prevents contamination by not touching the dropper tip; slide 72 gives eyelid closure a different purpose.'}],
+ teach:'Eyelid closure lowers nasolacrimal drainage, which lowers systemic absorption and the severity of systemic effects such as bradycardia or bronchospasm. Contamination is prevented by keeping the tip from touching anything.',
+ cite:'Lam_Glaucoma.pdf slides 71–72'},
+
+{id:'xg13', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'dglau', sub:'tech', concept:'wait-solutions',
+ tags:['eye drops','spacing'], source:'slide',
+ stem:'A patient uses two different eye drop solutions every morning and instills them back to back. How long should she wait between the two solutions?',
+ options:[
+  {t:'5 minutes', correct:true, why:'Slide 74 shows a 5 minute wait between solution 1 and solution 2 drops.'},
+  {t:'10 minutes', correct:false, why:'Slide 74 shows 10 minutes between a solution and an ointment or gel-forming solution, not between two solutions.'},
+  {t:'1 minute', correct:false, why:'Slide 74 shows 5 minutes between two solutions, so 1 minute is too short.'},
+  {t:'No wait is needed if the lids are closed', correct:false, why:'Slide 74 gives a 5 minute wait between solutions; eyelid closure on slide 72 serves a different purpose.'}],
+ teach:'Wait 5 minutes between two solutions, and 5 minutes between a solution and a suspension. A gel-forming solution or ointment goes last, at least 10 minutes after the drops.',
+ cite:'Lam_Glaucoma.pdf slide 74'},
+
+{id:'xg14', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'dglau', sub:'tech', concept:'order-application',
+ tags:['eye drops','order'], source:'slide',
+ stem:'A patient uses latanoprost solution, brinzolamide suspension and timolol gel-forming solution at the same time of day. In which order should they be instilled?',
+ options:[
+  {t:'Latanoprost, brinzolamide, timolol gel', correct:true, why:'Slide 75 orders application as solution, then suspension, then ointment or gel-forming solution.'},
+  {t:'Timolol gel, latanoprost, brinzolamide', correct:false, why:'Slide 75 puts the gel-forming solution last, so starting with it blocks the drops that follow.'},
+  {t:'Brinzolamide, latanoprost, timolol gel', correct:false, why:'Slide 75 puts the solution before the suspension; brinzolamide is the suspension (slide 51).'},
+  {t:'Any order, since the drugs differ', correct:false, why:'Slide 75 sets one order by dosage form, so the order is not free.'}],
+ teach:'Order of application is solution, suspension, then ointment or gel-forming solution. Brinzolamide 1% (Azopt) is the suspension, latanoprost is a solution and timolol gel is the gel-forming product.',
+ cite:'Lam_Glaucoma.pdf slides 51, 74–75'},
+
+{id:'xg15', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'dglau', sub:'tech', concept:'preservative-pf',
+ tags:['eye drops','preservative'], source:'slide',
+ stem:'A man using dorzolamide/timolol (Cosopt) has burning and redness attributed to the preservative in the bottle. Which change keeps both drugs?',
+ options:[
+  {t:'Cosopt PF', correct:true, why:'Slide 35 names Cosopt PF as the preservative-free option for a reaction to the preservative, and slide 51 lists it as dorzolamide plus timolol.'},
+  {t:'Combigan', correct:false, why:'Slide 69 shows Combigan pairs brimonidine with timolol, so it does not keep dorzolamide.'},
+  {t:'Simbrinza', correct:false, why:'Slide 69 shows Simbrinza pairs brinzolamide with brimonidine, so it contains neither dorzolamide nor timolol.'},
+  {t:'Timoptic XE gel', correct:false, why:'Slide 32 shows Timoptic XE gel is timolol alone, so dorzolamide would be lost.'}],
+ teach:'For intolerance from the preservative, change to a preservative-free product: Cosopt PF for dorzolamide plus timolol, and Trusopt is also available preservative-free.',
+ cite:'Lam_Glaucoma.pdf slides 22, 35, 51, 55, 69'},
+
+{id:'xg16', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'dglau', sub:'tech', concept:'contact-lens',
+ tags:['eye drops','contact lenses'], source:'transcript',
+ stem:'A woman wears soft contact lenses and uses a multiple-dose glaucoma drop containing benzalkonium chloride. What should the pharmacist counsel?',
+ options:[
+  {t:'Remove lenses first; reinsert 15 minutes after the drop', correct:true, why:'Slide 83 and the 11/19 lecture (T): lenses come out before the drop and go back at least 15 minutes later (bank).'},
+  {t:'Leave the lenses in and wait 5 minutes for the drop to settle', correct:false, why:'The 5 minute wait on slide 74 applies between two solutions, not to lens wear; lenses hold preservative against the eye.'},
+  {t:'Stop the drop because contact lens wearers cannot use glaucoma drugs', correct:false, why:'Lens wear changes how drops are given and does not exclude any product (bank, slide 83).'},
+  {t:'Use the drop only at bedtime with the lenses on', correct:false, why:'Slide 83 has the lenses out for the drop; moving the time to bedtime does not remove the preservative problem.'}],
+ teach:'Contact lenses can trap drug and preservative against the eye. Remove them before the drop and wait at least 15 minutes before reinserting. (T)',
+ cite:'Lam_Glaucoma.pdf slide 83 (T, bank)'},
+
+{id:'xg17', skill:'error', prof:'Dr. Lahoud', tier:'new', topic:'dglau', sub:'rev', concept:'rev-pga-bid',
+ tags:['EOOR','eye drops'], source:'slide',
+ stem:'A prescription reads bimatoprost 0.01% ophthalmic solution, 1 drop in both eyes (OU) twice daily (BID), for primary open-angle glaucoma. What is the error and the fix?',
+ options:[
+  {t:'Prescribing error: frequency too high; call the prescriber', correct:true, why:'Slides 20 and 24–25: prostaglandin analogs are once daily and more often decreases efficacy; the prescriber fixes a prescribing error.'},
+  {t:'Transcribing error: wrong frequency; correct the label with the technician', correct:false, why:'The prescription itself says BID, so the frequency was prescribed that way and no transcribing mistake occurred (slides 24–25).'},
+  {t:'Dispensing error: wrong drug filled; replace the bottle', correct:false, why:'Bimatoprost is the drug written, and the problem on slides 24–25 is the BID frequency, not the product filled.'},
+  {t:'No error; BID is the usual frequency', correct:false, why:'Slide 20 gives once-daily dosing for prostaglandin analogs; BID is the beta blocker frequency on slide 32.'}],
+ teach:'A prostaglandin analog is dosed once daily, and more frequent dosing decreases its efficacy. A frequency written wrongly by the prescriber is a prescribing error, corrected by calling the prescriber.',
+ cite:'Lam_Glaucoma.pdf slides 20, 24–25; Intro-to-Dispensing.pdf slide 38'},
+
+{id:'xg18', skill:'error', prof:'Dr. Lahoud', tier:'new', topic:'dglau', sub:'rev', concept:'rev-label-tid',
+ tags:['EOOR','eye drops'], source:'slide',
+ stem:'The prescription reads Trusopt 2% (dorzolamide), 1 drop OU three times daily (TID). The label reads 1 drop OU BID. What is the error and the fix?',
+ options:[
+  {t:'Transcribing error: correct label with technician', correct:true, why:'Slide 51 gives dorzolamide as TID, matching the prescription; the label was transcribed incorrectly and is fixed with the technician.'},
+  {t:'Prescribing error: frequency wrong; call the prescriber', correct:false, why:'Slide 51 gives dorzolamide as TID, so the prescription is right and the fault lies in the label.'},
+  {t:'Dispensing error: wrong strength; replace the bottle', correct:false, why:'The strength and drug match the prescription; only the label frequency differs from what was written.'},
+  {t:'No error; BID is acceptable for dorzolamide', correct:false, why:'Slide 51 gives dorzolamide as TID; BID is the frequency of Cosopt on slide 69, which also contains timolol.'}],
+ teach:'When the prescription is correct and the label differs, the error is transcribing and the label is corrected with the technician. Dorzolamide alone is TID; the combination with timolol is BID.',
+ cite:'Lam_Glaucoma.pdf slides 51, 69; Intro-to-Dispensing.pdf slide 38'},
+
+{id:'xg19', skill:'error', prof:'Dr. Lahoud', tier:'new', topic:'dglau', sub:'rev', concept:'rev-netarsudil-time',
+ tags:['EOOR','eye drops'], source:'slide',
+ stem:'A prescription reads netarsudil 0.02% (Rhopressa), 1 drop OU every night at bedtime (QHS). The label reads 1 drop OU every morning (QAM). What is the error and the fix?',
+ options:[
+  {t:'Transcribing error: correct label with technician', correct:true, why:'Slide 62 gives netarsudil 0.02% as QHS, matching the prescription, so the QAM on the label is a transcribing error.'},
+  {t:'Prescribing error: wrong time; call the prescriber', correct:false, why:'Slide 62 gives netarsudil as QHS, so the prescribed time is correct and the prescriber is not at fault.'},
+  {t:'Dispensing error: wrong drug filled; replace the bottle', correct:false, why:'Netarsudil is what the prescription and label both name; the only mismatch is the time of day (slide 62).'},
+  {t:'No error; morning and bedtime are equivalent', correct:false, why:'Slide 62 gives QHS for netarsudil, so the morning time on the label differs from what was prescribed.'}],
+ teach:'Netarsudil (Rhopressa) and Rocklatan are given once at bedtime (QHS). A label that differs from a correct prescription is a transcribing error, corrected with the technician.',
+ cite:'Lam_Glaucoma.pdf slide 62; Intro-to-Dispensing.pdf slide 38'},
+
+{id:'xg20', skill:'error', prof:'Dr. Lahoud', tier:'new', topic:'dglau', sub:'rev', concept:'rev-latisse',
+ tags:['EOOR','eye drops'], source:'slide',
+ stem:'A prescription for Lumigan (bimatoprost) for glaucoma is filled with Latisse (bimatoprost). What is the error and the fix?',
+ options:[
+  {t:'Dispensing error: get correct product, reverify', correct:true, why:'Slide 19 names Lumigan and Latisse as separate bimatoprost brands, and Latisse is the eyelash product (bank), so the wrong product was filled.'},
+  {t:'Prescribing error: wrong drug written; call the prescriber', correct:false, why:'Lumigan, the glaucoma brand on slide 19, was what the prescriber wrote, so the mistake occurred at filling.'},
+  {t:'Transcribing error: wrong label directions; correct the label', correct:false, why:'The directions are not the issue; the wrong brand was filled, which is a dispensing error, not a label transcription.'},
+  {t:'No error; both are the same drug and indication', correct:false, why:'Slide 19 lists Lumigan and Latisse as different brands; Latisse is for eyelash growth, not glaucoma (bank).'}],
+ teach:'Bimatoprost is sold as Lumigan for glaucoma and as Latisse for eyelash growth. Filling the wrong product is a dispensing error: get the correct stock with the technician and reverify.',
+ cite:'Lam_Glaucoma.pdf slide 19 (bank); Intro-to-Dispensing.pdf slide 38'}
 );
 
 /* ==========================================================================
