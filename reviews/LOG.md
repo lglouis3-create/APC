@@ -13,3 +13,4 @@
 ## 2026-11-21 DEENT questions
 - 85 questions from the DEENT repo bank (q7-q10). Reviews found no wrong keys; fixes: recording-only facts marked (T) instead of attributed to heading-only slides, severity cut-offs cited to slide 26, fix wording for transcribing/dispensing errors taken from Intro-to-Dispensing slide 39.
 - Not re-reviewed after fixes. Known source conflicts not keyed: BSA cut-offs on slides 26 vs 31, secukinumab class on slide 42, Simbrinza component on slides 51 vs 69, Latisse 0.3% vs 0.03%, Rocklatan QHS vs once daily.
+- 2026-11-21: Rendered slides in the DEENT repo (deck/<id>/NN.webp) viewed: Patel acne 7, 19, 33, 38, 40 (classification, non-drug measures, tetracyclines, iPledge, algorithm) and Lam glaucoma 74 (5 min solution-solution and solution-suspension, 10 min solution-ointment), 83 (remove lenses, wait 15 min, BAK), 91-92 (acute symptoms; refer to ophthalmologist or optometrist) match the questions.

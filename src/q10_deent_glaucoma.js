@@ -37,12 +37,12 @@ QUESTIONS.push(
  tags:['glaucoma','POAG'], source:'both',
  stem:'A woman has severe pain in one eye with headache, nausea, vomiting, blurred vision, colored halos around lights and sudden vision loss. Which statement fits?',
  options:[
-  {t:'Not POAG; send her for emergency eye evaluation', correct:true, why:'Slide 12 shows open-angle glaucoma is asymptomatic, while slides 91–92 give pain, halos and sudden loss as acute angle closure (bank).'},
+  {t:'Not POAG; send her for emergency eye evaluation', correct:true, why:'Slide 12 shows open-angle glaucoma is asymptomatic, while slide 91 gives intense eye pain, halos and sudden vision loss as acute symptoms and slide 92 says to refer to an ophthalmologist or optometrist.'},
   {t:'This is typical POAG and she should start a once-daily drop', correct:false, why:'Slide 12 says POAG is asymptomatic until substantial field loss; this pain and sudden loss is a different, urgent picture.'},
   {t:'An adverse effect of a prostaglandin analog', correct:false, why:'Slide 21 lists blurred vision, stinging, pigmentation and lash growth for prostaglandin analogs, not severe pain with vomiting.'},
   {t:'This is dry eye and artificial tears are enough', correct:false, why:'Severe pain with vomiting and sudden vision loss is not a surface irritation problem and cannot be handled with a lubricant.'}],
  teach:'Open-angle glaucoma is symptomless until late. Severe eye pain with headache, nausea, vomiting, halos and sudden vision loss points to acute angle closure, which is an emergency referral to an eye care professional.',
- cite:'Lam_Glaucoma.pdf slides 12, 91–92 (bank)'},
+ cite:'Lam_Glaucoma.pdf slides 12, 91–92; 11/19 transcript (T)'},
 
 {id:'xg03', skill:'recall', prof:'Dr. Lahoud', tier:'new', topic:'dglau', sub:'pres', concept:'iop-goal',
  tags:['glaucoma','goal'], source:'slide',
@@ -192,12 +192,12 @@ QUESTIONS.push(
  tags:['eye drops','contact lenses'], source:'both',
  stem:'A woman wears soft contact lenses and uses a multiple-dose glaucoma drop containing benzalkonium chloride. What should the pharmacist counsel?',
  options:[
-  {t:'Remove lenses first; reinsert 15 minutes after the drop', correct:true, why:'Slide 83 and the 11/19 lecture (T): lenses come out before the drop and go back at least 15 minutes later (bank).'},
+  {t:'Remove lenses first; reinsert 15 minutes after the drop', correct:true, why:'Slide 83 says to remove lenses and wait 15 minutes, especially for products with BAK preservative; (T) the lenses go back in after that wait.'},
   {t:'Leave the lenses in and wait 5 minutes for the drop to settle', correct:false, why:'The 5 minute wait on slide 74 applies between two solutions, not to lens wear; lenses hold preservative against the eye.'},
-  {t:'Stop the drop because contact lens wearers cannot use glaucoma drugs', correct:false, why:'Lens wear changes how drops are given and does not exclude any product (bank, slide 83).'},
+  {t:'Stop the drop because contact lens wearers cannot use glaucoma drugs', correct:false, why:'Slide 83 tells lens wearers to remove lenses and wait 15 minutes; it does not exclude any glaucoma product from use.'},
   {t:'Use the drop only at bedtime with the lenses on', correct:false, why:'Slide 83 has the lenses out for the drop; moving the time to bedtime does not remove the preservative problem.'}],
  teach:'Contact lenses can trap drug and preservative against the eye. Remove them before the drop and wait at least 15 minutes before reinserting. (T)',
- cite:'Lam_Glaucoma.pdf slide 83 (bank; slide not in the readable extraction)'},
+ cite:'Lam_Glaucoma.pdf slide 83; 11/19 transcript (T)'},
 
 {id:'xg17', skill:'error', prof:'Dr. Lahoud', tier:'new', topic:'dglau', sub:'rev', concept:'rev-pga-bid',
  tags:['EOOR','eye drops'], source:'both',

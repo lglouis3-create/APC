@@ -20,5 +20,5 @@ Course state for kit sessions (updated 2026-11-21). Source tree in `src/`, built
 
 ## 2026-11-21 DEENT additions
 - q7_deent_acne.js (19), q8_deent_scaly.js (22), q9_deent_eye.js (24), q10_deent_glaucoma.js (20); cites name the DEENT decks; decks are not on hand, so cite_check reports 86 references unchecked.
-- Reviewed against the Drive slides by three reviewers; fixes applied but not re-reviewed. Patel acne slide numbers could not be confirmed (Drive extraction has no page markers); Lam slides 83 and 91-92 unreadable; Smith slide numbers omitted.
+- Reviewed against the Drive slides by three reviewers; fixes applied but not re-reviewed. Checked by viewing the DEENT repo's rendered slide images (deck/p6, deck/lg): Patel acne slides 7, 19, 33, 38, 40 and Lam glaucoma slides 74, 83, 91, 92 match the cites; other acne and scaly slide numbers rest on the DEENT bank and the Drive text; Smith slide numbers omitted.
 - Facts only in recordings are marked (T) and source 'both'.
