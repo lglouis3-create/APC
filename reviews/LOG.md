@@ -26,3 +26,6 @@
 - Open: no check confirms the guide's 35 tables fit a phone width; page scroll width equals the viewport width at 375 px, and the tables were not inspected one by one.
 - Full checks: 35 pass; scheduler_test.js and state_check_test.js still fail (engine self-tests); explain_check.js is a report; stepper_test.js NOT RUN (no step-through figures).
 
+
+## 2026-11-21 logistics removed
+- Louis: information about how the TOSCE stations run is not tested on the written exam. Removed from the Guides tab the TOSCE pulse and BP station block, the TOSCE SBAR stations bullet, the lab "counsel a partner" bullet and the TOSCE citations on the POCT section; removed question e22 (how the TOSCE station is carried out) and x04 (which disease states are sorted in the Part 2 review). Kept: the TOSCE medication list pairs (e21; the list names drugs the SBAR stations may use) and the SBAR content itself. Bank: 326 questions.

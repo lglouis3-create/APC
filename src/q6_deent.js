@@ -41,17 +41,6 @@ QUESTIONS.push(
  teach:'(T) The acne recommendation follows Dr. Patel’s algorithm for mild, moderate and severe acne; the lab practices using QuEST/SCHOLAR-MAC to decide self-care eligibility, choose a product and counsel.',
  cite:'DEENT-Lab-Deck.pdf, QuEST/SCHOLAR-MAC and Part 1 slides; 11/16 transcript (T)'},
 
-{id:'x04', skill:'recall', lowYield:true, prof:'Dr. Lahoud', tier:'new', topic:'deent', sub:'quest', concept:'ophtho-states',
- tags:['ophthalmic'], source:'slide',
- stem:'Which ophthalmic disease states are sorted in the Part 2 review?',
- options:[
-  {t:'Dry eye, allergic conjunctivitis, bacterial or viral conjunctivitis, glaucoma', correct:true, why:'Week 14 deck, Part 2 activity 1: dry eye disease, allergic conjunctivitis, bacterial or viral conjunctivitis, primary open-angle glaucoma.'},
-  {t:'Dry eye disease, cataract, age-related macular degeneration, and retinal detachment', correct:false, why:'Cataract, macular degeneration and retinal detachment are not among the states named in the Part 2 review (Week 14 deck).'},
-  {t:'Allergic conjunctivitis, uveitis, blepharitis, and keratitis', correct:false, why:'Uveitis, blepharitis and keratitis are not among the states named in the Part 2 review (Week 14 deck).'},
-  {t:'Glaucoma, cataract, dry eye disease, and uveitis', correct:false, why:'Cataract and uveitis are not among the states named in the Part 2 review (Week 14 deck).'}],
- teach:'(T) The exam may ask how these differ in symptoms and therapy; the clinical details come from Dr. Lam’s documents, which are not in this drill.',
- cite:'DEENT-Lab-Deck.pdf, Part 2 slide; 11/16 transcript (T)'},
-
 {id:'x05', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'deent', sub:'quest', concept:'eoor-eye-drop',
  tags:['EOOR','glaucoma'], source:'slide',
  stem:'In the ophthalmic review, errors found on a glaucoma prescription are corrected using which communication format?',

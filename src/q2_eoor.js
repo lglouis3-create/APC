@@ -242,16 +242,5 @@ QUESTIONS.push(
   {l:'Norvasc', r:'amlodipine', why:'TOSCE guide, medication list.'},
   {l:'Bactrim', r:'sulfamethoxazole/trimethoprim', why:'TOSCE guide, medication list.'}],
  teach:'The TOSCE guide names these drugs as the medications encountered in lab from the BDK list.',
- cite:'TOSCE-Study-Guide.pdf slide 2'},
-
-{id:'e22', skill:'recall', prof:'Dr. Lahoud', tier:'new', topic:'eoor', sub:'drugs', concept:'tosce-scope',
- tags:['TOSCE'], source:'slide', lowYield:true,
- stem:'How is the TOSCE station on a prescription error carried out?',
- options:[
-  {t:'SBAR communication with a provider', correct:true, why:'TOSCE guide: two stations involve SBAR with a healthcare provider about a prescription error.'},
-  {t:'Counseling a patient on an OTC product', correct:false, why:'The third station is POCT (blood pressure or pulse) with counseling, not an error station.'},
-  {t:'A written exam on the error types', correct:false, why:'The stations are interactions of up to 9 minutes (TOSCE guide).'},
-  {t:'Speaking with a provider with no preparation', correct:false, why:'Students get at least 1 minute to review the case first (TOSCE guide).'}],
- teach:'The TOSCE has 3 stations: two with SBAR communication with a healthcare provider about a prescription error and one POCT station with counseling.',
- cite:'TOSCE-Study-Guide.pdf slide 1'}
+ cite:'TOSCE-Study-Guide.pdf slide 2'}
 );

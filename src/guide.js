@@ -354,7 +354,6 @@ const GUIDE_HTML = `
 <div class="gpt"><h5>Why counseling matters and how it is practiced</h5><ul>
 <li>Adherence rises when the patient understands and agrees to the regimen [(T)].</li>
 <li>Counseling reduces return visits to the clinic or hospital [(T)].</li>
-<li>Lab: counsel a partner on one reviewed medication and score each other with the OSCE counseling rubric [sl. 45].</li>
 <li>Resources allowed in lab: lecture notes plus Lexidrug or Micromedex [sl. 45].</li>
 </ul></div>
 <h4>Tell apart</h4>
@@ -540,9 +539,9 @@ const GUIDE_HTML = `
 </tbody></table>
 <ul>
 <li>Use the section 4 three-step review: legal and safe, then label against prescription, then bottle against label [sl. 30].</li>
-<li>SBAR is the communication format for correcting the error [W14; TOSCE guide]: <b>Situation</b> (why you are calling), <b>Background</b> (who the patient is, the prescription, the clinical facts), <b>Assessment</b> (what the actual problem is and why it matters), <b>Recommendation</b> (what should be done to correct it) [W11 OSCE deck].</li>
+<li>SBAR is the communication format for correcting the error [W14]: <b>Situation</b> (why you are calling), <b>Background</b> (who the patient is, the prescription, the clinical facts), <b>Assessment</b> (what the actual problem is and why it matters), <b>Recommendation</b> (what should be done to correct it) [W11 OSCE deck].</li>
 <li>Background is the clinical fact; Assessment is the problem. Example: Background &ldquo;the maximum prescribed dose of ibuprofen is 3.2 g/day&rdquo;; Assessment &ldquo;the total daily dose prescribed is too high&rdquo; [W11 OSCE deck].</li>
-<li>This definition applies to a prescription-error SBAR (the TOSCE and OSCE error stations). For a vaccine-needs SBAR, the Immunizations slide 22 example applies instead: Background = patient characteristics, Assessment = what the AAFP schedule recommends (see the Parsons guide, section 8).</li>
+<li>This definition applies to a prescription-error SBAR (the prescription-error SBAR taught in the Week 11 and Week 14 labs). For a vaccine-needs SBAR, the Immunizations slide 22 example applies instead: Background = patient characteristics, Assessment = what the AAFP schedule recommends (see the Parsons guide, section 8).</li>
 <li>Prescribing errors go to the prescriber; transcribing and dispensing errors go to the technician [sl. 38&ndash;39; EOOR key].</li>
 </ul></div>
 <h4>Tell apart</h4>
@@ -904,7 +903,7 @@ const GUIDE_HTML = `
 
 <section class="gobj" id="gp-4">
 <h3>4. Vital signs and physical assessment</h3>
-<div class="gbar"><span>SECTION 4</span><b>Measure pulse, respirations, blood pressure, temperature and oxygen saturation correctly and read the result.</b><i>POCT deck slides 27&ndash;42; TOSCE study guide</i></div>
+<div class="gbar"><span>SECTION 4</span><b>Measure pulse, respirations, blood pressure, temperature and oxygen saturation correctly and read the result.</b><i>POCT deck slides 27&ndash;42</i></div>
 <h4>At a glance</h4>
 <ul>
 <li>Vital signs: pulse, respirations, blood pressure, temperature, O2 saturation. Vital statistics: age, height, weight, medication allergies, smoking status, perception of pain.</li>
@@ -929,7 +928,7 @@ const GUIDE_HTML = `
 <li>Use the pads of the fingers (better than the tips); do not use the thumb [POCT sl 31].</li>
 <li>Radial side of the wrist (thumb side), just outside the last wrist tendon [POCT sl 31].</li>
 <li>Press hard enough to start to collapse the artery; adjust pressure if you cannot feel it [POCT sl 31].</li>
-<li>Minimum 15 seconds &times; 4, or 30 seconds &times; 2 [POCT sl 31; TOSCE guide].</li>
+<li>Minimum 15 seconds &times; 4, or 30 seconds &times; 2 [POCT sl 31].</li>
 <li>If the result is near the tachycardia or bradycardia cut-off, count the full minute [POCT sl 31].</li>
 </ul></div>
 <div class="gpt"><h5>Respirations</h5><ul>
@@ -973,11 +972,7 @@ const GUIDE_HTML = `
 <li>Place on the index or middle finger; keep the patient still at least a minute until the numbers steady [POCT sl 42].</li>
 <li>Record both numbers: oxygen saturation and heart rate [POCT sl 42].</li>
 </ul></div>
-<div class="gpt"><h5>TOSCE (pulse and BP station)</h5><ul>
-<li>One of 3 stations is POCT (blood pressure or pulse) with patient counseling [TOSCE guide].</li>
-<li>Palpable systolic pressure is not asked [TOSCE guide].</li>
-<li>Pulse may be measured over 15 or 30 seconds and multiplied [TOSCE guide].</li>
-</ul></div>
+
 <h4>Tell apart</h4>
 <div class="gtell"><b>Tell apart</b><ul>
 <li>Vital signs (pulse, respirations, blood pressure, temperature, O2 saturation) vs vital statistics (age, height, weight, medication allergies, smoking status, pain perception) [POCT sl 29].</li>
@@ -1382,7 +1377,7 @@ const GUIDE_HTML = `
 <tr><td>Recommendation</td><td>What you recommend, including the next dose</td><td>PCV21, Shingrix, influenza, RSV, updated COVID-19 vaccine; second Shingrix dose in 2&ndash;6 months</td></tr>
 </tbody></table>
 <div class="gpt"><h5>Writing an SBAR</h5><ul>
-<li>Which version applies: this table (Imm sl 22: Background = patient characteristics, Assessment = what the AAFP schedule recommends) is for a vaccine-needs SBAR. For a prescription-error SBAR (the TOSCE and OSCE error stations), use the Week 11 deck definition: Background = the clinical fact, Assessment = the actual problem and why it matters (see the Lahoud guide, section 7).</li>
+<li>Which version applies: this table (Imm sl 22: Background = patient characteristics, Assessment = what the AAFP schedule recommends) is for a vaccine-needs SBAR. For a prescription-error SBAR (the prescription-error SBAR taught in the Week 11 and Week 14 labs), use the Week 11 deck definition: Background = the clinical fact, Assessment = the actual problem and why it matters (see the Lahoud guide, section 7).</li>
 <li>Start from the recommendation, then ask what assessment led to it and what background supports it [Imm sl 20; T].</li>
 <li>Be complete but concise [Imm sl 20].</li>
 <li>Name the source (for example AAFP or CDC) in the assessment, especially early in a career (T).</li>
@@ -1443,7 +1438,6 @@ const GUIDE_HTML = `
 <li>Do not stop talking to a patient who still declines; respect autonomy and keep the door open [Imm sl 32].</li>
 <li>Cite the source in the SBAR assessment (T).</li>
 <li>Use reliable sources, not AI, for patient information in the lab (T) [Imm sl 33].</li>
-<li>The TOSCE SBAR stations concern a prescription error communicated to a preceptor or physician [TOSCE guide].</li>
 </ul></div>
 </section>
 
