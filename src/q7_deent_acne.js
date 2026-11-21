@@ -23,7 +23,7 @@ QUESTIONS.push(
  stem:'A 17-year-old boy has many open and closed comedones, some papules and pustules on his cheeks, and one nodule on his jaw. Scarring is mild. How should his acne be classified?',
  options:[
   {t:'Moderate acne', correct:true, why:'Moderate acne has many non-inflammatory and some inflammatory lesions, no more than one nodule and mild scarring (slide 8).'},
-  {t:'Mild acne', correct:false, why:'Mild acne has only some non-inflammatory lesions and no nodules (slide 7), so a patient with many comedones and a nodule is beyond it.'},
+  {t:'Mild acne', correct:false, why:'Mild acne has some non-inflammatory lesions, at most a few papules or pustules and no nodules (slide 7); many comedones plus a nodule is beyond it.'},
   {t:'Mildly clear acne', correct:false, why:'Mildly clear acne is rare non-inflammatory lesions with no more than one small lesion (slide 7), far less than this patient has.'},
   {t:'Severe acne', correct:false, why:'Severe acne has a few nodular lesions with moderate to extensive scarring (slide 8); he has one nodule and mild scarring.'}],
  teach:'Count the lesion types and nodules: one, some, many. Rare lesions is mildly clear, some is mild, many with some inflammatory lesions and no more than one nodule is moderate, and more than one nodule with scarring is severe. (T) Dr. Patel said she uses the words one, some and many on exam cases.',
@@ -35,9 +35,9 @@ QUESTIONS.push(
  options:[
   {t:'Refer him; severe acne is not a self-care candidate', correct:true, why:'Slide 18 excludes severe acne from self-care, and several nodules with moderate scarring is severe acne (slide 8).'},
   {t:'Recommend a benzoyl peroxide wash and reassess in a few weeks', correct:false, why:'A single topical agent is the first step for mild acne (slide 40), and severe acne is excluded from self-care (slide 18).'},
-  {t:'Recommend OTC adapalene gel at night and a glycolic acid peel', correct:false, why:'Topical OTC agents suit mild acne (slide 40); severe acne needs an oral antibiotic with a topical combination (slide 40).'},
+  {t:'Recommend OTC adapalene gel at night and a glycolic acid peel', correct:false, why:'Topical OTC agents suit mild acne (slide 40); severe acne needs a prescriber, with an oral antibiotic and topical combination or other prescription therapy (slide 40).'},
   {t:'Recommend a salicylic acid cleanser and tea tree oil in a lotion', correct:false, why:'Salicylic acid has limited efficacy data (slide 29) and cannot treat several nodules with scarring.'}],
- teach:'Self-care exclusions for acne are severe acne, possible rosacea, exacerbating factors and comedogenic drugs (slide 18). Severe first-line therapy is an oral antibiotic plus a topical combination, which needs a prescriber.',
+ teach:'Self-care exclusions for acne are severe acne, possible rosacea, exacerbating factors and comedogenic drugs (slide 18). Severe acne needs a prescriber (oral antibiotic with a topical combination, or other prescription therapy).',
  cite:'Patel_Acne-Therapeutics-Student.pdf slides 8, 18, 29, 40'},
 
 {id:'xa03', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'dacne', sub:'path', concept:'acne-mild-first-step',
@@ -45,21 +45,21 @@ QUESTIONS.push(
  stem:'A 15-year-old boy has some open and closed comedones on his forehead and two small papules on his chin. There are no nodules and scarring is minimal. He has used no acne product. What is the first step?',
  options:[
   {t:'One topical agent: benzoyl peroxide or a topical retinoid', correct:true, why:'Slide 40 lists topical single therapy, benzoyl peroxide or a topical retinoid, as first line for mild acne; slide 25 calls benzoyl peroxide the preferred initial OTC agent.'},
-  {t:'Benzoyl peroxide, a topical retinoid and a topical antibiotic together', correct:false, why:'Slide 40 reaches topical combinations only after single therapy fails; (T) Dr. Patel called the plan a step by step process.'},
+  {t:'Benzoyl peroxide, a topical retinoid and a topical antibiotic together', correct:false, why:'(T) Dr. Patel called the plan a step by step process, and the three-drug combination is not the first step for mild acne.'},
   {t:'An oral antibiotic added to a topical combination', correct:false, why:'Slide 40 adds an oral antibiotic at moderate acne, not at mild acne.'},
-  {t:'A combined oral contraceptive with spironolactone', correct:false, why:'Slide 40 lists contraceptives and spironolactone as a severe second-line option for females, and he is a boy with mild acne.'}],
+  {t:'A combined oral contraceptive with spironolactone', correct:false, why:'Slide 40 lists contraceptives and spironolactone as a second-line hormonal option for females, and he is a boy with mild acne.'}],
  teach:'Mild acne means some non-inflammatory lesions, no more than a few papules and pustules, no nodules and minimal scarring (slide 7). Start with one topical agent and step up only if it fails.',
  cite:'Patel_Acne-Therapeutics-Student.pdf slides 7, 25, 40; 11/10 transcript (T)'},
 
 {id:'xa04', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'dacne', sub:'path', concept:'acne-moderate-first-step',
  tags:['acne','algorithm'], source:'both',
- stem:'A 17-year-old boy has many open and closed comedones and some papules and pustules, with no nodules. He has never used an acne product. Which first-line therapy fits his severity?',
+ stem:'A 17-year-old boy has many open and closed comedones and some papules and pustules, with no nodules. He has never used an acne product. Which therapy comes first, before any oral antibiotic is added?',
  options:[
   {t:'Benzoyl peroxide plus a topical retinoid', correct:true, why:'Slide 40 gives topical combination therapy, such as benzoyl peroxide with a topical retinoid, as first line for moderate acne.'},
   {t:'A topical antibiotic such as clindamycin gel used alone', correct:false, why:'Topical antibiotics are not recommended as monotherapy; benzoyl peroxide is added to reduce resistance (slides 25, 31).'},
-  {t:'Oral doxycycline with benzoyl peroxide and a topical retinoid', correct:false, why:'(T) Dr. Patel added the oral antibiotic only after the topical combinations were tried (slide 40).'},
+  {t:'Oral doxycycline with benzoyl peroxide and a topical retinoid', correct:false, why:'(T) In Dr. Patel’s stepwise ordering the oral antibiotic is added only after the topical combinations have been tried, so it is not the first step here (slide 40).'},
   {t:'Oral isotretinoin as the first agent for his comedones', correct:false, why:'(T) Dr. Patel called isotretinoin the absolute last line for moderate acne, after topical and oral antibiotic combinations (slide 40).'}],
- teach:'Many non-inflammatory lesions with some inflammatory lesions is moderate acne (slide 8). First line is a topical combination; an oral antibiotic is added when the topical combinations have been tried (slide 40).',
+ teach:'Many non-inflammatory lesions with some inflammatory lesions is moderate acne (slide 8). First line is a topical combination; an oral antibiotic is added when the topical combinations have been tried (T, Dr. Patel’s stepwise ordering; slide 40).',
  cite:'Patel_Acne-Therapeutics-Student.pdf slides 8, 25, 31, 40; 11/10 transcript (T)'},
 
 {id:'xa05', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'dacne', sub:'assess', concept:'acne-mildly-clear',
@@ -96,7 +96,7 @@ QUESTIONS.push(
  cite:'Patel_Acne-Therapeutics-Student.pdf slide 18; 11/16 transcript (T)'},
 
 {id:'xa08', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'dacne', sub:'assess', concept:'acne-scholar-mac-medications',
- tags:['SCHOLAR-MAC','acne'], source:'slide',
+ tags:['SCHOLAR-MAC','acne'], source:'both',
  stem:'A mother says her 16-year-old daughter’s acne got worse over the past month. Which SCHOLAR-MAC element should the pharmacist ask about to find a possible drug cause?',
  options:[
   {t:'Medications', correct:true, why:'Slide 10 lists drugs that cause or worsen acne, including corticosteroids, lithium and androgens, so current medicines must be asked about.'},
@@ -104,7 +104,7 @@ QUESTIONS.push(
   {t:'Allergies', correct:false, why:'Allergies identify products to avoid; they do not reveal which drug is worsening acne (slide 10).'},
   {t:'Remitting factors', correct:false, why:'Remitting factors ask what makes the problem better; the drug causes on slide 10 are found by asking about medications.'}],
  teach:'SCHOLAR-MAC: Symptoms, Characteristics, History, Onset, Location, Aggravating factors, Remitting factors, Medications, Allergies, Conditions. The medication history can uncover acne-causing drugs such as those on slide 10, which are an exclusion from self-care (slide 18).',
- cite:'Patel_Acne-Therapeutics-Student.pdf slides 10, 18'},
+ cite:'Patel_Acne-Therapeutics-Student.pdf slides 10, 18; 11/16 transcript (T)'},
 
 {id:'xa09', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'dacne', sub:'safety', concept:'acne-tetracycline-cautions', multi:true,
  tags:['acne','pregnancy','safety'], source:'both',
@@ -112,7 +112,7 @@ QUESTIONS.push(
  options:[
   {t:'It is for patients older than 12 years, because of tooth discoloration', correct:true, why:'Slide 33 limits minocycline and doxycycline to patients over 12 years old; use under 12 may discolor teeth permanently.'},
   {t:'It should be avoided during pregnancy because of fetal harm', correct:true, why:'Slide 33 lists fetal harm and advises avoiding the tetracyclines during pregnancy.'},
-  {t:'Photosensitivity is common, so sunscreen is advised', correct:true, why:'Slide 33 lists photosensitivity as common with the tetracyclines, and slide 42 includes sunscreen in oral counseling.'},
+  {t:'Photosensitivity can occur, so sunscreen is advised', correct:true, why:'Slide 33 lists photosensitivity as an adverse effect of the tetracyclines, and slide 42 includes sunscreen in oral counseling.'},
   {t:'It can be taken together with oral isotretinoin', correct:false, why:'Slide 38 says not to use isotretinoin with vitamin A supplements, tetracyclines or steroids.'},
   {t:'It is used alone, without any topical agent', correct:false, why:'Slide 40 gives an oral antibiotic in combination with topical agents, not as a single agent.'}],
  teach:'Tetracyclines for acne: over 12 years, not in pregnancy, not with isotretinoin, photosensitivity, shortest possible duration with re-evaluation at 3–4 months (slide 33). (T) Dr. Patel stressed that the oral antibiotic is given with the topicals.',
@@ -190,7 +190,7 @@ QUESTIONS.push(
  options:[
   {t:'Cleanse twice daily without abrasives; pick a gel, solution or lotion', correct:true, why:'Slide 19 advises cleansing twice a day with a mild cleanser and no abrasives, and slide 24 gives gels, solutions and lotions for oily skin.'},
   {t:'Scrub with an abrasive cleanser several times a day to clear out the pores', correct:false, why:'Slide 19 says to avoid abrasive products, devices and excessive cleansing, which can irritate acne-prone skin.'},
-  {t:'Wash with a bar soap and use an ointment on the lesions', correct:false, why:'Slide 24 says bars and ointments are not usually recommended; creams and lotions are for normal to dry skin.'},
+  {t:'Wash with a medicated bar and use an ointment on the lesions', correct:false, why:'Slide 24 says ointments are not usually recommended for acne-prone skin; gels, solutions and lotions suit oily skin.'},
   {t:'Remove makeup with a water-based cleanser, then an oil-based one', correct:false, why:'The order is reversed: slide 19 removes dirt and makeup with an oil-based cleanser before using a water-based cleanser.'}],
  teach:'Non-drug measures: cleanse twice a day with a mild soap or non-soap cleanser, avoid abrasives and excessive cleansing, remove makeup with an oil-based cleanser before a water-based one (slide 19), and match the vehicle to skin type (slide 24).',
  cite:'Patel_Acne-Therapeutics-Student.pdf slides 19, 24; 11/10 transcript (T)'},
@@ -208,13 +208,13 @@ QUESTIONS.push(
 
 {id:'xa18', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'dacne', sub:'path', concept:'acne-mild-after-bp',
  tags:['acne','algorithm'], source:'both',
- stem:'A 14-year-old with mild acne used benzoyl peroxide twice daily for 2 months with no benefit. What is the next step?',
+ stem:'A 14-year-old with mild acne used benzoyl peroxide twice daily for 2 months with no benefit. In Dr. Patel’s stepwise order, which single-agent change comes next?',
  options:[
   {t:'Switch to a topical retinoid as the single topical agent', correct:true, why:'Slide 40 lists benzoyl peroxide or a topical retinoid as mild first line; (T) a retinoid is used when benzoyl peroxide gave no benefit.'},
   {t:'Add oral doxycycline to the benzoyl peroxide wash', correct:false, why:'Oral antibiotics enter at moderate acne (slide 40), not at mild acne, and the single topical agents have not all been tried.'},
   {t:'Switch to topical clindamycin as a single agent', correct:false, why:'Topical antibiotics are not used as monotherapy; benzoyl peroxide is added to reduce resistance (slides 25, 31).'},
   {t:'Refer for oral isotretinoin and its pregnancy-test program', correct:false, why:'Isotretinoin is for severe refractory nodular acne and is the last line (slide 37), not for mild acne after one agent.'}],
- teach:'Mild acne follows steps: one topical agent, then the other single agent, then a topical combination, before anything oral (slide 40). (T) Dr. Patel described it as a step by step process.',
+ teach:'Slide 40 lists the mild options; the sequence of switching to the other single topical agent, then combining, before anything oral comes from the lecture (T, 11/10), where Dr. Patel described a step by step process.',
  cite:'Patel_Acne-Therapeutics-Student.pdf slides 25, 31, 37, 40; 11/10 transcript (T)'},
 
 {id:'xa19', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'dacne', sub:'otc', concept:'acne-topical-application',
