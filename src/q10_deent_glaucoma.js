@@ -208,7 +208,7 @@ QUESTIONS.push(
   {t:'Dispensing error: wrong drug filled; replace the bottle', correct:false, why:'Bimatoprost is the drug written, and the problem on slides 24–25 is the BID frequency, not the product filled.'},
   {t:'No error; BID is the usual frequency', correct:false, why:'Slide 20 gives once-daily dosing for prostaglandin analogs; BID is the beta blocker frequency on slide 32.'}],
  teach:'A prostaglandin analog is dosed once daily, and more frequent dosing decreases its efficacy (T, 11/19 lecture). A frequency written wrongly by the prescriber is a prescribing error, corrected by calling the prescriber.',
- cite:'Lam_Glaucoma.pdf slides 20, 24–25; 11/19 transcript (T); Intro-to-Dispensing.pdf slide 38'},
+ cite:'Lam_Glaucoma.pdf slides 20, 24–25; 11/19 transcript (T); Intro-to-Dispensing.pdf slides 38–39'},
 
 {id:'xg18', skill:'error', prof:'Dr. Lahoud', tier:'new', topic:'dglau', sub:'rev', concept:'rev-label-tid',
  tags:['EOOR','eye drops'], source:'slide',
@@ -219,7 +219,7 @@ QUESTIONS.push(
   {t:'Dispensing error: wrong strength; replace the bottle', correct:false, why:'The strength and drug match the prescription; only the label frequency differs from what was written.'},
   {t:'No error; BID is acceptable for dorzolamide', correct:false, why:'Slide 51 gives dorzolamide as TID; BID is the frequency of Cosopt on slide 69, which also contains timolol.'}],
  teach:'When the prescription is correct and the label differs, the error is transcribing and the sig is re-entered in the pharmacy system and the label regenerated (slide 39). Dorzolamide alone is TID; the combination with timolol is BID.',
- cite:'Lam_Glaucoma.pdf slides 51, 69; Intro-to-Dispensing.pdf slide 38'},
+ cite:'Lam_Glaucoma.pdf slides 51, 69; Intro-to-Dispensing.pdf slides 38–39'},
 
 {id:'xg19', skill:'error', prof:'Dr. Lahoud', tier:'new', topic:'dglau', sub:'rev', concept:'rev-netarsudil-time',
  tags:['EOOR','eye drops'], source:'slide',
@@ -230,7 +230,7 @@ QUESTIONS.push(
   {t:'Dispensing error: wrong drug filled; replace the bottle', correct:false, why:'Netarsudil is what the prescription and label both name; the only mismatch is the time of day (slide 62).'},
   {t:'No error; morning and bedtime are equivalent', correct:false, why:'Slide 62 gives QHS for netarsudil, so the morning time on the label differs from what was prescribed.'}],
  teach:'Netarsudil (Rhopressa) and Rocklatan are given once at bedtime (QHS). A label that differs from a correct prescription is a transcribing error: re-enter the sig in the pharmacy system and regenerate the label (slide 39).',
- cite:'Lam_Glaucoma.pdf slide 62; Intro-to-Dispensing.pdf slide 38'},
+ cite:'Lam_Glaucoma.pdf slide 62; Intro-to-Dispensing.pdf slides 38–39'},
 
 {id:'xg20', skill:'error', prof:'Dr. Lahoud', tier:'new', topic:'dglau', sub:'rev', concept:'rev-latisse',
  tags:['EOOR','eye drops'], source:'both',
@@ -241,5 +241,5 @@ QUESTIONS.push(
   {t:'Transcribing error: wrong label directions; correct the label', correct:false, why:'The directions are not the issue; the wrong brand was filled, which is a dispensing error, not a label transcription.'},
   {t:'No error; both are the same drug and indication', correct:false, why:'Slide 19 lists Lumigan and Latisse as different brands; Latisse is for eyelash growth, not glaucoma (bank).'}],
  teach:'Bimatoprost is sold as Lumigan for glaucoma and as Latisse for eyelash growth. Filling the wrong product is a dispensing error: replace the incorrect product and relabel before dispensing (slide 39).',
- cite:'Lam_Glaucoma.pdf slide 19; DEENT bank/handout (indications); Intro-to-Dispensing.pdf slide 38'}
+ cite:'Lam_Glaucoma.pdf slide 19; DEENT bank/handout (indications); Intro-to-Dispensing.pdf slides 38–39'}
 );
