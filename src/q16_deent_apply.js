@@ -119,7 +119,7 @@ QUESTIONS.push(
   {t:'Child: 9%, moderate. Adult: 18%, severe.', correct:false, why:'This reverses the two figures. The head is 18% of the body surface in the child figure and 9% in the adult figure, because a child’s head is larger in proportion to the body, so the larger value belongs to the child.'},
   {t:'Both: 9%, so both are moderate.', correct:false, why:'This uses the adult head value for both patients. The child figure shows the head as 18% of the body surface, so applying the adult value understates the child’s BSA and places the child in the wrong category.'},
   {t:'Child: 18%, severe. Adult: 9%, mild, because it is under 10%.', correct:false, why:'The adult at 9% is not under the mild limit of 5% or less. A BSA of 9% meets the 8% cut-off for moderate, and being below 10% only means it does not reach severe, so calling it mild misreads the cut-offs.'}],
- teach:'Two steps decide the class: find the BSA that the lesion site represents for that patient’s age, then compare it with the cut-offs. The image shows the head as 9% in an adult and 18% in a child, while each arm is 9%, the chest and back are each 18%, and each leg is 18% in an adult and 13.5% in a child. The same anatomical site can therefore carry a different weight, and the classification and the choice of therapy can differ even though the body part is the same.',
+ teach:'Two steps decide the class: find the BSA that the lesion site represents for that patient’s age, then compare it with the cut-offs. The image shows the head as 9% in an adult and 18% in a child, while each arm is 9%, the chest and back are each 18%, and each leg is 18% in an adult and 13.5% in a child. On the slide’s cut-offs a value between 8% and 10% is moderate, although the lab recording calls it moderate to severe. The same anatomical site can therefore carry a different weight, and the classification and the choice of therapy can differ even though the body part is the same.',
  cite:'Patel_Scaly-Dermatoses-Therapeutics-Student.pdf slide 32; slides 26, 31 (BSA cut-offs)'},
 
 {id:'da08', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'deentapply', sub:'scaly', concept:'da-psoriasis-algorithm-next-step', img:'deent_psor_algo',
@@ -148,6 +148,7 @@ QUESTIONS.push(
 
 {id:'da10', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'deentapply', sub:'scaly', concept:'da-sd-shampoo-next-step',
  tags:['seborrheic dermatitis','ketoconazole','shampoo schedule','referral'], source:'slide',
+ note:'The shampoo schedule follows Dr. Patel’s slide 16, not a product label; labels for ketoconazole shampoo may give a different schedule.',
  stem:'A 35-year-old man with seborrheic dermatitis of the scalp has used ketoconazole shampoo every day for 2 weeks, leaving it on for 3 to 5 minutes each time. He is clearly better and asks what to do now. What is the best advice?',
  options:[
   {t:'Use it 2 to 3 times a week for 4 weeks.', correct:true, why:'The schedule is daily for 1 to 2 weeks, then 2 to 3 times a week for 4 weeks, and only after 4 weeks of improvement may the frequency fall to once weekly. He is at the end of the daily phase, so the next phase is 2 to 3 times weekly.'},
@@ -230,6 +231,7 @@ QUESTIONS.push(
 
 {id:'da16', skill:'apply', prof:'Dr. Lahoud', multi:true, tier:'new', topic:'deentapply', sub:'glau', concept:'da-glau-pacg-drug-flags', img:'deent_glc_pacg',
  tags:['glaucoma','angle-closure','drug-induced','medication review'], source:'slide',
+ note:'The list of drug classes follows Dr. Lam’s slide 90; albuterol is a weaker association than anticholinergics or phenylephrine.',
  stem:'A 66-year-old has been told he has primary angle-closure glaucoma (PACG). Use the image above. Which of his medicines should the pharmacist flag for review? Select all that apply.',
  options:[
   {t:'Oxybutynin tablets, a systemic anticholinergic', correct:true, why:'Topical and systemic anticholinergics worsen or exacerbate PACG. Oxybutynin is a systemic anticholinergic, so a patient with angle-closure glaucoma who takes it needs a review with the prescriber and eye care provider.'},
