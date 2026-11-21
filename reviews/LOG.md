@@ -29,3 +29,9 @@
 
 ## 2026-11-21 logistics removed
 - Louis: information about how the TOSCE stations run is not tested on the written exam. Removed from the Guides tab the TOSCE pulse and BP station block, the TOSCE SBAR stations bullet, the lab "counsel a partner" bullet and the TOSCE citations on the POCT section; removed question e22 (how the TOSCE station is carried out) and x04 (which disease states are sorted in the Part 2 review). Kept: the TOSCE medication list pairs (e21; the list names drugs the SBAR stations may use) and the SBAR content itself. Bank: 326 questions.
+
+## 2026-11-21 SBAR practice and DEENT application
+- Added q15 SBAR practice (24 questions: sort, flawed SBAR, case reasoning, immunization SBAR with the colored AAFP pages), an SBAR builder and six case drills with checklists and an immunization case in the Reference tab, 16 DEENT lecture slides (Patel acne and scaly dermatoses, Lam ophthalmic and glaucoma) in the Reference tab, and q16 DEENT application (20 questions, 13 with a slide image). Bank: 370 questions.
+- Each set had one independent review. No wrong keys. Fixes applied: SMX/TMP case changed to a child (the adult sig was clinically wrong), the vaccine-needs versus prescription-error SBAR "test" sentence, match-item length and cue-word tells, quote wording, expiry-date wording, slide images added to da03, da04 and da09, da18 explanation.
+- Invented case detail (ages, doses, dates, clinic names) is disclosed in the files and changes no key. The Patel and Lam deck PDFs are not on hand; slide numbers were checked against the DEENT repo's rendered slide images. The embedded slide images carry the printed credits of the source slides.
+- The AAFP Notes claims (Abrysvo window, MMR and varicella CD4 rule, Tdap timing) were checked against extracted Notes text and one reviewer's reading, not the colored Notes pages (not rendered into the site).

@@ -1,5 +1,9 @@
 # Change log
 
+## 2026-11-21 (SBAR practice and DEENT slides)
+- 24 SBAR questions, an SBAR builder and six case drills in Reference.
+- 16 DEENT lecture slides in Reference and 20 application questions, most with the slide shown.
+
 ## 2026-11-21 (star questions, guide, charts)
 - 40 star questions (20 per professor) built to resemble the exam, with full explanations of every option.
 - 14 chart cases where you read the AAFP schedule's colored tables and Appendix, which are now in the Reference tab.

@@ -4,7 +4,7 @@ Course state for kit sessions (updated 2026-11-21). Source tree in `src/`, built
 
 ## What the drill covers
 - Exam: Mon 11/23/2026 1 PM, 50 minutes, 30 questions (15 Dr. Parsons, 15 Dr. Lahoud), non-sterile weeks. Source: Week 14 deck, slide "Outpatient Written Exam".
-- Ingested (326 questions (328 minus two logistics items removed 2026-11-21): 274 core plus 2026-11-21 star sets q12/q13 (20 each) and 14 AAFP chart cases q14; Guide, Tell apart and Reference rewritten, colored AAFP pages embedded in images.json; earlier detail: 274 questions; 2026-11-21 also added 19 questions from the verified Week 14 Ophthalmic Review (Which is which) lab answer key, q11_deent_board.js, cited as Ophthalmic-Review-Key.pdf, a photo; Tell apart, Reference and Objective guide tabs now hold real tables and objectives instead of template samples; 2026-11-21 added 85 DEENT lab questions in q7-q10 from the lglouis3-create/DEENT bank: Patel acne and scaly dermatoses, Lam ophthalmic disorders and glaucoma): Week 2 Intro to Dispensing deck + 8/24 transcript + EOOR answer key + TOSCE guide (Dr. Lahoud); Week 3 OTC deck + APhA excerpt (no transcript); Week 5 POCT deck (no transcript exists); Week 6 immunization deck + AAFP 2026 schedule + 9/21 transcript; Week 14 DEENT deck + 11/16 transcript.
+- Ingested (370 questions: 326 (328 minus two logistics items removed 2026-11-21) plus q15 SBAR practice (24) and q16 DEENT application (20), with SBAR builder and case drills and 16 DEENT slide images in the Reference tab: 274 core plus 2026-11-21 star sets q12/q13 (20 each) and 14 AAFP chart cases q14; Guide, Tell apart and Reference rewritten, colored AAFP pages embedded in images.json; earlier detail: 274 questions; 2026-11-21 also added 19 questions from the verified Week 14 Ophthalmic Review (Which is which) lab answer key, q11_deent_board.js, cited as Ophthalmic-Review-Key.pdf, a photo; Tell apart, Reference and Objective guide tabs now hold real tables and objectives instead of template samples; 2026-11-21 added 85 DEENT lab questions in q7-q10 from the lglouis3-create/DEENT bank: Patel acne and scaly dermatoses, Lam ophthalmic disorders and glaucoma): Week 2 Intro to Dispensing deck + 8/24 transcript + EOOR answer key + TOSCE guide (Dr. Lahoud); Week 3 OTC deck + APhA excerpt (no transcript); Week 5 POCT deck (no transcript exists); Week 6 immunization deck + AAFP 2026 schedule + 9/21 transcript; Week 14 DEENT deck + 11/16 transcript.
 - Not ingested: Week 4 recording (Day in the Life), 8/31 OTC transcript, 10/5 TOSCE and 10/26 OSCE Q&A transcripts, the 13 Week 2 lab prescriptions (only the answer key), the BDK list.
 
 ## Known conflicts (see `reviews/LOG.md`)
@@ -13,7 +13,7 @@ Course state for kit sessions (updated 2026-11-21). Source tree in `src/`, built
 - Slide 7 lists incorrect patient under dispensing; slide 38 and the EOOR key treat it as transcribing (note on d03).
 - Hydrocortisone frequency: slide 27 "1-4 times/day", APhA excerpt "3 or 4 times daily"; not keyed.
 - Mid-level practitioner 3-month expiration (slide 22 footnote) was not stressed in lecture.
-- TOSCE list names methylphenidate (Focalin XR); not used in any question.
+- TOSCE list and the Week 11 list name methylphenidate (Focalin XR); the SBAR questions use Focalin XR as a CII example (Intro to Dispensing slide 23 is the source for its schedule).
 
 ## Delivery status
 - Checks: see `reviews/LOG.md`. Pushed to `main` (2026-11-20 and 2026-11-21); GitHub Pages must be enabled in repository settings (Deploy from a branch, main, root); no pull request opened.
