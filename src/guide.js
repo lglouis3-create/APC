@@ -45,8 +45,7 @@ const GUIDE_HTML = `
 <li>Harms named in lecture: wrong medication, unnecessary medication, dose too high causing an adverse effect [(T)].</li>
 </ul></div>
 <div class="gpt"><h5>The pharmacist&rsquo;s role</h5><ul>
-<li>Prescription review acts at order processing and dispensing [sl. 10].</li>
-<li>Medication counseling acts at administration and monitoring [sl. 10].</li>
+<li>Prescription review spans prescribing, order processing and dispensing; medication counseling spans administration and monitoring [sl. 10].</li>
 <li>Counseling does not replace prescription review; they are separate roles [sl. 10].</li>
 </ul></div>
 <h4>Tell apart</h4>
@@ -405,7 +404,7 @@ const GUIDE_HTML = `
 <tr><td>Mildly clear</td><td>Rare non-inflammatory lesions; no more than one small lesion [Acne sl. 7]</td><td>Benzoyl peroxide alone, or essential oils, or no product</td></tr>
 <tr><td>Mild</td><td>Some non-inflammatory lesions; no more than a few papules and pustules; no nodules; minimal scarring [Acne sl. 7]</td><td>One topical agent: benzoyl peroxide or a topical retinoid; topical combinations are a listed alternative</td></tr>
 <tr><td>Moderate</td><td>Many non-inflammatory and some inflammatory lesions; no more than one nodule; mild scarring [Acne sl. 8]</td><td>Topical combination, for example benzoyl peroxide plus a topical retinoid</td></tr>
-<tr><td>Severe</td><td>More than one nodule, with scarring [Acne sl. 8; (T)]</td><td>Refer; prescriber-directed therapy such as an oral antibiotic with a topical combination [Acne sl. 18, 29]</td></tr>
+<tr><td>Severe</td><td>A few nodular lesions with moderate to extensive scarring [Acne sl. 8]; (T) Dr. Patel: more than one nodule</td><td>Refer; prescriber-directed therapy such as an oral antibiotic with a topical combination [Acne sl. 18, 29]</td></tr>
 </tbody></table>
 <ul><li>Dr. Patel used the words one, some and many on exam cases, and described a stepwise order; slide 40 also lists oral regimens as moderate first line [(T)].</li></ul></div>
 <div class="gpt"><h5>Self-care exclusions</h5><ul>
@@ -437,7 +436,7 @@ const GUIDE_HTML = `
 <div class="gtell"><b>Tell apart</b><ul>
 <li>Mildly clear vs mild: mildly clear has rare lesions (one small lesion at most); mild has some non-inflammatory lesions and a few papules or pustules.</li>
 <li>Mild vs moderate: mild has no nodules; moderate has many comedones, some inflammatory lesions and at most one nodule.</li>
-<li>Moderate vs severe: moderate has at most one nodule and mild scarring; severe has more than one nodule with scarring.</li>
+<li>Moderate vs severe: moderate has at most one nodule and mild scarring; severe has a few nodular lesions with moderate to extensive scarring [Acne sl. 8]; (T) Dr. Patel: more than one nodule.</li>
 <li>Establish step vs Quickly assess: Establish is where an exclusion triggers referral [Acne sl. 18].</li>
 <li>Benzoyl peroxide vs salicylic acid: benzoyl peroxide is preferred; salicylic acid has limited data.</li>
 </ul></div>
@@ -491,7 +490,7 @@ const GUIDE_HTML = `
 <li>Artificial tears: 1&ndash;2 drops once or twice daily, up to 3&ndash;4 times daily or hourly; preservative-free preferred; duration set by response [Eye sl. 14].</li>
 <li>Bland ointment: longer retention; blurred vision and hypersensitivity [Eye sl. 15].</li>
 <li>Prescription options: cyclosporine (Restasis, Cequa), lifitegrast (Xiidra), topical corticosteroids, varenicline nasal spray (Tyrvaya) [Eye sl. 17&ndash;21].</li>
-<li>Cyclosporine: burning, stinging and foreign-body feeling are common and look like dry eye; used about 6 months or longer [(T); Smith sl. 67].</li>
+<li>Cyclosporine: burning, stinging and foreign-body feeling are common and look like dry eye; used about 6 months or longer [(T)]; slide number not verified (Smith deck not on hand).</li>
 <li>Corticosteroids: very short use only; chronic use risks glaucoma [(T)].</li>
 </ul></div>
 <div class="gpt"><h5>Exclusions from self-treatment (dry eye and conjunctivitis)</h5><ul>
@@ -543,6 +542,7 @@ const GUIDE_HTML = `
 <li>Use the section 4 three-step review: legal and safe, then label against prescription, then bottle against label [sl. 30].</li>
 <li>SBAR is the communication format for correcting the error [W14; TOSCE guide]: <b>Situation</b> (why you are calling), <b>Background</b> (who the patient is, the prescription, the clinical facts), <b>Assessment</b> (what the actual problem is and why it matters), <b>Recommendation</b> (what should be done to correct it) [W11 OSCE deck].</li>
 <li>Background is the clinical fact; Assessment is the problem. Example: Background &ldquo;the maximum prescribed dose of ibuprofen is 3.2 g/day&rdquo;; Assessment &ldquo;the total daily dose prescribed is too high&rdquo; [W11 OSCE deck].</li>
+<li>This definition applies to a prescription-error SBAR (the TOSCE and OSCE error stations). For a vaccine-needs SBAR, the Immunizations slide 22 example applies instead: Background = patient characteristics, Assessment = what the AAFP schedule recommends (see the Parsons guide, section 8).</li>
 <li>Prescribing errors go to the prescriber; transcribing and dispensing errors go to the technician [sl. 38&ndash;39; EOOR key].</li>
 </ul></div>
 <h4>Tell apart</h4>
@@ -598,9 +598,11 @@ const GUIDE_HTML = `
 <table class="reftab"><thead><tr><th>Ingredient</th><th>Dandruff</th><th>Seborrheic dermatitis</th><th>Psoriasis</th></tr></thead><tbody>
 <tr><td>Hydrocortisone 0.5&ndash;1%</td><td>No</td><td>Yes</td><td>Yes</td></tr>
 <tr><td>Sulfur 2&ndash;5%</td><td>Yes</td><td>Yes</td><td>No</td></tr>
-<tr><td>Pyrithione zinc, selenium sulfide, coal tar</td><td>Medicated shampoos for moderate to severe</td><td>Second-line shampoos</td><td>&ndash;</td></tr>
+<tr><td>Coal tar 0.5&ndash;5%</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+<tr><td>Pyrithione zinc, selenium sulfide</td><td>Medicated shampoos for moderate to severe</td><td>Second-line shampoos</td><td>&ndash;</td></tr>
 </tbody></table>
-<ul><li>Hydrocortisone and sulfur hold the only two &ldquo;no&rdquo; cells [(T)].</li></ul></div>
+<ul><li>Hydrocortisone (dandruff) and sulfur (psoriasis) hold the only two &ldquo;no&rdquo; cells; coal tar is listed for all three conditions [Scaly sl. 7].</li>
+<li>Coal tar is also a medicated shampoo for moderate to severe dandruff [Scaly sl. 9] and a second-line shampoo for seborrheic dermatitis [Scaly sl. 16].</li></ul></div>
 <div class="gpt"><h5>Dandruff and seborrheic dermatitis care</h5><ul>
 <li>Mild dandruff (intermittent, mild inflammation): non-medicated shampoo daily or every other day [Scaly sl. 9].</li>
 <li>Moderate to severe dandruff: medicated shampoo left on 3&ndash;5 minutes; daily for 1 week, then 2&ndash;3 times weekly for 2&ndash;3 weeks, then weekly [Scaly sl. 9].</li>
@@ -952,10 +954,10 @@ const GUIDE_HTML = `
 <li>Record the reading, the arm used and the patient position; wait 5 minutes before a repeat [POCT sl 37].</li>
 </ul></div>
 <table class="reftab"><thead><tr><th>Technique error</th><th>Effect on the reading</th><th>Correct technique</th></tr></thead><tbody>
-<tr><td>Cuff too small</td><td>Overestimates [POCT sl 33]</td><td>Width at least 50% around the bicep [sl 33]</td></tr>
-<tr><td>Cuff too large</td><td>Underestimates [POCT sl 33]</td><td>Length 75%&ndash;80% around the bicep [sl 33]</td></tr>
+<tr><td>Cuff too small</td><td>Overestimates [POCT sl 33]</td><td>Use the correct size: width at least 50% and length 75%&ndash;80% around the bicep [sl 33]</td></tr>
+<tr><td>Cuff too large</td><td>Underestimates [POCT sl 33]</td><td>Use the correct size: width at least 50% and length 75%&ndash;80% around the bicep [sl 33]</td></tr>
 <tr><td>Cuff too loose</td><td>Underestimates [POCT sl 33]</td><td>Wrap snugly [sl 35]</td></tr>
-<tr><td>Patient holds the arm up</td><td>Falsely elevated by muscle tension [POCT sl 34]</td><td>Arm supported at heart level [sl 34]</td></tr>
+<tr><td>Patient holds the arm up</td><td>Falsely elevated by muscle tension [POCT sl 34]</td><td>Arm rested at heart level on a support; the patient does not hold it up (slide 34: the patient should not support the arm; muscle tension raises the reading)</td></tr>
 </tbody></table>
 <div class="gpt"><h5>Temperature</h5><ul>
 <li>Antipyretics (acetaminophen, NSAIDs, steroids) can affect the reading [POCT sl 39].</li>
@@ -1134,6 +1136,7 @@ const GUIDE_HTML = `
 <div class="gpt"><h5>Reading Table 2</h5><ul>
 <li>Columns: pregnancy; HIV infection by CD4 (below 15% or below 200/mm3; at or above 15% and 200/mm3); immunocompromised (excluding HIV); men who have sex with men; asplenia and complement deficiency; kidney failure, ESRD or dialysis; heart or lung disease; chronic liver disease or alcoholism; diabetes; health care personnel [AAFP; Imm sl 8].</li>
 <li>Legend categories include recommended for all adults who lack documentation or evidence of past infection; recommended for all adults with additional doses based on condition; recommended for some adults based on age or risk; shared clinical decision-making; precaution (might be indicated if benefit outweighs risk); contraindicated or not recommended; no guidance [AAFP].</li>
+<li>Table 2 colors: yellow = recommended for all adults who lack documentation or evidence of past infection; light green = not recommended for all adults but recommended for some, based on age or increased risk; teal = shared clinical decision-making; orange = recommended for all adults, with additional doses based on condition; navy = precaution (might be indicated if the benefit outweighs the risk); red = contraindicated or not recommended; gray = no guidance or not applicable [AAFP Table 2 legend].</li>
 <li>Asterisk: vaccinate after pregnancy, if indicated [AAFP].</li>
 <li>Some vaccines depend on the CD4 count (T).</li>
 </ul></div>
@@ -1379,6 +1382,7 @@ const GUIDE_HTML = `
 <tr><td>Recommendation</td><td>What you recommend, including the next dose</td><td>PCV21, Shingrix, influenza, RSV, updated COVID-19 vaccine; second Shingrix dose in 2&ndash;6 months</td></tr>
 </tbody></table>
 <div class="gpt"><h5>Writing an SBAR</h5><ul>
+<li>Which version applies: this table (Imm sl 22: Background = patient characteristics, Assessment = what the AAFP schedule recommends) is for a vaccine-needs SBAR. For a prescription-error SBAR (the TOSCE and OSCE error stations), use the Week 11 deck definition: Background = the clinical fact, Assessment = the actual problem and why it matters (see the Lahoud guide, section 7).</li>
 <li>Start from the recommendation, then ask what assessment led to it and what background supports it [Imm sl 20; T].</li>
 <li>Be complete but concise [Imm sl 20].</li>
 <li>Name the source (for example AAFP or CDC) in the assessment, especially early in a career (T).</li>

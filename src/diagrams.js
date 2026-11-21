@@ -148,7 +148,7 @@ const _right = (x1, x2, y) => `<path class="arrow" d="M${x1} ${y} L${x2} ${y}"/>
 /* (a) Eye: which condition */
 DIA['tell-eye'] = (() => {
   let s = '', y = 4;
-  const root = _card(10, y, 340, [['Red, irritated eye: what does the patient report?', 'b']], {center: true});
+  const root = _card(10, y, 340, [['Eye complaint (or none): what does the patient report?', 'b']], {center: true});
   s += root.s; y += root.h + 10;
   const rows = [
     [['Gritty, sandy feeling'], [['Dry eye disease', 'b'], 'Compress: warm', 'First line: ocular lubricants'], _HUE.blue],
@@ -187,12 +187,12 @@ DIA['tell-bite'] = (() => {
   const q = _card(40, y, 280, [['Referral condition or self-care exclusion present?', 'b']], {center: true}); s += q.s; y += q.h;
   s += `<path class="arrow" d="M120 ${y} L92 ${y + 16}"/><path class="arrow" d="M240 ${y} L268 ${y + 16}"/>`;
   y += 18;
-  const yes = _card(6, y, 172, [['Yes: refer', 'b'], 'Tick bite, scabies, spider bite, secondary infection', 'Bite or sting with systemic symptoms',
-    'Hives, excessive swelling or dizziness', 'Allergic response away from the sting: urgent care or the ER', 'Severe reaction to previous stings',
-    'Personal or family history of significant allergy, such as hay fever', 'Age under 2 years'], {hue: _HUE.amber});
-  const no = _card(186, y, 168, [['No: self-care', 'b'], 'Pain, itching or irritation at a single sting site',
-    'Skin protectant: zinc oxide or calamine', 'Local anesthetic: pramoxine or benzyl alcohol', 'Topical diphenhydramine or hydrocortisone 1%',
-    'Antipruritics and anesthetics: 7 days at most unless a provider advises'], {hue: _HUE.green, min: yes.h});
+  const yes = _card(6, y, 172, [['Yes: refer', 'b'], '\u2022 Tick bite, scabies, spider bite, secondary infection', '\u2022 Bite or sting with systemic symptoms',
+    '\u2022 Hives, excessive swelling or dizziness', '\u2022 Allergic response away from the sting: urgent care or the ER', '\u2022 Severe reaction to previous stings',
+    '\u2022 Personal or family history of significant allergy, such as hay fever', '\u2022 Age under 2 years'], {hue: _HUE.amber});
+  const no = _card(186, y, 168, [['No: self-care', 'b'], '\u2022 Pain, itching or irritation at a single sting site',
+    '\u2022 Skin protectant: zinc oxide or calamine', '\u2022 Local anesthetic: pramoxine or benzyl alcohol', '\u2022 Topical diphenhydramine or hydrocortisone 1%',
+    '\u2022 Antipruritics and anesthetics: 7 days at most unless a provider advises'], {hue: _HUE.green, min: yes.h});
   s += yes.s + no.s; y += Math.max(yes.h, no.h);
   return figure(s, 'Bite or sting: refer when any condition or exclusion is present; otherwise self-care for a single sting site.', y + 6);
 })();
@@ -203,8 +203,8 @@ DIA['tell-acne'] = (() => {
   const rungs = [
     [0, 'Mildly clear', 'Rare non-inflammatory lesions; no more than one small lesion', 'Benzoyl peroxide alone or essential oils, or no product', _HUE.blue],
     [14, 'Mild', 'Some non-inflammatory lesions; at most a few papules or pustules; no nodules; minimal scarring', 'One topical agent: benzoyl peroxide or a topical retinoid', _HUE.green],
-    [28, 'Moderate', 'Many non-inflammatory and some inflammatory lesions; at most one nodule; mild scarring', 'Topical combination, such as benzoyl peroxide plus a topical retinoid; the oral antibiotic is added after topical combinations (lecture)', _HUE.amber],
-    [42, 'Severe', 'A few nodular lesions; moderate to extensive scarring', 'Refer: severe acne is not a self-care candidate; prescriber therapy', _HUE.violet]];
+    [28, 'Moderate', 'Many non-inflammatory and some inflammatory lesions; at most one nodule; mild scarring', 'Topical combination, such as benzoyl peroxide plus a topical retinoid; (T) lecture: the oral antibiotic is added after topical combinations; slide 40 lists oral regimens as moderate first line', _HUE.amber],
+    [42, 'Severe', 'A few nodular lesions with moderate to extensive scarring (slide 8); (T) Dr. Patel: more than one nodule', 'Refer: severe acne is not a self-care candidate; prescriber therapy', _HUE.violet]];
   rungs.forEach(([ind, nm, look, first, hue], i) => {
     const r = _card(8 + ind, y, 344 - ind, [[nm, 'b'], 'Looks like: ' + look, 'First line: ' + first], {hue});
     s += r.s; y += r.h;
