@@ -108,3 +108,126 @@ const DIAGRAMS = [];
 /* A figure's own title, used by the Diagrams tab's contents chips when a key
    needs a name different from the title drawn inside it. */
 const DIA_NAMES = {};
+
+/* ==========================================================================
+   Tell apart and Reference figures (drawn by helpers below)
+   ========================================================================== */
+const _CW = 5.7;                                    // estimated width of one character at 10.5px
+const _FIGWARN = [];                                // lines that would not fit their box, for the checks
+const _HUE = {blue: '#2f7fd0', green: '#2a9d6f', amber: '#c9792a', violet: '#8a5cc4'};
+const _wrap = (s, n) => {
+  const out = []; let cur = '';
+  String(s).split(' ').forEach(w => {
+    if ((cur + ' ' + w).trim().length > n) { if (cur) out.push(cur); cur = w; } else cur = (cur + ' ' + w).trim();
+  });
+  if (cur) out.push(cur);
+  return out;
+};
+/* A rounded box with wrapped text. items: strings, or [string, 'b'] bold, [string, 'd'] dim.
+   Returns {s, h}; the box is as tall as its text needs, at least o.min. */
+function _card(x, y, w, items, o = {}) {
+  const pad = o.hue ? 20 : 14, n = Math.floor((w - pad) / _CW), lines = [];
+  items.forEach(it => {
+    const t = Array.isArray(it) ? it[0] : it, st = Array.isArray(it) ? it[1] : '';
+    _wrap(t, n).forEach(l => lines.push([l, st]));
+  });
+  const h = Math.max(o.min || 0, lines.length * 13 + 14);
+  const tx = o.center ? x + w / 2 : x + (o.hue ? 13 : 8), an = o.center ? 'middle' : 'start';
+  const top = y + (h - lines.length * 13) / 2 + 10;
+  let s = `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="7" style="fill:${o.fill || 'var(--surface)'};stroke:var(--line);stroke-width:1.2"/>`;
+  if (o.hue) s += `<rect x="${x}" y="${y}" width="5" height="${h}" rx="2" style="fill:${o.hue}"/>`;
+  lines.forEach(([l, st], i) => {
+    if (l.length * _CW > w - 8) _FIGWARN.push(l);
+    s += `<text x="${tx}" y="${top + i * 13}" text-anchor="${an}" style="fill:var(${st === 'd' ? '--text-dim' : '--text'});font-size:10.5px;${st === 'b' ? 'font-weight:700;' : ''}">${l}</text>`;
+  });
+  return {s, h};
+}
+const _down = (x, y1, y2) => `<path class="arrow" d="M${x} ${y1} L${x} ${y2}"/>`;
+const _right = (x1, x2, y) => `<path class="arrow" d="M${x1} ${y} L${x2} ${y}"/>`;
+
+/* (a) Eye: which condition */
+DIA['tell-eye'] = (() => {
+  let s = '', y = 4;
+  const root = _card(10, y, 340, [['Red, irritated eye: what does the patient report?', 'b']], {center: true});
+  s += root.s; y += root.h + 10;
+  const rows = [
+    [['Gritty, sandy feeling'], [['Dry eye disease', 'b'], 'Compress: warm', 'First line: ocular lubricants'], _HUE.blue],
+    [['Itching, with tearing and red eyes'], [['Allergic conjunctivitis', 'b'], 'Compress: cold', 'First line: artificial tears, then ophthalmic antihistamines if symptoms persist'], _HUE.green],
+    [['Tearing with lid crusting'], [['Bacterial or viral conjunctivitis', 'b'], 'Compress: cold', 'First line: ocular antimicrobial; refer to a provider for the antibiotic if applicable'], _HUE.amber],
+    [['No symptoms until substantial visual field loss'], [['Primary open-angle glaucoma (POAG)', 'b'], 'Compress: not helpful', 'First line: prostaglandin analogs'], _HUE.violet]];
+  rows.forEach(([cl, res, hue]) => {
+    const r = _card(142, y, 208, res, {hue}), l = _card(10, y, 118, cl, {min: r.h, center: true});
+    s += l.s + _right(128, 140, y + r.h / 2) + r.s; y += r.h + 8;
+  });
+  y -= 8;
+  return figure(s, 'Eye: which condition. Start from the one symptom the patient reports; each branch ends in the compress and the first line.', y + 6);
+})();
+
+/* (b) Prescription review in three steps */
+DIA['tell-review'] = (() => {
+  let s = '', y = 4;
+  const rows = [
+    ['1. Is the prescription legal and safe for the patient?', 'Prescribing error', 'Contact the prescriber to clarify, correct or obtain a new prescription', _HUE.blue],
+    ['2. Was it transcribed appropriately?', 'Transcribing error', 'Correct the prescription entered in the system and regenerate labels', _HUE.green],
+    ['3. Does the product in hand match the transcribed product?', 'Dispensing error', 'Replace the incorrect product and/or relabel before dispensing', _HUE.amber]];
+  rows.forEach(([st, er, fx, hue], i) => {
+    const r = _card(176, y, 174, [[er, 'b'], 'Fix: ' + fx], {hue}), l = _card(10, y, 128, [[st, 'b']], {min: r.h, center: true});
+    s += l.s + _right(138, 174, y + r.h / 2) + r.s;
+    y += r.h;
+    if (i < 2) { s += _down(74, y, y + 12); y += 12; }
+  });
+  return figure(s, 'Prescription review in three steps. A step that fails names the error type and the fix.', y + 6);
+})();
+
+/* (c) Bite or sting: self-care or refer */
+DIA['tell-bite'] = (() => {
+  let s = '', y = 4;
+  const a = _card(80, y, 200, [['Bite or sting', 'b']], {center: true}); s += a.s; y += a.h;
+  s += _down(180, y, y + 12); y += 12;
+  const q = _card(40, y, 280, [['Referral condition or self-care exclusion present?', 'b']], {center: true}); s += q.s; y += q.h;
+  s += `<path class="arrow" d="M120 ${y} L92 ${y + 16}"/><path class="arrow" d="M240 ${y} L268 ${y + 16}"/>`;
+  y += 18;
+  const yes = _card(6, y, 172, [['Yes: refer', 'b'], 'Tick bite, scabies, spider bite, secondary infection', 'Bite or sting with systemic symptoms',
+    'Hives, excessive swelling or dizziness', 'Allergic response away from the sting: urgent care or the ER', 'Severe reaction to previous stings',
+    'Personal or family history of significant allergy, such as hay fever', 'Age under 2 years'], {hue: _HUE.amber});
+  const no = _card(186, y, 168, [['No: self-care', 'b'], 'Pain, itching or irritation at a single sting site',
+    'Skin protectant: zinc oxide or calamine', 'Local anesthetic: pramoxine or benzyl alcohol', 'Topical diphenhydramine or hydrocortisone 1%',
+    'Antipruritics and anesthetics: 7 days at most unless a provider advises'], {hue: _HUE.green, min: yes.h});
+  s += yes.s + no.s; y += Math.max(yes.h, no.h);
+  return figure(s, 'Bite or sting: refer when any condition or exclusion is present; otherwise self-care for a single sting site.', y + 6);
+})();
+
+/* (d) Acne ladder */
+DIA['tell-acne'] = (() => {
+  let s = '', y = 4;
+  const rungs = [
+    [0, 'Mildly clear', 'Rare non-inflammatory lesions; no more than one small lesion', 'Benzoyl peroxide alone or essential oils, or no product', _HUE.blue],
+    [14, 'Mild', 'Some non-inflammatory lesions; at most a few papules or pustules; no nodules; minimal scarring', 'One topical agent: benzoyl peroxide or a topical retinoid', _HUE.green],
+    [28, 'Moderate', 'Many non-inflammatory and some inflammatory lesions; at most one nodule; mild scarring', 'Topical combination, such as benzoyl peroxide plus a topical retinoid; the oral antibiotic is added after topical combinations (lecture)', _HUE.amber],
+    [42, 'Severe', 'A few nodular lesions; moderate to extensive scarring', 'Refer: severe acne is not a self-care candidate; prescriber therapy', _HUE.violet]];
+  rungs.forEach(([ind, nm, look, first, hue], i) => {
+    const r = _card(8 + ind, y, 344 - ind, [[nm, 'b'], 'Looks like: ' + look, 'First line: ' + first], {hue});
+    s += r.s; y += r.h;
+    if (i < 3) { s += _down(180 + ind / 2, y, y + 12); y += 12; }
+  });
+  return figure(s, 'Acne by severity: from mildly clear to severe, with the first-line therapy at each level. Severe acne goes to referral.', y + 6);
+})();
+
+/* (e) AAFP order of use */
+DIA['tell-aafp'] = (() => {
+  let s = '', y = 4;
+  const steps = ['Vaccines by age (Table 1)', 'Medical conditions (Table 2), often missed by providers', 'Notes: must be used on exams',
+    'Appendix: contraindications and precautions', 'Addendum: new or updated guidance'];
+  steps.forEach((t, i) => {
+    const r = _card(46, y, 304, [t], {min: 30, hue: _HUE.blue});
+    s += `<circle cx="24" cy="${y + r.h / 2}" r="12" style="fill:var(--surface);stroke:var(--line);stroke-width:1.4"/>` +
+         `<text x="24" y="${y + r.h / 2 + 4}" text-anchor="middle" style="fill:var(--text);font-size:12px;font-weight:700">${i + 1}</text>` + r.s;
+    y += r.h;
+    if (i < 4) { s += _down(24, y - 0, y + 10); y += 10; }
+  });
+  return figure(s, 'AAFP adult schedule: the order of use, from Table 1 to the Addendum.', y + 6);
+})();
+
+DIAGRAMS.push(['Tell apart', ['tell-eye', 'tell-review', 'tell-bite', 'tell-acne']], ['Reference', ['tell-aafp']]);
+Object.assign(DIA_NAMES, {'tell-eye': 'Eye: which condition', 'tell-review': 'Prescription review in three steps',
+  'tell-bite': 'Bite or sting: self-care or refer', 'tell-acne': 'Acne by severity', 'tell-aafp': 'AAFP schedule: order of use'});
