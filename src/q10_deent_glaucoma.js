@@ -31,7 +31,7 @@ QUESTIONS.push(
   {t:'POAG causes pain that the drops prevent', correct:false, why:'Slide 12 lists no pain for POAG; it is asymptomatic until substantial visual field loss occurs.'},
   {t:'POAG resolves once the pressure is measured once', correct:false, why:'Slides 13–14 set a goal of reducing pressure with ongoing therapy; measuring it once does not end the disease.'}],
  teach:'Primary open-angle glaucoma is asymptomatic until substantial visual field loss occurs. A patient cannot judge control by how the eyes feel, so the drops are used daily and an eye care professional follows the pressure.',
- cite:'Lam_Glaucoma.pdf slide 12'},
+ cite:'Lam_Glaucoma.pdf slides 12, 13–14'},
 
 {id:'xg02', skill:'tell', lowYield:true, prof:'Dr. Lahoud', tier:'new', topic:'dglau', sub:'pres', concept:'poag-vs-acg',
  tags:['glaucoma','POAG'], source:'both',
@@ -42,7 +42,7 @@ QUESTIONS.push(
   {t:'An adverse effect of a prostaglandin analog', correct:false, why:'Slide 21 lists blurred vision, stinging, pigmentation and lash growth for prostaglandin analogs, not severe pain with vomiting.'},
   {t:'This is dry eye and artificial tears are enough', correct:false, why:'Severe pain with vomiting and sudden vision loss is not a surface irritation problem and cannot be handled with a lubricant.'}],
  teach:'Open-angle glaucoma is symptomless until late. Severe eye pain with headache, nausea, vomiting, halos and sudden vision loss points to acute angle closure, which is an emergency referral to an eye care professional.',
- cite:'Lam_Glaucoma.pdf slides 12, 91–92; 11/19 transcript (T)'},
+ cite:'Lam_Glaucoma.pdf slides 12, 21, 91–92; 11/19 transcript (T)'},
 
 {id:'xg03', skill:'recall', prof:'Dr. Lahoud', tier:'new', topic:'dglau', sub:'pres', concept:'iop-goal',
  tags:['glaucoma','goal'], source:'slide',
@@ -53,7 +53,7 @@ QUESTIONS.push(
   {t:'Reduce IOP by 25–30%, with the target set by the pharmacist', correct:false, why:'Slide 14 shows the 25–30% reduction but states the IOP target is determined by an eye care professional, not the pharmacist.'},
   {t:'Raise ocular perfusion pressure, with no pressure target', correct:false, why:'Slide 7 names lower perfusion pressure as a risk factor, but slide 14 gives the goal as lowering IOP.'}],
  teach:'The goal of POAG therapy is a lower IOP. An eye care professional determines the target; the reduction shown on the slide is 25–30%.',
- cite:'Lam_Glaucoma.pdf slides 12, 14'},
+ cite:'Lam_Glaucoma.pdf slides 7, 12, 14'},
 
 {id:'xg04', skill:'recall', prof:'Dr. Lahoud', tier:'new', topic:'dglau', sub:'drugs', concept:'first-line-pga',
  tags:['glaucoma','prostaglandin'], source:'slide',
@@ -64,7 +64,7 @@ QUESTIONS.push(
   {t:'Alpha-2 adrenergic agonists', correct:false, why:'Slide 41 titles alpha-2 agonists adjunctive therapy or alternative; slide 63 puts them third in the sequence.'},
   {t:'Cholinergic agonists', correct:false, why:'Slide 63 puts cholinergic agents fifth, and slide 57 dosing is four times daily, so they are not first line.'}],
  teach:'The six classes in the usual order are prostaglandin analog, beta blocker, alpha-2 agonist, topical carbonic anhydrase inhibitor, cholinergic and Rho kinase inhibitor. The prostaglandin analog starts therapy.',
- cite:'Lam_Glaucoma.pdf slides 19, 63'},
+ cite:'Lam_Glaucoma.pdf slides 19, 31, 41, 57, 63'},
 
 {id:'xg05', skill:'recall', prof:'Dr. Lahoud', multi:true, tier:'new', topic:'dglau', sub:'drugs', concept:'pga-reasons',
  tags:['glaucoma','prostaglandin'], source:'slide',
@@ -76,7 +76,7 @@ QUESTIONS.push(
   {t:'Good tolerance', correct:true, why:'Slide 20 lists good tolerance as one of the reasons for first-line use.'},
   {t:'Dosing four times daily', correct:false, why:'Slide 20 stresses once-daily dosing; four times daily is the pilocarpine frequency on slide 57.'}],
  teach:'Prostaglandin analogs combine a large pressure reduction (up to 33%) with one dose a day, generic availability and good tolerance.',
- cite:'Lam_Glaucoma.pdf slide 20'},
+ cite:'Lam_Glaucoma.pdf slides 20, 31, 41, 51, 57'},
 
 {id:'xg06', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'dglau', sub:'drugs', concept:'pga-night',
  tags:['glaucoma','prostaglandin'], source:'slide',
@@ -236,10 +236,10 @@ QUESTIONS.push(
  tags:['EOOR','eye drops'], source:'both',
  stem:'A prescription for Lumigan (bimatoprost) for glaucoma is filled with Latisse (bimatoprost for eyelash growth). What is the error and the fix?',
  options:[
-  {t:'Dispensing error: replace product and relabel', correct:true, why:'Slide 19 names Lumigan and Latisse as separate bimatoprost brands, and Latisse is the eyelash product (bank/handout), so the wrong product was filled.'},
+  {t:'Dispensing error: replace product and relabel', correct:true, why:'Slide 19 shows bimatoprost as Lumigan, with Latisse as a sub-entry (0.3% on the slide); the eyelash-growth indication is from the bank/handout, so the wrong product was filled.'},
   {t:'Prescribing error: wrong drug written; call the prescriber', correct:false, why:'Lumigan, the glaucoma brand on slide 19, was what the prescriber wrote, so the mistake occurred at filling.'},
   {t:'Transcribing error: wrong label directions; correct the label', correct:false, why:'The directions are not the issue; the wrong brand was filled, which is a dispensing error, not a label transcription.'},
-  {t:'No error; both are the same drug and indication', correct:false, why:'Slide 19 lists Lumigan and Latisse as different brands; Latisse is for eyelash growth, not glaucoma (bank).'}],
+  {t:'No error; both are the same drug and indication', correct:false, why:'Slide 19 shows Lumigan with Latisse as a sub-entry; Latisse is for eyelash growth, not glaucoma (bank/handout), so they are not the same indication.'}],
  teach:'Bimatoprost is sold as Lumigan for glaucoma and as Latisse for eyelash growth. Filling the wrong product is a dispensing error: replace the incorrect product and relabel before dispensing (slide 39).',
  cite:'Lam_Glaucoma.pdf slide 19; DEENT bank/handout (indications); Intro-to-Dispensing.pdf slides 38–39'}
 );

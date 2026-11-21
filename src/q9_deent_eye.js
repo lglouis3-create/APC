@@ -40,7 +40,7 @@ QUESTIONS.push(
   {t:'A diuretic', correct:true, why:'Slide 6 includes diuretics among the drugs that are risk factors for dry eye.'},
   {t:'A decongestant', correct:true, why:'Slide 6 includes decongestants among the drugs that are risk factors for dry eye.'},
   {t:'An oral contraceptive', correct:true, why:'Slide 6 includes oral contraceptives and hormone-replacement agents as risk factors for dry eye.'},
-  {t:'Preservative-free artificial tears used several times a day', correct:false, why:'Slide 14 makes preservative-free artificial tears the first-line treatment, not a cause of dry eye.'},
+  {t:'Preservative-free artificial tears used several times a day', correct:false, why:'Slide 14 makes artificial tears first-line and prefers preservative-free products, so they are a treatment, not a cause of dry eye.'},
   {t:'An omega fatty acid supplement taken by mouth every day', correct:false, why:'Slide 16 lists omega fatty acids as a supplement used for dry eye, not a cause.'}],
  teach:'Risk factors for dry eye include older age, female sex, environment, comorbidities, surgery, preservatives such as benzalkonium chloride, and drugs: anticholinergic agents, diuretics, decongestants, oral contraceptives or hormone replacement, and corticosteroids. Artificial tears and supplements are treatments.',
  cite:'Lam_OphthalmicDisorders.pdf slides 6, 14, 16'},
@@ -49,7 +49,7 @@ QUESTIONS.push(
  tags:['dry eye','preservatives'], source:'both',
  stem:'A patient uses a multi-dose artificial tear bottle six times a day and says his eyes burn after each drop. The bottle contains the preservative benzalkonium chloride (BAK). What is the best change?',
  options:[
-  {t:'Switch to preservative-free single-use vials', correct:true, why:'Slide 43 gives preservative-free unit-dose dispensers as the fix when a preservative irritates the eye.'},
+  {t:'Switch to preservative-free single-use vials', correct:true, why:'Slide 43 lists preservative-free unit-dose dispensers and BAK as a common preservative; using them for irritation is an inference (T).'},
   {t:'Switch to a topical corticosteroid drop four times daily', correct:false, why:'Slide 17 lists topical corticosteroids as prescription drugs, so they are not the fix for preservative irritation; their brief use is a recording point (T).'},
   {t:'Add a decongestant drop for the burning and redness', correct:false, why:'Slide 39 shows decongestants carry rebound hyperemia and epithelial dryness risks, so they do not fix preservative irritation.'},
   {t:'Use the same bottle but double the number of drops', correct:false, why:'Slides 6 and 43 identify the preservative (BAK) as the problem, so more drops from the same bottle add more preservative.'}],
@@ -106,7 +106,7 @@ QUESTIONS.push(
  stem:'A patient with chronic dry eye starts artificial tears. How often can they be used, and for how long?',
  options:[
   {t:'Up to hourly if needed, for as long as the response requires', correct:true, why:'Slide 14 allows 1–2 drops 1–2 times daily, up to 3–4 times daily or hourly, for a duration set by response.'},
-  {t:'Four times daily for no more than 72 hours before referral', correct:false, why:'The 72-hour limit on slides 39 and 41 applies to decongestants and referral in conjunctivitis, not to artificial tears.'},
+  {t:'Four times daily for no more than 72 hours before referral', correct:false, why:'Slide 39 lists effects beyond 72 hours for decongestants and slide 41 sets 72 hours for referral in conjunctivitis, not for artificial tears.'},
   {t:'Once daily for a maximum of 30 days, then discard the product', correct:false, why:'The 30 days on slide 50 is how long opened drops may be kept, not a limit on artificial tear therapy.'},
   {t:'Twice daily for 4 weeks, then stop until symptoms return', correct:false, why:'Slide 14 sets no fixed stop for artificial tears, so a twice-daily course that ends after 4 weeks is not the teaching.'}],
  teach:'Artificial tears start at 1–2 drops once or twice daily and can go up to 3–4 times daily or hourly. Preservative-free products are preferred, and use continues as long as the patient responds, which is why dry eye is chronic.',
@@ -117,33 +117,33 @@ QUESTIONS.push(
  stem:'What is the advantage of a bland ophthalmic ointment over artificial tear drops, and what is its main drawback?',
  options:[
   {t:'Longer retention time; blurry vision', correct:true, why:'Slide 15 gives longer retention time as the advantage and blurry vision and hypersensitivity as the side effects.'},
-  {t:'Faster onset of relief; a limit of 72 hours of use', correct:false, why:'Slide 15 gives longer retention, not faster onset; the 72-hour limit on slide 39 applies to decongestants.'},
-  {t:'No preservative at all; a need to refrigerate after opening', correct:false, why:'Slide 15 gives longer retention as the advantage, and slide 50 lists storage separately, so refrigeration is not an ointment drawback.'},
+  {t:'Faster onset of relief; a limit of 72 hours of use', correct:false, why:'Slide 15 gives longer retention, not faster onset; slide 39 lists effects beyond 72 hours for decongestants, not ointments.'},
+  {t:'No preservative at all; a need to refrigerate after opening', correct:false, why:'Slide 15 gives longer retention as the advantage and blurry vision and hypersensitivity as the side effects, so refrigeration is not the drawback.'},
   {t:'Blocks the release of histamine; drying of the cornea itself', correct:false, why:'Slide 15 describes a lubricant, not an antihistamine; histamine blockade belongs to dual-acting agents on slide 37.'}],
- teach:'Bland ointments stay longer on the eye but blur vision and can cause hypersensitivity, so they go on mainly at bedtime (T). A bland gel is better tolerated (T). Neither makes the eye produce more tears (T).',
+ teach:'Bland ointments stay longer on the eye but blur vision and can cause hypersensitivity, so they go on mainly at bedtime (T). A bland gel is better tolerated (slide 15). Neither makes the eye produce more tears (T).',
  cite:'Lam_OphthalmicDisorders.pdf slide 15 (T)'},
 
 {id:'xe10', skill:'tell', prof:'Dr. Lahoud', tier:'new', topic:'deye', sub:'dert', concept:'rx-dry-eye-route',
  tags:['dry eye','prescription','sorting'], source:'both',
  stem:'Which prescription medicine for dry eye is a nasal spray rather than an eye drop?',
  options:[
-  {t:'Varenicline (Tyrvaya)', correct:true, why:'Slides 17 and 21 give varenicline as the nasal spray; slide 22 teaches priming and resisting inhaling.'},
+  {t:'Varenicline (Tyrvaya)', correct:true, why:'Slide 17 lists varenicline nasal spray, slide 21 is headed Varenicline (Tyrvaya), and slide 22 shows the device (prime the pump).'},
   {t:'Cyclosporine (Restasis, Cequa)', correct:false, why:'Slide 17 lists topical cyclosporine as a prescription dry eye drug; that it is an eye drop is a recording point (T).'},
   {t:'Lifitegrast (Xiidra)', correct:false, why:'Slide 17 lists lifitegrast as a prescription dry eye drug; that it is an eye drop is a recording point (T).'},
   {t:'A topical corticosteroid for dry eye', correct:false, why:'Slide 17 lists topical corticosteroids as prescription; that they are eye drops for a short duration is a recording point (T).'}],
- teach:'Prescription dry eye options: topical cyclosporine (immunomodulator), lifitegrast (LFA-1 antagonist), topical corticosteroids, and varenicline nasal spray (secretagogue). Varenicline is the only one given in the nose (T); it is applied by tilting, elevating the tongue, administering and resisting inhaling.',
- cite:'Lam_OphthalmicDisorders.pdf slides 17, 21, 22 (T)'},
+ teach:'Prescription dry eye options: topical cyclosporine (immunomodulator), lifitegrast (LFA-1 antagonist), topical corticosteroids, and varenicline nasal spray (secretagogue (T)). Brand names come from the slide 18, 19 and 21 headings. Varenicline is the only one given in the nose (T); it is applied by tilting, elevating the tongue, administering and resisting inhaling.',
+ cite:'Lam_OphthalmicDisorders.pdf slides 17, 18, 19, 21 (brand names from headings), 22 (T)'},
 
 {id:'xe11', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'deye', sub:'dert', concept:'cyclosporine-side-effects',
  tags:['dry eye','prescription','counseling'], source:'both',
  stem:'A woman started cyclosporine eye drops for dry eye one week ago and calls because her eyes burn, sting and feel gritty. What is the best response?',
  options:[
-  {t:'These are common effects and can resemble dry eye itself', correct:true, why:'The Smith cyclosporine side-effect slide gives burning, pain, foreign body sensation, pruritus and stinging; Dr. Lam calls them common (T).'},
-  {t:'Stop the drops for good, because burning means an allergy to cyclosporine', correct:false, why:'The Smith deck gives burning, pain, foreign body sensation, pruritus and stinging as effects; the Lam-specific point that they are common is (T).'},
-  {t:'Switch to a topical decongestant, since redness is the real problem', correct:false, why:'Slide 39 limits decongestants to 72 hours, and they do not treat the inflammation that cyclosporine targets.'},
+  {t:'These are common effects and can resemble dry eye itself', correct:true, why:'Smith slide 67 lists ocular burning, instillation site pain, foreign body sensation, pruritus and stinging; Dr. Lam calls them common (T).'},
+  {t:'Stop the drops for good, because burning means an allergy to cyclosporine', correct:false, why:'Smith slide 67 gives burning, pain, foreign body sensation, pruritus and stinging as effects; the Lam-specific point that they are common is (T).'},
+  {t:'Switch to a topical decongestant, since redness is the real problem', correct:false, why:'Slide 39 lists rebound hyperemia beyond 72 hours for decongestants, and Smith slide 67 says cyclosporine works by reducing inflammation in the eye, which decongestants do not.'},
   {t:'Take both daily doses at once to finish the course sooner', correct:false, why:'Twice-daily dosing about 8 to 12 hours apart is from Dr. Lam’s recording (T), so the doses are spaced, not combined.'}],
  teach:'Topical cyclosporine (Restasis, Cequa) is a prescription drop (slide 17) taken twice daily for 6 months or longer (T); common effects are burning, stinging and foreign body sensation, which resemble dry eye symptoms (T). Counsel on what to expect and keep the schedule.',
- cite:'Lam_OphthalmicDisorders.pdf slide 17 (T); Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf (cyclosporine side-effect slide)'},
+ cite:'Lam_OphthalmicDisorders.pdf slides 17, 18 (brand names; slide 18 is headings only) (T); Smith_Eye_Glaucoma_AllergicConj_DryEye.pdf slide 67'},
 
 {id:'xe12', skill:'error', prof:'Dr. Lahoud', tier:'new', topic:'deye', sub:'dert', concept:'topical-steroid-duration',
  tags:['dry eye','prescription','corticosteroid'], source:'both',
@@ -151,16 +151,16 @@ QUESTIONS.push(
  options:[
   {t:'Use should be very short because chronic use can cause glaucoma', correct:true, why:'Dr. Lam’s recording says corticosteroids are for very short use because long use raises glaucoma risk (T).'},
   {t:'It must be used for at least 6 months before any benefit appears', correct:false, why:'A 6-month course belongs to cyclosporine (T); corticosteroids are for short duration, so waiting 6 months for benefit is wrong.'},
-  {t:'It should be given as a nasal spray into each nostril twice daily', correct:false, why:'Slide 21 gives the nasal spray route for varenicline; topical corticosteroids are eye drops (T), not a nasal spray.'},
+  {t:'It should be given as a nasal spray into each nostril twice daily', correct:false, why:'Slide 17 lists the nasal spray route for varenicline; topical corticosteroids are eye drops (T), not a nasal spray.'},
   {t:'It is first-line therapy and should be dosed as often as hourly', correct:false, why:'Slide 14 makes artificial tears the first-line product that can go up to hourly; corticosteroids are not first line.'}],
  teach:'Topical corticosteroids give short-term symptom relief and are not maintenance drugs for dry eye, because chronic use risks glaucoma and other problems (T). Cyclosporine runs about 6 months or longer, lifitegrast about 12 weeks (T).',
- cite:'Lam_OphthalmicDisorders.pdf slides 14, 17, 21 (T)'},
+ cite:'Lam_OphthalmicDisorders.pdf slides 14, 17, 22; slide 20 is headings only, so its content is from the recording (T)'},
 
 {id:'xe13', skill:'tell', prof:'Dr. Lahoud', tier:'new', topic:'deye', sub:'cjdx', concept:'allergic-itch-rule',
  tags:['allergic conjunctivitis','bacterial/viral conjunctivitis','sorting'], source:'slide',
  stem:'Which finding is present in allergic conjunctivitis but not in bacterial or viral conjunctivitis?',
  options:[
-  {t:'Itching', correct:true, why:'Slide 29 lists itching for allergic conjunctivitis; slide 28 lists only tearing and lid crusting for bacterial and viral types.'},
+  {t:'Itching', correct:true, why:'Slide 29 lists itching for allergic conjunctivitis; slide 28 lists only tearing and lid crusting in the visible rows for bacterial and viral types.'},
   {t:'Tearing', correct:false, why:'Slides 28 and 29 both list tearing, so it appears in allergic, bacterial and viral conjunctivitis.'},
   {t:'Lid crusting on waking', correct:false, why:'Slide 28 lists lid crusting for bacterial and viral conjunctivitis, not for the allergic types on slide 29.'},
   {t:'Foreign body sensation with a sandy feeling', correct:false, why:'Slide 7 lists foreign body sensation and a sandy, gritty feeling as dry eye findings, not conjunctivitis.'}],
@@ -227,10 +227,10 @@ QUESTIONS.push(
  stem:'What is taught as the first-line OTC regimen for allergic conjunctivitis?',
  options:[
   {t:'Artificial tears plus a dual-acting agent', correct:true, why:'Slide 35 gives artificial tears plus an ophthalmic dual-acting antihistamine and mast cell stabilizer as first line.'},
-  {t:'An ophthalmic decongestant used for up to 72 hours', correct:false, why:'Slide 39 limits decongestants to 72 hours, and they relieve redness only (T); they are not the first-line regimen.'},
+  {t:'An ophthalmic decongestant used for up to 72 hours', correct:false, why:'Slide 39 lists decongestants with rebound effects beyond 72 hours, and they relieve redness only (T); they are not the first-line regimen.'},
   {t:'A second-generation oral antihistamine taken by itself', correct:false, why:'Slide 40 reserves oral antihistamines for systemic symptoms or persistent ocular symptoms, not first line.'},
   {t:'Cetirizine eye drops given as the only product', correct:false, why:'Ophthalmic cetirizine has a limited role (T), so it is not first line and not given as the only product.'}],
- teach:'First line for allergic conjunctivitis is two products: artificial tears to wash out the allergen and protect the ocular surface, plus a dual-acting agent for the itch. The slide 35 heading groups all three types; Dr. Lam’s 11/20 recording keys this pair to allergic conjunctivitis, and bacterial or viral conjunctivitis to cold compresses and referral (T).',
+ teach:'First line for allergic conjunctivitis is two products: artificial tears to wash out the allergen (T) and protect the ocular surface (slide 31; slide 36 is headings only), plus a dual-acting agent for the itch. The slide 35 heading groups all three types; Dr. Lam’s 11/20 recording keys this pair to allergic conjunctivitis, and bacterial or viral conjunctivitis to cold compresses and referral (T).',
  cite:'Lam_OphthalmicDisorders.pdf slides 35, 39, 40 (T)'},
 
 {id:'xe20', skill:'tell', prof:'Dr. Lahoud', tier:'new', topic:'deye', sub:'cjrx', concept:'otc-dual-acting-sort',
@@ -238,7 +238,7 @@ QUESTIONS.push(
  stem:'Which OTC eye drop is a dual-acting antihistamine and mast cell stabilizer?',
  options:[
   {t:'Ketotifen', correct:true, why:'Slide 37 gives ketotifen fumarate as an OTC antihistamine, mast cell stabilizer and H1 receptor antagonist.'},
-  {t:'Naphazoline by itself', correct:false, why:'Slide 39 gives naphazoline as an OTC ophthalmic decongestant, which reduces redness only.'},
+  {t:'Naphazoline by itself', correct:false, why:'Slide 39 gives naphazoline as an OTC ophthalmic decongestant, which is not a dual-acting agent.'},
   {t:'Tetrahydrozoline used for redness', correct:false, why:'Slide 39 gives tetrahydrozoline as an OTC ophthalmic decongestant, not a dual-acting agent.'},
   {t:'Brimonidine 0.025% used for redness', correct:false, why:'Slide 39 gives brimonidine 0.025% as an OTC ophthalmic decongestant, not a dual-acting agent.'}],
  teach:'OTC dual-acting agents: olopatadine (Pataday), alcaftadine and ketotifen fumarate. OTC decongestants: naphazoline, tetrahydrozoline and brimonidine 0.025%. Pheniramine appears only in combination with naphazoline.',
@@ -259,11 +259,11 @@ QUESTIONS.push(
  tags:['allergic conjunctivitis','decongestant','counseling'], source:'both',
  stem:'A man with hypertension has used tetrahydrozoline eye drops every day for 6 days for red eyes, and his eyes are redder when he skips a dose. What is the best advice?',
  options:[
-  {t:'Stop it; past 72 hours it causes rebound redness and raises blood pressure', correct:true, why:'Slide 39 lists rebound conjunctival hyperemia beyond 72 hours and increased blood pressure as separate decongestant effects.'},
+  {t:'Stop it; past 72 hours it causes rebound redness and raises blood pressure', correct:true, why:'Slide 39 lists rebound conjunctival hyperemia beyond 72 hours and increased blood pressure as a side effect of decongestants.'},
   {t:'Keep using it, since redness on skipping a dose means the drops are working well', correct:false, why:'Slide 39 gives rebound conjunctival hyperemia beyond 72 hours, so redness on skipping a dose is rebound.'},
-  {t:'Use it hourly instead, because the dose was too low to control his redness', correct:false, why:'Slide 39 limits decongestant dosing and warns of rebound beyond 72 hours, so more frequent use makes the problem worse.'},
+  {t:'Use it hourly instead, because the dose was too low to control his redness', correct:false, why:'Slide 39 lists rebound conjunctival hyperemia beyond 72 hours, so using it more often makes it worse (inference).'},
   {t:'Switch to a preservative-free brand of tetrahydrozoline and continue it', correct:false, why:'Slide 39 lists rebound hyperemia as a decongestant effect beyond 72 hours; a preservative-free product does not remove it.'}],
- teach:'Ophthalmic decongestants (naphazoline, tetrahydrozoline, brimonidine 0.025%) shrink vessels and reduce redness only. Beyond 72 hours they risk rebound conjunctival hyperemia and epithelial dryness, and absorbed drug can raise blood pressure. They do not treat the allergic response (T).',
+ teach:'Ophthalmic decongestants (naphazoline, tetrahydrozoline, brimonidine 0.025%) shrink vessels and reduce redness only (T). Slide 39 lists rebound conjunctival hyperemia and epithelial xerosis beyond 72 hours, and increased blood pressure as a side effect. They do not treat the allergic response (T).',
  cite:'Lam_OphthalmicDisorders.pdf slide 39 (T)'},
 
 {id:'xe23', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'deye', sub:'cjrx', concept:'referral-72-hours',
@@ -271,7 +271,7 @@ QUESTIONS.push(
  stem:'A man with itchy, red eyes has used artificial tears plus ketotifen drops correctly for three days with no improvement. What should the pharmacist do?',
  options:[
   {t:'Refer him to a provider', correct:true, why:'Slide 41 says to refer if symptoms do not resolve after 72 hours of appropriate treatment.'},
-  {t:'Add an ophthalmic decongestant for another week', correct:false, why:'Slide 39 limits decongestants to 72 hours and shows rebound hyperemia beyond it, so extending is not advised.'},
+  {t:'Add an ophthalmic decongestant for another week', correct:false, why:'Slide 39 lists effects beyond 72 hours, including rebound hyperemia, so extending a decongestant for another week is not advised.'},
   {t:'Continue the same products for several more weeks', correct:false, why:'Slide 41 sets 72 hours of appropriate treatment as the point for medical referral, not a longer trial.'},
   {t:'Switch to a topical corticosteroid eye drop sold OTC', correct:false, why:'Slide 17 lists topical corticosteroids as prescription medications, so they are not an OTC step.'}],
  teach:'If an OTC regimen is used correctly and symptoms have not resolved after 72 hours, the patient needs a provider and possibly a prescription or another diagnosis.',
@@ -281,9 +281,9 @@ QUESTIONS.push(
  tags:['contact lenses','counseling'], source:'both',
  stem:'A woman who wears soft contact lenses will use eye drops that contain BAK. What counseling is correct?',
  options:[
-  {t:'Remove lenses; wait 15 minutes after the drops', correct:true, why:'Slide 46 says to remove lenses and wait 15 minutes, especially for products with the BAK preservative.'},
+  {t:'Remove lenses; wait 15 minutes after the drops', correct:true, why:'Slide 46 says remove lenses, then wait 15 minutes (reinsert after the wait), especially important for products with the BAK preservative.'},
   {t:'Leave the lenses in and apply the drops over them', correct:false, why:'Slide 46 says to remove lenses before the drops; that lenses trap drug and preservative is a recording point (T).'},
-  {t:'Remove the lenses and reinsert them as soon as the drop is in', correct:false, why:'Slide 46 says to wait 15 minutes before reinserting the lenses, not to reinsert at once.'},
+  {t:'Remove the lenses and reinsert them as soon as the drop is in', correct:false, why:'Slide 46 says to wait 15 minutes, so the lenses go back in after the wait (reinsert after the wait), not at once.'},
   {t:'Reinsert the lenses after 5 minutes, the wait between two solutions', correct:false, why:'Slide 44 gives 5 minutes between two solutions; slide 46 gives 15 minutes before lens reinsertion.'}],
  teach:'Remove lenses before instilling eye drops and wait 15 minutes before reinserting, especially with benzalkonium chloride (slide 46). Lenses can trap drug and preservative against the eye and can be discolored by some products (T).',
  cite:'Lam_OphthalmicDisorders.pdf slides 44, 46 (T)'}

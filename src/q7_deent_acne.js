@@ -31,9 +31,9 @@ QUESTIONS.push(
 
 {id:'xa02', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'dacne', sub:'assess', concept:'acne-severe-refer',
  tags:['acne','severity','referral'], source:'slide',
- stem:'A man asks for an OTC acne product. He has many inflammatory and non-inflammatory lesions, several nodules on his cheeks and back, and moderate scarring. What should the pharmacist do?',
+ stem:'A man asks for an OTC acne product. He has many inflammatory and non-inflammatory lesions, a few nodules on his cheeks and back, and moderate scarring. What should the pharmacist do?',
  options:[
-  {t:'Refer him; severe acne is not a self-care candidate', correct:true, why:'Slide 18 excludes severe acne from self-care, and several nodules with moderate scarring is severe acne (slide 8).'},
+  {t:'Refer him; severe acne is not a self-care candidate', correct:true, why:'Slide 18 excludes severe acne from self-care, and a few nodular lesions with moderate scarring is severe acne (slide 8).'},
   {t:'Recommend a benzoyl peroxide wash and reassess in a few weeks', correct:false, why:'A single topical agent is the first step for mild acne (slide 40), and severe acne is excluded from self-care (slide 18).'},
   {t:'Recommend OTC adapalene gel at night and a glycolic acid peel', correct:false, why:'Topical OTC agents suit mild acne (slide 40); severe acne needs a prescriber, with an oral antibiotic and topical combination or other prescription therapy (slide 40).'},
   {t:'Recommend a salicylic acid cleanser and tea tree oil in a lotion', correct:false, why:'Salicylic acid has limited efficacy data (slide 29) and cannot treat several nodules with scarring.'}],
@@ -45,10 +45,10 @@ QUESTIONS.push(
  stem:'A 15-year-old boy has some open and closed comedones on his forehead and two small papules on his chin. There are no nodules and scarring is minimal. He has used no acne product. What is the first step?',
  options:[
   {t:'One topical agent: benzoyl peroxide or a topical retinoid', correct:true, why:'Slide 40 lists topical single therapy, benzoyl peroxide or a topical retinoid, as first line for mild acne; slide 25 calls benzoyl peroxide the preferred initial OTC agent.'},
-  {t:'Benzoyl peroxide, a topical retinoid and a topical antibiotic together', correct:false, why:'(T) Dr. Patel called the plan a step by step process, and the three-drug combination is not the first step for mild acne.'},
+  {t:'Topical dapsone gel as the first agent, before other topicals', correct:false, why:'Slide 40 lists topical dapsone only as a second-line option for mild acne, after the first-line topical therapy has been tried.'},
   {t:'An oral antibiotic added to a topical combination', correct:false, why:'Slide 40 adds an oral antibiotic at moderate acne, not at mild acne.'},
   {t:'A combined oral contraceptive with spironolactone', correct:false, why:'Slide 40 lists contraceptives and spironolactone as a second-line hormonal option for females, and he is a boy with mild acne.'}],
- teach:'Mild acne means some non-inflammatory lesions, no more than a few papules and pustules, no nodules and minimal scarring (slide 7). Start with one topical agent and step up only if it fails.',
+ teach:'Mild acne means some non-inflammatory lesions, no more than a few papules and pustules, no nodules and minimal scarring (slide 7). Slide 40 lists one topical agent (benzoyl peroxide or a topical retinoid) as single therapy; topical combinations are a listed first-line alternative, and (T) Dr. Patel described a step by step process.',
  cite:'Patel_Acne-Therapeutics-Student.pdf slides 7, 25, 40; 11/10 transcript (T)'},
 
 {id:'xa04', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'dacne', sub:'path', concept:'acne-moderate-first-step',
@@ -57,9 +57,9 @@ QUESTIONS.push(
  options:[
   {t:'Benzoyl peroxide plus a topical retinoid', correct:true, why:'Slide 40 gives topical combination therapy, such as benzoyl peroxide with a topical retinoid, as first line for moderate acne.'},
   {t:'A topical antibiotic such as clindamycin gel used alone', correct:false, why:'Topical antibiotics are not recommended as monotherapy; benzoyl peroxide is added to reduce resistance (slides 25, 31).'},
-  {t:'Oral doxycycline with benzoyl peroxide and a topical retinoid', correct:false, why:'(T) In Dr. Patel’s stepwise ordering the oral antibiotic is added only after the topical combinations have been tried, so it is not the first step here (slide 40).'},
+  {t:'Oral doxycycline with benzoyl peroxide and a topical retinoid', correct:false, why:'(T) Slide 40 also lists oral antibiotic regimens as moderate first line, but Dr. Patel’s stepwise ordering adds the oral antibiotic only after the topical combinations have been tried, so it is not the first step here.'},
   {t:'Oral isotretinoin as the first agent for his comedones', correct:false, why:'(T) Dr. Patel called isotretinoin the absolute last line for moderate acne, after topical and oral antibiotic combinations (slide 40).'}],
- teach:'Many non-inflammatory lesions with some inflammatory lesions is moderate acne (slide 8). First line is a topical combination; an oral antibiotic is added when the topical combinations have been tried (T, Dr. Patel’s stepwise ordering; slide 40).',
+ teach:'Many non-inflammatory lesions with some inflammatory lesions is moderate acne (slide 8). First line is a topical combination; an oral antibiotic is added when the topical combinations have been tried (T, Dr. Patel’s stepwise ordering; slide 40 itself also lists oral regimens as moderate first line).',
  cite:'Patel_Acne-Therapeutics-Student.pdf slides 8, 25, 31, 40; 11/10 transcript (T)'},
 
 {id:'xa05', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'dacne', sub:'assess', concept:'acne-mildly-clear',
@@ -67,7 +67,7 @@ QUESTIONS.push(
  stem:'A 19-year-old man has no inflammation and one small closed comedone on his forehead. Which approach fits his acne?',
  options:[
   {t:'Benzoyl peroxide alone or essential oils, or no product at all', correct:true, why:'Slide 40 lists benzoyl peroxide alone or essential oils, with or without, as first line for mildly clear acne.'},
-  {t:'Topical retinoid plus topical antibiotic, both applied at night', correct:false, why:'Combinations are later steps in the mild column (slide 40), and antibiotics are paired with benzoyl peroxide, not with a retinoid alone.'},
+  {t:'Topical retinoid plus topical antibiotic, both applied at night', correct:false, why:'Mildly clear acne is treated with benzoyl peroxide alone or essential oils (slide 40); a retinoid plus antibiotic is a mild-acne combination, beyond one small comedone.'},
   {t:'Oral antibiotic for 3–4 months plus benzoyl peroxide gel', correct:false, why:'Oral antibiotics are moderate and severe options (slide 40), and slide 33 asks for the shortest possible duration.'},
   {t:'Referral to a prescriber for isotretinoin and its monthly tests', correct:false, why:'Isotretinoin is for severe refractory nodular acne (slide 37); one small comedone is mildly clear acne (slide 7).'}],
  teach:'Mildly clear acne is rare non-inflammatory lesions with no more than one small lesion (slide 7). It is the lowest rung of the algorithm and needs little or no treatment.',
@@ -190,7 +190,7 @@ QUESTIONS.push(
  options:[
   {t:'Cleanse twice daily without abrasives; pick a gel, solution or lotion', correct:true, why:'Slide 19 advises cleansing twice a day with a mild cleanser and no abrasives, and slide 24 gives gels, solutions and lotions for oily skin.'},
   {t:'Scrub with an abrasive cleanser several times a day to clear out the pores', correct:false, why:'Slide 19 says to avoid abrasive products, devices and excessive cleansing, which can irritate acne-prone skin.'},
-  {t:'Wash with a medicated bar and use an ointment on the lesions', correct:false, why:'Slide 24 says ointments are not usually recommended for acne-prone skin; gels, solutions and lotions suit oily skin.'},
+  {t:'Wash with a medicated bar and use an ointment on the lesions', correct:false, why:'Slide 24 says ointments and bars are not usually recommended for any skin type; gels, solutions and lotions suit oily skin.'},
   {t:'Remove makeup with a water-based cleanser, then an oil-based one', correct:false, why:'The order is reversed: slide 19 removes dirt and makeup with an oil-based cleanser before using a water-based cleanser.'}],
  teach:'Non-drug measures: cleanse twice a day with a mild soap or non-soap cleanser, avoid abrasives and excessive cleansing, remove makeup with an oil-based cleanser before a water-based one (slide 19), and match the vehicle to skin type (slide 24).',
  cite:'Patel_Acne-Therapeutics-Student.pdf slides 19, 24; 11/10 transcript (T)'},
@@ -213,7 +213,7 @@ QUESTIONS.push(
   {t:'Switch to a topical retinoid as the single topical agent', correct:true, why:'Slide 40 lists benzoyl peroxide or a topical retinoid as mild first line; (T) a retinoid is used when benzoyl peroxide gave no benefit.'},
   {t:'Add oral doxycycline to the benzoyl peroxide wash', correct:false, why:'Oral antibiotics enter at moderate acne (slide 40), not at mild acne, and the single topical agents have not all been tried.'},
   {t:'Switch to topical clindamycin as a single agent', correct:false, why:'Topical antibiotics are not used as monotherapy; benzoyl peroxide is added to reduce resistance (slides 25, 31).'},
-  {t:'Refer for oral isotretinoin and its pregnancy-test program', correct:false, why:'Isotretinoin is for severe refractory nodular acne and is the last line (slide 37), not for mild acne after one agent.'}],
+  {t:'Refer for oral isotretinoin and its pregnancy-test program', correct:false, why:'Isotretinoin is for severe refractory nodular acne (slide 37); (T) Dr. Patel called it the last line, which does not fit mild acne after one agent.'}],
  teach:'Slide 40 lists the mild options; the sequence of switching to the other single topical agent, then combining, before anything oral comes from the lecture (T, 11/10), where Dr. Patel described a step by step process.',
  cite:'Patel_Acne-Therapeutics-Student.pdf slides 25, 31, 37, 40; 11/10 transcript (T)'},
 

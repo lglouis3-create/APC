@@ -6,10 +6,10 @@
    transcripts of that lecture, marked (T). Facts were taken from the student's
    verified DEENT course drill (q13_L07.js) and the slide text was re-read in
    the DEENT slide folder.
-   Where the sources differ: slide 26 writes psoriasis severity as <= 5%, >= 8%
-   and >= 10% BSA; slide 31 prints < 5%, > 8% and > 10%. The items key the
-   slide 26 form with the 10% cut-off that Dr. Patel confirmed on 11/11 (T);
-   no item uses a BSA of exactly 5%, 8% or 10%. She first said ">= 20%" for
+   Slides 26 and 31 both give psoriasis severity as <= 5%, >= 8% and >= 10% BSA
+   (slide 31 underlines the inequality signs; checked on the slide images). The
+   items key the 10% cut-off that Dr. Patel confirmed on 11/11 (T); no item
+   uses a BSA of exactly 5%, 8% or 10%. She first said ">= 20%" for
    severe and then told students to follow the slide (10%).
    Not keyed: doses of biologics and cyclosporine, PASI/DLQI scoring, epidermal
    turnover multiples.
@@ -147,7 +147,7 @@ QUESTIONS.push(
  stem:'A pharmacist suggests hydrocortisone cream for scaling on the cheeks of a 3-week-old infant with cradle cap. What is the error?',
  options:[
   {t:'No corticosteroid should go on an infant’s face', correct:true, why:'Slide 18 says to wash the face with mild soap or cleanser, apply a facial emollient and not suggest corticosteroids.'},
-  {t:'The cream must be a lotion for the scalp', correct:false, why:'Slide 17 gives corticosteroid lotion for scalp care; slide 18 advises against corticosteroids in infants.'},
+  {t:'The cream must be a lotion for the scalp', correct:false, why:'Slide 17 gives corticosteroid lotion for scalp care; slide 18 says not to suggest corticosteroids for the infant’s face.'},
   {t:'A ketoconazole cream is required for infant faces', correct:false, why:'Slide 18 gives infants baby oil, a non-medicated shampoo and a soft brush, with no antifungal cream.'},
   {t:'Coal tar must be applied to the face first', correct:false, why:'Slide 18 does not use coal tar for infant seborrheic dermatitis; severe scalp cases use salicylic acid 3–5%.'}],
  teach:'Infant care: baby oil or vegetable oil massage, non-medicated shampoo, soft bristle brush; for the face, mild cleanser and emollient (T: 11/10 transcript).',
@@ -161,7 +161,7 @@ QUESTIONS.push(
   {t:'Mild', correct:false, why:'Slide 26 limits mild psoriasis to a BSA of 5% or less, and 7% is above that.'},
   {t:'Moderate to severe', correct:false, why:'Slide 26 puts severe at 10% or more, so 7% is too low to sit between moderate and severe.'},
   {t:'Severe', correct:false, why:'Slide 26 puts severe at a BSA of 10% or more, and 7% is below it.'}],
- teach:'Cut-offs: mild BSA 5% or less, moderate 8% or more, severe 10% or more. A value between two cut-offs takes both names, such as 7% mild to moderate and 9% moderate to severe (T: 11/11 transcript). Slide 31 prints the strict forms (<5%, >8%, >10%); this item keys slide 26 and the lecture.',
+ teach:'Cut-offs: mild BSA 5% or less, moderate 8% or more, severe 10% or more. A value between two cut-offs takes both names, such as 7% mild to moderate and 9% moderate to severe (T: 11/11 transcript). Slides 26 and 31 both give these cut-offs; slide 26 notes that some phototherapy trials use 20% or more as the lower limit.',
  cite:'Patel_Scaly-Dermatoses-Therapeutics-Student.pdf slides 26, 31, 50; 11/11 transcript (T)'},
 
 {id:'xs14', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'dscaly', sub:'sev', concept:'dscaly-bsa-severe',
