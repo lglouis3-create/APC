@@ -19,7 +19,7 @@
    with the 3200 mg/day maximum; the key's station 7 gives the 3200 mg/day
    maximum without naming the drug.
    ========================================================================== */
-TOPICS.unshift({id:'starl', name:'★ Likely on the exam: Dr. Lahoud', prof:'Dr. Lahoud', open:true, cite:'Intro-to-Dispensing.pdf, EOOR-Answer-Key.pdf and the Week 14 DEENT lab', subs:[
+TOPICS.push({id:'starl', name:'★ Likely on the exam: Dr. Lahoud', prof:'Dr. Lahoud', open:true, cite:'Intro-to-Dispensing.pdf, EOOR-Answer-Key.pdf and the Week 14 DEENT lab', subs:[
   {id:'rx', name:'Prescription review and errors', cite:'Intro-to-Dispensing.pdf slides 29–39, 43–44; EOOR-Answer-Key.pdf'},
   {id:'law', name:'Requirements, refills, expiration', cite:'Intro-to-Dispensing.pdf slides 15–27'},
   {id:'deent', name:'DEENT lab', cite:'DEENT-Lab-Deck.pdf, Patel and Lam decks, Ophthalmic-Review-Key.pdf'}]});

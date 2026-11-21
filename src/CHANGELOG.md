@@ -1,5 +1,10 @@
 # Change log
 
+## 2026-11-21 (star questions, guide, charts)
+- 40 star questions (20 per professor) built to resemble the exam, with full explanations of every option.
+- 14 chart cases where you read the AAFP schedule's colored tables and Appendix, which are now in the Reference tab.
+- A study guide for each professor; Tell apart and Reference redesigned without wide tables.
+
 ## 2026-11-21 (DEENT lab questions)
 - 85 new questions on acne, scaly dermatoses and psoriasis, dry eye and conjunctivitis, and glaucoma.
 - Each is built from the DEENT course drill and marks which facts come from the recording.

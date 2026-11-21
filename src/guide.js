@@ -2,7 +2,7 @@ const GUIDE_HTML = `
 <h2>Study guide</h2>
 <p class="sub">One guide per professor, in the order of the exam. Each section gives what to know, what is easily confused, how it is asked and the usual traps. Bracketed tags name the source; (T) marks a point heard only in a recording.</p>
 <h2>Dr. Lahoud: dispensing, errors and the DEENT lab</h2>
-<nav class="gtoc"><ol>
+<div class="gtoc" style="border:1px solid var(--line);border-radius:9px;padding:8px 12px 8px 8px;margin:10px 0;background:var(--paper)"><ol style="margin:0 0 0 22px;padding:0;line-height:1.6;font-size:14.5px">
 <li><a href="#gl-1">Medication use process, errors and the Swiss cheese model</a></li>
 <li><a href="#gl-2">Who can prescribe and what makes a prescription valid</a></li>
 <li><a href="#gl-3">Generic substitution and label expiration dates</a></li>
@@ -11,7 +11,7 @@ const GUIDE_HTML = `
 <li><a href="#gl-6">DEENT lab, part 1: acne and QuEST/SCHOLAR-MAC</a></li>
 <li><a href="#gl-7">DEENT lab, part 2: ophthalmic review</a></li>
 <li><a href="#gl-8">DEENT lab, part 3: psoriasis and scaly dermatoses</a></li>
-</ol></nav>
+</ol></div>
 
 <section class="gobj" id="gl-1">
 <h3>1. Medication use process, errors and the Swiss cheese model</h3>
@@ -667,7 +667,7 @@ const GUIDE_HTML = `
 </section>
 
 <h2>Dr. Parsons: OTC, POCT and immunizations</h2>
-<nav class="gtoc"><ol>
+<div class="gtoc" style="border:1px solid var(--line);border-radius:9px;padding:8px 12px 8px 8px;margin:10px 0;background:var(--paper)"><ol style="margin:0 0 0 22px;padding:0;line-height:1.6;font-size:14.5px">
 <li><a href="#gp-1">Patient care process, SCHOLAR-MAC and SOAP notes</a></li>
 <li><a href="#gp-2">Insect bites and stings: referral, anaphylaxis, self-care exclusions and OTC products</a></li>
 <li><a href="#gp-3">Head lice (pediculosis)</a></li>
@@ -676,7 +676,7 @@ const GUIDE_HTML = `
 <li><a href="#gp-6">Using the AAFP adult immunization schedule</a></li>
 <li><a href="#gp-7">Vaccines by situation</a></li>
 <li><a href="#gp-8">SBAR, patient communication and vaccine hesitancy</a></li>
-</ol></nav>
+</ol></div>
 
 <section class="gobj" id="gp-1">
 <h3>1. Patient care process, SCHOLAR-MAC and SOAP notes</h3>
