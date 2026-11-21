@@ -34,12 +34,12 @@ QUESTIONS.push(
 
 {id:'xs02', skill:'tell', prof:'Dr. Lahoud', tier:'new', topic:'dscaly', sub:'sort', concept:'dscaly-sort-sd',
  tags:['seborrheic dermatitis','sorting'], source:'both',
- stem:'A man has yellow, greasy scales on red skin of the scalp, ears, eyebrows and nasolabial creases. Which scaly dermatosis is this?',
+ stem:'A man has yellow, greasy scales on red skin of the scalp, ears and face. Which scaly dermatosis is this?',
  options:[
   {t:'Seborrheic dermatitis', correct:true, why:'Slides 6 and 12 describe yellow, greasy scales on red skin of the head, ears and face as seborrheic dermatitis.'},
   {t:'Dandruff', correct:false, why:'Dandruff is limited to the scalp as thin white or grey flakes without inflammation (slide 6).'},
   {t:'Plaque psoriasis', correct:false, why:'Psoriasis has sharp-bordered red plaques with silvery white scales on the elbows and knees (slide 6).'},
-  {t:'Infant cradle cap (scalp scaling only)', correct:false, why:'Cradle cap is the infant form, with scalp scaling only (slide 12); this is an adult with facial and ear involvement.'}],
+  {t:'Infant cradle cap (scalp scaling only)', correct:false, why:'Cradle cap is the infant form of seborrheic dermatitis (slide 12), mostly scalp scaling in infants (T); this patient is an adult with ear and face involvement.'}],
  teach:'Key words for seborrheic dermatitis: greasy, yellowish scales, and a location beyond the scalp such as the ears and face (T: 11/10 transcript).',
  cite:'Patel_Scaly-Dermatoses-Therapeutics-Student.pdf slides 6, 12; 11/10 transcript (T)'},
 
@@ -58,10 +58,10 @@ QUESTIONS.push(
  tags:['dandruff','seborrheic dermatitis','psoriasis','sorting'], source:'both',
  stem:'Which features are absent in dandruff but present in both seborrheic dermatitis and psoriasis? Select all that apply.',
  options:[
-  {t:'Inflammation', correct:true, why:'Slide 6 lists inflammation as absent in dandruff and present in seborrheic dermatitis and psoriasis.'},
+  {t:'Inflammation', correct:true, why:'Slide 6 lists inflammation as absent in dandruff and present in the other two; slide 8 allows mild inflammation, which (T) is secondary to scratching, so the key follows slide 6.'},
   {t:'Epidermal hyperplasia', correct:true, why:'Slide 6 lists epidermal hyperplasia as absent in dandruff and present in the other two conditions.'},
   {t:'Malassezia involvement', correct:false, why:'Slide 8 lists Malassezia fungi in dandruff, so it is not absent there.'},
-  {t:'Flaking of scalp skin', correct:false, why:'Slide 8 says dandruff causes mild inflammation, flaking and pruritus, so flaking is present in dandruff.'}],
+  {t:'Flaking of scalp skin', correct:false, why:'Slide 8 says dandruff causes flaking and pruritus, so flaking is present in dandruff.'}],
  teach:'Inflammation from the start, not from scratching, and epidermal hyperplasia separate seborrheic dermatitis and psoriasis from dandruff (T: 11/10 transcript).',
  cite:'Patel_Scaly-Dermatoses-Therapeutics-Student.pdf slides 6, 8; 11/10 transcript (T)'},
 
@@ -147,7 +147,7 @@ QUESTIONS.push(
  stem:'A pharmacist suggests hydrocortisone cream for scaling on the cheeks of a 3-week-old infant with cradle cap. What is the error?',
  options:[
   {t:'No corticosteroid should go on an infant’s face', correct:true, why:'Slide 18 says to wash the face with mild soap or cleanser, apply a facial emollient and not suggest corticosteroids.'},
-  {t:'The cream must be a lotion for the scalp', correct:false, why:'Slide 17 gives corticosteroid lotion for adult scalp care; slide 18 advises against corticosteroids in infants.'},
+  {t:'The cream must be a lotion for the scalp', correct:false, why:'Slide 17 gives corticosteroid lotion for scalp care; slide 18 advises against corticosteroids in infants.'},
   {t:'A ketoconazole cream is required for infant faces', correct:false, why:'Slide 18 gives infants baby oil, a non-medicated shampoo and a soft brush, with no antifungal cream.'},
   {t:'Coal tar must be applied to the face first', correct:false, why:'Slide 18 does not use coal tar for infant seborrheic dermatitis; severe scalp cases use salicylic acid 3–5%.'}],
  teach:'Infant care: baby oil or vegetable oil massage, non-medicated shampoo, soft bristle brush; for the face, mild cleanser and emollient (T: 11/10 transcript).',
@@ -157,21 +157,21 @@ QUESTIONS.push(
  tags:['psoriasis','severity','BSA'], source:'both',
  stem:'A woman has two plaques on her elbows with a body surface area (BSA) involvement of 7%. Between which classes does her psoriasis fall?',
  options:[
-  {t:'Mild to moderate', correct:true, why:'Slide 31 puts mild at 5% or less and moderate at 8% or more, and Dr. Patel called 7% in between (T).'},
-  {t:'Mild', correct:false, why:'Slide 31 limits mild psoriasis to a BSA of 5% or less, and 7% is above that.'},
-  {t:'Moderate to severe', correct:false, why:'Slide 31 puts severe at 10% or more, so 7% is too low to sit between moderate and severe.'},
-  {t:'Severe', correct:false, why:'Slide 31 puts severe at a BSA of 10% or more, and 7% is below it.'}],
- teach:'Cut-offs: mild BSA 5% or less, moderate 8% or more, severe 10% or more. A value between two cut-offs takes both names, such as 7% mild to moderate and 9% moderate to severe (T: 11/11 transcript).',
+  {t:'Mild to moderate', correct:true, why:'Slide 26 puts mild at 5% or less and moderate at 8% or more, and Dr. Patel called 7% in between (T).'},
+  {t:'Mild', correct:false, why:'Slide 26 limits mild psoriasis to a BSA of 5% or less, and 7% is above that.'},
+  {t:'Moderate to severe', correct:false, why:'Slide 26 puts severe at 10% or more, so 7% is too low to sit between moderate and severe.'},
+  {t:'Severe', correct:false, why:'Slide 26 puts severe at a BSA of 10% or more, and 7% is below it.'}],
+ teach:'Cut-offs: mild BSA 5% or less, moderate 8% or more, severe 10% or more. A value between two cut-offs takes both names, such as 7% mild to moderate and 9% moderate to severe (T: 11/11 transcript). Slide 31 prints the strict forms (<5%, >8%, >10%); this item keys slide 26 and the lecture.',
  cite:'Patel_Scaly-Dermatoses-Therapeutics-Student.pdf slides 26, 31, 50; 11/11 transcript (T)'},
 
 {id:'xs14', skill:'apply', prof:'Dr. Lahoud', tier:'new', topic:'dscaly', sub:'sev', concept:'dscaly-bsa-severe',
  tags:['psoriasis','severity','BSA'], source:'both',
  stem:'A man has plaques over his back, chest and both legs, with a BSA of 12%. How is his psoriasis classified?',
  options:[
-  {t:'Severe', correct:true, why:'Slide 31 classes psoriasis with a BSA of 10% or more as severe, and 12% meets that.'},
-  {t:'Moderate', correct:false, why:'Slide 31 puts moderate at 8% or more, and a BSA of 12% passes the severe cut-off of 10%.'},
-  {t:'Mild', correct:false, why:'Slide 31 limits mild psoriasis to a BSA of 5% or less, which 12% far exceeds.'},
-  {t:'Mild to moderate', correct:false, why:'Slide 31 uses this range only between 5% and 8%, and 12% lies above both cut-offs.'}],
+  {t:'Severe', correct:true, why:'Slide 26 classes psoriasis with a BSA of 10% or more as severe, and 12% meets that.'},
+  {t:'Moderate', correct:false, why:'Slide 26 puts moderate at 8% or more, but a BSA of 12% also passes the severe cut-off of 10%, the highest class met.'},
+  {t:'Mild', correct:false, why:'Slide 26 limits mild psoriasis to a BSA of 5% or less, which 12% far exceeds.'},
+  {t:'Mild to moderate', correct:false, why:'“Mild to moderate” is the in-between class for 5% to 8% (T: 11/11 transcript), and 12% lies above both cut-offs.'}],
  teach:'Dr. Patel first said severe was 20% or more, then told students to follow the slide: 10% (T: 11/11 transcript). She asked students to know the BSA.',
  cite:'Patel_Scaly-Dermatoses-Therapeutics-Student.pdf slides 26, 31; 11/11 transcript (T)'},
 
@@ -203,8 +203,8 @@ QUESTIONS.push(
  options:[
   {t:'Topical corticosteroid', correct:true, why:'Slides 35–36 place topical agents first in mild-to-moderate psoriasis, and corticosteroids are the most effective topical (T).'},
   {t:'Methotrexate with folic acid', correct:false, why:'Slide 37 places systemic agents such as methotrexate in the moderate-to-severe algorithm, not first for mild disease.'},
-  {t:'Adalimumab (Humira)', correct:false, why:'Slides 35–37 place biologics after topical and oral systemic options, so they do not come first here.'},
-  {t:'Oral psoralen plus UVA', correct:false, why:'Slides 44–45 reserve psoralen plus UVA light for severe, refractory psoriasis.'}],
+  {t:'Adalimumab (Humira)', correct:false, why:'Slide 35 has no biologic in the mild-to-moderate algorithm; biologics appear only in the moderate-to-severe algorithm (slide 37).'},
+  {t:'Oral psoralen plus UVA', correct:false, why:'Slide 45 reserves psoralen plus UVA light for patients with severe, refractory psoriasis.'}],
  teach:'Mild to moderate: topical agents first, with non-drug measures. Systemic therapy is last line there. Corticosteroids are applied 2 to 4 times daily, limited to 4 weeks or less (slide 36).',
  cite:'Patel_Scaly-Dermatoses-Therapeutics-Student.pdf slides 35, 36, 37, 44, 45; 11/11 transcript (T)'},
 
