@@ -59,7 +59,7 @@ const COURSE = {
 
   files: ['atlas.js', 'diagrams.js',
           'q1_topics.js', 'q2_eoor.js', 'q3_otc.js', 'q4_poct.js', 'q5_immunizations.js', 'q6_deent.js',
-          'q7_deent_acne.js', 'q8_deent_scaly.js', 'q9_deent_eye.js', 'q10_deent_glaucoma.js', 'q11_deent_board.js'],
+          'q7_deent_acne.js', 'q8_deent_scaly.js', 'q9_deent_eye.js', 'q10_deent_glaucoma.js', 'q11_deent_board.js', 'q12_star_lahoud.js', 'q13_star_parsons.js'],
 
   tools: {citeAliases:{'aafp-adult-schedule-2026.pdf': null, 'apha-insect-excerpt.pdf': null, 'deent-lab-deck.pdf': null, 'ophthalmic-review-key.pdf': null,
                        'patel_acne-therapeutics-student.pdf': null, 'patel_scaly-dermatoses-therapeutics-student.pdf': null,

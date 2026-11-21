@@ -103,7 +103,7 @@ const DIA = {};
 /* The Diagrams tab: [group name, [figure keys]]. Course-specific — group the
    figures the way the course groups the processes they show. A key that is not
    in DIA is skipped, and the tab hides itself when nothing is listed. */
-const DIAGRAMS = [];
+const DIAGRAMS = [['Tell apart', ['tell-eye', 'tell-review', 'tell-bite', 'tell-acne']], ['Reference', ['tell-aafp']]];
 
 /* A figure's own title, used by the Diagrams tab's contents chips when a key
    needs a name different from the title drawn inside it. */
@@ -228,6 +228,5 @@ DIA['tell-aafp'] = (() => {
   return figure(s, 'AAFP adult schedule: the order of use, from Table 1 to the Addendum.', y + 6);
 })();
 
-DIAGRAMS.push(['Tell apart', ['tell-eye', 'tell-review', 'tell-bite', 'tell-acne']], ['Reference', ['tell-aafp']]);
 Object.assign(DIA_NAMES, {'tell-eye': 'Eye: which condition', 'tell-review': 'Prescription review in three steps',
   'tell-bite': 'Bite or sting: self-care or refer', 'tell-acne': 'Acne by severity', 'tell-aafp': 'AAFP schedule: order of use'});
