@@ -12,10 +12,7 @@
    times a day; the APhA excerpt says 3 or 4 times daily. No item keys the
    frequency.
    ========================================================================== */
-TOPICS.push({id:'starp', name:'★ Likely on the exam: Dr. Parsons', prof:'Dr. Parsons', open:true, cite:'OTC, POCT and immunization decks and the AAFP schedule', subs:[
-  {id:'otc', name:'OTC self-care', cite:'OTC-Insect-Bites-Pediculosis.pdf slides 8–10, 14–34; APhA-Insect-Excerpt.pdf'},
-  {id:'poct', name:'Physical assessment and POCT', cite:'POCT-Physical-Assessment.pdf slides 30–58'},
-  {id:'imm', name:'Immunizations', cite:'Immunizations-Pre-Lab.pdf; AAFP-Adult-Schedule-2026.pdf; 9/21 transcript'}]});
+
 
 QUESTIONS.push(
 /* ---- OTC self-care ---------------------------------------------------- */

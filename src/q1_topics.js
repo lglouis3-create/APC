@@ -4,7 +4,31 @@
    for the error key EOOR-Answer-Key.pdf (q2_eoor.js).
    ========================================================================== */
 const TOPICS = [
- {id:'dispensing', name:'Intro to Dispensing: prescription validity and review', prof:'Dr. Lahoud', open:true,
+ {id:'starl', name:'★ Likely on the exam: Dr. Lahoud', prof:'Dr. Lahoud', open:true, cite:'Intro-to-Dispensing.pdf, EOOR-Answer-Key.pdf and the Week 14 DEENT lab', subs:[
+  {id:'rx', name:'Prescription review and errors', cite:'Intro-to-Dispensing.pdf slides 29–39, 43–44; EOOR-Answer-Key.pdf'},
+  {id:'law', name:'Requirements, refills, expiration', cite:'Intro-to-Dispensing.pdf slides 15–27'},
+  {id:'deent', name:'DEENT lab', cite:'DEENT-Lab-Deck.pdf, Patel and Lam decks, Ophthalmic-Review-Key.pdf'}]},
+ {id:'starp', name:'★ Likely on the exam: Dr. Parsons', prof:'Dr. Parsons', open:true, cite:'OTC, POCT and immunization decks and the AAFP schedule', subs:[
+  {id:'otc', name:'OTC self-care', cite:'OTC-Insect-Bites-Pediculosis.pdf slides 8–10, 14–34; APhA-Insect-Excerpt.pdf'},
+  {id:'poct', name:'Physical assessment and POCT', cite:'POCT-Physical-Assessment.pdf slides 30–58'},
+  {id:'imm', name:'Immunizations', cite:'Immunizations-Pre-Lab.pdf; AAFP-Adult-Schedule-2026.pdf; 9/21 transcript'}]},
+ {id:'sbarl', name:'Practice: SBAR for prescription errors', prof:'Dr. Lahoud', open:false, cite:'Week 11 OSCE review; EOOR answer key; Intro to Dispensing slides 16–39', subs:[
+  {id:'sort', name:'Sort the sentences of the call', cite:'APC-III-Week-11-OSCE-Prep_2026.pdf (SBAR review: components; Background vs Assessment)'},
+  {id:'flaw', name:'Spot the flaw in a written SBAR', cite:'APC-III-Week-11-OSCE-Prep_2026.pdf; Intro-to-Dispensing.pdf slide 39'},
+  {id:'case', name:'Case reasoning: error, owner and complete SBAR', cite:'EOOR-Answer-Key.pdf; Intro-to-Dispensing.pdf slides 18–22, 27, 38–39'}]},
+ {id:'sbarp', name:'Practice: SBAR for vaccine recommendations', prof:'Dr. Parsons', open:false, cite:'Immunizations-Pre-Lab.pdf slides 20–23; 9/21 transcript; AAFP 2026 schedule', subs:[
+  {id:'sort', name:'Sort the vaccine SBAR', cite:'Immunizations-Pre-Lab.pdf slides 20–22; 9/21 transcript (T)'},
+  {id:'rec', name:'Assessment and recommendation from the AAFP tables', cite:'AAFP-Adult-Schedule-2026.pdf Table 2, Notes and Appendix'}]},
+ {id:'aafpcase', name:'Practice: read the AAFP chart', prof:'Dr. Parsons', open:false, cite:'AAFP-Adult-Schedule-2026.pdf Tables 1 and 2 and Appendix', subs:[
+  {id:'t1', name:'Table 1: by age', cite:'AAFP-Adult-Schedule-2026.pdf Table 1 (page 2)'},
+  {id:'t2', name:'Table 2: by condition', cite:'AAFP-Adult-Schedule-2026.pdf Table 2 (page 3)'},
+  {id:'app', name:'Appendix: contraindications and precautions', cite:'AAFP-Adult-Schedule-2026.pdf Appendix (pages 9–10)'}]},
+ {id:'deentapply', name:'Practice: DEENT lab cases', prof:'Dr. Lahoud', open:false, cite:'Patel acne and scaly dermatoses decks; Lam ophthalmic disorders and glaucoma decks', subs:[
+  {id:'acne', name:'Acne: grade, product, prescription review', cite:'Patel_Acne-Therapeutics-Student.pdf slides 8, 23, 24, 25, 27, 31'},
+  {id:'scaly', name:'Psoriasis and scaly dermatoses', cite:'Patel_Scaly-Dermatoses-Therapeutics-Student.pdf slides 6, 7, 12, 16, 26, 31, 32, 35, 36'},
+  {id:'eye', name:'Ophthalmic: self-care and conjunctivitis', cite:'Lam_OphthalmicDisorders.pdf slides 11, 28, 29'},
+  {id:'glau', name:'Glaucoma: drug choice and review', cite:'Lam_Glaucoma.pdf slides 32, 34, 44, 69, 72, 73, 90'}]},
+ {id:'dispensing', name:'Intro to Dispensing: prescription validity and review', prof:'Dr. Lahoud', open:false,
   cite:'Week 2: Intro-to-Dispensing.pdf and the 8/24 transcript',
   subs:[
    {id:'mup',     name:'Medication use process and errors',      cite:'slides 5–10'},

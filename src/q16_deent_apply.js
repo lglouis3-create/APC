@@ -20,11 +20,7 @@
    no item uses it for bacterial or viral disease. Lam slide 28 is cut off at the
    bottom, so the herpetic row is read only as acute with tearing.
    ========================================================================== */
-TOPICS.push({id:'deentapply', name:'DEENT lab: apply it', prof:'Dr. Lahoud', open:true, cite:'Patel acne and scaly dermatoses decks; Lam ophthalmic disorders and glaucoma decks', subs:[
-  {id:'acne', name:'Acne: grade, product, prescription review', cite:'Patel_Acne-Therapeutics-Student.pdf slides 8, 23, 24, 25, 27, 31'},
-  {id:'scaly', name:'Psoriasis and scaly dermatoses', cite:'Patel_Scaly-Dermatoses-Therapeutics-Student.pdf slides 6, 7, 12, 16, 26, 31, 32, 35, 36'},
-  {id:'eye', name:'Ophthalmic: self-care and conjunctivitis', cite:'Lam_OphthalmicDisorders.pdf slides 11, 28, 29'},
-  {id:'glau', name:'Glaucoma: drug choice and review', cite:'Lam_Glaucoma.pdf slides 32, 34, 44, 69, 72, 73, 90'}]});
+
 
 QUESTIONS.push(
 /* ---- Acne ------------------------------------------------------------- */

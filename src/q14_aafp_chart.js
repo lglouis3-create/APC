@@ -14,10 +14,7 @@
    and additional doses may be necessary; navy = precaution; red =
    contraindicated or not recommended; gray = no guidance.
    ========================================================================== */
-TOPICS.push({id:'aafpcase', name:'AAFP schedule: use the chart', prof:'Dr. Parsons', open:true, cite:'AAFP-Adult-Schedule-2026.pdf Tables 1 and 2 and Appendix', subs:[
-  {id:'t1', name:'Table 1: by age', cite:'AAFP-Adult-Schedule-2026.pdf Table 1 (page 2)'},
-  {id:'t2', name:'Table 2: by condition', cite:'AAFP-Adult-Schedule-2026.pdf Table 2 (page 3)'},
-  {id:'app', name:'Appendix: contraindications and precautions', cite:'AAFP-Adult-Schedule-2026.pdf Appendix (pages 9–10)'}]});
+
 
 QUESTIONS.push(
 /* ---- Table 2: by condition ------------------------------------------- */

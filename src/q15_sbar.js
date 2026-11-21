@@ -25,14 +25,9 @@
    on slide 22 and "more than 1 month" in the EOOR key; no item keys it.
    Dates are computed against today, 11/21/2026.
    ========================================================================== */
-TOPICS.push({id:'sbarl', name:'SBAR: prescription errors', prof:'Dr. Lahoud', open:true, cite:'Week 11 OSCE review; EOOR answer key; Intro to Dispensing slides 16–39', subs:[
-  {id:'sort', name:'Sort the sentences of the call', cite:'APC-III-Week-11-OSCE-Prep_2026.pdf (SBAR review: components; Background vs Assessment)'},
-  {id:'flaw', name:'Spot the flaw in a written SBAR', cite:'APC-III-Week-11-OSCE-Prep_2026.pdf; Intro-to-Dispensing.pdf slide 39'},
-  {id:'case', name:'Case reasoning: error, owner and complete SBAR', cite:'EOOR-Answer-Key.pdf; Intro-to-Dispensing.pdf slides 18–22, 27, 38–39'}]});
 
-TOPICS.push({id:'sbarp', name:'SBAR: immunization recommendations', prof:'Dr. Parsons', open:true, cite:'Immunizations-Pre-Lab.pdf slides 20–23; 9/21 transcript; AAFP 2026 schedule', subs:[
-  {id:'sort', name:'Sort the vaccine SBAR', cite:'Immunizations-Pre-Lab.pdf slides 20–22; 9/21 transcript (T)'},
-  {id:'rec', name:'Assessment and recommendation from the AAFP tables', cite:'AAFP-Adult-Schedule-2026.pdf Table 2, Notes and Appendix'}]});
+
+
 
 QUESTIONS.push(
 /* ---- Lahoud: sort the sentences of a prescription-error call ------------ */
