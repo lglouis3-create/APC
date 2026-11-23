@@ -1,5 +1,8 @@
 # Change log
 
+## 2026-11-23 (guides)
+- Guides show comparisons as cards, not wide tables, and source tags are lighter.
+
 ## 2026-11-23 (case cards)
 - Eight prescription cases now show the Rx, label and stock bottle as cards.
 

@@ -51,3 +51,6 @@
 
 ## 2026-11-23 prescription case cards
 - Louis: the prescription case questions were hard to read as plain text. sl01-sl05, sl09, sl11 and sl17 now show the prescription, the pharmacy label and the stock bottle as drawn cards (SVG data in images.json, keys case_*; generator kept outside the repo). The stems were shortened to the question; every fact in the cards comes from the original stems, and nothing marks which part is wrong. sl11 shows its drug reference line (maximum daily dose 3200 mg) as a card. The question image alt text is the engine's fixed wording.
+
+## 2026-11-23 Guides layout review
+- Louis asked for a review of how the section information is presented. At 375 px, 15 of the 35 Guides tables ran wider than the screen and needed sideways scrolling. All tables with three or more columns became cards (one card per row, each column a labelled line); two-column tables stayed. Source tags in brackets are smaller and grey. Content was not rewritten in this pass; the facts were reviewed on 2026-11-21.
