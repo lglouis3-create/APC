@@ -22,9 +22,9 @@
 
 
 QUESTIONS.push(
-{id:'sl01', skill:'error', prof:'Dr. Lahoud', multi:true, tier:'new', topic:'starl', sub:'rx', concept:'star-case-metformin',
+{id:'sl01', skill:'error', prof:'Dr. Lahoud', multi:true, tier:'new', topic:'starl', sub:'rx', concept:'star-case-metformin', img:'case_sl01',
  tags:['star','EOOR','PMR','label date'], source:'both',
- stem:'Fill date 11/21/2026. Prescription (written, dangerous drug, manually signed; prescriber name, address and phone present): issued 11/16/2026 | Daniel Reyes; no address or date of birth (DOB) on it, both in the patient medication record (PMR) | metformin extended-release (ER) 500 mg tablets, #30, 1 tablet by mouth once daily with the evening meal | Indication: type 2 diabetes | Refills: 11. Label: metformin ER 500 mg tablets, 1 tablet once daily with the evening meal, #30, refills 11, Use Before 11/21/2027. Stock bottle: metformin immediate-release (IR) 500 mg tablets, Exp 03/2027. Which errors are present? Select all that apply.',
+ stem:'Fill date 11/21/2026. Compare the prescription, the label and the stock bottle shown below. Which errors are present? Select all that apply.',
  options:[
   {t:'Patient address and DOB missing from the prescription', correct:false, why:'For a dangerous (non-controlled) drug the address may be missing when it is retrievable from the PMR, and the DOB is not required on the prescription if the PMR holds it (slide 16; T). The same omission would invalidate a CIII–V prescription (slide 19), so the rule depends on the drug class.'},
   {t:'Incorrect formulation filled', correct:true, why:'Product verification checks formulation, including ER versus IR (slide 36). The prescription and label say ER but the bottle is IR, a dispensing error on slide 38 that is fixed by replacing the product and relabeling before dispensing (slide 39). EOOR station 10 is the same error.'},
@@ -35,9 +35,9 @@ QUESTIONS.push(
  teach:'Work the three review steps in order. Step 1, legal and safe: for a dangerous drug the patient address and DOB may come from the PMR, refills have no limit and the script lasts 1 year. Step 2, transcribed appropriately: compare drug, strength, form, directions, quantity and refills with the prescription. Step 3, product match: read the stock bottle for drug, strength, formulation (ER versus IR) and expiration. The Use Before date is the earlier of one year after the fill date and the stock expiration, and a month-and-year stock date means the last day of that month (3/2027 becomes 3/31/2027). Quick method: write fill date plus one year, write the stock date as a month end, and choose the earlier. Dispensing errors are fixed with the technician by replacing the product and relabeling.',
  cite:'Intro-to-Dispensing.pdf slides 16, 19, 22, 25, 36–39; EOOR-Answer-Key.pdf slides 1–2 (station 10); 8/24 transcript (T)'},
 
-{id:'sl02', skill:'error', prof:'Dr. Lahoud', tier:'new', topic:'starl', sub:'rx', concept:'star-no-error-cv',
+{id:'sl02', skill:'error', prof:'Dr. Lahoud', tier:'new', topic:'starl', sub:'rx', concept:'star-no-error-cv', img:'case_sl02',
  tags:['star','EOOR','no errors','controlled'], source:'both',
- stem:'Fill date 11/21/2026. Prescription (written, manually signed): issued 9/28/2026 | Priya Nair, address and date of birth (DOB) on it | prescriber’s name, address, phone and DEA number present | alprazolam 0.5 mg tablets, #30 (thirty), 1 tablet by mouth three times daily as needed for anxiety | Refills: 5. Label: alprazolam 0.5 mg tablets, #30, 1 tablet by mouth three times daily as needed for anxiety, refills 5, Use Before 11/21/2027. Stock bottle: alprazolam 0.5 mg tablets, Exp 08/2028. What is the best assessment?',
+ stem:'Fill date 11/21/2026. Compare the prescription, the label and the stock bottle shown below. What is the best assessment?',
  options:[
   {t:'Prescribing error: 5 refills exceed the CIII–V limit', correct:false, why:'Schedule III–V prescriptions allow up to 5 refills within 6 months (slides 22, 27), and alprazolam is Schedule IV (T). Five refills is at the limit, not over it. Choosing this misremembers the limit, or applies the CII rule of 0 refills.'},
   {t:'Dispensing error: Use Before date must match the stock bottle', correct:false, why:'The label date is the earlier of one year after fill and the stock expiration (slide 25). One year after 11/21/2026 is 11/21/2027, which is earlier than 08/2028, so the label is right. Choosing this ignores the one-year limit on vials filled from a stock bottle.'},
@@ -46,9 +46,9 @@ QUESTIONS.push(
  teach:'A no-error case is built from near-misses that are actually allowed: a refill count exactly at the limit, a script that is old but still inside its category’s window, and a stock expiration that is later than one year after the fill date. Check the category first (alprazolam is Schedule IV (T), so address, DOB, DEA number and the written quantity are required on the prescription even if in the PMR), then the dates: 6 months for CIII–V, 30 days for CII, 1 year for dangerous drugs. Then copy-check the label against the prescription and read the stock bottle. Only say an error exists when you can name the slide 38 item and its step. Controlled drugs in the opioid, benzodiazepine, barbiturate and carisoprodol groups also need a PMP history check before dispensing (slide 21).',
  cite:'Intro-to-Dispensing.pdf slides 19, 21, 22, 25, 27, 38; EOOR-Answer-Key.pdf slides 1–2 (stations 5 and 11); 8/24 transcript (T)'},
 
-{id:'sl03', skill:'error', prof:'Dr. Lahoud', multi:true, tier:'new', topic:'starl', sub:'rx', concept:'star-case-cii',
+{id:'sl03', skill:'error', prof:'Dr. Lahoud', multi:true, tier:'new', topic:'starl', sub:'rx', concept:'star-case-cii', img:'case_sl03',
  tags:['star','EOOR','CII','controlled'], source:'slide',
- stem:'Fill date 11/21/2026. Prescription (written on a Texas State Board of Pharmacy official form, manually signed; prescriber name, address, phone and DEA number present): issued 10/15/2026 | Kevin Brandt, address and date of birth on it | oxycodone 5 mg tablets, #30 (thirty), 1 tablet by mouth every 6 hours as needed for pain | Refills: 1. Label: oxycodone 5 mg tablets, #30, 1 tablet every 6 hours as needed for pain, refills 1, Use Before 11/21/2027. Stock bottle: oxycodone 5 mg tablets, Exp 06/2028. Which errors are present? Select all that apply.',
+ stem:'Fill date 11/21/2026. Compare the prescription, the label and the stock bottle shown below. Which errors are present? Select all that apply.',
  options:[
   {t:'Number of refills transcribed incorrectly onto label', correct:false, why:'The label shows 1 refill and so does the prescription, so the label copies it correctly (slide 34, item 5). The refill is wrong at the source: it is a prescribing error, not a transcription error. Choosing this blames the label for the prescriber’s mistake.'},
   {t:'Prescription is expired', correct:true, why:'A CII prescription expires 30 days after issuance (slide 22). Issued 10/15/2026, the 30 days ended 11/14/2026; the fill date 11/21/2026 is day 37 (16 days left in October + 21). This is a prescribing error, fixed by contacting the prescriber for a new prescription (EOOR station 13).'},
@@ -60,9 +60,9 @@ QUESTIONS.push(
  note:'EOOR station 13 words the CII expiration as more than 1 month; slide 22 gives 30 days. At 37 days both readings call the prescription expired.',
  cite:'Intro-to-Dispensing.pdf slides 20, 22, 25, 34, 38; EOOR-Answer-Key.pdf slide 2 (station 13)'},
 
-{id:'sl04', skill:'error', prof:'Dr. Lahoud', multi:true, tier:'new', topic:'starl', sub:'rx', concept:'star-case-lasa',
+{id:'sl04', skill:'error', prof:'Dr. Lahoud', multi:true, tier:'new', topic:'starl', sub:'rx', concept:'star-case-lasa', img:'case_sl04',
  tags:['star','EOOR','LASA','label date'], source:'slide',
- stem:'Fill date 11/21/2026. Electronic prescription (dangerous drug, complete): issued 11/19/2026 | Nina Alvarez | escitalopram 10 mg tablets, #30, 1 tablet by mouth once daily | Indication: depression | Refills: 5 | substitution permitted. Label: escitalopram 10 mg tablets, #30, 1 tablet by mouth twice daily, refills 5, Use Before 9/30/2027. Stock bottle: citalopram 10 mg tablets, Exp 09/2027. Which errors are present? Select all that apply.',
+ stem:'Fill date 11/21/2026. Compare the prescription, the label and the stock bottle shown below. Which errors are present? Select all that apply.',
  options:[
   {t:'Incorrect strength filled', correct:false, why:'Both the prescription and the bottle show 10 mg, so the strength matches (slide 36, item 2). The error is the drug, not the number, and slide 38 keeps strength and drug as separate dispensing errors. Choosing this is the confusion between a look-alike name and a different dose.'},
   {t:'Directions transcribed incorrectly onto label', correct:true, why:'The prescription says once daily and the label says twice daily. Slide 38 lists directions transcribed incorrectly under transcribing errors, and slide 39 says to correct the entry in the pharmacy system and regenerate the label (EOOR station 2: daily written, bid on the label).'},
@@ -73,9 +73,9 @@ QUESTIONS.push(
  teach:'Locate each mismatch at the step where it first appears. Compare the prescription with the label: a difference in drug, directions or refills is a transcribing error, corrected in the pharmacy system with regenerated labels. Compare the label with the bottle: a difference in drug, strength, formulation or quantity is a dispensing error, corrected by replacing the product and relabeling. Only a fault in the prescription itself (expired, unsafe dose, missing DEA number, refills on a CII, insufficient prescribed quantity) is a prescribing error that goes to the prescriber. Citalopram and escitalopram share a 10 mg tablet, so strength does not separate them; read the drug name on the bottle. Month-and-year stock dates become the last day of the month (9/2027 becomes 9/30/2027).',
  cite:'Intro-to-Dispensing.pdf slides 25, 34, 36–39; EOOR-Answer-Key.pdf slides 1–2 (stations 1, 2, 8, 10)'},
 
-{id:'sl05', skill:'error', prof:'Dr. Lahoud', multi:true, tier:'new', topic:'starl', sub:'rx', concept:'star-brand-stamp',
+{id:'sl05', skill:'error', prof:'Dr. Lahoud', multi:true, tier:'new', topic:'starl', sub:'rx', concept:'star-brand-stamp', img:'case_sl05',
  tags:['star','EOOR','substitution'], source:'both',
- stem:'Fill date 11/21/2026. Prescription (written, dangerous drug, manually signed; patient and prescriber information complete): issued 11/18/2026 | Tom Hale | Bactrim double strength (DS) tablets, #20, 1 tablet by mouth twice daily for 10 days | Indication: purulent skin and soft tissue infection | Refills: 0 | a rubber stamp on the form reads “BRAND MEDICALLY NECESSARY.” Label: sulfamethoxazole/trimethoprim DS 800/160 mg tablets, #20, 1 tablet twice daily for 10 days, refills 1, Use Before 11/21/2027. Stock bottle: sulfamethoxazole/trimethoprim single strength (SS) 400/80 mg tablets, Exp 05/2028. Which errors are present? Select all that apply.',
+ stem:'Fill date 11/21/2026. Compare the prescription, the label and the stock bottle shown below. Which errors are present? Select all that apply.',
  options:[
   {t:'Incorrect drug filled: generic filled although brand was requested', correct:false, why:'A rubber stamp does not legally prevent generic substitution on a written prescription; the prescriber must handwrite “Brand Necessary” or “Brand Medically Necessary” (slide 24; T). Choosing this treats any brand wording as binding, the opposite of EOOR station 2, where a valid request existed.'},
   {t:'Incorrect strength filled', correct:true, why:'The prescription and label say DS 800/160 mg, but the bottle is SS 400/80 mg. Strength is verified in step 3 (slide 36) and filling SS for DS is a dispensing error (slide 38; EOOR station 3), fixed by replacing the product and relabeling.'},
@@ -124,9 +124,9 @@ QUESTIONS.push(
  teach:'Use Before for tablets or capsules taken from a stock bottle is the earlier of two dates: one year after the fill date, or the stock bottle’s expiration. Write both as full dates before comparing. A stock expiration given as month and year means the last day of that month (1/2027 is 1/31/2027 in EOOR station 10, 2/2027 is 2/28/2027 in the lecture example). So a stock expiration in the same month as the one-year date is later, and the one-year date wins when the fill day is before the last day of the month; the stock date wins when it falls earlier. Constituted products such as Augmentin suspension follow the bottle’s directions instead (discard 10 days after mixing).',
  cite:'Intro-to-Dispensing.pdf slides 25–26; EOOR-Answer-Key.pdf slide 2 (station 10); 8/24 transcript (T)'},
 
-{id:'sl09', skill:'error', prof:'Dr. Lahoud', multi:true, tier:'new', topic:'starl', sub:'rx', concept:'star-case-augmentin',
+{id:'sl09', skill:'error', prof:'Dr. Lahoud', multi:true, tier:'new', topic:'starl', sub:'rx', concept:'star-case-augmentin', img:'case_sl09',
  tags:['star','EOOR','liquid','label date'], source:'both',
- stem:'Fill date 11/21/2026. Electronic prescription (dangerous drug, complete, no brand request) for a 4-year-old child: Augmentin 400 mg/57 mg per 5 mL oral suspension, 5 mL by mouth twice daily for 10 days | Dispense: 75 mL | Indication: otitis media | Refills: 0. Label: amoxicillin-clavulanate 400 mg/57 mg per 5 mL suspension, 5 mL by mouth twice daily for 10 days, 75 mL, refills 0, Use Before 11/21/2027. The powder was mixed on 11/21/2026 and the bottle says “discard 10 days after mixing.” Which errors are present? Select all that apply.',
+ stem:'Fill date 11/21/2026. Compare the prescription, the label and the stock bottle shown below. Which errors are present? Select all that apply.',
  options:[
   {t:'Insufficient quantity filled', correct:false, why:'The pharmacy filled the 75 mL that was prescribed; the shortage is in the prescription, not in the fill. Insufficient quantity filled is the EOOR station 9 error, where 60 mL was dispensed when 75 mL was needed. Choosing this confuses prescribed quantity with filled quantity.'},
   {t:'Insufficient quantity prescribed', correct:true, why:'5 mL twice daily for 10 days needs 5 × 2 × 10 = 100 mL, but 75 mL was prescribed. Slide 38 lists insufficient prescribed quantity as a prescribing error, common with liquids, so the fix is a call to the prescriber (slide 39), not a change to the fill.'},
@@ -148,9 +148,9 @@ QUESTIONS.push(
  teach:'The 3 prime questions are what the doctor told the patient the medication is for, how to take it, and what to expect (slide 43). In the rubric they are items 9, 11 and 18, each followed by the pharmacist’s own information: indication (10), regimen (12) and then side effects, expectation and warnings (19–21). The rubric also scores communication: open-ended questions, no compounded or leading questions (26), no medical jargon (25), teach-back (27) and closure (28). Quick method: when an item asks three things at once, or suggests the answer (“this is for your blood pressure, right?”), it fails item 26. Allergies, pregnancy or breastfeeding and other medicines are each required, but as separate questions.',
  cite:'Intro-to-Dispensing.pdf slides 43–44'},
 
-{id:'sl11', skill:'error', prof:'Dr. Lahoud', tier:'new', topic:'starl', sub:'rx', concept:'star-unsafe-dose',
+{id:'sl11', skill:'error', prof:'Dr. Lahoud', tier:'new', topic:'starl', sub:'rx', concept:'star-unsafe-dose', img:'case_sl11',
  tags:['star','EOOR','safety','prescribing error'], source:'both',
- stem:'Fill date 11/21/2026. Electronic prescription (dangerous drug, complete): issued 11/20/2026 | ibuprofen 800 mg tablets, #120, 1 tablet by mouth every 4 hours as needed for pain | Refills: 0. A drug reference gives the maximum daily dose as 3200 mg. Label: ibuprofen 800 mg tablets, #120, 1 tablet by mouth every 4 hours as needed for pain, refills 0, Use Before 11/21/2027. Stock bottle: ibuprofen 800 mg tablets, Exp 09/2028. What is the best assessment and action?',
+ stem:'Fill date 11/21/2026. Compare the prescription, the label and the stock bottle shown below. What is the best assessment and action?',
  options:[
   {t:'Prescribing error: dose too high; call the prescriber', correct:true, why:'Every 4 hours is up to 6 tablets, 6 × 800 = 4800 mg a day, above the 3200 mg maximum. Step 1 asks whether the prescription is safe (slide 32; T), and a dose that is too high is a prescribing error (slide 38) fixed by contacting the prescriber with a recommendation (EOOR station 7).'},
   {t:'Transcribing error: re-enter the sig as every 6 hours and regenerate the label', correct:false, why:'The label matches the prescription, so there is no transcription mistake, and the pharmacist cannot rewrite the sig alone. Slide 39 corrects transcribing errors only when the entry differs from the prescription. Choosing this changes the prescriber’s order without calling.'},
@@ -223,9 +223,9 @@ QUESTIONS.push(
  note:'The key lists an ocular antimicrobial as first line for bacterial or viral conjunctivitis; Dr. Lam’s slide 34 gives cold compresses and referral. These pairings follow the lab’s key.',
  cite:'Ophthalmic-Review-Key.pdf (Compress row; Example medication row; First line row)'},
 
-{id:'sl17', skill:'error', prof:'Dr. Lahoud', multi:true, tier:'new', topic:'starl', sub:'deent', concept:'star-glaucoma-case',
+{id:'sl17', skill:'error', prof:'Dr. Lahoud', multi:true, tier:'new', topic:'starl', sub:'deent', concept:'star-glaucoma-case', img:'case_sl17',
  tags:['star','EOOR','eye drops','glaucoma'], source:'both',
- stem:'Fill date 11/21/2026. Electronic prescription (dangerous drug, complete), issued 11/18/2026 | Lumigan (bimatoprost) 0.01% ophthalmic solution, 1 drop in both eyes (OU) once daily at bedtime, for primary open-angle glaucoma | Refills: 5. Label: bimatoprost 0.01% ophthalmic solution, 1 drop in both eyes twice daily, refills 5. Stock bottle: Latisse (bimatoprost), the eyelash-growth product. Which errors are present? Select all that apply.',
+ stem:'Fill date 11/21/2026. Compare the prescription, the label and the stock bottle shown below. Which errors are present? Select all that apply.',
  options:[
   {t:'Prescribed dose/frequency is too high', correct:false, why:'The prescription says once daily, which is the expected frequency for a prostaglandin analog (Lam_Glaucoma slide 20). The twice-daily frequency appears only on the label, so the fault is in transcribing. Choosing this blames the prescriber for the label.'},
   {t:'Directions/sig transcribed incorrectly onto label', correct:true, why:'The prescription says once daily and the label says twice daily. Step 2 checks the sig as prescribed (slide 34, item 3), and slide 38 lists it as a transcribing error, corrected in the pharmacy system with a regenerated label (slide 39). More frequent dosing also decreases efficacy (T).'},

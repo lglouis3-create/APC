@@ -1,5 +1,8 @@
 # Change log
 
+## 2026-11-23 (case cards)
+- Eight prescription cases now show the Rx, label and stock bottle as cards.
+
 ## 2026-11-23 (Week 4)
 - A new topic, "Week 4: day in the life", with 12 questions from the Week 4 slides and narration.
 
