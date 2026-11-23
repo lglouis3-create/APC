@@ -6,7 +6,7 @@
    ========================================================================== */
 {
   const ORDER = ['starl', 'starp', 'sbarl', 'sbarp', 'aafpcase', 'deentapply',
-                 'dispensing', 'eoor', 'deent', 'dacne', 'dscaly', 'deye', 'dglau', 'dboard',
+                 'dispensing', 'eoor', 'week4', 'deent', 'dacne', 'dscaly', 'deye', 'dglau', 'dboard',
                  'otc', 'poct', 'imm'];
   const rank = t => { const i = ORDER.indexOf(t.id); return i < 0 ? ORDER.length : i; };
   TOPICS.sort((a, b) => rank(a) - rank(b));

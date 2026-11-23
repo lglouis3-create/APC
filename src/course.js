@@ -19,7 +19,8 @@ const COURSE = {
 
   lectures: [
     {id:'L02',  deck:'Intro-to-Dispensing.pdf',           label:'Week 2: Intro to Dispensing (8/24)',                 prof:'Dr. Lahoud',  exam:1, module:'Dr. Lahoud: dispensing and errors'},
-    {id:'L02K', deck:'EOOR-Answer-Key.pdf',               label:'Week 2 lab: errors and omissions answer key',        prof:'Dr. Lahoud',  exam:1, module:'Dr. Lahoud: dispensing and errors'},
+    {id:'L04',  deck:'APC_III_Week_4_Slides.pdf',        label:'Week 4: Day in the life of a community pharmacist (9/7)', prof:'Dr. Lahoud',  exam:1, module:'Dr. Lahoud: dispensing and errors'},
+  {id:'L02K', deck:'EOOR-Answer-Key.pdf',               label:'Week 2 lab: errors and omissions answer key',        prof:'Dr. Lahoud',  exam:1, module:'Dr. Lahoud: dispensing and errors'},
     {id:'L08T', deck:'TOSCE-Study-Guide.pdf',             label:'Week 8: TOSCE study guide',                          prof:'Dr. Lahoud',  exam:1, module:'Dr. Lahoud: dispensing and errors'},
     {id:'L06D', deck:'Patel_Acne-Therapeutics-Student.pdf',                 label:'DEENT lab source: Dr. Patel, acne therapeutics (11/10)',                 prof:'Dr. Lahoud',  exam:1, module:'Dr. Lahoud: DEENT lab'},
     {id:'L07D', deck:'Patel_Scaly-Dermatoses-Therapeutics-Student.pdf',     label:'DEENT lab source: Dr. Patel, scaly dermatoses (11/10-11/11)',            prof:'Dr. Lahoud',  exam:1, module:'Dr. Lahoud: DEENT lab'},
@@ -59,9 +60,9 @@ const COURSE = {
 
   files: ['atlas.js', 'diagrams.js',
           'q1_topics.js', 'q2_eoor.js', 'q3_otc.js', 'q4_poct.js', 'q5_immunizations.js', 'q6_deent.js',
-          'q7_deent_acne.js', 'q8_deent_scaly.js', 'q9_deent_eye.js', 'q10_deent_glaucoma.js', 'q11_deent_board.js', 'q12_star_lahoud.js', 'q13_star_parsons.js', 'q14_aafp_chart.js', 'q15_sbar.js', 'q16_deent_apply.js', 'q99_order.js'],
+          'q7_deent_acne.js', 'q8_deent_scaly.js', 'q9_deent_eye.js', 'q10_deent_glaucoma.js', 'q11_deent_board.js', 'q12_star_lahoud.js', 'q13_star_parsons.js', 'q14_aafp_chart.js', 'q15_sbar.js', 'q16_deent_apply.js', 'q17_week4.js', 'q99_order.js'],
 
-  tools: {citeAliases:{'aafp-adult-schedule-2026.pdf': null, 'apha-insect-excerpt.pdf': null, 'deent-lab-deck.pdf': null, 'ophthalmic-review-key.pdf': null,
+  tools: {citeAliases:{'apc_iii_week_4_slides.pdf': null, 'aafp-adult-schedule-2026.pdf': null, 'apha-insect-excerpt.pdf': null, 'deent-lab-deck.pdf': null, 'ophthalmic-review-key.pdf': null,
                        'patel_acne-therapeutics-student.pdf': null, 'patel_scaly-dermatoses-therapeutics-student.pdf': null,
                        'lam_ophthalmicdisorders.pdf': null, 'lam_glaucoma.pdf': null, 'smith_eye_glaucoma_allergicconj_dryeye.pdf': null},
           citeLectures:{}, citeBareMap:{},

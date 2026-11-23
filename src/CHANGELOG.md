@@ -1,5 +1,8 @@
 # Change log
 
+## 2026-11-23 (Week 4)
+- A new topic, "Week 4: day in the life", with 12 questions from the Week 4 slides and narration.
+
 ## 2026-11-21 (SBAR practice and DEENT slides)
 - 24 SBAR questions, an SBAR builder and six case drills in Reference.
 - 16 DEENT lecture slides in Reference and 20 application questions, most with the slide shown.
