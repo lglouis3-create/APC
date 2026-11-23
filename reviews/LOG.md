@@ -54,3 +54,6 @@
 
 ## 2026-11-23 Guides layout review
 - Louis asked for a review of how the section information is presented. At 375 px, 15 of the 35 Guides tables ran wider than the screen and needed sideways scrolling. All tables with three or more columns became cards (one card per row, each column a labelled line); two-column tables stayed. Source tags in brackets are smaller and grey. Content was not rewritten in this pass; the facts were reviewed on 2026-11-21.
+
+## 2026-11-23 Guides presentation by content type
+- Louis asked for less table-like presentation. In the Guides tab: required prescription items are now nested layers (every prescription, then what CIII-V adds, then what CII adds), the EOOR key is a station list with error-type chips, acne and psoriasis severity are ladders, and the worked date examples are calculation cards. The facts and wording come from the previous version; the layered requirements were rewritten from the same table rows (the CII "inherits everything for CIII-V" source note is kept). Tell apart and Reference already contain no tables.

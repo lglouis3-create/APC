@@ -1,5 +1,8 @@
 # Change log
 
+## 2026-11-23 (guide layouts)
+- The prescription requirements are nested layers, the error key is a station list, and severity levels are ladders.
+
 ## 2026-11-23 (guides)
 - Guides show comparisons as cards, not wide tables, and source tags are lighter.
 
